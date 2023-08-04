@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="sunday-morning">
+  <div class="container">
+    <div class="content-sections">
+      {{ range .Params.sections }}
+        <div class="content-section animate" id="jumpto-{{ .headline | urlize }}">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .headline }}">
+          </div>
+          <div class="body">
+            <h2>
+              {{ .headline }}
+            </h2>
+            <div class="content">
+              {{ .contentHTML | safeHTML }}
+            </div>
+            {{ if .button }}
+              <a href="{{ .button.href }}" class="button light">
+                {{ .button.text }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  <div class="container-md">
+    <div class="content-blurbs">
+        <div class="content-blurb location animate" id="jumpto-location">
+          <div class="body">
+            <h2>
+              {{ .Params.location.headline }}
+            </h2>
+            <div class="content">
+              {{ .Params.location.contentHTML | safeHTML }}
+            </div>
+          </div>
+        </div>
+        <div class="content-blurb center-content directions animate" id="jumpto-directions">
+          <div class="body">
+            <h2>
+              {{ .Params.directions.headline }}
+            </h2>
+            <div class="content">
+              {{ .Params.directions.contentHTML | safeHTML }}
+            </div>
+              <a href="{{ .Params.directions.button.href }}" target="_blank" class="button">
+                {{ .Params.directions.button.text }}
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{{ end }}

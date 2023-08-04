@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="staff">
+  <div class="container">
+    <div class="content-sections">
+      {{ range .Params.staff }}
+        <div class="content-section animate" id="jumpto-{{ .name | urlize }}">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+          </div>
+          <div class="body">
+            <h2>
+              {{ .name }}
+            </h2>
+            <h3>
+              {{ .role }}
+            </h3>
+            <h4>
+              <a href="mailto:{{ .email }}">
+                {{ .email }}
+              </a>
+            </h4>
+            <div class="content">
+              {{ .contentHTML | safeHTML }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

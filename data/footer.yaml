@@ -1,0 +1,20 @@
+contact:
+  title: Interested in joining us Sunday?
+  text: Visiting a new church can be difficult. We'd love to connect and answer any questions that you might have before you come!
+  button:
+    text: Contact us
+    href: https://fountaincitykc.churchcenter.com/people/forms/283554
+addressHTML: "<address>Meadowbrook Park Clubhouse<br>9101 Nall Ave<br>Prairie Village, KS 66207</address>"
+elsewhere:
+- text: Instagram
+  url: https://www.instagram.com/fountaincitychurch_kc/
+  image: /images/ui/instagram.svg
+- text: Facebook
+  url: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
+  image: /images/ui/facebook.svg
+- text: Youtube
+  url: https://www.youtube.com/@fountaincitychurchkc9519/
+  image: /images/ui/youtube.svg
+- text: Podbean
+  url: https://fcckc.podbean.com/
+  image: /images/ui/podbean.svg
