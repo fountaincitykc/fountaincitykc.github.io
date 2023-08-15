@@ -1,0 +1,5 @@
+headline: Directions
+contentHTML: "<address>Meadowbrook Park Clubhouse<br>9101 Nall Ave<br>Prairie Village, KS 66207</address>"
+button:
+  text: Get directions
+  href: https://goo.gl/maps/La7yYuc4yY75Cq5R6

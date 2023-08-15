@@ -6,7 +6,7 @@
     <meta name="description" content="Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="/css/main.css?v20230501" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?v20230815" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -83,23 +83,23 @@
         <div class="row">
           <div class="contact">
             <h3>
-              {{ .Site.Data.footer.contact.title }}
+              {{ .Site.Data.contact.headline }}
             </h3>
-            <p>
-              {{ .Site.Data.footer.contact.text }}
-            </p>
-            <a href="{{ .Site.Data.footer.contact.button.href }}" class="button" target="_blank">
-              {{ .Site.Data.footer.contact.button.text }}
+            <div class="content">
+              {{ .Site.Data.contact.contentHTML | safeHTML }}
+            </div>
+            <a href="{{ .Site.Data.contact.button.href }}" class="button" target="_blank">
+              {{ .Site.Data.contact.button.text }}
             </a>
           </div>
           <div class="address">
-            {{ .Site.Data.footer.addressHTML | safeHTML }}
+            {{ .Site.Data.directions.contentHTML | safeHTML }}
           </div>
         </div>
         <div class="row">
           <div class="social">
             <ul>
-              {{ range .Site.Data.footer.elsewhere }}
+              {{ range .Site.Data.elsewhere.links }}
                 <li>
                   <a href="{{ .url }}" target="_blank">
                     <img src="{{ .image }}" alt="{{ safeHTMLAttr .title }}">

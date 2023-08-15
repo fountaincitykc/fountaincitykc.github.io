@@ -411,6 +411,20 @@ Components */
   background-color: var(--white);
 }
 
+/* mobile-directions */
+
+.mobile-directions {
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  background-color: var(--blue-a10);
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .mobile-directions {
+    display: none;
+  }
+}
+
 /* hero */
 
 .hero {

@@ -40,14 +40,14 @@
         <div class="content-blurb center-content directions animate" id="jumpto-directions">
           <div class="body">
             <h2>
-              {{ .Params.directions.headline }}
+              {{ .Site.Data.directions.headline }}
             </h2>
             <div class="content">
-              {{ .Params.directions.contentHTML | safeHTML }}
+              {{ .Site.Data.directions.contentHTML | safeHTML }}
             </div>
-              <a href="{{ .Params.directions.button.href }}" target="_blank" class="button">
-                {{ .Params.directions.button.text }}
-              </a>
+            <a href="{{ .Site.Data.directions.button.href }}" target="_blank" class="button">
+              {{ .Site.Data.directions.button.text }}
+            </a>
           </div>
         </div>
     </div>

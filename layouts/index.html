@@ -1,15 +1,23 @@
 {{ define "main" }}
 <div class="home">
+  <div class="mobile-directions animate">
+    <div class="content">
+      {{ .Site.Data.directions.contentHTML | safeHTML }}
+    </div>
+    <a href="{{ .Site.Data.directions.button.href }}" target="_blank" class="button">
+      {{ .Site.Data.directions.button.text }}
+    </a>
+  </div>
   <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
-      <div class="body">
-        <h1>
-          {{ .Params.hero.headline1 }}
-        </h1>
-        <hr>
-        <h3>
-          {{ .Params.hero.headline2 }}
-        </h3>
-      </div>
+    <div class="body">
+      <h1>
+        {{ .Params.hero.headline1 }}
+      </h1>
+      <hr>
+      <h3>
+        {{ .Params.hero.headline2 }}
+      </h3>
+    </div>
   </div>
   <div class="container">
     <div class="cards">
