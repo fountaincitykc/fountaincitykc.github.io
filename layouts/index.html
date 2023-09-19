@@ -4,9 +4,7 @@
     <div class="content">
       {{ partial "address.html" . }}
     </div>
-    <a href="{{ .Site.Data.directions.button.href }}" target="_blank" class="button">
-      {{ .Site.Data.directions.button.text }}
-    </a>
+    {{ partial "directions-button.html" . }}
   </div>
   <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
     <div class="body">
@@ -97,8 +95,6 @@
           {{ end }}
         </div>
       </div>
-    {{ else if .Params.eventHTML }}
-      {{ partial .Params.eventHTML . }}
     {{ end }}
   </div>
 </div>

@@ -45,9 +45,7 @@
             <div class="content">
               {{ partial "address.html" . }}
             </div>
-            <a href="{{ .Site.Data.directions.button.href }}" target="_blank" class="button">
-              {{ .Site.Data.directions.button.text }}
-            </a>
+            {{ partial "directions-button.html" . }}
           </div>
         </div>
     </div>
