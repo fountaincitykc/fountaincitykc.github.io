@@ -2,7 +2,7 @@
 <div class="home">
   <div class="mobile-directions animate">
     <div class="content">
-      {{ .Site.Data.directions.contentHTML | safeHTML }}
+      {{ partial "address.html" . }}
     </div>
     <a href="{{ .Site.Data.directions.button.href }}" target="_blank" class="button">
       {{ .Site.Data.directions.button.text }}

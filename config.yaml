@@ -5,4 +5,8 @@ paginate: 10
 disableKinds: ["RSS","taxonomy","term"]
 params:
   datetimeFormat: "Jan 2, 2006 @ 3:04pm"
+  address: "9101 Nall Ave, Prairie Village, KS 66207"
+  mailingAddress: "11605 Foster St, Overland Park, KS 66210"
+  email: james@fountaincitykc.org
+  phone: 303-618-3079
 ...

@@ -6,7 +6,7 @@
     <meta name="description" content="Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="/css/main.css?v20230815" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?v20230919" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -81,7 +81,7 @@
     <footer class="main-footer">
       <div class="container">
         <div class="row">
-          <div class="contact">
+          <div class="contact-start">
             <h3>
               {{ .Site.Data.contact.headline }}
             </h3>
@@ -92,8 +92,12 @@
               {{ .Site.Data.contact.button.text }}
             </a>
           </div>
-          <div class="address">
-            {{ .Site.Data.directions.contentHTML | safeHTML }}
+          <div class="contact-end">
+            {{ partial "address.html" . }}
+            {{ partial "mailing-address.html" . }}
+            <p>
+              <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>{{ .Site.Params.phone }}
+            </p>
           </div>
         </div>
         <div class="row">
