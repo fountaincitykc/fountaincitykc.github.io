@@ -483,9 +483,6 @@ Components */
   padding: var(--spacer-xl) var(--spacer);
   background-color: var(--blue-a10);
   border-radius: var(--border-radius);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .event .body {
   align-self: center;
