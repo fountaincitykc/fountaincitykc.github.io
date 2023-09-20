@@ -70,7 +70,7 @@
       </div>
     </div>
     {{ if eq .Params.event.active true }}
-      <div class="promo event animate"{{ if .Params.event.photo }}style="background-image:url('{{ .Params.event.photo }}');"{{ end }}>
+      <div class="event animate"{{ with .Params.event.photo }}style="background-image:url('{{ . }}');"{{ end }}>
         <div class="body">
           <h2>
             {{ .Params.event.headline1 }}
@@ -86,10 +86,10 @@
               </h5>
             {{ end }}
           {{ end }}
-          {{ if .Params.event.content }}
+          {{ with .Params.event.content }}
             <div class="content">
               <p>
-                {{ .Params.event.content }}
+                {{ . }}
               </p>
             </div>
           {{ end }}
