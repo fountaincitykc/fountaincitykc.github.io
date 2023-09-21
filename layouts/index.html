@@ -70,31 +70,35 @@
       </div>
     </div>
     {{ if eq .Params.event.active true }}
-      <div class="event animate">
-        <div class="body">
-          <h2>
-            {{ .Params.event.headline1 }}
-          </h2>
-          {{ if .Params.event.headline2 }}
-            <hr>
-            <h4>
-              {{ .Params.event.headline2 }}
-            </h4>
-            {{ if .Params.event.headline3 }}
-              <h5>
-                {{ .Params.event.headline3 }}
-              </h5>
+      {{ if .Params.event.layout }}
+        {{ partial .Params.event.layout .Params.event }}
+      {{ else }}
+        <div class="event animate">
+          <div class="body">
+            <h2>
+              {{ .Params.event.headline1 }}
+            </h2>
+            {{ if .Params.event.headline2 }}
+              <hr>
+              <h4>
+                {{ .Params.event.headline2 }}
+              </h4>
+              {{ if .Params.event.headline3 }}
+                <h5>
+                  {{ .Params.event.headline3 }}
+                </h5>
+              {{ end }}
             {{ end }}
-          {{ end }}
-          {{ with .Params.event.content }}
-            <div class="content">
-              <p>
-                {{ . }}
-              </p>
-            </div>
-          {{ end }}
+            {{ with .Params.event.content }}
+              <div class="content">
+                <p>
+                  {{ . }}
+                </p>
+              </div>
+            {{ end }}
+          </div>
         </div>
-      </div>
+      {{ end }}
     {{ end }}
   </div>
 </div>

@@ -476,16 +476,14 @@ Components */
 /* event */
 
 .event {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
   margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xl) var(--spacer);
   background-color: var(--blue-a10);
   border-radius: var(--border-radius);
 }
 .event .body {
-  align-self: center;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
 }
 .event h4,
@@ -499,9 +497,7 @@ Components */
 .event hr {
   border-top-color: var(--black-a50);
 }
-.event .content {
-  max-width: 700px;
-}
+
 
 /* cards */
 
