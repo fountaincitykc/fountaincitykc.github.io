@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ if eq .Title "" }} | Overland Park, KS{{ end }}</title>
-    <meta name="description" content="Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.">
+    <title>{{ partial "page-title.html" . }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ partial "meta-description.html" . }}">
+    <meta property="og:title" content="{{ partial "page-title.html" . }}">
+    <meta property="og:description" content="{{ partial "meta-description.html" . }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="/images/ui/fountain-city-church.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href="/css/main.css?v20230920" rel="stylesheet" type="text/css">
   </head>
@@ -67,7 +72,7 @@
       </div>
     </header>
     <main class="main-content">
-      {{ if .Title }}
+      {{ if not .IsHome }}
         <div class="page-header animate">
           <h1>
             {{ .Title }}

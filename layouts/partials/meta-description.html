@@ -1,0 +1,8 @@
+{{- with .Description -}}
+  {{- . -}}
+{{- else -}}
+  {{- with .Summary -}}
+    {{ $summary := replaceRE "\n" " " . }}
+    {{- $summary -}}
+  {{- end -}}
+{{- end -}}
