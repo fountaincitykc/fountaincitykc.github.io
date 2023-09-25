@@ -1,8 +1,35 @@
 ---
 baseURL: "https://www.fountaincitykc.org/"
 title: "Fountain City Church - Overland Park, KS"
-paginate: 10
 disableKinds: ["RSS","taxonomy","term"]
+menu:
+  main:
+  - name: About us
+    pageRef: /about-us/
+    weight: 1
+  - name: Mission & vision
+    pageRef: /about-us/
+    parent: About us
+    weight: 2
+  - name: Our staff
+    pageRef: /staff/
+    parent: About us
+    weight: 3
+  - name: What we believe
+    pageRef: /what-we-believe/
+    parent: About us
+    weight: 4
+  - name: Sunday morning
+    pageRef: /sunday-morning/
+    weight: 5
+  - name: Connect
+    pageRef: /connect/
+    weight: 6
+  - name: Give
+    params:
+      rel: external
+    url: https://fountaincitykc.churchcenter.com/giving
+    weight: 7
 params:
   datetimeFormat: "Jan 2, 2006 @ 3:04pm"
   address: "9101 Nall Ave, Prairie Village, KS 66207"
