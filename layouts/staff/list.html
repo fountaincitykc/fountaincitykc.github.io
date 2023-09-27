@@ -5,7 +5,7 @@
       {{ range .Params.staff }}
         <div class="content-section animate" id="jumpto-{{ .name | urlize }}">
           <div class="photo">
-            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+            <img src="{{ .photo }}" alt="{{ .name }}">
           </div>
           <div class="body">
             <h2>

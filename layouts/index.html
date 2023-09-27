@@ -22,7 +22,7 @@
       {{ range .Params.cards }}
         <div class="card animate">
           <div class="photo">
-            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+            <img src="{{ .photo }}" alt="{{ .headline }}">
           </div>
           <div class="body">
             <h3>
@@ -45,7 +45,7 @@
     </div>
     <div class="content-section vertical-center sermon animate">
       <div class="photo">
-        <img src="{{ .Params.sermon.photo }}" alt="{{ safeHTMLAttr .Params.sermon.headline }}">
+        <img src="{{ .Params.sermon.photo }}" alt="{{ .Params.sermon.headline1 }}">
       </div>
       <div class="body">
         <h2>
