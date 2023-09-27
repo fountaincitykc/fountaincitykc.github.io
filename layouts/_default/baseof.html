@@ -11,7 +11,9 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="/images/ui/fountain-city-church.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="/css/main.css?v20230920" rel="stylesheet" type="text/css">
+    {{ with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+      <link href="{{ .RelPermalink }}" rel="stylesheet" type="text/css">
+    {{ end }}
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -81,6 +83,8 @@
       </div>
     </footer>
     <!-- <div class="debug"></div> -->
-    <script src="/js/main.js?v20230501"></script>
+    {{ with resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
   </body>
 </html>
