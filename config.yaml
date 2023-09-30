@@ -1,6 +1,7 @@
 ---
 baseURL: "https://www.fountaincitykc.org/"
 title: "Fountain City Church - Overland Park, KS"
+timeZone: America/Chicago
 disableKinds: ["RSS","taxonomy","term"]
 menu:
   main:
@@ -22,16 +23,18 @@ menu:
   - name: Sunday morning
     pageRef: /sunday-morning/
     weight: 5
+  #- name: Events
+  #  pageRef: /events/
+  #  weight: 6
   - name: Connect
     pageRef: /connect/
-    weight: 6
+    weight: 7
   - name: Give
     params:
       rel: external
     url: https://fountaincitykc.churchcenter.com/giving
-    weight: 7
+    weight: 8
 params:
-  datetimeFormat: "Jan 2, 2006 @ 3:04pm"
   address: "9101 Nall Ave, Prairie Village, KS 66207"
   mailingAddress: "11605 Foster St, Overland Park, KS 66210"
   email: james@fountaincitykc.org

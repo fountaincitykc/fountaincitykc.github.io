@@ -1,0 +1,11 @@
+{{ with .date }}
+  {{ time.Format ":date_full" . }}
+{{ end }}
+{{ with .start_time }}
+  at {{ . }}
+{{ end }}
+{{ if .start_time }}
+  {{ with .end_time }}
+    &ndash; {{ . }}
+  {{ end }}
+{{ end }}

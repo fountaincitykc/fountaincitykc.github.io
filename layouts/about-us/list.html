@@ -5,7 +5,7 @@
       {{ .Params.mission.headline }}
     </h3>
     <div class="content">
-      {{ .Params.mission.contentHTML | safeHTML }}
+      {{ .Params.mission.content | $.Page.RenderString (dict "display" "block") }}
     </div>
   </div>
   <div class="container-lg vision animate" id="jumpto-vision">
@@ -13,7 +13,7 @@
       {{ .Params.vision.headline }}
     </h3>
     <div class="content">
-      {{ .Params.vision.contentHTML | safeHTML }}
+      {{ .Params.vision.content | $.Page.RenderString (dict "display" "block") }}
     </div>
   </div>
 </div>

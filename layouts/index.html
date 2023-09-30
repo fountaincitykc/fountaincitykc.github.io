@@ -43,7 +43,7 @@
         </div>
       {{ end }}
     </div>
-    <div class="content-section vertical-center sermon animate">
+    <div class="content-section vertical-center animate">
       <div class="photo">
         <img src="{{ .Params.sermon.photo }}" alt="{{ .Params.sermon.headline1 }}">
       </div>
@@ -57,7 +57,7 @@
           </h3>
         {{ end }}
         <div class="content">
-          {{ .Params.sermon.contentHTML | safeHTML }}
+          {{ .Params.sermon.content | $.Page.RenderString (dict "display" "block") }}
         </div>
         <div class="actions">
           <a href="{{ .Params.sermon.watch.href }}" class="button" target="_blank">
@@ -69,35 +69,44 @@
         </div>
       </div>
     </div>
-    {{ if eq .Params.event.active true }}
-      {{ if .Params.event.layout }}
-        {{ partial .Params.event.layout .Params.event }}
-      {{ else }}
-        <div class="event animate">
-          <div class="body">
-            <h2>
-              {{ .Params.event.headline1 }}
-            </h2>
-            {{ if .Params.event.headline2 }}
-              <hr>
-              <h4>
-                {{ .Params.event.headline2 }}
-              </h4>
-              {{ if .Params.event.headline3 }}
-                <h5>
-                  {{ .Params.event.headline3 }}
-                </h5>
-              {{ end }}
-            {{ end }}
-            {{ with .Params.event.content }}
-              <div class="content">
-                <p>
-                  {{ . }}
-                </p>
+    {{ with .Site.GetPage "/events" }}
+      {{/* Find next upcoming featured event */}}
+      {{ range sort .Params.events "date" "asc" }}
+        {{ with .date }}
+          {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
+            {{ continue }}{{/* Skip events in the past */}}
+          {{ end }}
+        {{ end }}
+        {{ if eq .featured true }}
+          {{ if .layout }}
+            {{ partial .layout . }}{{/* Has custom layout */}}
+          {{ else }}
+            <div class="featured-event animate">
+              <div class="body">
+                <h2>
+                  {{ .title }}
+                </h2>
+                {{ if .date }}
+                  <hr>
+                  <h3>
+                    {{ partial "event-date.html" . }}
+                  </h3>
+                  {{ with .location }}
+                    <h4>
+                      {{ . }}
+                    </h4>
+                  {{ end }}
+                {{ end }}
+                {{ with .content }}
+                  <div class="content">
+                    {{ . | $.Page.RenderString (dict "display" "block") }}
+                  </div>
+                {{ end }}
               </div>
-            {{ end }}
-          </div>
-        </div>
+            </div>
+          {{ end }}
+          {{ break }}
+        {{ end }}
       {{ end }}
     {{ end }}
   </div>
