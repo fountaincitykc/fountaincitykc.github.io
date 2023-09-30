@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="about-us">
-  <div class="container-lg mission animate" id="jumpto-mission">
+  <div class="container-lg mission animate" id="mission">
     <h3>
       {{ .Params.mission.headline }}
     </h3>
@@ -8,7 +8,7 @@
       {{ .Params.mission.content | $.Page.RenderString (dict "display" "block") }}
     </div>
   </div>
-  <div class="container-lg vision animate" id="jumpto-vision">
+  <div class="container-lg vision animate" id="vision">
     <h3>
       {{ .Params.vision.headline }}
     </h3>

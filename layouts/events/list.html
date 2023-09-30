@@ -8,7 +8,7 @@
             {{ continue }}{{/* Skip events in the past */}}
           {{ end }}
         {{ end }}
-        <div class="content-event animate" id="jumpto-{{ .title | urlize }}">
+        <div class="content-event animate" id="{{ .title | urlize }}">
           <div class="date">
             {{ with .date }}
               <div class="month">
