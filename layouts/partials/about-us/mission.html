@@ -1,0 +1,8 @@
+<div class="container-lg mission animate" id="mission">
+  <h3>
+    {{ .headline }}
+  </h3>
+  <div class="content">
+    {{ .content | page.RenderString (dict "display" "block") }}
+  </div>
+</div>

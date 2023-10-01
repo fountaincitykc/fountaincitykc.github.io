@@ -1,31 +1,5 @@
 {{ define "main" }}
 <div class="staff">
-  <div class="container">
-    <div class="content-list dense">
-      {{ range .Params.staff }}
-        <div class="content-section animate" id="{{ .name | urlize }}">
-          <div class="photo">
-            <img src="{{ .photo }}" alt="{{ .name }}">
-          </div>
-          <div class="body">
-            <h2>
-              {{ .name }}
-            </h2>
-            <h3>
-              {{ .role }}
-            </h3>
-            <h4>
-              <a href="mailto:{{ .email }}">
-                {{ .email }}
-              </a>
-            </h4>
-            <div class="content">
-              {{ .content | $.Page.RenderString (dict "display" "block") }}
-            </div>
-          </div>
-        </div>
-      {{ end }}
-    </div>
-  </div>
+  {{ partial "staff/staff.html" .Params.staff }}
 </div>
 {{ end }}

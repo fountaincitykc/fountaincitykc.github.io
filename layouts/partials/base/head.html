@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<title>{{ partial "base/head-page-title.html" . }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ partial "base/head-meta-description.html" . }}">
+<meta property="og:title" content="{{ partial "base/head-page-title.html" . }}">
+<meta property="og:description" content="{{ partial "base/head-meta-description.html" . }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="/images/ui/fountain-city-church.png">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+{{ partial "base/head-css.html" . }}
+{{ partial "base/head-js.html" . }}

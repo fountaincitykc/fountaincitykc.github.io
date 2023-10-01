@@ -1,0 +1,33 @@
+<div class="content-section latest-sermon vertical-center animate">
+  <div class="photo">
+    <img src="{{ .photo }}" alt="{{ .headline }}">
+  </div>
+  <div class="body">
+    <h2>
+      {{ .headline }}
+    </h2>
+    {{ $feed := resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
+    {{ if $feed }}
+      {{ $feed = $feed | transform.Unmarshal }}
+      {{ range $feed.channel.item }}
+        <h3>
+          {{ index .title 0 }}
+        <h3>
+        <div class="content">
+          <p>
+            {{ .description | plainify }}
+          </p>
+        </div>
+        {{ break }}
+      {{ end }}
+    {{ end }}
+    <div class="actions">
+      <a href="{{ .watch.href }}" class="button" target="_blank">
+        {{ .watch.text }}
+      </a>
+      <a href="{{ .listen.href }}" class="button" target="_blank">
+        {{ .listen.text }}
+      </a>
+    </div>
+  </div>
+</div>

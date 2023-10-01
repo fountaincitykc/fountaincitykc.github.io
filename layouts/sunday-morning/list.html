@@ -1,53 +1,11 @@
 {{ define "main" }}
 <div class="sunday-morning">
-  <div class="container">
-    <div class="content-list dense">
-      {{ range .Params.sections }}
-        <div class="content-section animate" id="{{ .headline | urlize }}">
-          <div class="photo">
-            <img src="{{ .photo }}" alt="{{ .headline }}">
-          </div>
-          <div class="body">
-            <h2>
-              {{ .headline }}
-            </h2>
-            <div class="content">
-              {{ .content | $.Page.RenderString (dict "display" "block") }}
-            </div>
-            {{ if .button }}
-              <a href="{{ .button.href }}" class="button light">
-                {{ .button.text }}
-              </a>
-            {{ end }}
-          </div>
-        </div>
-      {{ end }}
-    </div>
-  </div>
-  <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  {{ partial "sunday-morning/sections.html" .Params.sections }}
+  {{ partial "sunday-morning/hero.html" .Params.hero }}
   <div class="container-md">
     <div class="content-list">
-        <div class="content-blurb location animate" id="location">
-          <div class="body">
-            <h2>
-              {{ .Params.location.headline }}
-            </h2>
-            <div class="content">
-              {{ .Params.location.content | $.Page.RenderString (dict "display" "block") }}
-            </div>
-          </div>
-        </div>
-        <div class="content-blurb center-content directions animate" id="directions">
-          <div class="body">
-            <h2>
-              {{ .Params.directions.headline }}
-            </h2>
-            <div class="content">
-              {{ partial "address.html" . }}
-            </div>
-            {{ partial "directions-button.html" . }}
-          </div>
-        </div>
+      {{ partial "sunday-morning/location.html" .Params.location }}
+      {{ partial "sunday-morning/directions.html" .Params.directions }}
     </div>
   </div>
 </div>

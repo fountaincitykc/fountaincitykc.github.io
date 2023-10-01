@@ -1,89 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>{{ partial "page-title.html" . }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ partial "meta-description.html" . }}">
-    <meta property="og:title" content="{{ partial "page-title.html" . }}">
-    <meta property="og:description" content="{{ partial "meta-description.html" . }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="/images/ui/fountain-city-church.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    {{ with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-      <link href="{{ .RelPermalink }}" rel="stylesheet" type="text/css">
-    {{ end }}
+    {{ partial "base/head.html" . }}
   </head>
   <body>
-    <header id="main-header" class="main-header">
-      <div class="container">
-        <div class="row">
-          <div class="logo">
-            <a href="/">
-              <img src="/images/ui/fountain-city-church.png" alt="Fountain City Church">
-            </a>
-          </div>
-          {{ partial "main-nav.html" . }}
-        </div>
-      </div>
-    </header>
+    {{ partial "base/main-header.html" . }}
     <main class="main-content">
-      {{ if not .IsHome }}
-        <div class="page-header animate">
-          <h1>
-            {{ .Title }}
-          </h1>
-          <hr>
-        </div>
-      {{ end }}
+      {{ partial "base/main-page-header.html" . }}
       {{ block "main" . }}
       {{ end }}
-    </main>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="contact-start">
-            <h3>
-              {{ .Site.Data.contact.headline }}
-            </h3>
-            <div class="content">
-              {{ .Site.Data.contact.content | $.Page.RenderString (dict "display" "block") }}
-            </div>
-            <a href="{{ .Site.Data.contact.button.href }}" class="button" target="_blank">
-              {{ .Site.Data.contact.button.text }}
-            </a>
-          </div>
-          <div class="contact-end">
-            {{ partial "address.html" . }}
-            {{ partial "mailing-address.html" . }}
-            <p>
-              <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>{{ .Site.Params.phone }}
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="social">
-            <ul>
-              {{ range .Site.Data.elsewhere.links }}
-                <li>
-                  <a href="{{ .url }}" target="_blank">
-                    <img src="{{ .image }}" alt="{{ .title }}">
-                  </a>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
-          <div class="copyright">
-            <p>
-              &copy; {{ dateFormat "2006" now }} by Fountain City Church
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    {{ with resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
-      <script src="{{ .RelPermalink }}"></script>
-    {{ end }}
+    </main>    
+    {{ partial "base/main-footer.html" . }}
   </body>
 </html>

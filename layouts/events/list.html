@@ -1,51 +1,5 @@
 {{ define "main" }}
 <div class="events">
-  <div class="container-lg">
-    <div class="content-list">
-      {{ range sort .Params.events "date" "asc" }}
-        {{ with .date }}
-          {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-            {{ continue }}{{/* Skip events in the past */}}
-          {{ end }}
-        {{ end }}
-        <div class="content-event animate" id="{{ .title | urlize }}">
-          <div class="date">
-            {{ with .date }}
-              <div class="month">
-                {{ time.Format "Jan" . }}
-              </div>
-              <div class="day">
-                {{ time.Format "2" . }}
-              </div>
-            {{ else }}
-              <div class="tbd">
-                TBD
-              </div>
-            {{ end }}
-          </div>
-          <div class="body">
-            <h2>
-              {{ .title }}
-            </h2>
-            {{ if .date }}
-              <h3>
-                {{ partial "event-date.html" . }}
-              </h3>
-            {{ end }}
-            {{ with .location }}
-              <h4>
-                {{ . }}
-              </h4>
-            {{ end }}
-            {{ with .content }}
-              <div class="content">
-                {{ . | $.Page.RenderString (dict "display" "block") }}
-              </div>
-            {{ end }}
-          </div>
-        </div>
-      {{ end }}
-    </div>
-  </div>
+  {{ partial "events/events.html" .Params.events }}
 </div>
 {{ end }}

@@ -1,0 +1,25 @@
+<div class="cards">
+  {{ range . }}
+    <div class="card animate">
+      <div class="photo">
+        <img src="{{ .photo }}" alt="{{ .headline }}">
+      </div>
+      <div class="body">
+        <h3>
+          {{ .headline }}
+        </h3>
+        <hr>
+        <div class="content">
+          <p>
+            {{ .content }}
+          </p>
+        </div>
+        {{ if .button }}
+          <a href="{{ .button.href }}" class="button white">
+            {{ .button.text }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>

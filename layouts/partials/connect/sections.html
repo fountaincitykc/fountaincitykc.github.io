@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="content-list dense">
+    {{ range . }}
+      <div class="content-section animate" id="{{ .headline | urlize }}">
+        <div class="photo">
+          <img src="{{ .photo }}" alt="{{ .headline }}">
+        </div>
+        <div class="body">
+          <h2>
+            {{ .headline }}
+          </h2>
+          <div class="content">
+            {{ .content | page.RenderString (dict "display" "block") }}
+          </div>
+          {{ if .button }}
+            <a href="{{ .button.href }}" class="more text-button">
+              {{ .button.text }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

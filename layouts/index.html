@@ -1,114 +1,11 @@
 {{ define "main" }}
 <div class="home">
-  <div class="mobile-directions animate">
-    <div class="content">
-      {{ partial "address.html" . }}
-    </div>
-    {{ partial "directions-button.html" . }}
-  </div>
-  <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
-    <div class="body">
-      <h1>
-        {{ .Params.hero.headline1 }}
-      </h1>
-      <hr>
-      <h3>
-        {{ .Params.hero.headline2 }}
-      </h3>
-    </div>
-  </div>
+  {{ partial "home/mobile-directions.html" . }}
+  {{ partial "home/hero.html" .Params.hero }}
   <div class="container">
-    <div class="cards">
-      {{ range .Params.cards }}
-        <div class="card animate">
-          <div class="photo">
-            <img src="{{ .photo }}" alt="{{ .headline }}">
-          </div>
-          <div class="body">
-            <h3>
-              {{ .headline }}
-            </h3>
-            <hr>
-            <div class="content">
-              <p>
-                {{ .content }}
-              </p>
-            </div>
-            {{ if .button }}
-              <a href="{{ .button.href }}" class="button white">
-                {{ .button.text }}
-              </a>
-            {{ end }}
-          </div>
-        </div>
-      {{ end }}
-    </div>
-    <div class="content-section vertical-center animate">
-      <div class="photo">
-        <img src="{{ .Params.sermon.photo }}" alt="{{ .Params.sermon.headline1 }}">
-      </div>
-      <div class="body">
-        <h2>
-          {{ .Params.sermon.headline1 }}
-        </h2>
-        {{ if .Params.sermon.headline2 }}
-          <h3>
-            {{ .Params.sermon.headline2 }}
-          </h3>
-        {{ end }}
-        <div class="content">
-          {{ .Params.sermon.content | $.Page.RenderString (dict "display" "block") }}
-        </div>
-        <div class="actions">
-          <a href="{{ .Params.sermon.watch.href }}" class="button" target="_blank">
-            {{ .Params.sermon.watch.text }}
-          </a>
-          <a href="{{ .Params.sermon.listen.href }}" class="button" target="_blank">
-            {{ .Params.sermon.listen.text }}
-          </a>
-        </div>
-      </div>
-    </div>
-    {{ with .Site.GetPage "/events" }}
-      {{/* Find next upcoming featured event */}}
-      {{ range sort .Params.events "date" "asc" }}
-        {{ with .date }}
-          {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-            {{ continue }}{{/* Skip events in the past */}}
-          {{ end }}
-        {{ end }}
-        {{ if eq .featured true }}
-          {{ if .layout }}
-            {{ partial .layout . }}{{/* Has custom layout */}}
-          {{ else }}
-            <div class="featured-event animate">
-              <div class="body">
-                <h2>
-                  {{ .title }}
-                </h2>
-                {{ if .date }}
-                  <hr>
-                  <h3>
-                    {{ partial "event-date.html" . }}
-                  </h3>
-                  {{ with .location }}
-                    <h4>
-                      {{ . }}
-                    </h4>
-                  {{ end }}
-                {{ end }}
-                {{ with .content }}
-                  <div class="content">
-                    {{ . | $.Page.RenderString (dict "display" "block") }}
-                  </div>
-                {{ end }}
-              </div>
-            </div>
-          {{ end }}
-          {{ break }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
+    {{ partial "home/cards.html" .Params.cards }}
+    {{ partial "home/latest-sermon.html" .Params.sermon }}
+    {{ partial "home/featured-event.html" . }}
   </div>
 </div>
 {{ end }}

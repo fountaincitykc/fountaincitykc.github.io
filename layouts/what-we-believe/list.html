@@ -1,7 +1,5 @@
 {{ define "main" }}
 <div class="what-we-believe">
-  <div class="container-lg callout-lead animate">
-    {{ .Content }}
-  </div>
+  {{ partial "what-we-believe/content.html" . }}
 </div>
 {{ end }}

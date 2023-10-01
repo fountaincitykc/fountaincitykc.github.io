@@ -1,0 +1,42 @@
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="contact-start">
+        <h3>
+          {{ site.Data.contact.headline }}
+        </h3>
+        <div class="content">
+          {{ site.Data.contact.content | page.RenderString (dict "display" "block") }}
+        </div>
+        <a href="{{ site.Data.contact.button.href }}" class="button" target="_blank">
+          {{ site.Data.contact.button.text }}
+        </a>
+      </div>
+      <div class="contact-end">
+        {{ partial "shared/address.html" . }}
+        {{ partial "shared/mailing-address.html" . }}
+        <p>
+          <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>{{ .Site.Params.phone }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="social">
+        <ul>
+          {{ range site.Data.elsewhere.links }}
+            <li>
+              <a href="{{ .url }}" target="_blank">
+                <img src="{{ .image }}" alt="{{ .title }}">
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; {{ dateFormat "2006" now }} by Fountain City Church
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

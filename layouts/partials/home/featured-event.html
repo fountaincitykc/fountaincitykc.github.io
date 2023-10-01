@@ -1,0 +1,40 @@
+{{ with .Site.GetPage "/events" }}
+  {{/* Find next upcoming featured event */}}
+  {{ range sort .Params.events "date" "asc" }}
+    {{ with .date }}
+      {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
+        {{ continue }}{{/* Skip events in the past */}}
+      {{ end }}
+    {{ end }}
+    {{ if eq .featured true }}
+      {{ if .layout }}
+        {{ partial .layout . }}{{/* Has custom layout */}}
+      {{ else }}
+        <div class="featured-event animate">
+          <div class="body">
+            <h2>
+              {{ .title }}
+            </h2>
+            {{ if .date }}
+              <hr>
+              <h3>
+                {{ partial "events/event-date.html" . }}
+              </h3>
+              {{ with .location }}
+                <h4>
+                  {{ . }}
+                </h4>
+              {{ end }}
+            {{ end }}
+            {{ with .content }}
+              <div class="content">
+                {{ . | page.RenderString (dict "display" "block") }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+      {{ break }}
+    {{ end }}
+  {{ end }}
+{{ end }}

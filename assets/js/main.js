@@ -1,4 +1,5 @@
-{
+window.addEventListener('DOMContentLoaded', function(event) {
+
   // Create mobile nav menu
   // (see .js-nav, .js-nav-toggle, and .js-nav-close in main.css)
 
@@ -40,9 +41,10 @@
       <div class="js-nav-close"><span>Close</span></div>
       <ul>...
   */
-}
+}, false);
 
-{
+window.addEventListener('DOMContentLoaded', function(event) {
+
   // Animate all elements with the .animate classname
   // (see .animate and .js-start-animation in main.css)
 
@@ -60,4 +62,4 @@
       observer.observe(t);
     });
   }
-}
+}, false);
