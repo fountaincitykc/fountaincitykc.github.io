@@ -1,11 +1,6 @@
-{{ with .date }}
-  {{ time.Format ":date_full" . }}
+{{ if .date }}
+  {{ time.Format ":date_full" .date }}
 {{ end }}
-{{ with .start_time }}
+{{ with .time }}
   at {{ . }}
-{{ end }}
-{{ if .start_time }}
-  {{ with .end_time }}
-    &ndash; {{ . }}
-  {{ end }}
 {{ end }}

@@ -24,9 +24,9 @@ menu:
   - name: Sunday morning
     pageRef: /sunday-morning/
     weight: 5
-  #- name: Events
-  #  pageRef: /events/
-  #  weight: 6
+  - name: Events
+    pageRef: /events/
+    weight: 6
   - name: Connect
     pageRef: /connect/
     weight: 7
