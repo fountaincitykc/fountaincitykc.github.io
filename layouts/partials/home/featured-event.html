@@ -8,10 +8,11 @@
       {{ end }}
     {{ end }}
     {{ if eq .featured true }}
-      {{ if .layout }}
-        {{/* Has custom layout */}}
-        {{ partial .layout . }}
+      {{ if .custom_layout }}
+        {{/* Render custom layout */}}
+        {{ partial .custom_layout . }}
       {{ else }}
+        {{/* Render standard layout */}}
         <div class="featured-event animate">
           <div class="body">
             <h2>

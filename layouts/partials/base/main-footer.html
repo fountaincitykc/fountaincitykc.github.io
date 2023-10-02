@@ -16,7 +16,7 @@
         {{ partial "shared/address.html" . }}
         {{ partial "shared/mailing-address.html" . }}
         <p>
-          <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>{{ .Site.Params.phone }}
+          <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a><br>{{ site.Params.phone }}
         </p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <nav id="main-nav" class="main-nav">
   <ul>
   {{ $page := . }}
-  {{ range .Site.Menus.main }}
+  {{ range site.Menus.main }}
     <li{{ if or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} class="selected"{{ end }}>
       <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank"{{ end }}>{{ .Name }}</a>
       {{ if .HasChildren }}
