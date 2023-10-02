@@ -1,11 +1,8 @@
 {{/* Get the title and description of the last podcast from the podbean RSS feed */}}
-{{ $feed := resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
-{{ if $feed }}
-  {{ if $feed.Err }}
-    {{ print "<!-- " ($feed.Err) " -->" | safeHTML }}
-  {{ else }}
-    {{ $feed = $feed | transform.Unmarshal }}
-    {{ range $feed.channel.item }}
+{{ with resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
+  {{ if not .Err }}
+    {{ $xml := . | transform.Unmarshal }}
+    {{ range $xml.channel.item }}
       <h3>
         {{/* <title> and <itunes:title> are listed in an array, so grab the first one */}}
         {{ index .title 0 | plainify | htmlUnescape }}
@@ -18,6 +15,4 @@
       {{ break }}
     {{ end }}
   {{ end }}
-{{ else }}
-  {{ print "<!-- Unable to get remote feed -->" | safeHTML }} 
 {{ end }}
