@@ -6,19 +6,21 @@
     <h2>
       {{ .headline }}
     </h2>
-    {{ $feed := resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
-    {{ if $feed }}
-      {{ $feed = $feed | transform.Unmarshal }}
-      {{ range $feed.channel.item }}
-        <h3>
-          {{ index .title 0 }}
-        <h3>
-        <div class="content">
-          <p>
-            {{ .description | plainify }}
-          </p>
-        </div>
-        {{ break }}
+    {{ if not site.IsServer }}
+      {{ $feed := resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
+      {{ if $feed }}
+        {{ $feed = $feed | transform.Unmarshal }}
+        {{ range $feed.channel.item }}
+          <h3>
+            {{ index .title 0 }}
+          <h3>
+          <div class="content">
+            <p>
+              {{ .description | plainify }}
+            </p>
+          </div>
+          {{ break }}
+        {{ end }}
       {{ end }}
     {{ end }}
     <div class="actions">

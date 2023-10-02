@@ -1,14 +1,16 @@
-{{ with .Site.GetPage "/events" }}
+{{ with site.GetPage "/events" }}
   {{/* Find next upcoming featured event */}}
   {{ range sort .Params.events "date" "asc" }}
     {{ with .date }}
+      {{/* Skip events in the past */}}
       {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-        {{ continue }}{{/* Skip events in the past */}}
+        {{ continue }}
       {{ end }}
     {{ end }}
     {{ if eq .featured true }}
       {{ if .layout }}
-        {{ partial .layout . }}{{/* Has custom layout */}}
+        {{/* Has custom layout */}}
+        {{ partial .layout . }}
       {{ else }}
         <div class="featured-event animate">
           <div class="body">
