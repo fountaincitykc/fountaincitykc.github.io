@@ -36,6 +36,11 @@ menu:
     url: https://fountaincitykc.churchcenter.com/giving
     weight: 8
 
+caches:
+  getresource:
+    # Set cache duration for the podcast feed
+    maxAge: -1
+
 params:
   address: "9101 Nall Ave, Prairie Village, KS 66207"
   mailingAddress: "11605 Foster St, Overland Park, KS 66210"
