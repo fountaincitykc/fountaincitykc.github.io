@@ -25,9 +25,17 @@
           <h2>
             {{ .title }}
           </h2>
-          {{ if .date }}
+          {{ if or .date .time }}
             <h3>
-              {{ partial "events/event-date.html" . }}
+              {{ with .date }}
+                {{ time.Format ":date_full" . }}
+              {{ end }}
+              {{ if and .date .time }}
+                <br> 
+              {{ end }}
+              {{ with .time }}
+                {{ . }}
+              {{ end }}
             </h3>
           {{ end }}
           {{ with .location }}

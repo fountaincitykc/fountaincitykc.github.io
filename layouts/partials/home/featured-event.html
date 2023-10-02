@@ -21,7 +21,15 @@
             {{ if .date }}
               <hr>
               <h3>
-                {{ partial "events/event-date.html" . }}
+                {{ with .date }}
+                  {{ time.Format ":date_full" . }}
+                {{ end }}
+                {{ if and .date .time }}
+                  at 
+                {{ end }}
+                {{ with .time }}
+                  {{ . }}
+                {{ end }}
               </h3>
               {{ with .location }}
                 <h4>

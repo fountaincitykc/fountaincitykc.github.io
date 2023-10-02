@@ -8,7 +8,7 @@
       {{ .title }}
     </h2>
     <h3>
-      {{ partial "events/event-date.html" . }}
+      {{ time.Format ":date_full" .date }} at {{ .time }}
     </h3>
     <h4>
       {{ .location }}
