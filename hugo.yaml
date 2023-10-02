@@ -3,6 +3,7 @@ baseURL: "https://www.fountaincitykc.org/"
 title: "Fountain City Church - Overland Park, KS"
 timeZone: America/Chicago
 disableKinds: ["RSS","taxonomy","term"]
+
 menu:
   main:
   - name: About us
@@ -34,6 +35,7 @@ menu:
       rel: external
     url: https://fountaincitykc.churchcenter.com/giving
     weight: 8
+
 params:
   address: "9101 Nall Ave, Prairie Village, KS 66207"
   mailingAddress: "11605 Foster St, Overland Park, KS 66210"
