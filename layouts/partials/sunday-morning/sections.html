@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="content-list dense">
+  <div class="content-list is-dense">
     {{ range . }}
       <div class="content-section animate" id="{{ .headline | urlize }}">
         <div class="photo">
@@ -13,7 +13,7 @@
             {{ .content | page.RenderString (dict "display" "block") }}
           </div>
           {{ if .button }}
-            <a href="{{ .button.href }}" class="button light">
+            <a href="{{ .button.href }}" class="button is-light">
               {{ .button.text }}
             </a>
           {{ end }}
