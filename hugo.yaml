@@ -43,7 +43,7 @@ caches:
 
 params:
   address: "9101 Nall Ave, Prairie Village, KS 66207"
-  mailingAddress: "11605 Foster St, Overland Park, KS 66210"
+  mailingAddress: "PO Box 7521, Overland Park, KS 66207"
   email: james@fountaincitykc.org
   phone: 303-618-3079
 ...
