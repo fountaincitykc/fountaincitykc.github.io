@@ -1,6 +1,8 @@
 <div class="content-section latest-sermon is-vertical-center animate">
-  <div class="photo">
-    <img src="{{ .photo }}" alt="{{ .headline }}">
+  <div class="media">
+    <a href="{{ .watch.href }}">
+      <img src="{{ .photo }}" alt="Watch sermons">
+    </a>
   </div>
   <div class="body">
     <h2>
@@ -8,7 +10,7 @@
     </h2>
     {{ partial "home/latest-sermon-content.html" . }}
     <div class="actions">
-      <a href="{{ .watch.href }}" class="button" target="_blank">
+      <a href="{{ .watch.href }}" class="button">
         {{ .watch.text }}
       </a>
       <a href="{{ .listen.href }}" class="button" target="_blank">

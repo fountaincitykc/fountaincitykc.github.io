@@ -1,18 +1,11 @@
-{{/* Get the title and description of the last podcast from the podbean RSS feed */}}
-{{ with resources.GetRemote "https://feed.podbean.com/fcckc/feed.xml" }}
-  {{ if not .Err }}
-    {{ $xml := . | transform.Unmarshal }}
-    {{ range $xml.channel.item }}
-      <h3>
-        {{/* <title> and <itunes:title> are listed in an array, so grab the first one */}}
-        {{ index .title 0 | plainify | htmlUnescape }}
-      </h3>
-      <div class="content">
-        <p>
-          {{ .description | plainify | htmlUnescape }}
-        </p>
-      </div>
-      {{ break }}
-    {{ end }}
+{{ with site.GetPage "/sermons" }}
+  {{ with .Params.sermons }}
+    {{ $latest_sermon := index . 0 }}
+    <h3>
+      {{ $latest_sermon.date }} - {{ $latest_sermon.title }}
+    </h3>
+    <div class="content">
+      {{ $latest_sermon.description | page.RenderString (dict "display" "block") }}
+    </div>
   {{ end }}
 {{ end }}

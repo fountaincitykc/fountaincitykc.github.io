@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="content-list is-dense">
+    {{ range . }}
+      <div class="content-section animate" id="{{ .date | urlize }}">
+        <div class="media">
+          {{ partial "shared/youtube-image.html" .youtube }}
+        </div>
+        <div class="body">
+          <h3>
+            {{ .date }}
+          </h3>
+          <h4>
+            {{ .title }}
+          </h4>
+          <p>
+            {{ .description }}
+          </p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     {{ partial "base/head.html" . }}
+    {{ block "head" . }}
+    {{ end }}
   </head>
   <body>
     {{ partial "base/main-header.html" . }}

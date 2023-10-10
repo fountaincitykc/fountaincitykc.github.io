@@ -1,3 +1,9 @@
+{{ define "head" }}
+  {{ with resources.Get "js/watch-live.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+
 {{ define "main" }}
 <div class="home">
   {{ partial "home/mobile-directions.html" . }}
