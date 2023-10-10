@@ -534,7 +534,14 @@ Components */
 }
 .content-section .actions  {
   display: flex;
-  gap: var(--spacer-sm);
+  flex-direction: column;
+  gap: var(--spacer);
+}
+@media (min-width: 576px) {
+  .content-section .actions  {
+    flex-direction: row;
+    gap: var(--spacer-sm);
+  }
 }
 @media (min-width: 992px) {
   .content-section  {
