@@ -1,12 +1,23 @@
 <div class="container-lg">
   <div class="content-list">
+    {{ $month := "" }}
     {{ range sort . "date" "asc" }}
+      {{/* Skip events in the past */}}
       {{ with .date }}
         {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-          {{ continue }}{{/* Skip events in the past */}}
+          {{ continue }}
         {{ end }}
       {{ end }}
-      <div class="content-event animate" id="{{ .title | urlize }}">
+      {{/* Print date header */}}
+      {{ $currentMonth := time.Format "January 2006" .date }}
+      {{ if ne $month $currentMonth }}
+        {{ $month = $currentMonth }}
+        <h2 class="content-event-header animate">
+          {{ $month }}
+        </h2>
+      {{ end }}
+      {{/* Print event detais */}}
+      <div class="content-event animate">
         <div class="date">
           {{ with .date }}
             <div class="month">
@@ -22,11 +33,11 @@
           {{ end }}
         </div>
         <div class="body">
-          <h2>
+          <h3>
             {{ .title }}
-          </h2>
+          </h3>
           {{ if or .date .time }}
-            <h3>
+            <h4>
               {{ with .date }}
                 {{ time.Format ":date_full" . }}
               {{ end }}
@@ -36,12 +47,12 @@
               {{ with .time }}
                 {{ . }}
               {{ end }}
-            </h3>
+            </h4>
           {{ end }}
           {{ with .location }}
-            <h4>
+            <h5>
               {{ . }}
-            </h4>
+            </h5>
           {{ end }}
           {{ with .content }}
             <div class="content">
