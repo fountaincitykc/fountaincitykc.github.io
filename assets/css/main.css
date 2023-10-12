@@ -47,7 +47,6 @@ Variables */
   --font-size-h4: 22px;
   --font-size-h5: 16px;
   --font-size-h6: 14px;
-  --font-weight-thin: 200;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 500;
@@ -87,13 +86,6 @@ Fonts */
 
 /* https://gwfh.mranftl.com/fonts/montserrat?subsets=latin */
 
-@font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  src: url('/fonts/montserrat-v26-latin-200.woff2') format('woff2');
-}
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -427,9 +419,6 @@ Components */
 }
 .hero h1 {
   font-weight: var(--font-weight-heavy);
-}
-.hero h3 {
-  font-weight: var(--font-weight-thin);
 }
 .hero hr {
   border-top-color: var(--white-a50);
