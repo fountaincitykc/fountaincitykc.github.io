@@ -7,11 +7,11 @@
   </head>
   <body>
     {{ partial "base/main-header.html" . }}
-    <main class="main-content">
+    <main id="content" class="main-content">
       {{ partial "base/main-page-header.html" . }}
       {{ block "main" . }}
       {{ end }}
-    </main>    
+    </main>
     {{ partial "base/main-footer.html" . }}
   </body>
 </html>

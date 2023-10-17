@@ -1,0 +1,11 @@
+<div class="container-lg">
+  <div class="animate">
+    {{ partial "shared/youtube-embed.html" .Params.youtube_id }}
+    <div class="body">
+      <h3>
+        {{ .Params.verse }}
+      </h3>
+      {{ .Content }}
+    </div>
+  </div>
+</div>

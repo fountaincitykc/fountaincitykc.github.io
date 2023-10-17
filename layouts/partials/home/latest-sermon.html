@@ -8,7 +8,14 @@
     <h2>
       {{ .headline }}
     </h2>
-    {{ partial "home/latest-sermon-content.html" . }}
+    {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+      <h3>
+        {{ .Title }} - {{ .Params.verse }}
+      </h3>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    {{ end }}
     <div class="actions">
       <a href="{{ .watch.href }}" class="button">
         {{ .watch.text }}

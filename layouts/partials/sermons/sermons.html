@@ -1,20 +1,18 @@
 <div class="container">
   <div class="content-list is-dense">
-    {{ range . }}
-      <div class="content-section animate" id="{{ .date | urlize }}">
+    {{ range .RegularPages }}
+      <div class="content-section animate">
         <div class="media">
-          {{ partial "shared/youtube-image.html" .youtube }}
+          {{ partial "shared/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtube_id) }}
         </div>
         <div class="body">
           <h3>
-            {{ .date }}
+            {{ .Title }}
           </h3>
           <h4>
-            {{ .title }}
+            {{ .Params.verse }}
           </h4>
-          <p>
-            {{ .description }}
-          </p>
+          {{ .Content }}
         </div>
       </div>
     {{ end }}
