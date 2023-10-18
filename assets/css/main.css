@@ -410,15 +410,7 @@ Components */
 .hero .body {
   align-self: center;
   text-align: center;
-}
-.hero h1,
-.hero h3 {
   color: var(--white);
-  text-transform: uppercase;
-  letter-spacing: var(--uppercase-letter-spacing);
-}
-.hero h1 {
-  font-weight: var(--font-weight-heavy);
 }
 .hero hr {
   border-top-color: var(--white-a50);
@@ -1210,6 +1202,34 @@ Page-specific overrides */
 
 /* home */
 
+.home .hero h1 span {
+  display: block;
+}
+.home .hero h1 span:nth-child(1) {
+  margin-bottom: var(--spacer-xs);
+  font-size: var(--font-size-h3);
+}
+.home .hero h1 span:nth-child(n+2) {
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-letter-spacing);
+  line-height: 1;
+}
+.home .hero h1 span:nth-child(2) {
+  font-weight: var(--font-weight-heavy);
+}
+.home .hero h1 span:nth-child(3) {
+  font-weight: var(--font-weight-light);
+}
+@media (min-width: 576px) {
+  .home .hero h1 span:nth-child(n+2) {
+    font-size: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .home .hero h1 span:nth-child(n+2) {
+    font-size: 72px;
+  }
+}
 .home .hero .watch-live.hide {
   /* Hide "Watch live" button by default */
   /* This class is removed by JavaScript on Sunday (see watch-live.js) */

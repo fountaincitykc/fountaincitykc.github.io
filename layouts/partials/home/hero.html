@@ -1,7 +1,7 @@
 <div class="hero is-fixed animate" style="background-image:url('{{ .photo }}');">
   <div class="body">
     <h1>
-      {{ .headline1 }}
+      {{ .headline1 | safeHTML }}
     </h1>
     <hr>
     <h3>
