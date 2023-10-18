@@ -7,7 +7,9 @@
         </div>
         <div class="body">
           <h3>
-            {{ .Title }}
+            <a href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a>
           </h3>
           <h4>
             {{ .Params.verse }}

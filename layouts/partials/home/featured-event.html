@@ -1,23 +1,21 @@
-{{ with site.GetPage "/events" }}
-  {{/* Find next upcoming featured event */}}
-  {{ range sort .Params.events "date" "asc" }}
-    {{ with .date }}
-      {{/* Skip events in the past */}}
-      {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-        {{ continue }}
-      {{ end }}
+{{/* Find next upcoming featured event */}}
+{{ range sort (where site.RegularPages "Section" "events") "Date" "asc" }}
+  {{ with .Date }}
+    {{/* Skip events in the past */}}
+    {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
+      {{ continue }}
     {{ end }}
-    {{ if eq .featured true }}
-      {{ if .featured_layout }}
-        {{/* Render custom layout */}}
-        {{ partial .featured_layout . }}
-      {{ else }}
-        {{/* Render standard layout */}}
-        <div class="featured-event animate">
-          {{ partial "home/featured-event-body.html" . }}
-        </div>
-      {{ end }}
-      {{ break }}
+  {{ end }}
+  {{ if eq .Params.featured true }}
+    {{ if .Params.featured_layout }}
+      {{/* Render custom layout */}}
+      {{ partial .Params.featured_layout . }}
+    {{ else }}
+      {{/* Render standard layout */}}
+      <div class="featured-event animate">
+        {{ partial "home/featured-event-body.html" . }}
+      </div>
     {{ end }}
+    {{ break }}
   {{ end }}
 {{ end }}

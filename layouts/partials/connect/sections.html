@@ -12,9 +12,9 @@
           <div class="content">
             {{ .content | page.RenderString (dict "display" "block") }}
           </div>
-          {{ if .button }}
-            <a href="{{ .button.href }}" class="more text-button">
-              {{ .button.text }}
+          {{ with .button }}
+            <a href="{{ .href }}" class="more text-button">
+              {{ .text }}
             </a>
           {{ end }}
         </div>

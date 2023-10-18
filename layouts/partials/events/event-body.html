@@ -1,0 +1,48 @@
+<div class="date">
+  {{ with .Date }}
+    <div class="month">
+      {{ time.Format "Jan" . }}
+    </div>
+    <div class="day">
+      {{ time.Format "2" . }}
+    </div>
+  {{ else }}
+    <div class="tbd">
+      TBD
+    </div>
+  {{ end }}
+</div>
+<div class="body">
+  <h3>
+    {{ if page.IsSection }}
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  </h3>
+  {{ if or .Date .Params.time }}
+    <h4>
+      {{ with .Date }}
+        {{ time.Format ":date_full" . }}
+      {{ end }}
+      {{ if and .Date .Params.time }}
+        <br> 
+      {{ end }}
+      {{ with .Params.time }}
+        {{ . }}
+      {{ end }}
+    </h4>
+  {{ end }}
+  {{ with .Params.location }}
+    <h5>
+      {{ . }}
+    </h5>
+  {{ end }}
+  {{ with .Content }}
+    <div class="content">
+      {{ . }}
+    </div>
+  {{ end }}
+</div>

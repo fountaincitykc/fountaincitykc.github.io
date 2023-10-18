@@ -1,29 +1,29 @@
 <div class="body">
   <h2>
-    {{ .title }}
+    {{ .Title }}
   </h2>
-  {{ if .date }}
+  {{ if .Date }}
     <hr>
     <h3>
-      {{ with .date }}
+      {{ with .Date }}
         {{ time.Format ":date_full" . }}
       {{ end }}
-      {{ if and .date .time }}
+      {{ if and .Date .Params.time }}
         at 
       {{ end }}
-      {{ with .time }}
+      {{ with .Params.time }}
         {{ . }}
       {{ end }}
     </h3>
-    {{ with .location }}
+    {{ with .Params.location }}
       <h4>
         {{ . }}
       </h4>
     {{ end }}
   {{ end }}
-  {{ with .content }}
+  {{ with .Content }}
     <div class="content">
-      {{ . | page.RenderString (dict "display" "block") }}
+      {{ . }}
     </div>
   {{ end }}
 </div>
