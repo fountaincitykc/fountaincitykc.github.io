@@ -277,6 +277,10 @@ Components */
   .container-xxl {
     max-width: 540px;
   }
+  .container-fluid {
+    padding-right: var(--spacer-lg);
+    padding-left: var(--spacer-lg);
+  }
 }
 @media (min-width: 768px) {/* md */
   .container,
@@ -304,8 +308,13 @@ Components */
 }
 @media (min-width: 1400px) {/* xxl */
   .container,
+  .container-fluid,
   .container-xxl {
     max-width: 1320px;
+  }
+  .container-fluid {
+    padding-right: var(--spacer);
+    padding-left: var(--spacer);
   }
 }
 
@@ -543,6 +552,9 @@ Components */
   .content-section .actions  {
     flex-direction: row;
     gap: var(--spacer-sm);
+  }
+  .content-section .media {
+    width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -940,7 +952,7 @@ Structure */
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    gap: var(--spacer);
+    gap: 32px;/* Use a non-standard value to maximize gap in this breakpoint */
   }
   .main-nav a {
     display: inline-block;
