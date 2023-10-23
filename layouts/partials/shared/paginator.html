@@ -1,0 +1,18 @@
+{{ if or .HasPrev .HasNext }}
+  <ul class="paginator">
+    <li>
+      {{ if .HasPrev }}
+        <a href="{{ .Prev.URL }}" class="button is-large">← Newer</a>
+      {{ else }}
+        <span class="button is-large is-disabled">← Newer</span>
+      {{ end }}
+    </li>
+    <li>
+      {{ if .HasNext }}
+        <a href="{{ .Next.URL }}" class="button is-large">Older →</a>
+      {{ else }}
+        <span class="button is-large is-disabled">Older →</span>
+      {{ end }}
+    </li>
+  </ul>
+{{ end }}
