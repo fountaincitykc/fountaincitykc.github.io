@@ -2,4 +2,4 @@
 title: Christmas Eve
 date: 2023-12-24
 ---
-Please join us to celebrate the birth of our Savior Jesus Christ as prophecy was fulfilled of Immanuel, God with us. More details to follow.
+Please join us for brunch and Christmas Eve service on Sunday, December 24. Brunch is provided at 10am followed by service at 11am. More details to follow.
