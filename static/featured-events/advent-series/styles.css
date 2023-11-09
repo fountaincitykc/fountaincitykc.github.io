@@ -1,4 +1,6 @@
 .advent-series {
   background-color: #143B58;
-  border: solid 10px #b7a061;
+}
+.advent-series h2 {
+  color: #b7a061;
 }
