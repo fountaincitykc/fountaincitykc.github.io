@@ -672,6 +672,7 @@ Components */
 /* featured-event */
 
 .featured-event {
+  overflow: hidden;
   margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xl) var(--spacer);
   background-color: var(--blue-a10);
