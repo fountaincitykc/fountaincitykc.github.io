@@ -771,21 +771,6 @@ Components */
   }
 }
 
-/* : option - is-logo */
-
-.featured-event.has-photo .photo.is-logo img {
-  width: 300px;
-  height: auto;
-  margin: 0 auto;
-}
-@media (min-width: 992px) {
-  .featured-event.has-photo .photo.is-logo img {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-}
-
 /* paginator */
 
 .paginator {

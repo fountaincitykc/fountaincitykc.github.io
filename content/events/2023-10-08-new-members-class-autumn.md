@@ -1,4 +1,5 @@
 ---
+draft: true
 title: New Members Class — Autumn
 date: 2023-10-08
 ---

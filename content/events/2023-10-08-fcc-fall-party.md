@@ -1,4 +1,5 @@
 ---
+draft: true
 title: FCC Fall Party
 date: 2023-10-08
 time: 11:30am
