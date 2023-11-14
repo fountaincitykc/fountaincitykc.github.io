@@ -738,7 +738,6 @@ Components */
   margin: auto;
   padding: var(--spacer);
   padding-top: 0;
-  text-align: left;
 }
 .featured-event.has-photo hr {
   display: none;
@@ -756,6 +755,7 @@ Components */
     width: 60%;
     padding: var(--spacer-lg);
     padding-left: var(--spacer);
+    text-align: left;
   }
 }
 
