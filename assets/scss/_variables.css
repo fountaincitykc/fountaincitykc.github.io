@@ -1,0 +1,79 @@
+:root {
+
+  --black-rgb: 39, 39, 40;
+  --black: rgb(var(--black-rgb));
+  --black-a10: rgba(var(--black-rgb), 0.1);
+  --black-a20: rgba(var(--black-rgb), 0.2);
+  --black-a30: rgba(var(--black-rgb), 0.3);
+  --black-a40: rgba(var(--black-rgb), 0.4);
+  --black-a50: rgba(var(--black-rgb), 0.5);
+
+  --white-rgb: 255, 255, 255;
+  --white: rgb(var(--white-rgb));
+  --white-a10: rgba(var(--white-rgb), 0.1);
+  --white-a20: rgba(var(--white-rgb), 0.2);
+  --white-a30: rgba(var(--white-rgb), 0.3);
+  --white-a40: rgba(var(--white-rgb), 0.4);
+  --white-a50: rgba(var(--white-rgb), 0.5);
+
+  --blue-rgb: 14, 113, 193;
+  --blue: rgb(var(--blue-rgb));
+  --blue-a10: rgba(var(--blue-rgb), 0.1);
+  --blue-a20: rgba(var(--blue-rgb), 0.2);
+  --blue-a30: rgba(var(--blue-rgb), 0.3);
+  --blue-a40: rgba(var(--blue-rgb), 0.4);
+  --blue-a50: rgba(var(--blue-rgb), 0.5);
+
+  --blue-light-rgb: 32, 140, 226;
+  --blue-light: rgb(var(--blue-light-rgb));
+
+  --blue-dark-rgb: 3, 88, 156;
+  --blue-dark: rgb(var(--blue-dark-rgb));
+
+  --gray-light-rgb: 245, 245, 245;
+  --gray-light: rgb(var(--gray-light-rgb));
+  
+  --font-family-base: 'Montserrat', Helvetica, Arial, sans-serif;
+  --font-size-root: 16px;
+  --font-size-small: 14px;
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --font-size-h1: 36px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
+  --font-size-h5: 16px;
+  --font-size-h6: 14px;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  --font-weight-heavy: 600;
+  --line-height-base: 1.5;
+  --line-height-header: 1.2;
+  --uppercase-letter-spacing: 2px;
+
+  --border-radius: 3px;
+
+  --spacer-xxs: 4px;
+  --spacer-xs: 8px;
+  --spacer-sm: 16px;
+  --spacer: 24px;
+  --spacer-lg: 48px;
+  --spacer-xl: 64px;
+  --spacer-xxl: 80px;
+
+  --zindex-main-nav: 998;
+  --zindex-main-nav-submenu: 999;
+
+  /* https://easings.net/ */
+  --easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
+
+}
+@media (min-width: 576px) {
+  :root {
+    --font-size-h1: 48px;
+    --font-size-h2: 48px;
+    --font-size-h3: 32px;
+    --font-size-h4: 24px;
+  }
+}

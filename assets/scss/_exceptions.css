@@ -1,0 +1,62 @@
+.home .hero h1 span {
+  display: block;
+}
+.home .hero h1 span:nth-child(1) {
+  margin-bottom: var(--spacer-xs);
+  font-size: var(--font-size-h3);
+}
+.home .hero h1 span:nth-child(n+2) {
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-letter-spacing);
+  line-height: 1;
+}
+.home .hero h1 span:nth-child(2) {
+  font-weight: var(--font-weight-heavy);
+}
+.home .hero h1 span:nth-child(3) {
+  font-weight: var(--font-weight-light);
+}
+@media (min-width: 576px) {
+  .home .hero h1 span:nth-child(n+2) {
+    font-size: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .home .hero h1 span:nth-child(n+2) {
+    font-size: 72px;
+  }
+}
+.home .hero .watch-live.hide {
+  /* Hide "Watch live" button by default */
+  /* This class is removed by JavaScript on Sunday (see watch-live.js) */
+  display: none;
+}
+
+/* Animation */
+
+.home .hero.animate h1,
+.home .hero.animate hr,
+.home .hero.animate h3,
+.home .hero.animate .watch-live {
+  transform: translate(0, 40px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home .hero.js-start-animation h1 {
+    transition: transform 1s var(--easeOutQuad);
+  }
+  .home .hero.js-start-animation hr {
+    transition: transform 1.5s var(--easeOutQuad);
+  }
+  .home .hero.js-start-animation h3 {
+    transition: transform 2s var(--easeOutQuad);
+  }
+  .home .hero.js-start-animation .watch-live {
+    transition: transform 2.5s var(--easeOutQuad);
+  }
+}
+.home .hero.js-start-animation h1,
+.home .hero.js-start-animation hr,
+.home .hero.js-start-animation h3,
+.home .hero.js-start-animation .watch-live {
+  transform: translate(0,0);
+}

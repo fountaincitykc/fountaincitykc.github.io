@@ -1,0 +1,8 @@
+.content-event-header {
+  padding-top: var(--spacer-xl);
+  border-top: 3px solid var(--black-a10);
+}
+.content-event-header:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}

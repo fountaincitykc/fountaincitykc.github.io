@@ -1,0 +1,66 @@
+/* photo/video + short text */
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--spacer);
+  /* This margin will only be applied if the parent of .content-section is not .content-list */
+  margin-bottom: var(--spacer-xxl);
+}
+.content-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+.content-section h2 + h3,
+.content-section h3 + h4,
+.content-section h4 + h5 {
+  margin-top: calc(var(--spacer-sm) * -1);/* Negative margin */
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+.content-section .actions  {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
+}
+@media (min-width: 576px) {
+  .content-section .actions  {
+    flex-direction: row;
+    gap: var(--spacer-sm);
+  }
+  .content-section .media {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .content-section  {
+    flex-direction: row;
+    gap: var(--spacer-lg);
+  }
+  .content-section .media {
+    width: 40%;
+  }
+  .content-section .body {
+    width: 60%;
+  }
+}
+
+/* : option - is-stacked */
+
+@media (min-width: 992px) {
+  .content-section.is-stacked  {
+    flex-direction: column;
+    gap: var(--spacer);
+  }
+  .content-section.is-stacked .media {
+    width: 100%;
+  }
+  .content-section.is-stacked .body {
+    width: 100%;
+  }
+}

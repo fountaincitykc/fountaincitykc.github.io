@@ -1,0 +1,26 @@
+.play-video {
+  display: block;
+  position: relative;
+}
+.play-video::after {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  content: "▶︎";
+  font-size: 80px;
+  color: var(--white);
+  text-shadow: 0 0 var(--spacer) var(--black);
+  transition: background-color .2s ease, font-size .2s var(--easeOutQuad);
+}
+.play-video:hover::after {
+  font-size: 86px;
+  background-color: var(--black-a20);
+}

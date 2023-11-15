@@ -1,0 +1,38 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 400px;
+  margin-bottom: var(--spacer-xxl);
+  padding: var(--spacer);
+  padding-top: var(--spacer-lg);/* Add more padding on top, so the content is vertically centered */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero .body {
+  align-self: center;
+  text-align: center;
+  color: var(--white);
+}
+.hero hr {
+  border-top-color: var(--white-a50);
+}
+@media (min-width: 576px) {
+  .hero {
+    min-height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+}
+
+/* : option - is-fixed */
+
+@media (min-width: 992px) {
+  .hero.is-fixed {
+    background-attachment: fixed;
+  }
+}

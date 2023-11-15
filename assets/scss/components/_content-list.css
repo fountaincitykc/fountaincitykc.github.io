@@ -1,0 +1,17 @@
+/* wrapper for all content types */
+
+.content-list {
+  margin-bottom: var(--spacer-xxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-xxl);
+}
+.content-list > * {
+  margin-bottom: 0 !important;/* Remove margin-bottom on direct children */
+}
+
+/* : option - is-dense */
+
+.content-list.is-dense {
+  gap: var(--spacer-xl);
+}

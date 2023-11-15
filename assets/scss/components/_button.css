@@ -1,0 +1,82 @@
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  transition: background-color .2s ease;
+}
+.button:focus {
+  outline: 0;
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--blue-light);
+  text-decoration: none;
+}
+.button:active {
+  color: var(--white);
+  background-color: var(--blue);
+  text-decoration: none;
+}
+
+/* : option - is-disabled */
+
+.button.is-disabled,
+.button.is-disabled:hover,
+.button.is-disabled:active {
+  cursor: default;
+  background-color: var(--black-a10);
+}
+
+/* : option - is-block */
+
+.button.is-block {
+  display: block;
+  width: 100%;
+}
+
+/* : option - is-large */
+
+.button.is-large {
+  padding: 1rem 1.75rem;
+  font-size: var(--font-size-large);
+}
+
+/* : option - is-light */
+
+.button.is-light {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+.button.is-light:hover {
+  color: var(--blue);
+  background-color: var(--blue-a20);
+}
+.button.is-light:active {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+
+/* : option - is-white */
+
+.button.is-white {
+  color: var(--blue);
+  background-color: var(--white);
+}
+.button.is-white:hover {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+.button.is-white:active {
+  color: var(--blue);
+  background-color: var(--white);
+}

@@ -1,0 +1,23 @@
+/* short centered text */
+
+.content-blurb {
+  /* This margin will only be applied if the parent of .content-blurb is not .content-list */
+  margin-bottom: var(--spacer-xxl);
+}
+@media (min-width: 576px) {
+  .content-blurb {
+    text-align: center;
+  }
+  .content-blurb .content {
+    text-align: left;
+  }
+}
+
+/* : option - has-center-content */
+
+@media (min-width: 576px) {
+  .content-blurb.has-center-content .content,
+  .content-blurb.has-center-content .content p {
+    text-align: center;
+  }
+}
