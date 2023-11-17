@@ -1,5 +1,9 @@
 {{ define "main" }}
 <div class="event">
-  {{ partial "events/event.html" . }}
+  <div class="container-lg">
+    <div class="content-event animate">
+      {{ .Render "event-content" }}
+    </div>
+  </div>  
 </div>
 {{ end }}

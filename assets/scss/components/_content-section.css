@@ -1,4 +1,23 @@
-/* photo/video + short text */
+/* 
+Description:
+  Short text with media
+
+Usage:
+  <div class="content-section">
+    <div class="media">
+      <img src="" alt="">
+    </div>
+    <div class="body">
+      <h2>
+        Headline
+      </h2>
+      <div class="content">
+        Content
+      </div>
+      <a href="" class="button">Button</a>
+    </div>
+  </div>
+*/
 
 .content-section {
   display: flex;
@@ -9,6 +28,10 @@
   gap: var(--spacer);
   /* This margin will only be applied if the parent of .content-section is not .content-list */
   margin-bottom: var(--spacer-xxl);
+}
+.content-section .body,
+.content-section .media {
+  width: 100%;
 }
 .content-section img {
   display: block;
@@ -47,6 +70,22 @@
   }
   .content-section .body {
     width: 60%;
+  }
+}
+
+/* : option - align-center */
+
+.content-section.is-center .body,
+.content-section.is-center .media {
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .content-section.is-center {
+    align-items: center;
+  }
+  .content-section.is-center .body {
+    text-align: left;
   }
 }
 

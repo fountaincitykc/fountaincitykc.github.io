@@ -1,5 +1,20 @@
 {{ define "main" }}
 <div class="sermon">
-  {{ partial "sermons/sermon.html" . }}
+  <div class="container-lg">
+    <div class="content-section is-stacked animate">
+      <div class="media">
+        {{ partial "shared/youtube-embed.html" .Params.youtube_id }}
+      </div>
+      <div class="body">
+        <h3>
+          {{ .Title }}
+        </h3>
+        <h4>
+          {{ .Params.verse }}
+        </h4>
+        {{ .Content }}
+      </div>
+    </div>
+  </div>  
 </div>
 {{ end }}

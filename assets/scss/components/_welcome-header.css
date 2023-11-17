@@ -1,0 +1,10 @@
+.welcome-header {
+  margin-bottom: var(--spacer-xxl);
+  padding: var(--spacer-lg) var(--spacer-xs);
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+}
+.welcome-header h1 {
+  margin-bottom: 0;
+}

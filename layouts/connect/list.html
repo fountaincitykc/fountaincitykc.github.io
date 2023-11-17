@@ -1,6 +1,43 @@
 {{ define "main" }}
 <div class="connect">
-  {{ partial "connect/sections.html" .Params.sections }}
-  {{ partial "connect/contact.html" .Params.contact }}
+  <div class="container-fluid">
+    <div class="content-list dense">
+      {{ range .Params.sections }}
+        <div class="content-section animate" id="{{ .headline | urlize }}">
+          <div class="media">
+            <img src="{{ .photo }}" alt="{{ .headline }}">
+          </div>
+          <div class="body">
+            <h2>
+              {{ .headline }}
+            </h2>
+            <div class="content">
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+            </div>
+            {{ with .button }}
+              <a href="{{ .href }}" class="more text-button">
+                {{ .text }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="container-md">
+    <div class="content-blurb has-center-content animate">
+      <div class="body">
+        {{ with .Params.contact }}
+          <h2>
+            {{ .headline }}
+          </h2>
+          <div class="content">
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          </div>
+        {{ end }}
+        {{ partial "shared/contact-button.html" . }}
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}

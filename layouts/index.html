@@ -6,12 +6,112 @@
 
 {{ define "main" }}
 <div class="home">
-  {{ partial "home/mobile-directions.html" . }}
-  {{ partial "home/hero.html" .Params.hero }}
+  {{/* Mobile directions */}}
+  <div class="mobile-directions animate">
+    <div class="content">
+      {{ partial "shared/address.html" . }}
+    </div>
+    {{ partial "shared/directions-button.html" . }}
+  </div>
+  {{/* Hero */}}
+  <div class="hero is-fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
+    <div class="body">
+      {{ partial "shared/fcc.html" }}
+      <hr>
+      <h3>
+        {{ .Params.hero.headline2 }}
+      </h3>
+      {{ with .Params.hero.button }}
+        <div id="watch-live" class="watch-live hide">
+          <a href="{{ .href }}" class="button" target="_blank">{{ .text }}</a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  {{/* Featured content */}}
   <div class="container-fluid">
-    {{ partial "home/cards.html" .Params.cards }}
-    {{ partial "home/latest-sermon.html" .Params.sermon }}
-    {{ partial "home/featured-event.html" . }}
+    <div class="cards">
+      {{ range .Params.cards }}
+        <div class="card animate">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="{{ .headline }}">
+          </div>
+          <div class="body">
+            <h3>
+              {{ .headline }}
+            </h3>
+            <hr>
+            <div class="content">
+              <p>
+                {{ .content }}
+              </p>
+            </div>
+            {{ if .button }}
+              <a href="{{ .button.href }}" class="button is-white">
+                {{ .button.text }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  {{/* Latest sermon */}}
+  <div class="container-fluid">
+    <div class="content-section animate">
+      <div class="media">
+        <a href="{{ .Params.sermon.watch.href }}">
+          <img src="{{ .Params.sermon.photo }}" alt="Watch sermons">
+        </a>
+      </div>
+      <div class="body">
+        <h2>
+          {{ .Params.sermon.headline }}
+        </h2>
+        {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+          <h3>
+            {{ .Title }} - {{ .Params.verse }}
+          </h3>
+          <div class="content">
+            {{ .Content }}
+          </div>
+        {{ end }}
+        <div class="actions">
+          {{ with .Params.sermon.watch }}
+            <a href="{{ .href }}" class="button">
+              {{ .text }}
+            </a>
+          {{ end }}
+          {{ with .Params.sermon.listen }}
+            <a href="{{ .href }}" class="button" target="_blank">
+              {{ .text }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{/* Featured event */}}
+    {{ range sort (where site.RegularPages "Section" "events") "Date" "asc" }}
+      {{ with .Date }}
+        {{/* Skip events in the past */}}
+        {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
+          {{ continue }}
+        {{ end }}
+      {{ end }}
+      {{/* Find next upcoming feature event */}}
+      {{ if eq .Params.featured true }}
+        {{ if .Params.featured_layout }}
+          {{/* Render custom layout */}}
+          {{ partial .Params.featured_layout . }}
+        {{ else }}
+          {{/* Render standard layout */}}
+          <div class="featured-event animate">
+            {{ partial "shared/featured-event.html" . }}
+          </div>
+        {{ end }}
+        {{ break }}
+      {{ end }}
+    {{ end }}
   </div>
 </div>
 {{ end }}

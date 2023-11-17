@@ -1,3 +1,27 @@
+/*
+Usage:
+  <div class="featured-event has-photo">
+    <div class="photo">
+      <img src="" alt="">
+    </div>
+    <div class="body">
+      <h2>
+        Title
+      </h2>
+      <hr>
+      <h3>
+        Date & Time
+      </h3>
+      <h4>
+        Location
+      </h4>
+      <div class="content">
+        Content
+      </div>
+    </div>
+  </div>
+*/
+
 .featured-event {
   overflow: hidden;
   margin-bottom: var(--spacer-xxl);

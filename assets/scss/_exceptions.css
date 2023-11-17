@@ -1,38 +1,12 @@
-.home .hero h1 span {
-  display: block;
-}
-.home .hero h1 span:nth-child(1) {
-  margin-bottom: var(--spacer-xs);
-  font-size: var(--font-size-h3);
-}
-.home .hero h1 span:nth-child(n+2) {
-  text-transform: uppercase;
-  letter-spacing: var(--uppercase-letter-spacing);
-  line-height: 1;
-}
-.home .hero h1 span:nth-child(2) {
-  font-weight: var(--font-weight-heavy);
-}
-.home .hero h1 span:nth-child(3) {
-  font-weight: var(--font-weight-light);
-}
-@media (min-width: 576px) {
-  .home .hero h1 span:nth-child(n+2) {
-    font-size: 48px;
-  }
-}
-@media (min-width: 768px) {
-  .home .hero h1 span:nth-child(n+2) {
-    font-size: 72px;
-  }
-}
+/* Home */
+
+/* Hide "Watch live" button by default */
+/* This class is removed by JavaScript on Sunday (see watch-live.js) */
 .home .hero .watch-live.hide {
-  /* Hide "Watch live" button by default */
-  /* This class is removed by JavaScript on Sunday (see watch-live.js) */
   display: none;
 }
 
-/* Animation */
+/* Home animation */
 
 .home .hero.animate h1,
 .home .hero.animate hr,
@@ -59,4 +33,10 @@
 .home .hero.js-start-animation h3,
 .home .hero.js-start-animation .watch-live {
   transform: translate(0,0);
+}
+
+/* Welcome */
+
+.welcome-content .content-section .media {
+  max-width: 240px;
 }

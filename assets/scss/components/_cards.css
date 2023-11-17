@@ -1,3 +1,26 @@
+/*
+Usage:
+  <div class="cards">
+      <div class="card">
+        <div class="photo">
+          <img src="" alt="">
+        </div>
+        <div class="body">
+          <h3>
+            Headline
+          </h3>
+          <hr>
+          <div class="content">
+            Content
+          </div>
+          <a href="" class="button">
+            Button
+          </a>
+        </div>
+      </div>
+  </div>
+*/
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -17,6 +40,7 @@
     flex: 1 1 0;
   }
 }
+
 .card {
   background-color: var(--blue-a10);
   border-radius: var(--border-radius);

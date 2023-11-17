@@ -1,0 +1,22 @@
+/*
+Description:
+  Fade in an element when it's visible in the viewport
+Usage:
+  <div class="animate">
+    ...
+  </div>
+*/
+
+.animate {
+  opacity: 0;
+}
+
+/* This class is added by JavaScript (see animate.js) */
+@media (prefers-reduced-motion: no-preference) {
+  .js-start-animation {
+    transition: opacity 1s ease;
+  }
+}
+.js-start-animation {
+  opacity: 1;
+}

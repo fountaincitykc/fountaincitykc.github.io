@@ -1,23 +1,35 @@
-/* short centered text */
+/*
+Description:
+  Short centered text
+
+Usage:
+  <div class="content-blurb">
+    <div class="body">
+      <h2>
+        Headline
+      </h2>
+      <div class="content">
+        Content
+      </div>
+      <a href="" class="button">
+        Button
+      </a>
+    </div>
+  </div>
+*/
 
 .content-blurb {
   /* This margin will only be applied if the parent of .content-blurb is not .content-list */
   margin-bottom: var(--spacer-xxl);
+  text-align: center;
 }
-@media (min-width: 576px) {
-  .content-blurb {
-    text-align: center;
-  }
-  .content-blurb .content {
-    text-align: left;
-  }
+.content-blurb .content {
+  text-align: left;
 }
 
 /* : option - has-center-content */
 
-@media (min-width: 576px) {
-  .content-blurb.has-center-content .content,
-  .content-blurb.has-center-content .content p {
-    text-align: center;
-  }
+.content-blurb.has-center-content .content,
+.content-blurb.has-center-content .content p {
+  text-align: center;
 }

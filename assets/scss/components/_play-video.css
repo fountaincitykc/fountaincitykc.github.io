@@ -1,3 +1,10 @@
+/*
+Usage:
+  <a href="" class="play-video">
+    <img src="" alt="">
+  </a>
+*/
+
 .play-video {
   display: block;
   position: relative;

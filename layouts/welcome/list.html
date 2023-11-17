@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex">
+    {{ partial "base/head.html" . }}
+  </head>
+  <body>
+    {{/* Header */}}
+    <header class="welcome-header animate">
+      {{ partial "shared/fcc.html" (dict "class" "is-small") }}
+    </header>
+    {{/* Content */}}
+    <main class="welcome-content">
+      <div class="container-lg">
+        {{/* Intro */}}
+        <div class="content-blurb animate">
+          <div class="body">
+            <div class="content callout-lead">
+              {{ .Params.intro_content | $.Page.RenderString (dict "display" "block") }}
+            </div>
+          </div>
+        </div>
+        {{/* Staff */}}
+        <div class="content-list is-dense">
+          {{ range .Params.staff }}
+            <div class="content-section is-center animate">
+              <div class="media">
+                <div class="rounded-image">
+                  <img src="{{ .photo }}" alt="{{ .name }}">
+                </div>
+              </div>
+              <div class="body">
+                <h2>
+                  {{ .name }}
+                </h2>
+                <h3>
+                  {{ .role }}
+                </h3>
+                <div class="content">
+                  {{ .content | $.Page.RenderString (dict "display" "block") }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+        {{/* Contact */}}
+        <div class="content-blurb has-center-content animate">
+          <div class="body">
+            <div class="content callout-lead">
+              {{ .Params.contact_cta | $.Page.RenderString (dict "display" "block") }}
+            </div>
+            {{ partial "shared/contact-button.html" . }}
+          </div>
+        </div>
+      </div>
+    </main>
+    {{/* Footer */}}
+    <footer class="welcome-footer">
+      <div class="container">
+        {{ .Params.footer_content | $.Page.RenderString (dict "display" "block") }}
+        <img src="/images/ui/fountain-city-church.png" alt="Fountain City Church">
+      </div>
+    </footer>
+  </body>
+</html>

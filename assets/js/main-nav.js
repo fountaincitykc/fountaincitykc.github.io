@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(event) {
 
   // Create mobile nav menu
-  // (see .js-nav, .js-nav-toggle, and .js-nav-close in main.css)
+  // (see .js-nav, .js-nav-toggle, and .js-nav-close in components/_main-nav.css)
 
   const mainNav = document.getElementById('main-nav');
   if (mainNav) {

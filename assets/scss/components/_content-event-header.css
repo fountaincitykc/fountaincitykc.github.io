@@ -1,3 +1,10 @@
+/*
+Usage:
+  <h2 class="content-event-header">
+    Headline
+  </h2>
+*/
+
 .content-event-header {
   padding-top: var(--spacer-xl);
   border-top: 3px solid var(--black-a10);

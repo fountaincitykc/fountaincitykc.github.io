@@ -2,15 +2,15 @@
   <div class="container-fluid">
     <div class="row">
       <div class="contact-start">
-        <h3>
-          {{ site.Data.contact.headline }}
-        </h3>
-        <div class="content">
-          {{ site.Data.contact.content | page.RenderString (dict "display" "block") }}
-        </div>
-        <a href="{{ site.Data.contact.button.href }}" class="button" target="_blank">
-          {{ site.Data.contact.button.text }}
-        </a>
+        {{ with site.Data.contact }}
+          <h3>
+            {{ .headline }}
+          </h3>
+          <div class="content">
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          </div>
+        {{ end }}
+        {{ partial "shared/contact-button.html" . }}
       </div>
       <div class="contact-end">
         {{ partial "shared/address.html" . }}

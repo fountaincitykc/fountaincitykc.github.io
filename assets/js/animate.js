@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(event) {
 
   // Animate all elements with the .animate classname
-  // (see .animate and .js-start-animation in main.css)
+  // (see .animate and .js-start-animation in components/_animate.css)
 
   const animationTargets = document.querySelectorAll('.animate');
   if (animationTargets) {

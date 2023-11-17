@@ -1,0 +1,11 @@
+.welcome-footer {
+  padding: var(--spacer-xl) var(--spacer);
+  background-color: var(--blue-a10);
+  text-align: center;
+}
+.welcome-footer img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}

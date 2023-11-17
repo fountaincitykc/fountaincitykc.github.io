@@ -1,4 +1,14 @@
-/* wrapper for all content types */
+/*
+Description:
+  Wrapper for all content types (.content-blurb, .content-section, .content-event, etc )
+
+Usage:
+  <div class="content-list">
+    <div class="content-section">...</div>
+    <div class="content-section">...</div>
+    <div class="content-section">...</div>
+  </div>
+*/
 
 .content-list {
   margin-bottom: var(--spacer-xxl);
