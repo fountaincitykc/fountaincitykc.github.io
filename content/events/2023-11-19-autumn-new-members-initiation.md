@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Autumn New Members Initiation
 date: 2023-11-19
 ---
