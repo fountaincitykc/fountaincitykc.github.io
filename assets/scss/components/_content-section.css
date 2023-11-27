@@ -66,10 +66,10 @@ Usage:
     gap: var(--spacer-lg);
   }
   .content-section .media {
-    width: 40%;
+    width: 33.33%;
   }
   .content-section .body {
-    width: 60%;
+    width: 66.66%;
   }
 }
 
