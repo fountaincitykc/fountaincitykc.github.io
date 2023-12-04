@@ -90,7 +90,9 @@
         </div>
       </div>
     </div>
-    {{/* Featured event */}}
+  </div>
+  {{/* Featured event */}}
+  <div class="container-fluid">
     {{ range sort (where site.RegularPages "Section" "events") "Date" "asc" }}
       {{ with .Date }}
         {{/* Skip events in the past */}}
