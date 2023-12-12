@@ -8,10 +8,10 @@ buildFuture: true # Needed to show future events
 menu:
   main:
   - name: About us
-    pageRef: /about-us/
+    pageRef: /vision/
     weight: 1
-  - name: Mission & vision
-    pageRef: /about-us/
+  - name: Vision
+    pageRef: /vision/
     parent: About us
     weight: 2
   - name: Our staff
