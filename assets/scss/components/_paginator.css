@@ -1,13 +1,13 @@
 /*
-Usage:
-  <ul class="paginator">
-    <li>
-      <span">Newer</span>
-    </li>
-    <li>
-      <a href="">Older</a>
-    </li>
-  </ul>
+@markup
+<ul class="paginator">
+  <li>
+    <span>Newer</span>
+  </li>
+  <li>
+    <a>Older</a>
+  </li>
+</ul>
 */
 
 .paginator {

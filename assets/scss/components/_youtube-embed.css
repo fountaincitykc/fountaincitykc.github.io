@@ -1,8 +1,8 @@
 /*
-Usage:
-  <div class="youtube-embed">
-    <iframe src=""></iframe>
-  </div>
+@markup
+<div class="youtube-embed">
+  <iframe></iframe>
+</div>
 */
 
 .youtube-embed {

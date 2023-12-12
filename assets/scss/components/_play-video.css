@@ -1,8 +1,8 @@
 /*
-Usage:
-  <a href="" class="play-video">
-    <img src="" alt="">
-  </a>
+@markup
+<a class="play-video">
+  <img>
+</a>
 */
 
 .play-video {

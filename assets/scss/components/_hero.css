@@ -1,16 +1,16 @@
 /*
-Usage:
-  <div class="hero" style="background-image:url();">
-    <div class="body">
-      <h1>
-        Headline
-      </h1>
-      <hr>
-      <h2>
-        Subhead
-      </h2>
-    </div>
-  </div> 
+@markup
+<div class="hero" style="background-image:url();">
+  <div class="body">
+    <h1>
+      Headline
+    </h1>
+    <hr>
+    <h2>
+      Subhead
+    </h2>
+  </div>
+</div> 
 */
 
 .hero {

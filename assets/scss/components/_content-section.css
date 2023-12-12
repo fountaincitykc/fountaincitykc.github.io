@@ -1,22 +1,24 @@
 /* 
-Description:
-  Short text with media
+@description
+Short text with media
 
-Usage:
-  <div class="content-section">
-    <div class="media">
-      <img src="" alt="">
-    </div>
-    <div class="body">
-      <h2>
-        Headline
-      </h2>
-      <div class="content">
-        Content
-      </div>
-      <a href="" class="button">Button</a>
-    </div>
+@markup
+<div class="content-section">
+  <div class="media">
+    <img>
   </div>
+  <div class="body">
+    <h2>
+      Headline
+    </h2>
+    <div class="content">
+      Content
+    </div>
+    <a class="button">
+      Button
+    </a>
+  </div>
+</div>
 */
 
 .content-section {

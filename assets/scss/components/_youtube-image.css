@@ -1,10 +1,10 @@
 /*
-Usage:
-  <div class="youtube-image">
-    <a href="" class="play-video">
-      <img src="" alt="">
-    </a>
-  </div>
+@markup
+<div class="youtube-image">
+  <a class="play-video">
+    <img>
+  </a>
+</div>
 */
 
 .youtube-image {

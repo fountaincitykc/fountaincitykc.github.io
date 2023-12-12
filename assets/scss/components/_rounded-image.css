@@ -1,8 +1,8 @@
 /*
-Usage:
-  <div class="rounded-image">
-    <img src="" alt="">
-  </div>
+@markup
+<div class="rounded-image">
+  <img>
+</div>
 */
 
 .rounded-image {

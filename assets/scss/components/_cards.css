@@ -1,24 +1,24 @@
 /*
-Usage:
-  <div class="cards">
-      <div class="card">
-        <div class="photo">
-          <img src="" alt="">
-        </div>
-        <div class="body">
-          <h3>
-            Headline
-          </h3>
-          <hr>
-          <div class="content">
-            Content
-          </div>
-          <a href="" class="button">
-            Button
-          </a>
-        </div>
+@markup
+<div class="cards">
+    <div class="card">
+      <div class="photo">
+        <img>
       </div>
-  </div>
+      <div class="body">
+        <h3>
+          Headline
+        </h3>
+        <hr>
+        <div class="content">
+          Content
+        </div>
+        <a class="button">
+          Button
+        </a>
+      </div>
+    </div>
+</div>
 */
 
 .cards {

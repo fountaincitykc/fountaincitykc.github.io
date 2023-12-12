@@ -1,12 +1,12 @@
 /*
-Usage:
-  <p class="callout">...</p>
+@markup
+<p class="callout">...</p>
 or
-  <div class="callout">
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-  </div>
+<div class="callout-lead">
+  <p>...</p>
+  <p>...</p>
+  <p>...</p>
+</div>
 */
 
 .callout,

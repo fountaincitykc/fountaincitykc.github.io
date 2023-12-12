@@ -1,13 +1,13 @@
 /*
-Description:
-  Wrapper for all content types (.content-blurb, .content-section, .content-event, etc )
+@description
+Wrapper for all content types (.content-blurb, .content-section, .content-event, etc)
 
-Usage:
-  <div class="content-list">
-    <div class="content-section">...</div>
-    <div class="content-section">...</div>
-    <div class="content-section">...</div>
-  </div>
+@markup
+<div class="content-list">
+  <div class="content-section">...</div>
+  <div class="content-section">...</div>
+  <div class="content-section">...</div>
+</div>
 */
 
 .content-list {

@@ -1,29 +1,29 @@
 /*
-Usage:
-  <div class="content-event">
-    <div class="date">
-      <div class="month">
-        Month
-      </div>
-      <div class="day">
-        Day
-      </div>
+@markup
+<div class="content-event">
+  <div class="date">
+    <div class="month">
+      Month
     </div>
-    <div class="body">
-      <h3>
-        Headline
-      </h3>
-      <h4>
-        Date & Time
-      </h4>
-      <h5>
-        Location
-      </h5>
-      <div class="content">
-        Content
-      </div>
+    <div class="day">
+      Day
     </div>
   </div>
+  <div class="body">
+    <h3>
+      Headline
+    </h3>
+    <h4>
+      Date & Time
+    </h4>
+    <h5>
+      Location
+    </h5>
+    <div class="content">
+      Content
+    </div>
+  </div>
+</div>
 */
 
 .content-event {

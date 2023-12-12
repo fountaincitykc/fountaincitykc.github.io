@@ -1,10 +1,11 @@
 /*
-Description:
-  Fade in an element when it's visible in the viewport
-Usage:
-  <div class="animate">
-    ...
-  </div>
+@description
+Fade in an element when it's visible in the viewport
+
+@markup
+<div class="animate">
+  ...
+</div>
 */
 
 .animate {

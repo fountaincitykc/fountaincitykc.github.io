@@ -1,21 +1,21 @@
 /*
-Description:
-  Short centered text
+@description
+Short centered text
 
-Usage:
-  <div class="content-blurb">
-    <div class="body">
-      <h2>
-        Headline
-      </h2>
-      <div class="content">
-        Content
-      </div>
-      <a href="" class="button">
-        Button
-      </a>
+@markup
+<div class="content-blurb">
+  <div class="body">
+    <h2>
+      Headline
+    </h2>
+    <div class="content">
+      Content
     </div>
+    <a class="button">
+      Button
+    </a>
   </div>
+</div>
 */
 
 .content-blurb {

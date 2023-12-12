@@ -1,8 +1,8 @@
 /*
-Usage:
-  <a href="" class="button">
-    Button
-  </a>
+@markup
+<a class="button">
+  Button
+</a>
 */
 
 .button {

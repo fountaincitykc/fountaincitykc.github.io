@@ -1,8 +1,8 @@
 /*
-Usage:
-  <h2 class="content-event-header">
-    Headline
-  </h2>
+@markup
+<h2 class="content-event-header">
+  Headline
+</h2>
 */
 
 .content-event-header {
