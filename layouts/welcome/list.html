@@ -25,9 +25,7 @@
           {{ range .Params.staff }}
             <div class="content-section is-center animate">
               <div class="media">
-                <div class="rounded-image">
-                  <img src="{{ .photo }}" alt="{{ .name }}">
-                </div>
+                <img src="{{ .photo }}" alt="{{ .name }}" class="is-rounded">
               </div>
               <div class="body">
                 <h2>

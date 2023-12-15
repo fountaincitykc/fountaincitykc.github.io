@@ -3,9 +3,11 @@
 <div class="rounded-image">
   <img>
 </div>
+or
+<img class="is-rounded">
 */
 
-.rounded-image {
+.rounded-image {/* Force the image into a square */
   position: relative;
   padding-bottom: 100%;
   max-width: 100%;
@@ -21,4 +23,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+img.is-rounded {
+  border-radius: 100%;
 }
