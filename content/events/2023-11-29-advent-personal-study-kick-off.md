@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Advent Personal Study Kick-off
 date: 2023-11-29
 ---
