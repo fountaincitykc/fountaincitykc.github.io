@@ -5,7 +5,10 @@
       {{ range .Paginator.Pages }}
         <div class="content-section animate">
           <div class="media">
-            {{ partial "shared/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtube_id) }}
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Watch sermon">
+            </a>
+            {{/* partial "shared/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtube_id) */}}
           </div>
           <div class="body">
             <h3>
@@ -17,6 +20,9 @@
               {{ .Params.verse }}
             </h4>
             {{ .Content }}
+            <a href="{{ .RelPermalink }}" class="button is-light">
+              {{ $.Params.button_text }}
+            </a>
           </div>
         </div>
       {{ end }}

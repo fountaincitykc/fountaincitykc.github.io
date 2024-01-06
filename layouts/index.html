@@ -57,25 +57,30 @@
     </div>
   </div>
   {{/* Latest sermon */}}
+  {{ $latestSermon := newScratch }}
+  {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+    {{ $latestSermon.Set "title" .Title }}
+    {{ $latestSermon.Set "content" .Content }}
+    {{ $latestSermon.Set "verse" .Params.verse }}
+    {{ $latestSermon.Set "image" .Params.image }}
+  {{ end }}
   <div class="container-fluid">
     <div class="content-section animate">
       <div class="media">
         <a href="{{ .Params.sermon.watch.href }}">
-          <img src="{{ .Params.sermon.photo }}" alt="Watch sermons">
+          <img src="{{ $latestSermon.Get "image" }}" alt="Watch sermons">
         </a>
       </div>
       <div class="body">
         <h2>
           {{ .Params.sermon.headline }}
         </h2>
-        {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-          <h3>
-            {{ .Title }} - {{ .Params.verse }}
-          </h3>
-          <div class="content">
-            {{ .Content }}
-          </div>
-        {{ end }}
+        <h3>
+          {{ $latestSermon.Get "title" }} - {{ $latestSermon.Get "verse" }}
+        </h3>
+        <div class="content">
+          {{ $latestSermon.Get "content" }}
+        </div>
         <div class="actions">
           {{ with .Params.sermon.watch }}
             <a href="{{ .href }}" class="button">

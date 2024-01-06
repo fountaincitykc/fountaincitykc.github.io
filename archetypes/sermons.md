@@ -11,4 +11,5 @@ title: {{ $title }}
 date: {{ $date }}
 verse: 
 youtube_id: 
+image: /images/latest-sermon/default.jpg
 ---
