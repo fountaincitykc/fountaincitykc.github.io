@@ -4,7 +4,6 @@ description: "A Christ-Centered church making and sending disciples in this gene
 
 aliases:
 - /about-us
-
 ---
 
 A Christ-Centered church making and sending disciples in this generation and the next.
