@@ -34,9 +34,3 @@
 .home .hero.js-start-animation .watch-live {
   transform: translate(0,0);
 }
-
-/* Welcome */
-
-.welcome-content .content-section .media {
-  max-width: 240px;
-}
