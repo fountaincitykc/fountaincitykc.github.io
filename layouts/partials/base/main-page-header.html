@@ -1,12 +1,17 @@
 {{ if not .IsHome }}
   <div class="page-header animate">
     <h1>
-      {{/* If the current page is a list page or an error page, show the page title */}}
-      {{ if or .IsSection (eq page.Type "page") }}
-        {{ .Title }}
-      {{/* Otherwise, the current page is a single page in a content section, so show the page type instead of the page title */}}
-      {{ else }}
+      {{/* If the current page is the event detail page... */}}
+      {{ if and (eq .Type "events") .IsPage }}
         {{ page.Type | singularize }}
+      
+        {{/* If the current page is the sermon detail page... */}}
+      {{ else if and (eq .Type "sermons") .IsPage }}
+        {{ dateFormat "January 2, 2006" .Date }}
+      
+        {{/* Otherwise, use the page title */}}
+      {{ else }}
+        {{ .Title }}
       {{ end }}
     </h1>
     <hr>
