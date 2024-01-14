@@ -5,6 +5,7 @@
   {{ $date = $filename -}}
 {{ end -}}
 date: {{ $date }}
+series: 
 title: 
 youtube_id: 
 image: /images/latest-sermon/default.jpg
