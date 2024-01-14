@@ -13,11 +13,11 @@
           <div class="body">
             <h3>
               <a href="{{ .RelPermalink }}">
-                {{ .Title }}
+                {{ dateFormat "January 2, 2006" .Date }}
               </a>
             </h3>
             <h4>
-              {{ .Params.verse }}
+              {{ .Params.title }}
             </h4>
             {{ .Content }}
             <a href="{{ .RelPermalink }}" class="button is-light">

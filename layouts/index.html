@@ -59,9 +59,9 @@
   {{/* Latest sermon */}}
   {{ $latestSermon := newScratch }}
   {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+    {{ $latestSermon.Set "date" ( dateFormat "January 2, 2006" .Date ) }}
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
-    {{ $latestSermon.Set "verse" .Params.verse }}
     {{ $latestSermon.Set "image" .Params.image }}
   {{ end }}
   <div class="container-fluid">
@@ -76,7 +76,7 @@
           {{ .Params.sermon.headline }}
         </h2>
         <h3>
-          {{ $latestSermon.Get "title" }} - {{ $latestSermon.Get "verse" }}
+          {{ $latestSermon.Get "date" }} - {{ $latestSermon.Get "title" }}
         </h3>
         <div class="content">
           {{ $latestSermon.Get "content" }}

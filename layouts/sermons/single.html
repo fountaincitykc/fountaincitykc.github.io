@@ -7,10 +7,10 @@
       </div>
       <div class="body">
         <h3>
-          {{ .Title }}
+          {{ dateFormat "January 2, 2006" .Date }}
         </h3>
         <h4>
-          {{ .Params.verse }}
+          {{ .Params.title }}
         </h4>
         {{ .Content }}
       </div>
