@@ -63,6 +63,10 @@
 .featured-event.has-white-text hr {
   border-top-color: var(--white-a50);
 }
+.featured-event.has-white-text .content a {
+  color: var(--white);
+  text-decoration: underline;
+}
 
 /* : option - has-photo */
 

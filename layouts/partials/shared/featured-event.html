@@ -8,8 +8,11 @@
       {{ with .Date }}
         {{ time.Format ":date_full" . }}
       {{ end }}
+      {{ with .Params.end_date }}
+        – {{ time.Format ":date_long" . }}
+      {{ end }}
       {{ if and .Date .Params.time }}
-        at 
+        <br> 
       {{ end }}
       {{ with .Params.time }}
         {{ . }}
