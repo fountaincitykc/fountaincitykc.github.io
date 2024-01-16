@@ -6,7 +6,7 @@
         <div class="content-section animate">
           <div class="media">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="Watch sermon">
+              <img src="{{ .Params.image }}" alt="{{ default .Title .Params.series }}">
             </a>
             {{/* partial "shared/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtube_id) */}}
           </div>

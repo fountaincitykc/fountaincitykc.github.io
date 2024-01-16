@@ -63,12 +63,13 @@
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
     {{ $latestSermon.Set "image" .Params.image }}
+    {{ $latestSermon.Set "alt" (default .Title .Params.series) }}
   {{ end }}
   <div class="container-fluid">
     <div class="content-section animate">
       <div class="media">
         <a href="{{ .Params.sermon.watch.href }}">
-          <img src="{{ $latestSermon.Get "image" }}" alt="Watch sermons">
+          <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "alt" }}">
         </a>
       </div>
       <div class="body">
