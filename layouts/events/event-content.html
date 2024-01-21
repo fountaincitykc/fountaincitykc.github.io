@@ -27,8 +27,10 @@
       {{ with .Date }}
         {{ time.Format ":date_full" . }}
       {{ end }}
-      {{ with .Params.end_date }}
-        – {{ time.Format ":date_long" . }}
+      {{ if .Date }}
+        {{ with .Params.end_date }}
+          – {{ time.Format ":date_long" . }}
+        {{ end }}
       {{ end }}
       {{ if and .Date .Params.time }}
         <br> 

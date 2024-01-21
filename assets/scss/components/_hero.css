@@ -30,6 +30,9 @@
   text-align: center;
   color: var(--white);
 }
+.hero .button {
+  box-shadow: 0 0 var(--spacer-sm) rgba(0,0,0,0.4);
+}
 .hero hr {
   border-top-color: var(--white-a50);
 }
