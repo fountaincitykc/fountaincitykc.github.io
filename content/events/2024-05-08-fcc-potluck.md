@@ -1,5 +1,5 @@
 ---
-title: Potluck
+title: FCC Potluck
 date: 2024-05-08
 time: 6–8pm
 location: Meadowbrook Park - Shelter 1
