@@ -1,6 +1,6 @@
 ---
 title: FCC Prayer Night
-date: 2024-02-28
+date: 2024-04-24
 time: 6–8pm
 location: Meadowbrook Clubhouse
 ---
