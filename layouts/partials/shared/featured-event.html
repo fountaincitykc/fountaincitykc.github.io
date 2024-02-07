@@ -12,7 +12,7 @@
         – {{ time.Format ":date_long" . }}
       {{ end }}
       {{ if and .Date .Params.time }}
-        <br> 
+        <br>
       {{ end }}
       {{ with .Params.time }}
         {{ . }}

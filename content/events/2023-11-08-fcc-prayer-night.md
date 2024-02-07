@@ -3,7 +3,6 @@ draft: true
 title: FCC Prayer Night
 date: 2023-11-08
 time: 6–8pm
-location: Meadowbrook Clubhouse
 featured: true
 featured_layout: featured-events/prayer-night.html
 ---
