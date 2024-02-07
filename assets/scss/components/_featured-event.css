@@ -48,7 +48,7 @@
 .featured-event h3 + h4 {
   margin-top: calc(var(--spacer-sm) * -1);/* Negative margin */
 }
-.featured-event .content p:last-of-type {
+.featured-event .content :last-child {
   margin-bottom: 0;
 }
 .featured-event hr {
