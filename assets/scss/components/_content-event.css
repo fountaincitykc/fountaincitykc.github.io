@@ -59,7 +59,7 @@
 .content-event h4 + h5 {
   margin-top: calc(var(--spacer) * -1);/* Negative margin */
 }
-.content-event .content p:last-of-type {
+.content-event .content :last-child {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {

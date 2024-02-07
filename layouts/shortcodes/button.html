@@ -1,0 +1,5 @@
+{{- /* TODO: Add support for optional button classnames */ -}}
+{{- $href := .Get "href" -}}
+<a href="{{ $href }}" class="button" {{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>
+  {{- .Inner -}}
+</a>{{ "" -}}

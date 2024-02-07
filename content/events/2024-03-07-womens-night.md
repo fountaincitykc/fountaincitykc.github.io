@@ -4,4 +4,8 @@ date: 2024-03-07
 time: 6:30–8:30pm
 location: Meadowbrook Clubhouse
 ---
-A night for women to connect and grow.
+Join us for a great night of food, fellowship, and growth together! We'll hear from speaker Carie Roth: You're Not Enough, And Why That's Great News. Dinner, dessert, and time to connect with others. We hope you can make it, and invite a friend to register too! Registration closes March 1st.
+
+{{< button href="https://fountaincitykc.churchcenter.com/registrations/events/2128231" >}}
+Register
+{{< /button >}}
