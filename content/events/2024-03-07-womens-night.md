@@ -6,6 +6,6 @@ location: Meadowbrook Clubhouse
 ---
 Join us for a great night of food, fellowship, and growth together! We'll hear from speaker Carie Roth: You're Not Enough, And Why That's Great News. Dinner, dessert, and time to connect with others. We hope you can make it, and invite a friend to register too! Registration closes March 1st.
 
-{{< button href="https://fountaincitykc.churchcenter.com/registrations/events/2128231" >}}
+{{< button href="https://fountaincitykc.churchcenter.com/registrations/events/2128231" light=true >}}
 Register
 {{< /button >}}

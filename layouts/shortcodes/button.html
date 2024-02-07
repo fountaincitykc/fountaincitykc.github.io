@@ -1,5 +1,11 @@
-{{- /* TODO: Add support for optional button classnames */ -}}
 {{- $href := .Get "href" -}}
-<a href="{{ $href }}" class="button" {{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>
+{{- $c := slice "button" -}}
+{{- if eq (.Get "disabled") true }}{{ $c = $c | append "is-disabled" }}{{ end -}}
+{{- if eq (.Get "block") true }}{{ $c = $c | append "is-block" }}{{ end -}}
+{{- if eq (.Get "large") true }}{{ $c = $c | append "is-large" }}{{ end -}}
+{{- if eq (.Get "light") true }}{{ $c = $c | append "is-light" }}{{ end -}}
+{{- if eq (.Get "white") true }}{{ $c = $c | append "is-white" }}{{ end -}}
+{{- $class := delimit $c " " -}}
+<a href="{{ $href }}" class="{{ $class }}" {{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>
   {{- .Inner -}}
 </a>{{ "" -}}
