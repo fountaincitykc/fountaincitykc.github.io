@@ -14,7 +14,7 @@
         {{ $currentMonth := time.Format "January 2006" .Date }}
         {{ if ne $month $currentMonth }}
           {{ $month = $currentMonth }}
-          <h2 class="content-event-header animate">
+          <h2 class="content-event-header animate" id="{{ time.Format "2006-01" .Date }}">
             {{ $month }}
           </h2>
         {{ end }}
@@ -24,6 +24,6 @@
         </div>
       {{ end }}
     </div>
-  </div>  
+  </div>
 </div>
 {{ end }}
