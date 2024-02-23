@@ -5,3 +5,7 @@ end_date: 2024-05-04
 location: "[Tall Oaks Center, Linwood, KS](https://maps.app.goo.gl/eStiuf5TLXuJAeZE7)"
 ---
 A time for relationship, rest, and renewal.
+
+{{< button href="https://fountaincitykc.churchcenter.com/registrations/events/2181729" light=true >}}
+Register
+{{< /button >}}
