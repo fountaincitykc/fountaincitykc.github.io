@@ -3,6 +3,8 @@ title: Women's Night
 date: 2024-03-07
 time: 6:30–8:30pm
 location: Meadowbrook Clubhouse
+featured: true
+featured_layout: featured-events/womens-night.html
 ---
 Join us for a great night of food, fellowship, and growth together! We'll hear from speaker Carie Roth: You're Not Enough, And Why That's Great News. Dinner, dessert, and time to connect with others. We hope you can make it, and invite a friend to register too! Registration closes March 1st.
 

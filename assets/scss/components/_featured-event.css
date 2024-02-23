@@ -35,7 +35,8 @@
   text-align: center;
 }
 .featured-event h2 {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-heavy);
+  margin-bottom: var(--spacer-xs);
 }
 .featured-event h3 {
   font-weight: var(--font-weight-normal);
