@@ -3,4 +3,5 @@
 }
 .womens-night h2 {
   color: #df4d32;
+  font-weight: var(--font-weight-heavy);
 }

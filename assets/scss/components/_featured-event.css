@@ -35,16 +35,15 @@
   text-align: center;
 }
 .featured-event h2 {
-  font-weight: var(--font-weight-heavy);
   margin-bottom: var(--spacer-xs);
 }
 .featured-event h3 {
-  font-weight: var(--font-weight-normal);
   font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-normal);
 }
 .featured-event h4 {
-  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
 }
 .featured-event h3 + h4 {
   margin-top: calc(var(--spacer-sm) * -1);/* Negative margin */
