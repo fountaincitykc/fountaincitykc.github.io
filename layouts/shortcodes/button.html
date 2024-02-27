@@ -1,11 +1,26 @@
-{{- $href := .Get "href" -}}
-{{- $c := slice "button" -}}
-{{- if eq (.Get "disabled") true }}{{ $c = $c | append "is-disabled" }}{{ end -}}
-{{- if eq (.Get "block") true }}{{ $c = $c | append "is-block" }}{{ end -}}
-{{- if eq (.Get "large") true }}{{ $c = $c | append "is-large" }}{{ end -}}
-{{- if eq (.Get "light") true }}{{ $c = $c | append "is-light" }}{{ end -}}
-{{- if eq (.Get "white") true }}{{ $c = $c | append "is-white" }}{{ end -}}
-{{- $class := delimit $c " " -}}
+{{ $href := .Get "href" -}}
+{{ $class := slice "button" -}}
+{{/* Get variant */ -}}
+{{ $variant := .Get "variant" -}}
+{{ if or (eq $variant "light") (eq $variant "white") -}}
+  {{ $class = $class | append (printf "is-%s" $variant) -}}
+{{ end -}}
+{{/* Get size */ -}}
+{{ $size := .Get "size" -}}
+{{ if eq $size "large" -}}
+  {{ $class = $class | append (printf "is-%s" $size) -}}
+{{ end -}}
+{{/* Get block */ -}}
+{{ $block := .Get "block" -}}
+{{ if eq $block "true" -}}
+  {{ $class = $class | append "is-block" -}}
+{{ end -}}
+{{/* Get disabled */ -}}
+{{ $disabled := .Get "disabled" -}}
+{{ if eq $disabled "true" -}}
+  {{ $class = $class | append "is-disabled" -}}
+{{ end -}}
+{{ $class = delimit $class " " -}}
 <a href="{{ $href }}" class="{{ $class }}" {{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>
   {{- .Inner -}}
 </a>{{ "" -}}

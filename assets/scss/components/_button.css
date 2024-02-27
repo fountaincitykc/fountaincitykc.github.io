@@ -40,8 +40,9 @@
 .button.is-disabled,
 .button.is-disabled:hover,
 .button.is-disabled:active {
+  pointer-events: none;
+  opacity: 0.5;
   cursor: default;
-  background-color: var(--black-a10);
 }
 
 /* : option - is-block */
