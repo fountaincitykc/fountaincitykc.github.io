@@ -3,13 +3,7 @@
   <div class="container-lg">
     <div class="content-list">
       {{ $month := "" }}
-      {{ range sort .RegularPages "Date" "asc" }}
-        {{/* Skip events in the past */}}
-        {{ with .Date }}
-          {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-            {{ continue }}
-          {{ end }}
-        {{ end }}
+      {{ range sort (where .RegularPages "Date" "gt" now) "Date" "asc" }}
         {{/* Print date header */}}
         {{ $currentMonth := time.Format "January 2006" .Date }}
         {{ if ne $month $currentMonth }}

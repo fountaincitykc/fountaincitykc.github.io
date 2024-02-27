@@ -14,11 +14,6 @@
             <div class="content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
-            {{ with .button }}
-              <a href="{{ .href }}" class="more text-button">
-                {{ .text }}
-              </a>
-            {{ end }}
           </div>
         </div>
       {{ end }}
@@ -34,8 +29,10 @@
           <div class="content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
+          <a href="mailto:{{ site.Params.email }}" class="button">
+            {{ .cta }}
+          </a>
         {{ end }}
-        {{ partial "shared/contact-button.html" . }}
       </div>
     </div>
   </div>

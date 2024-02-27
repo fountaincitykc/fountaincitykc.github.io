@@ -28,6 +28,9 @@ Short text with media
   justify-content: space-between;
   align-items: stretch;
   gap: var(--spacer);
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
   /* This margin will only be applied if the parent of .content-section is not .content-list */
   margin-bottom: var(--spacer-xxl);
 }
@@ -58,14 +61,12 @@ Short text with media
     flex-direction: row;
     gap: var(--spacer-sm);
   }
-  .content-section .media {
-    width: 50%;
-  }
 }
 @media (min-width: 992px) {
   .content-section  {
     flex-direction: row;
     gap: var(--spacer-lg);
+    max-width: none;
   }
   .content-section .media {
     width: 40%;
@@ -75,7 +76,7 @@ Short text with media
   }
 }
 
-/* : option - align-center */
+/* : option - is-center */
 
 .content-section.is-center .body,
 .content-section.is-center .media {

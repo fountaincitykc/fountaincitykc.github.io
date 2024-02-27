@@ -99,29 +99,65 @@
       </div>
     </div>
   </div>
-  {{/* Featured event */}}
-  <div class="container-fluid">
-    {{ range sort (where site.RegularPages "Section" "events") "Date" "asc" }}
-      {{ with .Date }}
-        {{/* Skip events in the past */}}
-        {{ if gt (now.Format "2006-01-02") (time.Format "2006-01-02" .) }}
-          {{ continue }}
+  {{/* Featured events */}}
+  <div class="featured-events">
+    <div class="container-fluid">
+      <h2>
+        {{ .Params.events.headline }}
+      </h2>
+      <div class="cards">
+        {{ with .Site.GetPage "/events" }}
+          {{/* TODO: Modify the card layout so it works with only 1 or 2 events */}}
+          {{ $featuredEvents := where .RegularPages "Params.featured" true }}
+          {{ $futureEvents := where $featuredEvents "Date" "gt" now }}
+          {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
+          {{ range $upcomingEvents }}
+            <div class="card animate">
+              <div class="media">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+              </div>
+              <div class="body">
+                <h3>
+                  {{ .Title }}
+                </h3>
+                {{ if .Date }}
+                  <hr>
+                  <h4>
+                    {{ with .Date }}
+                      {{ time.Format ":date_full" . }}
+                    {{ end }}
+                    {{ with .Params.end_date }}
+                      – {{ time.Format ":date_long" . }}
+                    {{ end }}
+                    {{ if and .Date .Params.time }}
+                      <br>
+                    {{ end }}
+                    {{ with .Params.time }}
+                      {{ . }}
+                    {{ end }}
+                  </h4>
+                  {{ with .Params.location }}
+                    <h5>
+                      {{ . | markdownify }}
+                    </h5>
+                  {{ end }}
+                {{ end }}
+                <div class="content">
+                  {{ .Content }}
+                </div>
+              </div>
+              {{ with .Params.rsvp }}
+                <div class="footer">
+                  <a href="{{ .button.href }}" class="button is-white" {{ if hasPrefix .button.href "http" }} target="_blank" rel="noopener"{{ end }}>
+                    {{ .button.text }}
+                  </a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
-      {{/* Find next upcoming feature event */}}
-      {{ if eq .Params.featured true }}
-        {{ if .Params.featured_layout }}
-          {{/* Render custom layout */}}
-          {{ partial .Params.featured_layout . }}
-        {{ else }}
-          {{/* Render standard layout */}}
-          <div class="featured-event animate">
-            {{ partial "shared/featured-event.html" . }}
-          </div>
-        {{ end }}
-        {{ break }}
-      {{ end }}
-    {{ end }}
+      </div>
+    </div>
   </div>
 </div>
 {{ end }}

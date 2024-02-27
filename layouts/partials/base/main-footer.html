@@ -10,7 +10,11 @@
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
         {{ end }}
-        {{ partial "shared/contact-button.html" . }}
+        {{ with site.Data.contact.button }}
+          <a href="{{ .href }}" target="_blank" class="button">
+            {{ .text }}
+          </a>
+        {{ end }}
       </div>
       <div class="contact-end">
         {{ partial "shared/address.html" . }}

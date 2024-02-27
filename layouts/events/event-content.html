@@ -50,4 +50,11 @@
       {{ . }}
     </div>
   {{ end }}
+  {{ with .Params.rsvp }}
+    <div class="rsvp">
+      <a href="{{ .button.href }}" class="button is-light" {{ if hasPrefix .button.href "http" }} target="_blank" rel="noopener"{{ end }}>
+        {{ .button.text }}
+      </a>
+    </div>
+  {{ end }}
 </div>
