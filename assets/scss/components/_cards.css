@@ -1,25 +1,29 @@
 /*
 @markup
 <div class="cards">
-    <div class="card">
-      <div class="photo">
-        <img>
-      </div>
-      <div class="body">
-        <h3>
-          Headline
-        </h3>
-        <hr>
-        <div class="content">
-          Content
-        </div>
-        <a class="button">
-          Button
-        </a>
+  <div class="card">
+    <div class="media">
+      <img>
+    </div>
+    <div class="body">
+      <h3>
+        Headline
+      </h3>
+      <hr>
+      <div class="content">
+        Content
       </div>
     </div>
+    <div class="footer">
+      <a class="button">
+        Button
+      </a>
+    </div>
+  </div>
 </div>
 */
+
+/* cards */
 
 .cards {
   display: flex;
@@ -41,30 +45,41 @@
   }
 }
 
+/* card */
+
 .card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacer);
   background-color: var(--blue-a10);
   border-radius: var(--border-radius);
   overflow: hidden;
 }
-.card img {
+.card .media img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 .card .body {
+  flex-grow: 1; /* Push down footer */
   padding: var(--spacer);
   text-align: center;
 }
-.card h3 {
+.card .body h3 {
   /* Remove horizontal padding on headline to reduce wrapping */
   margin-left: calc(var(--spacer) * -1);/* Negative margin */
   margin-right: calc(var(--spacer) * -1);/* Negative margin */
 }
-.card .button {
-  margin-bottom: var(--spacer);
+.card .body :last-child {
+  margin-bottom: 0;
+}
+.card .footer {
+  padding: var(--spacer);
+  padding-top: 0;
+  text-align: center;
 }
 @media (min-width: 768px) and (max-width: 991px) {/* md only */
-  .card img {
+  .card .media img {
     height: 300px;
   }
 }

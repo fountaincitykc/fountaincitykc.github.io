@@ -33,7 +33,7 @@
     <div class="cards">
       {{ range .Params.cards }}
         <div class="card animate">
-          <div class="photo">
+          <div class="media">
             <img src="{{ .photo }}" alt="{{ .headline }}">
           </div>
           <div class="body">
@@ -46,12 +46,14 @@
                 {{ .content }}
               </p>
             </div>
-            {{ if .button }}
+          </div>
+          {{ if .button }}
+            <div class="footer">
               <a href="{{ .button.href }}" class="button is-white">
                 {{ .button.text }}
               </a>
-            {{ end }}
-          </div>
+            </div>
+          {{ end }}
         </div>
       {{ end }}
     </div>
