@@ -41,10 +41,10 @@
 @media (min-width: 992px) {
   .cards {
     flex-direction: row;
-    justify-content: space-between;
     align-items: stretch;
   }
   .cards > .card {
+    max-width: 33%;
     flex: 1 1 0;
   }
 }
