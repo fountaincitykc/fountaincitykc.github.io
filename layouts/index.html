@@ -99,18 +99,20 @@
   <div class="featured-events">
     <div class="container-fluid">
       <h2>
-        {{ .Params.events.headline }}
+        {{ .Params.featured_events.headline }}
       </h2>
       <div class="cards">
         {{ with .Site.GetPage "/events" }}
           {{/* TODO: Modify the card layout so it works with only 1 or 2 events */}}
           {{ $featuredEvents := where .RegularPages "Params.featured" true }}
-          {{ $futureEvents := where $featuredEvents "Date" "gt" now }}
+          {{ $today := time.AsTime (now.Format "2006-01-02") }}
+          {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
           {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
           {{ range $upcomingEvents }}
             <div class="card animate">
+              {{ $eventImage := default $.Params.featured_events.placeholder_image .Params.image }}
               <div class="media">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
               <div class="body">
                 <h3>
@@ -152,7 +154,7 @@
         {{ end }}
       </div>
       <p class="all-events">
-        <a href="/events/">{{ .Params.events.view_all }}</a>
+        <a href="/events/">{{ .Params.featured_events.view_all }}</a>
       </p>
     </div>
   </div>
