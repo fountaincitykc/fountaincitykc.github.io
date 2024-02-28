@@ -1,0 +1,25 @@
+contact:
+  headline: Interested in Fountain City Church?
+  content: "Visiting a new church can be difficult. We'd love to connect and answer any questions you may have before you come!"
+  button:
+    text: Connect with us
+    href: https://fountaincitykc.churchcenter.com/people/forms/283554
+app_store:
+  headline: Download church app
+  content: "Our Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory."
+  button:
+    image: /images/ui/app-store.svg
+    href: https://apps.apple.com/us/app/church-center-app/id1357742931
+social:
+  - text: Instagram
+    url: https://www.instagram.com/fountaincitychurch_kc/
+    image: /images/ui/instagram.svg
+  - text: Facebook
+    url: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
+    image: /images/ui/facebook.svg
+  - text: Youtube
+    url: https://www.youtube.com/@fountaincitychurchkc9519/
+    image: /images/ui/youtube.svg
+  - text: Podbean
+    url: https://fcckc.podbean.com/
+    image: /images/ui/podbean.svg

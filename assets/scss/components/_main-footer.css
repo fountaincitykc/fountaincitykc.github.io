@@ -3,21 +3,43 @@
   color: var(--white);
   background-color: var(--black);
 }
-.main-footer .row {
+.main-footer a:not([class='button']) {
+  color: var(--white);
+}
+
+/* top-row */
+
+.main-footer .top-row {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 0;
 }
-.main-footer .contact-start {
+.main-footer .contact,
+.main-footer .app-store {
   margin-bottom: var(--spacer-xl);
   padding-bottom: var(--spacer-xl);
   border-bottom: solid 3px var(--white-a20);
 }
-.main-footer .contact-end a {
-  color: var(--white);
+@media (min-width: 992px) {
+  .main-footer .top-row {
+    flex-direction: row;
+    gap: var(--spacer-xl);
+    margin-bottom: var(--spacer-xl);
+  }
+  .main-footer .contact,
+  .main-footer .app-store,
+  .main-footer .address {
+    flex: 1 1 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+/* bottom-row */
+
+.main-footer .bottom-row {
+  display: flex;
+  flex-direction: column;
 }
 .main-footer .social ul {
   display: flex;
@@ -30,25 +52,9 @@
   width: 32px;
   height: 32px;
 }
-@media (min-width: 768px) {
-  .main-footer .row {
+@media (min-width: 992px) {
+  .main-footer .bottom-row {
     flex-direction: row;
-  }
-  .main-footer .contact-start {
-    flex: 1 1 auto;
-    padding-bottom: 0;
-    padding-right: var(--spacer-lg);
-    border-bottom: none;
-  }
-  .main-footer .contact-start > * {
-    max-width: 600px;
-  }
-  .main-footer .contact-end {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    margin-bottom: var(--spacer-xl);
-    padding-left: var(--spacer-lg);
-    padding-right: var(--spacer-lg);
   }
   .main-footer .social,
   .main-footer .copyright {
@@ -64,14 +70,5 @@
   }
   .main-footer .social ul {
     justify-content: flex-end;
-  }
-}
-@media (min-width: 992px) {
-  .main-footer .contact-start {
-    padding-right: var(--spacer-xxl);
-  }
-  .main-footer .contact-end {
-    padding-left: var(--spacer-xxl);
-    padding-right: var(--spacer-xxl);
   }
 }

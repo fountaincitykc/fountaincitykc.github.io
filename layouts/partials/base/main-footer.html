@@ -1,8 +1,8 @@
 <footer class="main-footer">
   <div class="container-fluid">
-    <div class="row">
-      <div class="contact-start">
-        {{ with site.Data.contact }}
+    <div class="top-row">
+      <div class="contact">
+        {{ with site.Data.footer.contact }}
           <h3>
             {{ .headline }}
           </h3>
@@ -10,13 +10,28 @@
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
         {{ end }}
-        {{ with site.Data.contact.button }}
+        {{ with site.Data.footer.contact.button }}
           <a href="{{ .href }}" target="_blank" class="button">
             {{ .text }}
           </a>
         {{ end }}
       </div>
-      <div class="contact-end">
+      <div class="app-store">
+        {{ with site.Data.footer.app_store }}
+          <h3>
+            {{ .headline }}
+          </h3>
+          <div class="content">
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          </div>
+        {{ end }}
+        {{ with site.Data.footer.app_store.button }}
+          <a href="{{ .href }}" target="_blank" class="button">
+            <img src="{{ .image }}">
+          </a>
+        {{ end }}
+      </div>
+      <div class="address">
         {{ partial "shared/address.html" . }}
         {{ partial "shared/mailing-address.html" . }}
         <p>
@@ -24,10 +39,10 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="bottom-row">
       <div class="social">
         <ul>
-          {{ range site.Data.elsewhere.links }}
+          {{ range site.Data.footer.social }}
             <li>
               <a href="{{ .url }}" target="_blank">
                 <img src="{{ .image }}" alt="{{ .title }}">
