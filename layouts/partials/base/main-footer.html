@@ -24,7 +24,7 @@
           </div>
         {{ end }}
         {{ with site.Data.footer.app_store.button }}
-          {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q>` .image))}}
+          {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "App store"))}}
         {{ end }}
       </div>
       <div class="address">
