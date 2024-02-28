@@ -29,9 +29,7 @@
           <div class="content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
-          <a href="mailto:{{ site.Params.email }}" class="button">
-            {{ .cta }}
-          </a>
+          {{ partial "shared/button.html" (dict "href" (printf `mailto:%s` site.Params.email) "label" .cta )}}
         {{ end }}
       </div>
     </div>

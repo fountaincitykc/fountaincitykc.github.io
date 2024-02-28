@@ -2,16 +2,16 @@
   <ul class="paginator">
     <li>
       {{ if .HasPrev }}
-        <a href="{{ .Prev.URL }}" class="button is-large">← Newer</a>
+        {{ partial "shared/button.html" (dict "href" .Prev.URL "label" "← Newer" "class" "is-large" )}}
       {{ else }}
-        <span class="button is-large is-disabled">← Newer</span>
+        {{ partial "shared/button.html" (dict "label" "← Newer" "class" "is-large is-disabled" )}}
       {{ end }}
     </li>
     <li>
       {{ if .HasNext }}
-        <a href="{{ .Next.URL }}" class="button is-large">Older →</a>
+        {{ partial "shared/button.html" (dict "href" .Next.URL "label" "Older →" "class" "is-large" )}}
       {{ else }}
-        <span class="button is-large is-disabled">Older →</span>
+        {{ partial "shared/button.html" (dict "label" "Older →" "class" "is-large is-disabled" )}}
       {{ end }}
     </li>
   </ul>

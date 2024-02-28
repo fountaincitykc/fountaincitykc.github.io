@@ -15,9 +15,7 @@
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
             {{ with .button }}
-              <a href="{{ .href }}" class="button is-light">
-                {{ .text }}
-              </a>
+              {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-light" )}}
             {{ end }}
           </div>
         </div>
@@ -45,7 +43,9 @@
           <div class="content">
             {{ partial "shared/address.html" . }}
           </div>
-          {{ partial "shared/directions-button.html" . }}
+          {{ with site.Data.directions.button }}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+          {{ end }}
         </div>
       </div>
     </div>

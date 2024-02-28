@@ -11,9 +11,7 @@
           </div>
         {{ end }}
         {{ with site.Data.footer.contact.button }}
-          <a href="{{ .href }}" target="_blank" class="button">
-            {{ .text }}
-          </a>
+          {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
         {{ end }}
       </div>
       <div class="app-store">
@@ -26,9 +24,7 @@
           </div>
         {{ end }}
         {{ with site.Data.footer.app_store.button }}
-          <a href="{{ .href }}" target="_blank" class="button">
-            <img src="{{ .image }}">
-          </a>
+          {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q>` .image))}}
         {{ end }}
       </div>
       <div class="address">

@@ -11,7 +11,9 @@
     <div class="content">
       {{ partial "shared/address.html" . }}
     </div>
-    {{ partial "shared/directions-button.html" . }}
+    {{ with site.Data.directions.button }}
+      {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+    {{ end }}
   </div>
   {{/* Hero */}}
   <div class="hero is-fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
@@ -23,7 +25,7 @@
       </h3>
       {{ with .Params.hero.button }}
         <div id="watch-live" class="watch-live hide">
-          <a href="{{ .href }}" class="button" target="_blank">{{ .text }}</a>
+          {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
         </div>
       {{ end }}
     </div>
@@ -47,11 +49,9 @@
               </p>
             </div>
           </div>
-          {{ if .button }}
+          {{ with .button }}
             <div class="footer">
-              <a href="{{ .button.href }}" class="button is-white">
-                {{ .button.text }}
-              </a>
+              {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-white" )}}
             </div>
           {{ end }}
         </div>
@@ -86,14 +86,10 @@
         </div>
         <div class="actions">
           {{ with .Params.sermon.watch }}
-            <a href="{{ .href }}" class="button">
-              {{ .text }}
-            </a>
+            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
-            <a href="{{ .href }}" class="button" target="_blank">
-              {{ .text }}
-            </a>
+            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
           {{ end }}
         </div>
       </div>
@@ -148,9 +144,7 @@
               </div>
               {{ with .Params.rsvp }}
                 <div class="footer">
-                  <a href="{{ .button.href }}" class="button is-white" {{ if hasPrefix .button.href "http" }} target="_blank" rel="noopener"{{ end }}>
-                    {{ .button.text }}
-                  </a>
+                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "is-white" )}}
                 </div>
               {{ end }}
             </div>
