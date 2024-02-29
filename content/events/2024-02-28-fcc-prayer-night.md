@@ -1,4 +1,5 @@
 ---
+draft: true
 title: FCC Prayer Night
 date: 2024-02-28
 time: 6–8pm
