@@ -8,11 +8,11 @@ apps:
   headline: Download our app
   content: "The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory."
   app_store:
+    url: https://apps.apple.com/us/app/church-center-app/id1357742931
     image: /images/ui/app-store.svg
-    href: https://apps.apple.com/us/app/church-center-app/id1357742931
   google_play:
+    url: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
     image: /images/ui/google-play.svg
-    href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
 social:
   - text: Instagram
     url: https://www.instagram.com/fountaincitychurch_kc/

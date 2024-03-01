@@ -25,10 +25,10 @@
         {{ end }}
         <div class="app-buttons">
           {{ with site.Data.footer.apps.app_store }}
-            {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "App Store") "class" "is-dark")}}
+            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "App Store") "class" "is-dark")}}
           {{ end }}
           {{ with site.Data.footer.apps.google_play }}
-            {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "Google Play") "class" "is-dark")}}
+            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "Google Play") "class" "is-dark")}}
           {{ end }}
         </div>
       </div>
