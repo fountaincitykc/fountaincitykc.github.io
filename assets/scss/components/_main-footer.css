@@ -1,7 +1,7 @@
 .main-footer {
   padding-top: var(--spacer-xxl);
   color: var(--white);
-  background-color: var(--black);
+  background-color: var(--dark-gray);
 }
 .main-footer a:not([class='button']) {
   color: var(--white);
@@ -14,10 +14,14 @@
   flex-direction: column;
 }
 .main-footer .contact,
-.main-footer .app-store {
+.main-footer .apps {
   margin-bottom: var(--spacer-xl);
   padding-bottom: var(--spacer-xl);
   border-bottom: solid 3px var(--white-a20);
+}
+.main-footer .app-buttons {
+  display: flex;
+  gap: var(--spacer-sm);
 }
 @media (min-width: 992px) {
   .main-footer .top-row {
@@ -26,7 +30,7 @@
     margin-bottom: var(--spacer-xl);
   }
   .main-footer .contact,
-  .main-footer .app-store,
+  .main-footer .apps,
   .main-footer .address {
     flex: 1 1 0;
     margin-bottom: 0;

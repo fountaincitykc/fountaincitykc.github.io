@@ -24,10 +24,10 @@
   content: "▶︎";
   font-size: 80px;
   color: var(--white);
-  text-shadow: 0 0 var(--spacer) var(--black);
+  text-shadow: 0 0 var(--spacer) var(--dark-gray);
   transition: background-color .2s ease, font-size .2s var(--easeOutQuad);
 }
 .play-video:hover::after {
   font-size: 86px;
-  background-color: var(--black-a20);
+  background-color: var(--dark-gray-a20);
 }

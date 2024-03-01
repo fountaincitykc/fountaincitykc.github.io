@@ -54,6 +54,9 @@
   display: block;
   width: 100%;
 }
+.button.is-block img {
+  margin: 0 auto;
+}
 
 /* : option - is-large */
 
@@ -75,6 +78,21 @@
 .button.is-light:active {
   color: var(--blue);
   background-color: var(--blue-a10);
+}
+
+/* : option - is-dark */
+
+.button.is-dark {
+  color: var(--white);
+  background-color: var(--black-a30);
+}
+.button.is-dark:hover {
+  color: var(--white);
+  background-color: var(--black-a50);
+}
+.button.is-dark:active {
+  color: var(--white);
+  background-color: var(--black-a30);
 }
 
 /* : option - is-white */

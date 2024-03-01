@@ -1,12 +1,20 @@
 :root {
 
-  --black-rgb: 39, 39, 40;
+  --black-rgb: 0, 0, 0;
   --black: rgb(var(--black-rgb));
   --black-a10: rgba(var(--black-rgb), 0.1);
   --black-a20: rgba(var(--black-rgb), 0.2);
   --black-a30: rgba(var(--black-rgb), 0.3);
   --black-a40: rgba(var(--black-rgb), 0.4);
   --black-a50: rgba(var(--black-rgb), 0.5);
+
+  --dark-gray-rgb: 39, 39, 40;
+  --dark-gray: rgb(var(--dark-gray-rgb));
+  --dark-gray-a10: rgba(var(--dark-gray-rgb), 0.1);
+  --dark-gray-a20: rgba(var(--dark-gray-rgb), 0.2);
+  --dark-gray-a30: rgba(var(--dark-gray-rgb), 0.3);
+  --dark-gray-a40: rgba(var(--dark-gray-rgb), 0.4);
+  --dark-gray-a50: rgba(var(--dark-gray-rgb), 0.5);
 
   --white-rgb: 255, 255, 255;
   --white: rgb(var(--white-rgb));

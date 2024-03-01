@@ -14,8 +14,8 @@
           {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
         {{ end }}
       </div>
-      <div class="app-store">
-        {{ with site.Data.footer.app_store }}
+      <div class="apps">
+        {{ with site.Data.footer.apps }}
           <h3>
             {{ .headline }}
           </h3>
@@ -23,9 +23,14 @@
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
         {{ end }}
-        {{ with site.Data.footer.app_store.button }}
-          {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "App store"))}}
-        {{ end }}
+        <div class="app-buttons">
+          {{ with site.Data.footer.apps.app_store }}
+            {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "App Store") "class" "is-dark")}}
+          {{ end }}
+          {{ with site.Data.footer.apps.google_play }}
+            {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image "Google Play") "class" "is-dark")}}
+          {{ end }}
+        </div>
       </div>
       <div class="address">
         {{ partial "shared/address.html" . }}

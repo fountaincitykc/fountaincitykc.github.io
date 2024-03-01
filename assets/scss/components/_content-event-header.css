@@ -7,7 +7,7 @@
 
 .content-event-header {
   padding-top: var(--spacer-xl);
-  border-top: 3px solid var(--black-a10);
+  border-top: 3px solid var(--dark-gray-a10);
 }
 .content-event-header:first-of-type {
   padding-top: 0;

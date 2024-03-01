@@ -20,7 +20,7 @@ html {
 body {
   margin: 0;
   background-color: var(--white);
-  color: var(--black);
+  color: var(--dark-gray);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
@@ -127,5 +127,5 @@ hr {
   margin-bottom: var(--spacer);
   overflow: visible;
   border: none;
-  border-top: 3px solid var(--black-a30);
+  border-top: 3px solid var(--dark-gray-a30);
 }
