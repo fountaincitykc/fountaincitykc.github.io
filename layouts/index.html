@@ -5,19 +5,17 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="home">
+<div class="page--home">
   {{/* Mobile directions */}}
   <div class="mobile-directions animate">
-    <div class="content">
-      {{ partial "shared/address.html" . }}
-    </div>
+    {{ partial "shared/address.html" . }}
     {{ with site.Data.directions.button }}
       {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
   {{/* Hero */}}
-  <div class="hero is-fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
-    <div class="body">
+  <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
+    <div class="hero__body">
       {{ partial "shared/fcc.html" }}
       <hr>
       <h3>
@@ -35,23 +33,23 @@
     <div class="cards">
       {{ range .Params.cards }}
         <div class="card animate">
-          <div class="media">
+          <div class="card__media">
             <img src="{{ .photo }}" alt="{{ .headline }}">
           </div>
-          <div class="body">
+          <div class="card__body">
             <h3>
               {{ .headline }}
             </h3>
             <hr>
-            <div class="content">
+            <div class="card__content">
               <p>
                 {{ .content }}
               </p>
             </div>
           </div>
           {{ with .button }}
-            <div class="footer">
-              {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-white" )}}
+            <div class="card__footer">
+              {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--white" )}}
             </div>
           {{ end }}
         </div>
@@ -69,27 +67,27 @@
   {{ end }}
   <div class="container-fluid">
     <div class="content-section animate">
-      <div class="media">
+      <div class="content-section__media">
         <a href="{{ .Params.sermon.watch.href }}">
           <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "alt" }}">
         </a>
       </div>
-      <div class="body">
+      <div class="content-section__body">
         <h2>
           {{ .Params.sermon.headline }}
         </h2>
         <h3>
           {{ $latestSermon.Get "date" }} - {{ $latestSermon.Get "title" }}
         </h3>
-        <div class="content">
+        <div class="content-section__content">
           {{ $latestSermon.Get "content" }}
         </div>
-        <div class="actions">
+        <div class="content-section__footer">
           {{ with .Params.sermon.watch }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-light" )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--light" )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-light" )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--light" )}}
           {{ end }}
         </div>
       </div>
@@ -110,10 +108,10 @@
           {{ range $upcomingEvents }}
             <div class="card animate">
               {{ $eventImage := default $.Params.featured_events.placeholder_image .Params.image }}
-              <div class="media">
+              <div class="card__media">
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
-              <div class="body">
+              <div class="card__body">
                 <h3>
                   {{ .Title }}
                 </h3>
@@ -139,20 +137,20 @@
                     </h5>
                   {{ end }}
                 {{ end }}
-                <div class="content">
+                <div class="card__content">
                   {{ .Content }}
                 </div>
               </div>
               {{ with .Params.rsvp }}
-                <div class="footer">
-                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "is-white" )}}
+                <div class="card__footer">
+                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "button--white" )}}
                 </div>
               {{ end }}
             </div>
           {{ end }}
         {{ end }}
       </div>
-      <p class="all-events">
+      <p class="featured-events__view-all">
         <a href="/events/">{{ .Params.featured_events.view_all }}</a>
       </p>
     </div>

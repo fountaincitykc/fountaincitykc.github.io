@@ -1,15 +1,15 @@
 /*
 @markup
-<h2 class="content-event-header">
+<h2 class="event-header">
   Headline
 </h2>
 */
 
-.content-event-header {
+.event-header {
   padding-top: var(--spacer-xl);
   border-top: 3px solid var(--dark-gray-a10);
 }
-.content-event-header:first-of-type {
+.event-header:first-of-type {
   padding-top: 0;
   border-top: none;
 }

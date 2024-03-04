@@ -4,7 +4,7 @@
   <img>
 </div>
 or
-<img class="is-rounded">
+<img class="img--rounded">
 */
 
 .rounded-image {/* Force the image into a square */
@@ -25,6 +25,8 @@ or
   object-position: center center;
 }
 
-img.is-rounded {
+/* @options */
+
+img.img--rounded {
   border-radius: 100%;
 }

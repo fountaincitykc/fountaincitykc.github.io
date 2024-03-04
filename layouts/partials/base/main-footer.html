@@ -1,12 +1,12 @@
 <footer class="main-footer">
   <div class="container-fluid">
-    <div class="top-row">
-      <div class="contact">
+    <div class="main-footer__top-row">
+      <div class="main-footer__contact">
         {{ with site.Data.footer.contact }}
           <h3>
             {{ .headline }}
           </h3>
-          <div class="content">
+          <div>
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
         {{ end }}
@@ -14,25 +14,25 @@
           {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
         {{ end }}
       </div>
-      <div class="apps">
+      <div class="main-footer__apps">
         {{ with site.Data.footer.apps }}
           <h3>
             {{ .headline }}
           </h3>
-          <div class="content">
+          <div>
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
         {{ end }}
-        <div class="app-buttons">
+        <div class="main-footer__app-buttons">
           {{ with site.Data.footer.apps.app_store }}
-            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "App Store") "class" "is-dark")}}
+            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "App Store") "class" "button--dark")}}
           {{ end }}
           {{ with site.Data.footer.apps.google_play }}
-            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "Google Play") "class" "is-dark")}}
+            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "Google Play") "class" "button--dark")}}
           {{ end }}
         </div>
       </div>
-      <div class="address">
+      <div class="main-footer__address">
         {{ partial "shared/address.html" . }}
         {{ partial "shared/mailing-address.html" . }}
         <p>
@@ -40,8 +40,8 @@
         </p>
       </div>
     </div>
-    <div class="bottom-row">
-      <div class="social">
+    <div class="main-footer__bottom-row">
+      <div class="main-footer__social">
         <ul>
           {{ range site.Data.footer.social }}
             <li>
@@ -52,7 +52,7 @@
           {{ end }}
         </ul>
       </div>
-      <div class="copyright">
+      <div class="main-footer__copyright">
         <p>
           &copy; {{ dateFormat "2006" now }} by Fountain City Church
         </p>

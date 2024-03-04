@@ -31,10 +31,12 @@ h1.fcc span:nth-child(3) {/* Church */
   }
 }
 
-/* : option - is-small */
+/* @options */
+
+/* fcc--small */
 
 @media (min-width: 768px) {
-  h1.fcc.is-small span:nth-child(n+2) {
+  h1.fcc.fcc--small span:nth-child(n+2) {
     font-size: 48px;
   }
 }

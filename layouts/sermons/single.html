@@ -1,18 +1,20 @@
 {{ define "main" }}
-<div class="sermon">
+<div class="page--sermon">
   <div class="container-lg">
-    <div class="content-section is-stacked animate">
-      <div class="media">
+    <div class="content-section content-section--stacked animate">
+      <div class="content-section__media">
         {{ partial "shared/youtube-embed.html" .Params.youtube_id }}
       </div>
-      <div class="body">
+      <div class="content-section__body">
         <h3>
           {{ dateFormat "January 2, 2006" .Date }}
         </h3>
         <h4>
           {{ .Title }}
         </h4>
-        {{ .Content }}
+        <div class="content-section__content">
+          {{ .Content }}
+        </div>
       </div>
     </div>
   </div>  

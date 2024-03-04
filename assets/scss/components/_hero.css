@@ -1,7 +1,7 @@
 /*
 @markup
 <div class="hero" style="background-image:url();">
-  <div class="body">
+  <div class="hero__body">
     <h1>
       Headline
     </h1>
@@ -25,15 +25,15 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-.hero .body {
+.hero .hero__body {
   align-self: center;
   text-align: center;
   color: var(--white);
 }
-.hero .button {
+.hero .hero__body .button {
   box-shadow: 0 0 var(--spacer-sm) rgba(0,0,0,0.4);
 }
-.hero hr {
+.hero .hero__body hr {
   border-top-color: var(--white-a50);
 }
 @media (min-width: 576px) {
@@ -47,10 +47,12 @@
   }
 }
 
-/* : option - is-fixed */
+/* @options */
+
+/* hero--fixed */
 
 @media (min-width: 992px) {
-  .hero.is-fixed {
+  .hero.hero--fixed {
     background-attachment: fixed;
   }
 }

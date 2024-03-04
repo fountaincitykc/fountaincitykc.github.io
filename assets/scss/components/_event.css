@@ -1,15 +1,15 @@
 /*
 @markup
-<div class="content-event">
-  <div class="date">
-    <div class="month">
+<div class="event">
+  <div class="event__date">
+    <div class="event__month">
       Month
     </div>
-    <div class="day">
+    <div class="event__day">
       Day
     </div>
   </div>
-  <div class="body">
+  <div class="event__body">
     <h3>
       Headline
     </h3>
@@ -19,63 +19,65 @@
     <h5>
       Location
     </h5>
-    <div class="content">
+    <div class="event__content">
       Content
     </div>
-    <div class="rsvp">
+    <div class="event__rsvp">
       <a class="button">
+        Button
+      </a>
     </div>
   </div>
 </div>
 */
 
-.content-event {
+.event {
   display: flex;
   flex-direction: column;
   gap: var(--spacer);
 }
-.content-event .date .month,
-.content-event .date .day,
-.content-event .date .tbd {
+.event .event__month,
+.event .event__day,
+.event .event__tbd {
   width: 70px;
   padding: var(--spacer-xxs) 0;
   font-weight: var(--font-weight-bold);
   text-align: center;
 }
-.content-event .date .month,
-.content-event .date .tbd {
+.event .event__month,
+.event .event__tbd {
   background-color: var(--blue-a50);
   color: var(--white);
 }
-.content-event .date .day {
+.event .event__day {
   border: 3px solid var(--blue-a50);
 }
-.content-event .date .tbd {
+.event .event__tbd {
   padding: var(--spacer) 0;
 }
-.content-event h4,
-.content-event h5 {
+.event h4,
+.event h5 {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-base);
 }
-.content-event h4 + h5 {
+.event h4 + h5 {
   margin-top: calc(var(--spacer) * -1);/* Negative margin */
 }
-.content-event .content :last-child {
+.event .event__content :last-child {
   margin-bottom: 0;
 }
-.content-event .rsvp {
+.event .event__rsvp {
   margin-top: var(--spacer);
 }
 @media (min-width: 768px) {
-  .content-event  {
+  .event  {
     flex-direction: row;
     gap: var(--spacer-lg);
   }
-  .content-event .date .month,
-  .content-event .date .day,
-  .content-event .date .tbd {
+  .event .event__month,
+  .event .event__day,
+  .event .event__tbd {
     width: 100px;
     font-size: var(--font-size-h3);
   }

@@ -38,74 +38,76 @@
   display: block;
 }
 
-/* : option - is-disabled */
+/* @options */
 
-.button.is-disabled,
-.button.is-disabled:hover,
-.button.is-disabled:active {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: default;
+/* button--light */
+
+.button.button--light {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+.button.button--light:hover {
+  color: var(--blue);
+  background-color: var(--blue-a20);
+}
+.button.button--light:active {
+  color: var(--blue);
+  background-color: var(--blue-a10);
 }
 
-/* : option - is-block */
+/* button--dark */
 
-.button.is-block {
-  display: block;
-  width: 100%;
+.button.button--dark {
+  color: var(--white);
+  background-color: var(--black-a30);
 }
-.button.is-block img {
-  margin: 0 auto;
+.button.button--dark:hover {
+  color: var(--white);
+  background-color: var(--black-a50);
+}
+.button.button--dark:active {
+  color: var(--white);
+  background-color: var(--black-a30);
 }
 
-/* : option - is-large */
+/* button--white */
 
-.button.is-large {
+.button.button--white {
+  color: var(--blue);
+  background-color: var(--white);
+}
+.button.button--white:hover {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+.button.button--white:active {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+/* button--large */
+
+.button.button--large {
   padding: 1rem 1.75rem;
   font-size: var(--font-size-large);
 }
 
-/* : option - is-light */
+/* button--disabled */
 
-.button.is-light {
-  color: var(--blue);
-  background-color: var(--blue-a10);
-}
-.button.is-light:hover {
-  color: var(--blue);
-  background-color: var(--blue-a20);
-}
-.button.is-light:active {
-  color: var(--blue);
-  background-color: var(--blue-a10);
+.button.button--disabled,
+.button.button--disabled:hover,
+.button.button--disabled:active {
+  pointer-events: none;
+  opacity: 0.25;
+  cursor: default;
 }
 
-/* : option - is-dark */
+/* button--block */
 
-.button.is-dark {
-  color: var(--white);
-  background-color: var(--black-a30);
+.button.button--block {
+  display: block;
+  width: 100%;
 }
-.button.is-dark:hover {
-  color: var(--white);
-  background-color: var(--black-a50);
-}
-.button.is-dark:active {
-  color: var(--white);
-  background-color: var(--black-a30);
-}
-
-/* : option - is-white */
-
-.button.is-white {
-  color: var(--blue);
-  background-color: var(--white);
-}
-.button.is-white:hover {
-  color: var(--blue);
-  background-color: var(--blue-a10);
-}
-.button.is-white:active {
-  color: var(--blue);
-  background-color: var(--white);
+.button.button--block img {
+  margin: 0 auto;
 }

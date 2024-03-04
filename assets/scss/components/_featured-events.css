@@ -7,6 +7,9 @@
   <div class="cards">
     ...
   </div>
+  <p class="featured-events__view-all">
+    <a>Link</a>
+  </p>
 </div>
 */
 
@@ -14,7 +17,7 @@
   text-align: center;
   margin-bottom: var(--spacer-xxl);
 }
-.featured-events .all-events {
+.featured-events .featured-events__view-all {
   font-size: var(--font-size-large);
   text-align: center;
 }

@@ -1,17 +1,17 @@
 {{ define "main" }}
-<div class="connect">
+<div class="page--connect">
   <div class="container-fluid">
-    <div class="content-list dense">
+    <div class="content-list content-list--dense">
       {{ range .Params.sections }}
         <div class="content-section animate" id="{{ .headline | urlize }}">
-          <div class="media">
+          <div class="content-section__media">
             <img src="{{ .photo }}" alt="{{ .headline }}">
           </div>
-          <div class="body">
+          <div class="content-section__body">
             <h2>
               {{ .headline }}
             </h2>
-            <div class="content">
+            <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
           </div>
@@ -20,13 +20,13 @@
     </div>
   </div>
   <div class="container-md">
-    <div class="content-blurb has-center-content animate">
-      <div class="body">
+    <div class="blurb blurb--centered animate">
+      <div class="blurb__body">
         {{ with .Params.contact }}
           <h2>
             {{ .headline }}
           </h2>
-          <div class="content">
+          <div class="blurb__content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
           {{ partial "shared/button.html" (dict "href" (printf `mailto:%s` site.Params.email) "label" .cta )}}

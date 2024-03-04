@@ -3,16 +3,17 @@
 @import "foundation";
 @import "animate";
 
+@import "components/blurb";
 @import "components/button";
 @import "components/callout";
+@import "components/card";
 @import "components/cards";
 @import "components/container";
-@import "components/content-blurb";
-@import "components/content-event-header";
-@import "components/content-event";
 @import "components/content-list";
 @import "components/content-section";
 @import "components/error";
+@import "components/event-header";
+@import "components/event";
 @import "components/fcc";
 @import "components/featured-events";
 @import "components/hero";

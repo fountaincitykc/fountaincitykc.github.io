@@ -1,13 +1,13 @@
 {{ define "main" }}
-<div class="staff">
+<div class="page--staff">
   <div class="container-fluid">
-    <div class="content-list is-dense">
+    <div class="content-list content-list--dense">
       {{ range .Params.staff }}
         <div class="content-section animate" id="{{ .name | urlize }}">
-          <div class="media">
+          <div class="content-section__media">
             <img src="{{ .photo }}" alt="{{ .name }}">
           </div>
-          <div class="body">
+          <div class="content-section__body">
             <h2>
               {{ .name }}
             </h2>
@@ -19,7 +19,7 @@
                 {{ .email }}
               </a>
             </h4>
-            <div class="content">
+            <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
           </div>

@@ -1,0 +1,37 @@
+/*
+@description
+Short centered text
+
+@markup
+<div class="blurb">
+  <div class="blurb__body">
+    <h2>
+      Headline
+    </h2>
+    <div class="blurb__content">
+      Content
+    </div>
+    <a class="button">
+      Button
+    </a>
+  </div>
+</div>
+*/
+
+.blurb {
+  /* This margin will only be applied if the parent of .blurb is not .content-list */
+  margin-bottom: var(--spacer-xxl);
+  text-align: center;
+}
+.blurb  .blurb__content {
+  text-align: left;
+}
+
+/* @options */
+
+/* blurb--centered */
+
+.blurb.blurb--centered .blurb__content,
+.blurb.blurb--centered .blurb__content p {
+  text-align: center;
+}

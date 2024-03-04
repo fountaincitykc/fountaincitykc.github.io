@@ -4,12 +4,12 @@
       {{/* If the current page is the event detail page... */}}
       {{ if and (eq .Type "events") .IsPage }}
         {{ page.Type | singularize }}
-      
-        {{/* If the current page is the sermon detail page... */}}
+
+      {{/* If the current page is the sermon detail page... */}}
       {{ else if and (eq .Type "sermons") .IsPage }}
         {{ dateFormat "January 2, 2006" .Date }}
-      
-        {{/* Otherwise, use the page title */}}
+
+      {{/* Otherwise, use the page title */}}
       {{ else }}
         {{ .Title }}
       {{ end }}

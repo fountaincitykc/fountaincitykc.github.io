@@ -1,16 +1,16 @@
 {{ define "main" }}
-<div class="sermons">
+<div class="page--sermons">
   <div class="container-fluid">
-    <div class="content-list is-dense">
+    <div class="content-list content-list--dense">
       {{ range .Paginator.Pages }}
         <div class="content-section animate">
-          <div class="media">
+          <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
               <img src="{{ .Params.image }}" alt="{{ default .Title .Params.series }}">
             </a>
             {{/* partial "shared/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtube_id) */}}
           </div>
-          <div class="body">
+          <div class="content-section__body">
             <h3>
               <a href="{{ .RelPermalink }}">
                 {{ dateFormat "January 2, 2006" .Date }}
@@ -19,8 +19,12 @@
             <h4>
               {{ .Title }}
             </h4>
-            {{ .Content }}
-            {{ partial "shared/button.html" (dict "href" .RelPermalink "label" $.Params.button_text "class" "is-light" )}}
+            <div class="content-section__content">
+              {{ .Content }}
+            </div>
+            <div class="content-section__footer">
+              {{ partial "shared/button.html" (dict "href" .RelPermalink "label" $.Params.button_text "class" "button--light" )}}
+            </div>
           </div>
         </div>
       {{ end }}

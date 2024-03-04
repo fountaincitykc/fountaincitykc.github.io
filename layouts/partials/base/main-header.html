@@ -1,12 +1,14 @@
 <header id="main-header" class="main-header">
   <div class="container-fluid">
-    <div class="row">
-      <div class="logo">
+    <div class="main-header__row">
+      <div class="main-header__logo">
         <a href="/">
           <img src="/images/ui/fountain-city-church.png" alt="Fountain City Church">
         </a>
       </div>
-      {{ partial "base/main-nav.html" . }}
+      <div class="main-header__nav">
+        {{ partial "base/main-nav.html" . }}
+      </div>
     </div>
   </div>
 </header>

@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="events">
+<div class="page--events">
   <div class="container-lg">
     <div class="content-list">
       {{ $month := "" }}
@@ -9,14 +9,12 @@
         {{ $currentMonth := time.Format "January 2006" .Date }}
         {{ if ne $month $currentMonth }}
           {{ $month = $currentMonth }}
-          <h2 class="content-event-header animate" id="{{ time.Format "2006-01" .Date }}">
+          <h2 class="event-header animate" id="{{ time.Format "2006-01" .Date }}">
             {{ $month }}
           </h2>
         {{ end }}
         {{/* Print event details */}}
-        <div class="content-event animate">
-          {{ .Render "event-content" }}
-        </div>
+        {{ .Render "event" }}
       {{ end }}
     </div>
   </div>

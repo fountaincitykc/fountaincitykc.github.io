@@ -1,6 +1,6 @@
 /*
 @description
-Wrapper for all content types (.content-blurb, .content-section, .content-event, etc)
+Wrapper for all content types (.blurb, .content-section, .event, etc)
 
 @markup
 <div class="content-list">
@@ -20,8 +20,10 @@ Wrapper for all content types (.content-blurb, .content-section, .content-event,
   margin-bottom: 0 !important;/* Remove margin-bottom on direct children */
 }
 
-/* : option - is-dense */
+/* @options */
 
-.content-list.is-dense {
+/* content-list--dense */
+
+.content-list.content-list--dense {
   gap: var(--spacer-xl);
 }

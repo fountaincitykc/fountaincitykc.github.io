@@ -1,0 +1,60 @@
+<div class="event animate">
+  <div class="event__date">
+    {{ with .Date }}
+      <div class="event__month">
+        {{ time.Format "Jan" . }}
+      </div>
+      <div class="event__day">
+        {{ time.Format "2" . }}
+      </div>
+    {{ else }}
+      <div class="event__tbd">
+        TBD
+      </div>
+    {{ end }}
+  </div>
+  <div class="event__body">
+    <h3>
+      {{ if page.IsSection }}
+        <a href="{{ .RelPermalink }}">
+          {{ .Title }}
+        </a>
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </h3>
+    {{ if or .Date .Params.time }}
+      <h4>
+        {{ with .Date }}
+          {{ time.Format ":date_full" . }}
+        {{ end }}
+        {{ if .Date }}
+          {{ with .Params.end_date }}
+            – {{ time.Format ":date_long" . }}
+          {{ end }}
+        {{ end }}
+        {{ if and .Date .Params.time }}
+          <br> 
+        {{ end }}
+        {{ with .Params.time }}
+          {{ . }}
+        {{ end }}
+      </h4>
+    {{ end }}
+    {{ with .Params.location }}
+      <h5>
+        {{ . | markdownify }}
+      </h5>
+    {{ end }}
+    {{ with .Content }}
+      <div class="event__content">
+        {{ . }}
+      </div>
+    {{ end }}
+    {{ with .Params.rsvp }}
+      <div class="event__rsvp">
+        {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "button--light" )}}
+      </div>
+    {{ end }}
+  </div>
+</div>

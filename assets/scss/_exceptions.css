@@ -2,35 +2,35 @@
 
 /* Hide "Watch live" button by default */
 /* This class is removed by JavaScript on Sunday (see watch-live.js) */
-.home .hero .watch-live.hide {
+.page--home .hero .watch-live.hide {
   display: none;
 }
 
 /* Home animation */
 
-.home .hero.animate h1,
-.home .hero.animate hr,
-.home .hero.animate h3,
-.home .hero.animate .watch-live {
+.page--home .hero.animate h1,
+.page--home .hero.animate hr,
+.page--home .hero.animate h3,
+.page--home .hero.animate .watch-live {
   transform: translate(0, 40px);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .home .hero.js-start-animation h1 {
+  .page--home .hero.js-start-animation h1 {
     transition: transform 1s var(--easeOutQuad);
   }
-  .home .hero.js-start-animation hr {
+  .page--home .hero.js-start-animation hr {
     transition: transform 1.5s var(--easeOutQuad);
   }
-  .home .hero.js-start-animation h3 {
+  .page--home .hero.js-start-animation h3 {
     transition: transform 2s var(--easeOutQuad);
   }
-  .home .hero.js-start-animation .watch-live {
+  .page--home .hero.js-start-animation .watch-live {
     transition: transform 2.5s var(--easeOutQuad);
   }
 }
-.home .hero.js-start-animation h1,
-.home .hero.js-start-animation hr,
-.home .hero.js-start-animation h3,
-.home .hero.js-start-animation .watch-live {
+.page--home .hero.js-start-animation h1,
+.page--home .hero.js-start-animation hr,
+.page--home .hero.js-start-animation h3,
+.page--home .hero.js-start-animation .watch-live {
   transform: translate(0,0);
 }

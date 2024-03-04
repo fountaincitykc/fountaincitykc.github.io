@@ -2,10 +2,10 @@
 @markup
 <ul class="paginator">
   <li>
-    <span>Newer</span>
+    <a class="button button--disabled">Newer</a>
   </li>
   <li>
-    <a>Older</a>
+    <a class="button">Older</a>
   </li>
 </ul>
 */

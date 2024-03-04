@@ -25,7 +25,7 @@
   color: var(--blue-light);
   text-decoration: none;
 }
-.main-nav li.selected > a {
+.main-nav li.main-nav--selected > a {
   color: var(--blue-dark);
   background-color: var(--blue-a10);
   cursor: default;
@@ -47,7 +47,7 @@
     display: inline-block;
     padding: var(--spacer-sm) 0;
   }
-  .main-nav li.selected > a {
+  .main-nav li.main-nav--selected > a {
     background-color: transparent;
     text-decoration: underline;
     text-decoration-color: var(--blue-a10);
@@ -105,14 +105,13 @@ body.js-nav.show-nav {
   /* Hide scrollbar when nav is showing */
   overflow: hidden;
 }
-
-.js-nav-toggle,
-.js-nav-close {
+.js-main-nav--toggle,
+.js-main-nav--close {
     display: block;
     padding: var(--spacer-sm) 0;
 }
-.js-nav-toggle span,
-.js-nav-close span {
+.js-main-nav--toggle span,
+.js-main-nav--close span {
   display: inline-block;
   padding-left: 40px;
   background-repeat: no-repeat;
@@ -124,27 +123,21 @@ body.js-nav.show-nav {
   font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
-.js-nav-toggle span {
+.js-main-nav--toggle span {
   color: var(--blue);
   background-image: url(/images/ui/nav-toggle.svg);
 }
-.js-nav-close span {
+.js-main-nav--close span {
   color: var(--white);
   background-image: url(/images/ui/nav-close.svg);
 }
-
 @media (max-width: 767px) {/* JavaScript-enabled mobile navigation */
-  body.js-nav .main-header .row {
-    display: flex;
-    align-items: center;
-  }
-  body.js-nav .main-header .logo {
-    flex: 0 0 auto;
-    margin: 0;
-  }
-  body.js-nav .main-header .js-nav-toggle {
-    flex: 1 1 auto;
+  body.js-nav .js-main-nav--toggle {
     text-align: right;
+  }
+  body.js-nav .js-main-nav--close {
+    text-align: right;
+    padding-right: var(--spacer);
   }
   body.js-nav .main-nav {
     position: fixed;
@@ -154,10 +147,6 @@ body.js-nav.show-nav {
     right: 0;
     overflow: auto;
     background-color: var(--blue);
-  }
-  body.js-nav .main-header .js-nav-close {
-    text-align: right;
-    padding-right: var(--spacer);
   }
   body.js-nav .main-nav a {
     display: block;
@@ -171,7 +160,7 @@ body.js-nav.show-nav {
     background-color: var(--white-a10);
     text-decoration: none;
   }
-  body.js-nav .main-nav li.selected > a {
+  body.js-nav .main-nav li.main-nav--selected > a {
     background-color: var(--white-a20);
     cursor: default;
   }
@@ -192,8 +181,8 @@ body.js-nav.show-nav {
     /* Always show main-nav above this breakpoint */
     transform: translate(0,0) !important;
   }
-  body.js-nav .js-nav-toggle,
-  body.js-nav .js-nav-close {
+  body.js-nav .js-main-nav--toggle,
+  body.js-nav .js-main-nav--close {
     /* Hide nav toggle and nav close above this breakpoint */
     display: none !important;
   }
