@@ -85,6 +85,13 @@
   background-color: var(--white);
 }
 
+/* button--small */
+
+.button.button--small {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-small);
+}
+
 /* button--large */
 
 .button.button--large {

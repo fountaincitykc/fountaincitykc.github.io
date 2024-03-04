@@ -53,7 +53,7 @@
     {{ end }}
     {{ with .Params.rsvp }}
       <div class="event__rsvp">
-        {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "button--light" )}}
+        {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "variant" "light" )}}
       </div>
     {{ end }}
   </div>

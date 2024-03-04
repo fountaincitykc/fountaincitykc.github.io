@@ -49,7 +49,7 @@
           </div>
           {{ with .button }}
             <div class="card__footer">
-              {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--white" )}}
+              {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "white" )}}
             </div>
           {{ end }}
         </div>
@@ -84,10 +84,10 @@
         </div>
         <div class="content-section__footer">
           {{ with .Params.sermon.watch }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--light" )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "button--light" )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
           {{ end }}
         </div>
       </div>
@@ -143,7 +143,7 @@
               </div>
               {{ with .Params.rsvp }}
                 <div class="card__footer">
-                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "class" "button--white" )}}
+                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "variant" "white" )}}
                 </div>
               {{ end }}
             </div>
