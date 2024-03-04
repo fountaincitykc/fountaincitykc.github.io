@@ -86,10 +86,10 @@
         </div>
         <div class="actions">
           {{ with .Params.sermon.watch }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-light" )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+            {{ partial "shared/button.html" (dict "href" .href "label" .text "class" "is-light" )}}
           {{ end }}
         </div>
       </div>
