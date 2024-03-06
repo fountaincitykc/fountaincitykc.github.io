@@ -1,5 +1,5 @@
 ---
-title: Newcomer's lunch
+title: Newcomer's Lunch
 date: 2024-04-14
 time: After service
 location: Meadowbrook Clubhouse - Rosewood B
