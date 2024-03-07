@@ -3,5 +3,7 @@ title: Newcomer's Lunch
 date: 2024-04-14
 time: After service
 location: Meadowbrook Clubhouse - Rosewood B
+featured: false
+image: /images/featured-events/newcomers-lunch.jpg
 ---
-Join us to get to know Pastor James and hear about the vision, values, and community at Fountain City Church. Pizza will be provided.
+New to Fountain City Church? Join us to get to know Pastor James and hear about FCC's vision, values,  and our community. Pizza will be provided.
