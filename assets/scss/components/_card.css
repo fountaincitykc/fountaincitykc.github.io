@@ -57,10 +57,18 @@
 .card .card__body :last-child {
   margin-bottom: 0;
 }
+.card .card__content {
+  text-align: left;
+}
 .card .card__footer {
   padding: var(--spacer);
   padding-top: 0;
   text-align: center;
+}
+@media (min-width: 576px) {
+  .card .card__content {
+    text-align: center;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {/* md only */
   .card .card__media img {
