@@ -141,9 +141,9 @@
                   {{ .Content }}
                 </div>
               </div>
-              {{ with .Params.rsvp }}
+              {{ with .Params.button }}
                 <div class="card__footer">
-                  {{ partial "shared/button.html" (dict "href" .button.href "label" .button.text "variant" "white" )}}
+                  {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "white" )}}
                 </div>
               {{ end }}
             </div>

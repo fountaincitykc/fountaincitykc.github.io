@@ -22,7 +22,7 @@
     <div class="event__content">
       Content
     </div>
-    <div class="event__rsvp">
+    <div class="event__footer">
       <a class="button">
         Button
       </a>
@@ -67,7 +67,7 @@
 .event .event__content :last-child {
   margin-bottom: 0;
 }
-.event .event__rsvp {
+.event .event__footer {
   margin-top: var(--spacer);
 }
 @media (min-width: 768px) {
