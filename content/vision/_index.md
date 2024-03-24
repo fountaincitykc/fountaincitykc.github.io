@@ -7,6 +7,7 @@ aliases:
 ---
 
 A Christ-Centered church making and sending disciples in this generation and the next.
+{.callout}
 
 We believe God is working in our world to bring healing and new life to all people and places through Jesus Christ. God wants people to know him, find their true selves in him, flourish in all of life with him.
 

@@ -5,6 +5,13 @@ timeZone: America/Chicago
 disableKinds: ["RSS","taxonomy","term"]
 buildFuture: true # Needed to show future events
 
+markup:
+  goldmark:
+    parser:
+      attribute: # enable Markdown attributes for block-level elements
+        block: true
+        title: true
+
 menu:
   main:
   - name: About us

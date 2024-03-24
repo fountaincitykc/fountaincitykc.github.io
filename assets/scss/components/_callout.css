@@ -1,15 +1,8 @@
 /*
 @markup
 <p class="callout">...</p>
-or
-<div class="callout-lead">
-  <p>...</p>
-  <p>...</p>
-  <p>...</p>
-</div>
 */
 
-.callout,
-.callout-lead > p:first-of-type {
+.callout {
   font-size: var(--font-size-large);
 }
