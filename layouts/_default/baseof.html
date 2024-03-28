@@ -1,6 +1,5 @@
-{{ printf "<!-- Build time: %s -->" now | safeHTML }}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-build-time="{{ now.Format "Jan 02, 2006 3:04 PM Z07:00" }}">
   <head>
     {{ partial "base/head.html" . }}
     {{ block "head" . }}
