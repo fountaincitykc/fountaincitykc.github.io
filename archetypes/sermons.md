@@ -7,9 +7,10 @@
   {{/* Get the date from the filename */ -}}
   {{ $date = $filename -}}
 {{ end -}}
-date: {{ $date }}
-series: 
 title: 
-youtube_id: 
-image: /images/latest-sermon/default.jpg
+date: {{ $date }}
+params:
+  series: 
+  youtube_id: 
+  image: /images/latest-sermon/default.jpg
 ---

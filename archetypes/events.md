@@ -20,12 +20,13 @@
 {{ $title = trim $title " " | title  -}}
 title: {{ $title }}
 date: {{ $date }}
-end_date: 2024-01-01
-time: 7–9:30pm
-location: [Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)
-featured: true
-image: /images/featured-events/event-title.jpg
-button:
-  href: https://fountaincitykc.churchcenter.com/
-  text: Register
+params:
+  end_date: 2024-01-01
+  time: 7–9:30pm
+  location: [Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)
+  featured: true
+  image: /images/featured-events/event-title.jpg
+  button:
+    href: https://fountaincitykc.churchcenter.com/
+    text: Register
 ---

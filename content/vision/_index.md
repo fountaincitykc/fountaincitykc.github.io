@@ -1,7 +1,6 @@
 ---
 title: "Vision"
 description: "A Christ-Centered church making and sending disciples in this generation and the next."
-
 aliases:
 - /about-us
 ---
