@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Good Friday Service
 date: 2024-03-29
 params:
