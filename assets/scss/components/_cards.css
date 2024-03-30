@@ -1,6 +1,6 @@
 /*
 @markup
-<div class="cards">
+<div class="cards cards--len-N">
   <div class="card">
     ...
   </div>
@@ -25,8 +25,11 @@
     flex-direction: row;
     align-items: stretch;
   }
-  .cards > .card {
+  .cards > .card { /* Default to 3-up */
     max-width: 33%;
     flex: 1 1 0;
+  }
+  .cards.cards--len-2 > .card { /* 2-up */
+    max-width: 50%;
   }
 }
