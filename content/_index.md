@@ -6,7 +6,7 @@ aliases:
 params:
   hero:
     #headline1: "Welcome to Fountain City Church"
-    headline2: Join us Easter Sunday at 10
+    headline2: Sundays at 10
     button:
       text: Watch live
       href: https://www.youtube.com/@fountaincitychurchkc9519/

@@ -25,7 +25,7 @@ params:
   time: 7–9:30pm
   location: [Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)
   featured: true
-  image: /images/featured-events/event-title.jpg
+  image: /images/featured-events/placeholder.svg
   button:
     href: https://fountaincitykc.churchcenter.com/
     text: Register
