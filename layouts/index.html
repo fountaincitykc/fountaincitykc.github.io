@@ -99,7 +99,7 @@
   <div class="featured-events">
     <div class="container-fluid">
       <h2>
-        {{ .Params.featured_events.headline }}
+        {{ .Params.featuredEvents.headline }}
       </h2>
       {{ with .Site.GetPage "/events" }}
         {{ $featuredEvents := where .RegularPages "Params.featured" true }}
@@ -109,7 +109,7 @@
         <div class="cards cards--len-{{ $upcomingEvents | len }}">
           {{ range $upcomingEvents }}
             <div class="card animate">
-              {{ $eventImage := default $.Params.featured_events.placeholder_image .Params.image }}
+              {{ $eventImage := default $.Params.featuredEvents.placeholderImage .Params.image }}
               <div class="card__media">
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
@@ -153,7 +153,7 @@
         </div>
       {{ end }}
       <p class="featured-events__view-all">
-        <a href="/events/">{{ .Params.featured_events.view_all }}</a>
+        <a href="/events/">{{ .Params.featuredEvents.viewAll }}</a>
       </p>
     </div>
   </div>

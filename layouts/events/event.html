@@ -29,7 +29,7 @@
           {{ time.Format ":date_full" . }}
         {{ end }}
         {{ if .Date }}
-          {{ with .Params.end_date }}
+          {{ with .Params.endDate }}
             – {{ time.Format ":date_long" . }}
           {{ end }}
         {{ end }}

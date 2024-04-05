@@ -2,7 +2,7 @@
 title: Men's Retreat
 date: 2024-05-03
 params:
-  end_date: 2024-05-04
+  endDate: 2024-05-04
   location: "[Tall Oaks Center, Linwood, KS](https://maps.app.goo.gl/eStiuf5TLXuJAeZE7)"
   featured: true
   image: /images/featured-events/mens-retreat.jpg

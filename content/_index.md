@@ -38,8 +38,8 @@ params:
     listen:
       text: Listen to podcast
       href: https://fcckc.podbean.com/
-  featured_events:
+  featuredEvents:
     headline: Upcoming events
-    view_all: "View all events →"
-    placeholder_image: "/images/featured-events/placeholder.svg"
+    viewAll: "View all events →"
+    placeholderImage: "/images/featured-events/placeholder.svg"
 ---

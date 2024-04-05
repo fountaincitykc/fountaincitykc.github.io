@@ -11,6 +11,6 @@ title:
 date: {{ $date }}
 params:
   series: 
-  youtube_id: 
+  youtubeId: 
   image: /images/latest-sermon/default.jpg
 ---

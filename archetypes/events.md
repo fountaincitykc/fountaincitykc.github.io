@@ -21,7 +21,7 @@
 title: {{ $title }}
 date: {{ $date }}
 params:
-  end_date: 2024-01-01
+  endDate: 2024-01-01
   time: 7–9:30pm
   location: [Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)
   featured: true
