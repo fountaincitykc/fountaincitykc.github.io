@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Winter New Members Initiation
 date: 2024-04-07
 ---
