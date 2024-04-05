@@ -24,11 +24,8 @@
           </div>
         {{ end }}
         <div class="main-footer__app-buttons">
-          {{ with site.Data.footer.apps.app_store }}
-            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "App Store") "variant" "dark")}}
-          {{ end }}
-          {{ with site.Data.footer.apps.google_play }}
-            {{ partial "shared/button.html" (dict "href" .url "label" (printf `<img src=%q alt=%q>` .image "Google Play") "variant" "dark")}}
+          {{ range site.Data.footer.apps.buttons }}
+            {{ partial "shared/button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
           {{ end }}
         </div>
       </div>
@@ -45,7 +42,7 @@
         <ul>
           {{ range site.Data.footer.social }}
             <li>
-              <a href="{{ .url }}" target="_blank">
+              <a href="{{ .href }}" target="_blank">
                 <img src="{{ .image }}" alt="{{ .title }}">
               </a>
             </li>

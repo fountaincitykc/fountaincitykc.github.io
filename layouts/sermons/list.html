@@ -22,7 +22,7 @@
               {{ .Content }}
             </div>
             <div class="content-section__footer">
-              {{ partial "shared/button.html" (dict "href" .RelPermalink "label" $.Params.buttonText "variant" "light" )}}
+              {{ partial "shared/button.html" (dict "href" .RelPermalink "label" $.Params.button.text "variant" "light" )}}
             </div>
           </div>
         </div>

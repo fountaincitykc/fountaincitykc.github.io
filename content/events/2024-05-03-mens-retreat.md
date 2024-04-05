@@ -7,8 +7,8 @@ params:
   featured: true
   image: /images/featured-events/mens-retreat.jpg
   button:
-    href: https://fountaincitykc.churchcenter.com/registrations/events/2181729
     text: Register
+    href: https://fountaincitykc.churchcenter.com/registrations/events/2181729
 ---
 Join the Fountain City men for a night away for relationship, rest, and renewal.
 

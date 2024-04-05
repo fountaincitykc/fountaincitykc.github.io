@@ -15,5 +15,6 @@ params:
   contact:
     headline: Want to know Jesus?
     content: "We believe that God the Creator of all things designed us to know Him, and designed us to find rich, abundant meaningful life in relationship with Him through Jesus Christ. If you are curious about Jesus, or have questions, we'd be glad to talk."
-    cta: Connect with Pastor James
+    button:
+      text: Connect with Pastor James
 ---

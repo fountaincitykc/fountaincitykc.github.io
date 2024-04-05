@@ -7,22 +7,23 @@ contact:
 apps:
   headline: Download our app
   content: "The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory."
-  app_store:
-    url: https://apps.apple.com/us/app/church-center-app/id1357742931
-    image: /images/ui/app-store.svg
-  google_play:
-    url: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
-    image: /images/ui/google-play.svg
+  buttons:
+    - text: App Store
+      href: https://apps.apple.com/us/app/church-center-app/id1357742931
+      image: /images/ui/app-store.svg
+    - text: Google Play
+      href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
+      image: /images/ui/google-play.svg
 social:
   - text: Instagram
-    url: https://www.instagram.com/fountaincitychurch_kc/
+    href: https://www.instagram.com/fountaincitychurch_kc/
     image: /images/ui/instagram.svg
   - text: Facebook
-    url: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
+    href: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
     image: /images/ui/facebook.svg
   - text: Youtube
-    url: https://www.youtube.com/@fountaincitychurchkc9519/
+    href: https://www.youtube.com/@fountaincitychurchkc9519/
     image: /images/ui/youtube.svg
   - text: Podbean
-    url: https://fcckc.podbean.com/
+    href: https://fcckc.podbean.com/
     image: /images/ui/podbean.svg

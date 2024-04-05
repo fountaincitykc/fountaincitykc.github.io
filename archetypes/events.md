@@ -27,6 +27,6 @@ params:
   featured: true
   image: /images/featured-events/placeholder.svg
   button:
-    href: https://fountaincitykc.churchcenter.com/
     text: Register
+    href: https://fountaincitykc.churchcenter.com/
 ---

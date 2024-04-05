@@ -6,8 +6,8 @@ params:
   featured: true
   image: /images/featured-events/fcc-royals-night.jpg
   button:
-    href: https://fountaincitykc.churchcenter.com/registrations/events/2255838
     text: Register
+    href: https://fountaincitykc.churchcenter.com/registrations/events/2255838
 ---
 Join us for a night at the K cheering on our boys in blue. 
 

@@ -29,7 +29,7 @@
           <div class="blurb__content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
-          {{ partial "shared/button.html" (dict "href" (printf `mailto:%s` site.Params.email) "label" .cta )}}
+          {{ partial "shared/button.html" (dict "href" (printf `mailto:%s` site.Params.email) "label" .button.text )}}
         {{ end }}
       </div>
     </div>
