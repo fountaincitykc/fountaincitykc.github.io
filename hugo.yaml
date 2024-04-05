@@ -1,4 +1,3 @@
----
 baseURL: "https://www.fountaincitykc.org/"
 title: "Fountain City Church - Overland Park, KS"
 timeZone: America/Chicago
@@ -8,7 +7,7 @@ buildFuture: true # Needed to show future events
 markup:
   goldmark:
     parser:
-      attribute: # enable Markdown attributes for block-level elements
+      attribute: # Enable Markdown attributes for block-level elements
         block: true
         title: true
 
@@ -49,4 +48,3 @@ params:
   mailingAddress: "PO Box 7521, Overland Park, KS 66207"
   email: james@fountaincitykc.org
   phone: 303-618-3079
-...

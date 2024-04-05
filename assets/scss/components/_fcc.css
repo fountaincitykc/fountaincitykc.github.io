@@ -1,7 +1,3 @@
-/*
-For usage, see: /layouts/partials/shared/fcc.html
-*/
-
 h1.fcc span {
   display: block;
 }
@@ -31,12 +27,3 @@ h1.fcc span:nth-child(3) {/* Church */
   }
 }
 
-/* @options */
-
-/* fcc--small */
-
-@media (min-width: 768px) {
-  h1.fcc.fcc--small span:nth-child(n+2) {
-    font-size: 48px;
-  }
-}

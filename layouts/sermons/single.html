@@ -3,7 +3,11 @@
   <div class="container-lg">
     <div class="content-section content-section--stacked animate">
       <div class="content-section__media">
-        {{ partial "shared/youtube-embed.html" .Params.youtube_id }}
+        {{ with .Params.youtube_id }}
+          <div class="youtube-embed">
+            <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen title="YouTube video"></iframe>
+          </div>
+        {{ end }}
       </div>
       <div class="content-section__body">
         <h3>

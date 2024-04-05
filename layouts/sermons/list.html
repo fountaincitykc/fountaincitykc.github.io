@@ -27,7 +27,26 @@
           </div>
         </div>
       {{ end }}
-      {{ partial "shared/paginator.html" .Paginator }}
+      {{ with .Paginator }}
+        {{ if or .HasPrev .HasNext }}
+          <ul class="paginator">
+            <li>
+              {{ if .HasPrev }}
+                {{ partial "shared/button.html" (dict "href" .Prev.URL "label" "← Newer" "variant" "large" )}}
+              {{ else }}
+                {{ partial "shared/button.html" (dict "label" "← Newer" "variant" "large" "disabled" true )}}
+              {{ end }}
+            </li>
+            <li>
+              {{ if .HasNext }}
+                {{ partial "shared/button.html" (dict "href" .Next.URL "label" "Older →" "variant" "large" )}}
+              {{ else }}
+                {{ partial "shared/button.html" (dict "label" "Older →" "variant" "large" "disabled" true )}}
+              {{ end }}
+            </li>
+          </ul>
+        {{ end }}
+      {{ end }}
     </div>
   </div>  
 </div>
