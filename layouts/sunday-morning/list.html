@@ -16,7 +16,7 @@
             </div>
             {{ with .button }}
               <div class="content-section__footer">
-                {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
+                {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
               </div>
             {{ end }}
           </div>
@@ -43,10 +43,10 @@
             {{ .Params.directions.headline }}
           </h2>
           <div class="blurb__content">
-            {{ partial "shared/address.html" . }}
+            {{ partial "address.html" . }}
           </div>
           {{ with site.Data.directions.button }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+            {{ partial "button.html" (dict "href" .href "label" .text )}}
           {{ end }}
         </div>
       </div>

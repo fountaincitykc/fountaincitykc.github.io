@@ -8,9 +8,9 @@
 <div class="page--home">
   {{/* Mobile directions */}}
   <div class="mobile-directions animate">
-    {{ partial "shared/address.html" . }}
+    {{ partial "address.html" . }}
     {{ with site.Data.directions.button }}
-      {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+      {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
   {{/* Hero */}}
@@ -25,7 +25,7 @@
       </h3>
       {{ with .Params.hero.button }}
         <div id="watch-live" class="watch-live hide">
-          {{ partial "shared/button.html" (dict "href" .href "label" .text )}}
+          {{ partial "button.html" (dict "href" .href "label" .text )}}
         </div>
       {{ end }}
     </div>
@@ -51,7 +51,7 @@
           </div>
           {{ with .button }}
             <div class="card__footer">
-              {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "white" )}}
+              {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
             </div>
           {{ end }}
         </div>
@@ -86,10 +86,10 @@
         </div>
         <div class="content-section__footer">
           {{ with .Params.sermon.watch }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
+            {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
-            {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
+            {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
           {{ end }}
         </div>
       </div>
@@ -145,7 +145,7 @@
               </div>
               {{ with .Params.button }}
                 <div class="card__footer">
-                  {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "white" )}}
+                  {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
                 </div>
               {{ end }}
             </div>

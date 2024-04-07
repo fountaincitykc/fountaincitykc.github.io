@@ -22,7 +22,7 @@
               {{ .Content }}
             </div>
             <div class="content-section__footer">
-              {{ partial "shared/button.html" (dict "href" .RelPermalink "label" $.Params.button.text "variant" "light" )}}
+              {{ partial "button.html" (dict "href" .RelPermalink "label" $.Params.button.text "variant" "light" )}}
             </div>
           </div>
         </div>
@@ -32,16 +32,16 @@
           <ul class="paginator">
             <li>
               {{ if .HasPrev }}
-                {{ partial "shared/button.html" (dict "href" .Prev.URL "label" "← Newer" "variant" "large" )}}
+                {{ partial "button.html" (dict "href" .Prev.URL "label" "← Newer" "variant" "large" )}}
               {{ else }}
-                {{ partial "shared/button.html" (dict "label" "← Newer" "variant" "large" "disabled" true )}}
+                {{ partial "button.html" (dict "label" "← Newer" "variant" "large" "disabled" true )}}
               {{ end }}
             </li>
             <li>
               {{ if .HasNext }}
-                {{ partial "shared/button.html" (dict "href" .Next.URL "label" "Older →" "variant" "large" )}}
+                {{ partial "button.html" (dict "href" .Next.URL "label" "Older →" "variant" "large" )}}
               {{ else }}
-                {{ partial "shared/button.html" (dict "label" "Older →" "variant" "large" "disabled" true )}}
+                {{ partial "button.html" (dict "label" "Older →" "variant" "large" "disabled" true )}}
               {{ end }}
             </li>
           </ul>

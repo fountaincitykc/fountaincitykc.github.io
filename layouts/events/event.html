@@ -53,7 +53,7 @@
     {{ end }}
     {{ with .Params.button }}
       <div class="event__footer">
-        {{ partial "shared/button.html" (dict "href" .href "label" .text "variant" "light" )}}
+        {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
       </div>
     {{ end }}
   </div>

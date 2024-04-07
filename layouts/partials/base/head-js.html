@@ -1,4 +1,0 @@
-{{ $nav := resources.Get "js/main-nav.js" }}
-{{ $animate := resources.Get "js/animate.js" }}
-{{ $js := slice $nav $animate | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $js.RelPermalink }}"></script>

@@ -1,4 +1,0 @@
-{{ $cssOpts := dict "transpiler" "libsass" "targetPath" "css/main.css" }}
-{{ with resources.Get "scss/main.scss" | toCSS $cssOpts | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
-{{ end }}
