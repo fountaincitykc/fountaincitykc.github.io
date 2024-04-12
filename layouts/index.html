@@ -117,13 +117,17 @@
                 <h3>
                   {{ .Title }}
                 </h3>
-                {{ if .Date }}
-                  <hr>
+                <hr>
+                {{ if .Params.dateText }}
+                  <h4>
+                    {{ .Params.dateText }}
+                  </h4>
+                {{ else if .Date }}
                   <h4>
                     {{ with .Date }}
                       {{ time.Format ":date_full" . }}
                     {{ end }}
-                    {{ with .Params.end_date }}
+                    {{ with .Params.endDate }}
                       – {{ time.Format ":date_long" . }}
                     {{ end }}
                     {{ if and .Date .Params.time }}
@@ -133,11 +137,11 @@
                       {{ . }}
                     {{ end }}
                   </h4>
-                  {{ with .Params.location }}
-                    <h5>
-                      {{ . | markdownify }}
-                    </h5>
-                  {{ end }}
+                {{ end }}
+                {{ with .Params.location }}
+                  <h5>
+                    {{ . | markdownify }}
+                  </h5>
                 {{ end }}
                 <div class="card__content">
                   {{ .Summary }}

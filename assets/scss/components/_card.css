@@ -40,11 +40,6 @@
   padding: var(--spacer);
   text-align: center;
 }
-.card .card__body h3 {
-  /* Remove horizontal padding on headline to reduce wrapping */
-  margin-left: calc(var(--spacer) * -1);/* Negative margin */
-  margin-right: calc(var(--spacer) * -1);/* Negative margin */
-}
 .card .card__body h4,
 .card .card__body h5 {
   font-size: var(--font-size-base);

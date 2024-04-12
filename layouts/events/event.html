@@ -23,7 +23,11 @@
         {{ .Title }}
       {{ end }}
     </h3>
-    {{ if or .Date .Params.time }}
+    {{ if .Params.dateText }}
+      <h4>
+        {{ .Params.dateText }}
+      </h4>
+    {{ else if or .Date .Params.time }}
       <h4>
         {{ with .Date }}
           {{ time.Format ":date_full" . }}
