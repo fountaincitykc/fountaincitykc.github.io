@@ -9,4 +9,4 @@ params:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2267968
 ---
-FCC will be helping kids learn to study the bible for themselves with a family bible study through a survey study of the New Testament produced by _Not Consumed Ministries_. The study comes with age appropriate books for kids ages 2-4, 5-7, 8-12, teens and adults. This is an awesome opportunity for our church to pursue making disciples of Jesus in the next generation.
+Register now for the FCC summer kids’ and family Bible study, designed to help kids study the Bible on their own and bring families together around God’s Word. The study has books for kids ages 2-4, 5-7, 8-12, teens, and adults to facilitate learning at an age-appropriate level. Registration for book orders closes May 5.
