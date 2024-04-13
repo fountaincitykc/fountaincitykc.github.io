@@ -31,3 +31,5 @@ params:
     text: Register
     href: https://fountaincitykc.churchcenter.com/
 ---
+
+<!--more-->

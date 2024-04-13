@@ -115,7 +115,7 @@
               </div>
               <div class="card__body">
                 <h3>
-                  {{ .Title }}
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h3>
                 <hr>
                 {{ if .Params.dateText }}
