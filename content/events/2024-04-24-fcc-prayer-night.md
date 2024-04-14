@@ -3,7 +3,7 @@ title: FCC Prayer Night
 date: 2024-04-24
 params:
   time: 6–8pm
-  featured: false
+  featured: true
   image: /images/featured-events/prayer-night.jpg
   button:
     text: RSVP
