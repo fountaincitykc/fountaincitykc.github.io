@@ -41,5 +41,6 @@ params:
   featuredEvents:
     headline: Upcoming events
     viewAll: "View all events →"
+    readMore: "Read more →"
     placeholderImage: "/images/featured-events/placeholder.svg"
 ---

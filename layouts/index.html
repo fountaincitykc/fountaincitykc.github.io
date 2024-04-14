@@ -145,6 +145,9 @@
                 {{ end }}
                 <div class="card__content">
                   {{ .Summary }}
+                  {{ if .Truncated }}
+                    <a href="{{ .RelPermalink }}">{{ $.Params.featuredEvents.readMore }}</a>
+                  {{ end }}
                 </div>
               </div>
               {{ with .Params.button }}
