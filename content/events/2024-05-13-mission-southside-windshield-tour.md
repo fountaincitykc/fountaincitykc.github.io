@@ -4,7 +4,7 @@ date: 2024-05-13
 params:
   time: 5:50–7:15pm
   featured: true
-  image: /images/featured-events/mission-southside.png
+  image: /images/featured-events/mission-southside.jpg
   button:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2275861
