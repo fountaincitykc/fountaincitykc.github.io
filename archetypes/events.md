@@ -24,7 +24,7 @@ params:
   dateText: # Overide default date format with custom text
   endDate: 2024-01-01
   time: 7–9:30pm
-  location: [Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)
+  location: "[Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)"
   featured: true
   image: /images/featured-events/placeholder.svg
   button:
