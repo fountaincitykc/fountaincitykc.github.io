@@ -4,11 +4,11 @@ date: 2024-05-03
 params:
   endDate: 2024-05-04
   location: "[Tall Oaks Center, Linwood, KS](https://maps.app.goo.gl/eStiuf5TLXuJAeZE7)"
-  featured: true
+  featured: false
   image: /images/featured-events/mens-retreat.jpg
-  button:
-    text: Register
-    href: https://fountaincitykc.churchcenter.com/registrations/events/2181729
+  #button:
+  #  text: Register
+  #  href: https://fountaincitykc.churchcenter.com/registrations/events/2181729
 ---
 Join the Fountain City men for a night away for relationship, rest, and renewal.
 
