@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Newcomer's Lunch
 date: 2024-06-23
 params:
