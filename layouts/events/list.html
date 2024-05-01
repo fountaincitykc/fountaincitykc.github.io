@@ -1,20 +1,36 @@
 {{ define "main" }}
+{{ $today := time.AsTime (now.Format "2006-01-02") }}
+{{ $events := where .RegularPages "Date" "ge" $today }}
 <div class="page--events">
   <div class="container-lg">
-    <div class="content-list">
-      {{ $month := "" }}
-      {{ $today := time.AsTime (now.Format "2006-01-02") }}
-      {{ range sort (where .RegularPages "Date" "ge" $today) "Date" "asc" }}
-        {{/* Print date header */}}
-        {{ $currentMonth := time.Format "January 2006" .Date }}
-        {{ if ne $month $currentMonth }}
-          {{ $month = $currentMonth }}
-          <h2 class="event-header animate" id="{{ time.Format "2006-01" .Date }}">
-            {{ $month }}
-          </h2>
+    <nav class="event-nav animate">
+      <ul>
+        {{ $year := "" }}
+        {{ range $events.GroupByDate "2006" "asc" }}
+          {{ $year := .Key }}
+          <li>{{ .Key }}
+            <ul>
+              {{ range .Pages.GroupByDate "January" "asc" }}
+                {{ $anchor := printf "%s %s" .Key $year | anchorize }}
+                <li>
+                  <a href="#{{ $anchor }}">
+                    {{ substr .Key 0 3 }}<span>{{ substr .Key 3 }}</span>
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
         {{ end }}
-        {{/* Print event details */}}
-        {{ .Render "event" }}
+      </ul>
+    </nav>
+    <div class="content-list">
+      {{ range $events.GroupByDate "January 2006" "asc" }}
+        <h2 class="event-header animate" id="{{ .Key | anchorize }}">
+          {{ .Key }}
+        </h2>
+        {{ range .Pages }}
+          {{ .Render "event" }}
+        {{ end }}
       {{ end }}
     </div>
   </div>

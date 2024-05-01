@@ -14,22 +14,24 @@
   align-items: center;
   gap: var(--spacer);
   margin-bottom: var(--spacer-xxl);
-}
-.cards > .card {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 576px;
-}
-@media (min-width: 992px) {
-  .cards {
+
+  & > .card {
+    flex-grow: 1;
+    width: 100%;
+    max-width: $min-breakpoint-sm;
+  }
+  @media (min-width: $min-breakpoint-lg) {
     flex-direction: row;
     align-items: stretch;
-  }
-  .cards > .card { /* Default to 3-up */
-    max-width: 33%;
-    flex: 1 1 0;
-  }
-  .cards.cards--len-2 > .card { /* 2-up */
-    max-width: 50%;
-  }
+
+    // Default to 3-up
+    & > .card { 
+      max-width: 33%;
+      flex: 1 1 0;
+    }
+    // 2-up
+    &.cards--len-2 > .card {
+      max-width: 50%;
+    }
+  }  
 }

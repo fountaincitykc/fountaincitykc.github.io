@@ -1,0 +1,31 @@
+.page--home {
+  .hero {
+    h1, hr, h3, .watch-live {
+      transform: translate(0, 40px);
+    }
+    .watch-live.hide {
+      // Hide button by default
+      // The "hide" class is removed by JavaScript on Sunday (see watch-live.js)
+      display: none;
+    }
+    &.js-start-animation {
+      h1, hr, h3, .watch-live {
+        transform: translate(0,0);
+      }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      h1 {
+        transition: transform 1s var(--easeOutQuad);
+      }
+      hr {
+        transition: transform 1.5s var(--easeOutQuad);
+      }
+      h3 {
+        transition: transform 2s var(--easeOutQuad);
+      }
+      .watch-live {
+        transition: transform 2.5s var(--easeOutQuad);
+      }
+    }
+  }
+}

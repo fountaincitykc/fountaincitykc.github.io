@@ -104,16 +104,15 @@ a {
   color: var(--blue);
   background-color: transparent;
   text-decoration: none;
-}
 
-a:hover {
-  color: var(--blue-light);
-  text-decoration: underline;
-}
-
-a:active {
-  color: var(--blue);
-  text-decoration: underline;
+  &:hover {
+    color: var(--blue-light);
+    text-decoration: underline;
+  }
+  &:active {
+    color: var(--blue);
+    text-decoration: underline;
+  }
 }
 
 strong, b {

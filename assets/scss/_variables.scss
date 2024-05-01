@@ -73,7 +73,7 @@
   --zindex-main-nav: 998;
   --zindex-main-nav-submenu: 999;
 
-  /* https://easings.net/ */
+  // https://easings.net/
   --easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
 
 }
@@ -85,3 +85,24 @@
     --font-size-h4: 24px;
   }
 }
+
+// Breakpoint vars
+
+$min-breakpoint-xxl: 1400px;
+$max-width-xxl: 1320px;
+
+$min-breakpoint-xl: 1200px;
+$max-breakpoint-xl: ($min-breakpoint-xxl - 1);
+$max-width-xl: 1140px;
+
+$min-breakpoint-lg: 992px;
+$max-breakpoint-lg: ($min-breakpoint-xl - 1);
+$max-width-lg: 960px;
+
+$min-breakpoint-md: 768px;
+$max-breakpoint-md: ($min-breakpoint-lg - 1);
+$max-width-md: 720px;
+
+$min-breakpoint-sm: 576px;
+$max-breakpoint-sm: ($min-breakpoint-md - 1);
+$max-width-sm: 540px;

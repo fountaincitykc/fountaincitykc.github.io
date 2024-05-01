@@ -15,15 +15,15 @@ Wrapper for all content types (.blurb, .content-section, .event, etc)
   display: flex;
   flex-direction: column;
   gap: var(--spacer-xxl);
-}
-.content-list > * {
-  margin-bottom: 0 !important;/* Remove margin-bottom on direct children */
-}
 
-/* @options */
+  // Remove margin-bottom on direct children
+  & > * {
+    margin-bottom: 0 !important;
+  }
 
-/* content-list--dense */
+  // @options
 
-.content-list.content-list--dense {
-  gap: var(--spacer-xl);
+  &.content-list--dense {
+    gap: var(--spacer-xl);
+  }
 }

@@ -13,11 +13,13 @@
 </div>
 */
 
-.featured-events h2 {
-  text-align: center;
-  margin-bottom: var(--spacer-xxl);
-}
-.featured-events .featured-events__view-all {
-  font-size: var(--font-size-large);
-  text-align: center;
+.featured-events {
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacer-xxl);
+  }
+  .featured-events__view-all {
+    font-size: var(--font-size-large);
+    text-align: center;
+  }
 }

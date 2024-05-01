@@ -1,11 +1,20 @@
+/*
+@markup
+<div class="mobile-directions animate">
+  <address>
+  <a class="button">
+    Button
+  </a>
+</div>
+*/
+
 .mobile-directions {
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
   background-color: var(--blue-a10);
   text-align: center;
-}
-@media (min-width: 576px) {
-  .mobile-directions {
+
+  @media (min-width: $min-breakpoint-sm) {
     display: none;
   }
 }
