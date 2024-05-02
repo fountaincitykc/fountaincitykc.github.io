@@ -8,6 +8,7 @@
         {{ time.Format "2" . }}
       </div>
     {{ else }}
+      {{/* Note: TBD events are not shown on the list page, so this would only be shown if navigating to the page directly */}}
       <div class="event__tbd">
         TBD
       </div>
