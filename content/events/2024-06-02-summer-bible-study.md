@@ -3,8 +3,8 @@ title: Summer Kids' and Family Bible Study
 date: 2024-06-02
 params:
   dateText: Begins June 2, 2024
-  featured: true
-  image: /images/featured-events/summer-bible-study.jpg
+  #featured: true
+  #image: /images/featured-events/summer-bible-study.jpg
   #button:
   #  text: Register
   #  href: https://fountaincitykc.churchcenter.com/registrations/events/2267968
