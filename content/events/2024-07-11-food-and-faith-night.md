@@ -1,5 +1,5 @@
 ---
-title: Summer Home Group
+title: Food & Faith Night
 date: 2024-07-11
 params:
   time: 6pm

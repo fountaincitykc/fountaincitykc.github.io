@@ -1,6 +1,6 @@
 ---
-title: Summer Home Group
-date: 2024-06-27
+title: Food & Faith Night
+date: 2024-08-06
 params:
   time: 6pm
   location: "[Meadowbrook Clubhouse](https://maps.app.goo.gl/JxLLQFnJGyvnyyGDA)"
