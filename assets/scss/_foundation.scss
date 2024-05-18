@@ -128,3 +128,11 @@ hr {
   border: none;
   border-top: 3px solid var(--dark-gray-a30);
 }
+
+blockquote {
+  margin: 0;
+  margin-bottom: var(--spacer);
+  padding: var(--spacer);
+  background-color: var(--gray-light);
+  border-left: solid 4px var(--blue-a50);
+}
