@@ -12,5 +12,5 @@ date: {{ $date }}
 params:
   series: 
   youtubeId: 
-  image: /images/latest-sermon/default.jpg
+  image: /images/sermons/default.jpg
 ---
