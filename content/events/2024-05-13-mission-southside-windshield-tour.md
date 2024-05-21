@@ -10,6 +10,7 @@ params:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2275861
 ---
+
 Join us on a tour of Mission Southside to learn more about how God is at work in the communities they serve.
 
 <!--more-->
