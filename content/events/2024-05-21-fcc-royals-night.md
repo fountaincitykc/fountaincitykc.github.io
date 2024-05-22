@@ -1,13 +1,14 @@
 ---
+draft: true
 title: FCC Royals Night
 date: 2024-05-21
 params:
   time: 6–9:30pm
-  #featured: true
-  #image: /images/featured-events/fcc-royals-night.jpg
-  #button:
-  #  text: Register
-  #  href: https://fountaincitykc.churchcenter.com/registrations/events/2255838
+  featured: true
+  image: /images/featured-events/fcc-royals-night.jpg
+  button:
+    text: Register
+    href: https://fountaincitykc.churchcenter.com/registrations/events/2255838
 ---
 
 Join us for a night at the K cheering on our boys in blue. 
