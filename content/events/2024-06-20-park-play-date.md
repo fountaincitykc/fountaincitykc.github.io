@@ -2,8 +2,8 @@
 title: Park Play Date
 date: 2024-06-20
 params:
-  time: 3:30pm
-  location: Roe Park
+  time: 9:30am
+  location: Franklin Park
   featured: true
   image: /images/featured-events/park-play-date.jpg
 ---
