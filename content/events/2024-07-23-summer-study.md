@@ -2,7 +2,7 @@
 title: 10:25 Nights
 date: 2024-07-23
 params:
-  time: 6pm
+  time: 6-8pm
   location: Meadowbrook Clubhouse
 ---
 
