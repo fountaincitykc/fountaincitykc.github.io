@@ -4,8 +4,8 @@ date: 2024-07-23
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse
-  #featured: true
-  #image: /images/featured-events/summer-study.jpg
+  featured: true
+  image: /images/featured-events/summer-study.jpg
   #button:
   #  text: RSVP
   #  href:
