@@ -4,8 +4,8 @@ date: 2024-08-06
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse
-  #featured: true
-  #image: /images/featured-events/summer-study.jpg
+  featured: true
+  image: /images/featured-events/summer-study.jpg
   #button:
   #  text: RSVP
   #  href: https://fountaincitykc.churchcenter.com/registrations/events/
