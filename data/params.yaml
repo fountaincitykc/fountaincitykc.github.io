@@ -1,9 +1,32 @@
 contact:
+  email: james@fountaincitykc.org
+  phone: 303-618-3079
+
+serviceAddress:
+  text: Sunday service
+  address: "9101 Nall Ave, Prairie Village, KS 66207"
+
+mailingAddress:
+  text: Mailing address
+  address: "PO Box 7521, Overland Park, KS 66207"
+
+directions:
+  text: Get directions
+  href: https://goo.gl/maps/La7yYuc4yY75Cq5R6
+
+events:
+  defaultImage: /images/events/default.svg
+
+sermons:
+  defaultImage: /images/sermons/default.jpg
+
+connect:
   headline: Interested in Fountain City Church?
   content: "Visiting a new church can be difficult. We'd love to connect and answer any questions you may have before you come!"
   button:
     text: Connect with us
     href: https://fountaincitykc.churchcenter.com/people/forms/283554
+
 apps:
   headline: Download our app
   content: "The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory."
@@ -14,6 +37,7 @@ apps:
     - text: Google Play
       href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
       image: /images/ui/google-play.svg
+
 social:
   - text: Instagram
     href: https://www.instagram.com/fountaincitychurch_kc/

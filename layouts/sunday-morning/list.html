@@ -43,9 +43,14 @@
             {{ .Params.directions.headline }}
           </h2>
           <div class="blurb__content">
-            {{ partial "address.html" . }}
+            {{ with site.Data.params.serviceAddress }}
+              <address>
+                <strong>{{ .text }}</strong><br>
+                {{ .address }}
+              </address>
+            {{ end }}
           </div>
-          {{ with site.Data.directions.button }}
+          {{ with site.Data.params.directions }}
             {{ partial "button.html" (dict "href" .href "label" .text )}}
           {{ end }}
         </div>

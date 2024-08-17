@@ -8,8 +8,13 @@
 <div class="page--home">
   {{/* Mobile directions */}}
   <div class="mobile-directions animate">
-    {{ partial "address.html" . }}
-    {{ with site.Data.directions.button }}
+    {{ with site.Data.params.serviceAddress }}
+      <address>
+        <strong>{{ .text }}</strong><br>
+        {{ .address }}
+      </address>
+    {{ end }}
+    {{ with site.Data.params.directions }}
       {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
@@ -64,7 +69,7 @@
     {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
-    {{ $latestSermon.Set "image" (default site.Params.sermonDefaultImage .Params.image) }}
+    {{ $latestSermon.Set "image" (default site.Data.params.sermons.defaultImage .Params.image) }}
     {{ $latestSermon.Set "alt" (default .Title .Params.series) }}
   {{ end }}
   <div class="container-fluid">
@@ -109,7 +114,7 @@
         <div class="cards cards--len-{{ $upcomingEvents | len }}">
           {{ range $upcomingEvents }}
             <div class="card animate">
-              {{ $eventImage := default site.Params.eventDefaultImage .Params.image }}
+              {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
               <div class="card__media">
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>

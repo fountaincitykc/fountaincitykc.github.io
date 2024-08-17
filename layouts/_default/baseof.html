@@ -80,48 +80,55 @@
       <div class="container-fluid">
         <div class="main-footer__top-row">
           <div class="main-footer__contact">
-            {{ with site.Data.footer.contact }}
+            {{ with site.Data.params.connect }}
               <h3>
                 {{ .headline }}
               </h3>
               <div>
                 {{ .content | $.Page.RenderString (dict "display" "block") }}
               </div>
-            {{ end }}
-            {{ with site.Data.footer.contact.button }}
-              {{ partial "button.html" (dict "href" .href "label" .text )}}
+              {{ with .button }}
+                {{ partial "button.html" (dict "href" .href "label" .text )}}
+              {{ end }}
             {{ end }}
           </div>
           <div class="main-footer__apps">
-            {{ with site.Data.footer.apps }}
+            {{ with site.Data.params.apps }}
               <h3>
                 {{ .headline }}
               </h3>
               <div>
                 {{ .content | $.Page.RenderString (dict "display" "block") }}
               </div>
+              <div class="main-footer__app-buttons">
+                {{ range .buttons }}
+                  {{ partial "button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
+                {{ end }}
+              </div>
             {{ end }}
-            <div class="main-footer__app-buttons">
-              {{ range site.Data.footer.apps.buttons }}
-                {{ partial "button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
-              {{ end }}
-            </div>
           </div>
           <div class="main-footer__address">
-            {{ partial "address.html" . }}
-            <address>
-              <strong>Mailing address</strong><br>
-              {{ site.Params.mailingAddress }}
-            </address>            
+            {{ with site.Data.params.serviceAddress }}
+              <address>
+                <strong>{{ .text }}</strong><br>
+                {{ .address }}
+              </address>
+            {{ end }}
+            {{ with site.Data.params.mailingAddress }}
+              <address>
+                <strong>{{ .text }}</strong><br>
+                {{ .address }}
+              </address>
+            {{ end }}
             <p>
-              <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a><br>{{ site.Params.phone }}
+              {{ with site.Data.params.contact.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}<br>{{ site.Data.params.contact.phone }}
             </p>
           </div>
         </div>
         <div class="main-footer__bottom-row">
           <div class="main-footer__social">
             <ul>
-              {{ range site.Data.footer.social }}
+              {{ range site.Data.params.social }}
                 <li>
                   <a href="{{ .href }}" target="_blank">
                     <img src="{{ .image }}" alt="{{ .title }}">
