@@ -5,7 +5,7 @@ params:
   time: 7–8:30am
   location: Roe Park
   featured: true
-  image: /images/featured-events/womens-bible-study.jpg
+  image: /images/events/womens-bible-study.jpg
   button:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2316840

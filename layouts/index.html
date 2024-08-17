@@ -61,10 +61,10 @@
   {{/* Latest sermon */}}
   {{ $latestSermon := newScratch }}
   {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-    {{ $latestSermon.Set "date" ( dateFormat "January 2, 2006" .Date ) }}
+    {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
-    {{ $latestSermon.Set "image" .Params.image }}
+    {{ $latestSermon.Set "image" (default site.Params.sermonDefaultImage .Params.image) }}
     {{ $latestSermon.Set "alt" (default .Title .Params.series) }}
   {{ end }}
   <div class="container-fluid">
@@ -109,7 +109,7 @@
         <div class="cards cards--len-{{ $upcomingEvents | len }}">
           {{ range $upcomingEvents }}
             <div class="card animate">
-              {{ $eventImage := default $.Params.featuredEvents.placeholderImage .Params.image }}
+              {{ $eventImage := default site.Params.eventDefaultImage .Params.image }}
               <div class="card__media">
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>

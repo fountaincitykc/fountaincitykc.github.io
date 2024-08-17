@@ -4,7 +4,7 @@ date: 2024-02-28
 params:
   time: 6–8pm
   featured: true
-  image: /images/featured-events/prayer-night.jpg
+  image: /images/events/prayer-night.jpg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2142702

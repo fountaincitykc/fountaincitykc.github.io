@@ -5,7 +5,7 @@ params:
   time: 6:30–8:30pm
   location: Meadowbrook Clubhouse
   featured: true
-  image: /images/featured-events/womens-night.jpg
+  image: /images/events/womens-night.jpg
   button:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2128231

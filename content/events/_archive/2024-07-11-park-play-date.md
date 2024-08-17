@@ -5,7 +5,7 @@ params:
   time: 9:30am
   location: Olathe Spray Pad
   featured: true
-  image: /images/featured-events/park-play-date.jpg
+  image: /images/events/park-play-date.jpg
 ---
 
 Please join other families for our weekly park play date. All are welcome and feel free to invite friends and neighbors.

@@ -5,7 +5,7 @@ params:
   endDate: 2024-05-04
   location: "[Tall Oaks Center, Linwood, KS](https://maps.app.goo.gl/eStiuf5TLXuJAeZE7)"
   featured: false
-  image: /images/featured-events/mens-retreat.jpg
+  image: /images/events/mens-retreat.jpg
   button:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2181729

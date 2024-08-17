@@ -48,3 +48,5 @@ params:
   mailingAddress: "PO Box 7521, Overland Park, KS 66207"
   email: james@fountaincitykc.org
   phone: 303-618-3079
+  eventDefaultImage: /images/events/default.svg
+  sermonDefaultImage: /images/sermons/default.jpg

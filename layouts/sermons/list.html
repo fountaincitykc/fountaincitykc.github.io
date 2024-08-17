@@ -6,7 +6,7 @@
         <div class="content-section animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="{{ default .Title .Params.series }}">
+              <img src="{{ default site.Params.sermonDefaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
             </a>
           </div>
           <div class="content-section__body">

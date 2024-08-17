@@ -5,7 +5,7 @@ params:
   time: 6pm
   location: Meadowbrook Clubhouse
   featured: true
-  image: /images/featured-events/summer-study.jpg
+  image: /images/events/summer-study.jpg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2343698
