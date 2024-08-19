@@ -39,6 +39,7 @@ params:
       href: https://fcckc.podbean.com/
   featuredEvents:
     headline: Upcoming events
-    viewAll: "View all events →"
-    more: "Learn more →"
+    viewAll:
+      text: "View all events →"
+      href: "/events/"
 ---

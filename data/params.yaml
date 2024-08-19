@@ -14,12 +14,6 @@ directions:
   text: Get directions
   href: https://goo.gl/maps/La7yYuc4yY75Cq5R6
 
-events:
-  defaultImage: /images/events/default.svg
-
-sermons:
-  defaultImage: /images/sermons/default.jpg
-
 connect:
   headline: Interested in Fountain City Church?
   content: "Visiting a new church can be difficult. We'd love to connect and answer any questions you may have before you come!"
@@ -51,3 +45,20 @@ social:
   - text: Podbean
     href: https://fcckc.podbean.com/
     image: /images/ui/podbean.svg
+
+events:
+  defaultImage: /images/events/default.svg
+
+sermons:
+  defaultImage: /images/sermons/default.jpg
+
+labels:
+  older:
+    icon: ←
+    text: Older
+  newer:
+    icon: →
+    text: Newer
+  truncated:
+    icon: →
+    text: More details

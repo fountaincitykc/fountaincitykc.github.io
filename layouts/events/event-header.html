@@ -1,0 +1,9 @@
+<h3>
+  {{ if page.IsPage }}
+    {{ .Title }}
+  {{ else }}
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  {{ end }}
+</h3>

@@ -31,17 +31,19 @@
         {{ if or .HasPrev .HasNext }}
           <ul class="paginator">
             <li>
+              {{ $label := printf "%s %s" site.Data.params.labels.older.icon site.Data.params.labels.older.text }}
               {{ if .HasNext }}
-                {{ partial "button.html" (dict "href" .Next.URL "label" "← Older" "variant" "white" )}}
+                {{ partial "button.html" (dict "href" .Next.URL "label" $label "variant" "white" )}}
               {{ else }}
-                {{ partial "button.html" (dict "label" "← Older" "variant" "white" "disabled" true )}}
+                {{ partial "button.html" (dict "label" $label "variant" "white" "disabled" true )}}
               {{ end }}
             </li>
             <li>
+              {{ $label := printf "%s %s" site.Data.params.labels.newer.text site.Data.params.labels.newer.icon }}
               {{ if .HasPrev }}
-                {{ partial "button.html" (dict "href" .Prev.URL "label" "Newer →" "variant" "white" )}}
+                {{ partial "button.html" (dict "href" .Prev.URL "label" $label "variant" "white" )}}
               {{ else }}
-                {{ partial "button.html" (dict "label" "Newer →" "variant" "white" "disabled" true )}}
+                {{ partial "button.html" (dict "label" $label "variant" "white" "disabled" true )}}
               {{ end }}
             </li>
           </ul>

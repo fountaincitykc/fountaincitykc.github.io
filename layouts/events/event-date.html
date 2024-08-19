@@ -1,0 +1,22 @@
+{{ if .Params.dateText }}
+  <h4>
+    {{ .Params.dateText }}
+  </h4>
+{{ else if or .Date .Params.time }}
+  <h4>
+    {{ with .Date }}
+      {{ time.Format ":date_full" . }}
+    {{ end }}
+    {{ if .Date }}
+      {{ with .Params.endDate }}
+        – {{ time.Format ":date_long" . }}
+      {{ end }}
+    {{ end }}
+    {{ if and .Date .Params.time }}
+      <br> 
+    {{ end }}
+    {{ with .Params.time }}
+      {{ . }}
+    {{ end }}
+  </h4>
+{{ end }}
