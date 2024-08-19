@@ -107,64 +107,67 @@
       <h2>
         {{ .Params.featuredEvents.headline }}
       </h2>
-      {{ with .Site.GetPage "/events" }}
-        {{ $featuredEvents := where .RegularPages "Params.featured" true }}
-        {{ $today := time.AsTime (now.Format "2006-01-02") }}
-        {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
-        {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
-        <div class="cards cards--len-{{ $upcomingEvents | len }}">
-          {{ range $upcomingEvents }}
-            <div class="card animate">
-              {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
-              <div class="card__media">
-                <img src="{{ $eventImage }}" alt="{{ .Title }}">
-              </div>
-              <div class="card__body">
-                <h3>
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h3>
-                <hr>
-                {{ if .Params.dateText }}
-                  <h4>
-                    {{ .Params.dateText }}
-                  </h4>
-                {{ else if .Date }}
-                  <h4>
-                    {{ with .Date }}
-                      {{ time.Format ":date_full" . }}
-                    {{ end }}
-                    {{ with .Params.endDate }}
-                      – {{ time.Format ":date_long" . }}
-                    {{ end }}
-                    {{ if and .Date .Params.time }}
-                      <br>
-                    {{ end }}
-                    {{ with .Params.time }}
-                      {{ . }}
-                    {{ end }}
-                  </h4>
-                {{ end }}
-                {{ with .Params.location }}
-                  <h5>
-                    {{ . | markdownify }}
-                  </h5>
-                {{ end }}
-                <div class="card__content">
-                  {{ .Summary }}
-                  {{ if .Truncated }}
-                    <a href="{{ .RelPermalink }}">{{ $.Params.featuredEvents.more }}</a>
-                  {{ end }}
-                </div>
-              </div>
-              {{ with .Params.button }}
-                <div class="card__footer">
-                  {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
-                </div>
-              {{ end }}
+      {{ $today := time.AsTime (now.Format "2006-01-02") }}
+      {{/* Get all events */}}
+      {{ $events := where site.RegularPages "Section" "events" }}
+      {{/* Filter down to featured events */}}
+      {{ $featuredEvents := where $events "Params.featured" true }}
+      {{/* Filter down to upcoming featured events */}}
+      {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
+      {{/* Filter down to the next 3 upcoming featured events */}}
+      {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
+      <div class="cards cards--len-{{ $upcomingEvents | len }}">
+        {{ range $upcomingEvents }}
+          <div class="card animate">
+            {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
+            <div class="card__media">
+              <img src="{{ $eventImage }}" alt="{{ .Title }}">
             </div>
-          {{ end }}
-        </div>
-      {{ end }}
+            <div class="card__body">
+              <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+              <hr>
+              {{ if .Params.dateText }}
+                <h4>
+                  {{ .Params.dateText }}
+                </h4>
+              {{ else if .Date }}
+                <h4>
+                  {{ with .Date }}
+                    {{ time.Format ":date_full" . }}
+                  {{ end }}
+                  {{ with .Params.endDate }}
+                    – {{ time.Format ":date_long" . }}
+                  {{ end }}
+                  {{ if and .Date .Params.time }}
+                    <br>
+                  {{ end }}
+                  {{ with .Params.time }}
+                    {{ . }}
+                  {{ end }}
+                </h4>
+              {{ end }}
+              {{ with .Params.location }}
+                <h5>
+                  {{ . | markdownify }}
+                </h5>
+              {{ end }}
+              <div class="card__content">
+                {{ .Summary }}
+                {{ if .Truncated }}
+                  <a href="{{ .RelPermalink }}">{{ $.Params.featuredEvents.more }}</a>
+                {{ end }}
+              </div>
+            </div>
+            {{ with .Params.button }}
+              <div class="card__footer">
+                {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
       <p class="featured-events__view-all">
         <a href="/events/">{{ .Params.featuredEvents.viewAll }}</a>
       </p>
