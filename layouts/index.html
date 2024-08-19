@@ -66,6 +66,7 @@
   {{/* Latest sermon */}}
   {{ $latestSermon := newScratch }}
   {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+    {{ $latestSermon.Set "link" .RelPermalink }}
     {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
@@ -75,7 +76,7 @@
   <div class="container-fluid">
     <div class="content-section animate">
       <div class="content-section__media">
-        <a href="{{ .Params.sermon.watch.href }}">
+        <a href="{{ $latestSermon.Get "link" }}">
           <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "alt" }}">
         </a>
       </div>
@@ -91,7 +92,7 @@
         </div>
         <div class="content-section__footer">
           {{ with .Params.sermon.watch }}
-            {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
+            {{ partial "button.html" (dict "href" ($latestSermon.Get "link") "label" .text "variant" "light" )}}
           {{ end }}
           {{ with .Params.sermon.listen }}
             {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}

@@ -1,25 +1,41 @@
 {{ define "main" }}
 <div class="page--sermon">
   <div class="container-lg">
-    <div class="content-section content-section--stacked animate">
-      <div class="content-section__media">
-        {{ with .Params.youtubeId }}
-          <div class="youtube-embed">
-            <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen title="YouTube video"></iframe>
+    <div class="content-list content-list--dense">
+      <div class="content-section content-section--stacked animate">
+        <div class="content-section__media">
+          {{ with .Params.youtubeId }}
+            <div class="youtube-embed">
+              <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen title="YouTube video"></iframe>
+            </div>
+          {{ end }}
+        </div>
+        <div class="content-section__body">
+          <h3>
+            {{ dateFormat "January 2, 2006" .Date }}
+          </h3>
+          <h4>
+            {{ .Title }}
+          </h4>
+          <div class="content-section__content">
+            {{ .Content }}
           </div>
-        {{ end }}
-      </div>
-      <div class="content-section__body">
-        <h3>
-          {{ dateFormat "January 2, 2006" .Date }}
-        </h3>
-        <h4>
-          {{ .Title }}
-        </h4>
-        <div class="content-section__content">
-          {{ .Content }}
         </div>
       </div>
+      {{ if or .NextInSection .PrevInSection }}
+        <ul class="paginator">
+          <li>
+            {{ with .PrevInSection }}
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "← %s" (dateFormat "January 2, 2006" .Date)) "variant" "large" )}}
+            {{ end }}
+          </li>
+          <li>
+            {{ with .NextInSection }}
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "%s →" (dateFormat "January 2, 2006" .Date)) "variant" "large" )}}
+            {{ end }}
+          </li>
+        </ul>
+      {{ end }}
     </div>
   </div>  
 </div>
