@@ -26,12 +26,12 @@
         <ul class="paginator">
           {{ with .PrevInSection }}
             <li>
-              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "← %s" (dateFormat "January 2, 2006" .Date)) "variant" "white" )}}
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "← %s &ndash; %s" (dateFormat "Jan 2" .Date) .Title) "variant" "white" )}}
             </li>
           {{ end }}
           {{ with .NextInSection }}
             <li>
-              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "%s →" (dateFormat "January 2, 2006" .Date)) "variant" "white" )}}
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "%s &ndash; %s →" (dateFormat "Jan 2" .Date) .Title) "variant" "white" )}}
             </li>
           {{ end }}
         </ul>

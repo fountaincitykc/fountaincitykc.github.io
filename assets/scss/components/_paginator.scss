@@ -12,7 +12,7 @@
 
 .paginator {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: var(--spacer);
   padding-left: 0;
@@ -20,8 +20,17 @@
   list-style-type: none;
   border-top: 3px solid var(--dark-gray-a10);
 
-  li:nth-child(2) {
-    padding-left: var(--spacer);
-    border-left: 3px solid var(--dark-gray-a10);
+  li {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $min-breakpoint-sm) {
+    flex-direction: row;
+
+    li:nth-child(2) {
+      padding-left: var(--spacer);
+      border-left: 3px solid var(--dark-gray-a10);
+    }
   }
 }
