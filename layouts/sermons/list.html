@@ -32,16 +32,16 @@
           <ul class="paginator">
             <li>
               {{ if .HasNext }}
-                {{ partial "button.html" (dict "href" .Next.URL "label" "← Older" "variant" "large" )}}
+                {{ partial "button.html" (dict "href" .Next.URL "label" "← Older" "variant" "white" )}}
               {{ else }}
-                {{ partial "button.html" (dict "label" "← Older" "variant" "large" "disabled" true )}}
+                {{ partial "button.html" (dict "label" "← Older" "variant" "white" "disabled" true )}}
               {{ end }}
             </li>
             <li>
               {{ if .HasPrev }}
-                {{ partial "button.html" (dict "href" .Prev.URL "label" "Newer →" "variant" "large" )}}
+                {{ partial "button.html" (dict "href" .Prev.URL "label" "Newer →" "variant" "white" )}}
               {{ else }}
-                {{ partial "button.html" (dict "label" "Newer →" "variant" "large" "disabled" true )}}
+                {{ partial "button.html" (dict "label" "Newer →" "variant" "white" "disabled" true )}}
               {{ end }}
             </li>
           </ul>

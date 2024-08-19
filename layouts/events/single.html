@@ -1,7 +1,23 @@
 {{ define "main" }}
 <div class="page--event">
   <div class="container-lg">
-    {{ .Render "event" }}
+    <div class="content-list content-list--dense">
+      {{ .Render "event" }}
+      {{ if or .NextInSection .PrevInSection }}
+        <ul class="paginator">
+          {{ with .PrevInSection }}
+            <li>
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "← %s" .Title) "variant" "white" )}}
+            </li>
+          {{ end }}
+          {{ with .NextInSection }}
+            <li>
+              {{ partial "button.html" (dict "href" .RelPermalink "label" (printf "%s →" .Title) "variant" "white" )}}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
   </div>  
 </div>
 {{ end }}

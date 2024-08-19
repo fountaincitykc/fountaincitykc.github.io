@@ -59,16 +59,7 @@
       {{ if not .IsHome }}
         <div class="page-header animate">
           <h1>
-            {{/* If the current page is the event detail page... */}}
-            {{ if and (eq .Type "events") .IsPage }}
-              {{ page.Type | singularize }}
-            {{/* Else if the current page is the sermon detail page... */}}
-            {{ else if and (eq .Type "sermons") .IsPage }}
-              {{ dateFormat "January 2, 2006" .Date }}
-            {{/* Otherwise, use the page title */}}
-            {{ else }}
-              {{ .Title }}
-            {{ end }}
+            {{ cond .IsPage page.Type .Title }}
           </h1>
           <hr>
         </div>
