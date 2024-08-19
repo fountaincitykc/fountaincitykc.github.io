@@ -169,7 +169,7 @@
         {{ end }}
       </div>
       <p class="featured-events__view-all">
-        <a href="/events/">{{ .Params.featuredEvents.viewAll }}</a>
+        {{ partial "button.html" (dict "href" "/events/" "label" .Params.featuredEvents.viewAll "variant" "white" "size" "large" )}}
       </p>
     </div>
   </div>

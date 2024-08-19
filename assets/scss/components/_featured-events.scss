@@ -8,7 +8,9 @@
     ...
   </div>
   <p class="featured-events__view-all">
-    <a>Link</a>
+    <a class="button">
+      Button
+    </a>
   </p>
 </div>
 */
@@ -19,7 +21,6 @@
     margin-bottom: var(--spacer-xxl);
   }
   .featured-events__view-all {
-    font-size: var(--font-size-large);
     text-align: center;
   }
 }
