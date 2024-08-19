@@ -7,13 +7,13 @@
         <ul class="paginator">
           {{ with .PrevInSection }}
             <li>
-              {{ $label := printf "%s %s &ndash; %s" site.Data.params.labels.older.icon (dateFormat "Jan 2" .Date) .Title }}
+              {{ $label := printf "← %s &ndash; %s" (dateFormat "Jan 2" .Date) .Title }}
               {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
             </li>
           {{ end }}
           {{ with .NextInSection }}
             <li>
-              {{ $label := printf "%s &ndash; %s %s" (dateFormat "Jan 2" .Date) .Title site.Data.params.labels.newer.icon }}
+              {{ $label := printf "%s &ndash; %s →" (dateFormat "Jan 2" .Date) .Title }}
               {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
             </li>
           {{ end }}

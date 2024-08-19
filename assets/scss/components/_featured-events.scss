@@ -7,7 +7,7 @@
   <div class="cards cards--len-N">
     ...
   </div>
-  <p class="featured-events__view-all">
+  <p class="featured-events__footer">
     <a class="button">
       Button
     </a>
@@ -20,7 +20,7 @@
     text-align: center;
     margin-bottom: var(--spacer-xxl);
   }
-  .featured-events__view-all {
+  .featured-events__footer {
     text-align: center;
   }
 }

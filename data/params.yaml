@@ -51,14 +51,3 @@ events:
 
 sermons:
   defaultImage: /images/sermons/default.jpg
-
-labels:
-  older:
-    icon: ←
-    text: Older
-  newer:
-    icon: →
-    text: Newer
-  truncated:
-    icon: →
-    text: More details

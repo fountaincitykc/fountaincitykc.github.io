@@ -85,7 +85,7 @@
           {{ .Params.sermon.headline }}
         </h2>
         <h3>
-          {{ $latestSermon.Get "date" }} - {{ $latestSermon.Get "title" }}
+          {{ $latestSermon.Get "date" }} &ndash; {{ $latestSermon.Get "title" }}
         </h3>
         <div class="content-section__content">
           {{ $latestSermon.Get "content" }}
@@ -117,7 +117,7 @@
        TODO: handle layout for 1 event
       */}}
       <h2>
-        {{ .Params.featuredEvents.headline }}
+        {{ .Params.events.headline }}
       </h2>
       <div class="cards cards--len-{{ $upcomingEvents | len }}">
         {{ range $upcomingEvents }}
@@ -135,7 +135,7 @@
                 {{ .Summary }}
                 {{ if .Truncated }}
                   <a href="{{ .RelPermalink }}">
-                    {{ printf "%s %s" site.Data.params.labels.truncated.text site.Data.params.labels.truncated.icon }}
+                    More details →
                   </a>
                 {{ end }}
               </div>
@@ -148,8 +148,8 @@
           </div>
         {{ end }}
       </div>
-      {{ with .Params.featuredEvents.viewAll }}
-        <p class="featured-events__view-all">
+      {{ with .Params.events.button }}
+        <p class="featured-events__footer">
           {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" "size" "large" )}}
         </p>
       {{ end }}
