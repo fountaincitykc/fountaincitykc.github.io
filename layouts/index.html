@@ -6,6 +6,7 @@
 
 {{ define "main" }}
 <div class="page--home">
+
   {{/* Mobile directions */}}
   <div class="mobile-directions animate">
     {{ with site.Data.params.serviceAddress }}
@@ -18,6 +19,7 @@
       {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
+
   {{/* Hero */}}
   <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
     <div class="hero__body">
@@ -35,6 +37,7 @@
       {{ end }}
     </div>
   </div>
+
   {{/* Featured content */}}
   <div class="container-fluid">
     <div class="cards cards--len-{{ .Params.cards | len }}">
@@ -63,6 +66,7 @@
       {{ end }}
     </div>
   </div>
+
   {{/* Latest sermon */}}
   {{ $latestSermon := newScratch }}
   {{ range first 1 (where site.RegularPages "Section" "sermons") }}
@@ -99,79 +103,83 @@
       </div>
     </div>
   </div>
+
   {{/* Featured events */}}
-  <div class="featured-events">
-    <div class="container-fluid">
-      {{ $today := time.AsTime (now.Format "2006-01-02") }}
-      {{/* Get all events */}}
-      {{ $events := where site.RegularPages "Section" "events" }}
-      {{/* Filter down to featured events */}}
-      {{ $featuredEvents := where $events "Params.featured" true }}
-      {{/* Filter down to upcoming featured events */}}
-      {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
-      {{/* Filter down to the next 3 upcoming featured events */}}
-      {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
-      {{/* Handle layout for 1 event or multiple events */}}
-      {{ $eventLen := $upcomingEvents | len }}
-      {{/* Layout for 1 event */}}
-      {{ if eq $eventLen 1 }}
-        {{ with index $upcomingEvents 0 }}
-          <div class="content-section animate">
-            <div class="content-section__media">
-              {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
-              <img src="{{ $eventImage }}" alt="{{ .Title }}">
-            </div>
-            <div class="content-section__body">
-              {{ .Render "event-header" }}
-              {{ .Render "event-date" }}
-              {{ .Render "event-location" }}
-              <div class="content-section__content">
-                {{ .Render "event-summary" }}
-              </div>
-              {{ with .Params.button }}
-                <div class="content-section__footer">
-                  {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
-                </div>
-              {{ end }}
-            </div>
-          </div>
-        {{ end }}
-      {{/* Layout for multiple events */}}
-      {{ else if gt $eventLen 1 }}
-        <h2 class="featured-events__headline">
-          {{ .Params.events.headline }}
-        </h2>
-        <div class="cards cards--len-{{ $eventLen }}">
-          {{ range $upcomingEvents }}
-            <div class="card animate">
-              <div class="card__media">
+  {{ $today := time.AsTime (now.Format "2006-01-02") }}
+  {{/* Get all events */}}
+  {{ $events := where site.RegularPages "Section" "events" }}
+  {{/* Filter down to featured events */}}
+  {{ $featuredEvents := where $events "Params.featured" true }}
+  {{/* Filter down to upcoming featured events */}}
+  {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
+  {{/* Filter down to the next 3 upcoming featured events */}}
+  {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
+  {{/* Handle layout for 1 event or multiple events */}}
+  {{ $eventLen := $upcomingEvents | len }}
+  {{ if gt $eventLen 0 }}
+    {{/* Layout for 1 event */}}
+    <div class="featured-events">
+      <div class="container-fluid">
+        {{ if eq $eventLen 1 }}
+          {{ with index $upcomingEvents 0 }}
+            <div class="content-section animate">
+              <div class="content-section__media">
                 {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
-              <div class="card__body">
+              <div class="content-section__body">
                 {{ .Render "event-header" }}
-                <hr>
                 {{ .Render "event-date" }}
                 {{ .Render "event-location" }}
-                <div class="card__content">
+                <div class="content-section__content">
                   {{ .Render "event-summary" }}
                 </div>
+                {{ with .Params.button }}
+                  <div class="content-section__footer">
+                    {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
+                  </div>
+                {{ end }}
               </div>
-              {{ with .Params.button }}
-                <div class="card__footer">
-                  {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
-                </div>
-              {{ end }}
             </div>
           {{ end }}
-        </div>
-        {{ with .Params.events.button }}
-          <p class="featured-events__footer">
-            {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" "size" "large" )}}
-          </p>
+        {{/* Layout for multiple events */}}
+        {{ else if gt $eventLen 1 }}
+          <h2 class="featured-events__headline">
+            {{ .Params.events.headline }}
+          </h2>
+          <div class="cards cards--len-{{ $eventLen }}">
+            {{ range $upcomingEvents }}
+              <div class="card animate">
+                <div class="card__media">
+                  {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
+                  <img src="{{ $eventImage }}" alt="{{ .Title }}">
+                </div>
+                <div class="card__body">
+                  {{ .Render "event-header" }}
+                  <hr>
+                  {{ .Render "event-date" }}
+                  {{ .Render "event-location" }}
+                  <div class="card__content">
+                    {{ .Render "event-summary" }}
+                  </div>
+                </div>
+                {{ with .Params.button }}
+                  <div class="card__footer">
+                    {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+          {{ with .Params.events.button }}
+            <p class="featured-events__footer">
+              {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" "size" "large" )}}
+            </p>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  </div>
+  {{ end }}
+
 </div>
 {{ end }}
