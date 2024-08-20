@@ -5,9 +5,7 @@
       {{ range .Paginator.Pages }}
         <div class="content-section animate">
           <div class="content-section__media">
-            <a href="{{ .RelPermalink }}">
-              <img src="{{ default site.Data.params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
-            </a>
+            <img src="{{ default site.Data.params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
           </div>
           <div class="content-section__body">
             <h3>
