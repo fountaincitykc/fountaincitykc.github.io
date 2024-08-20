@@ -1,7 +1,7 @@
 /*
 @markup
 <div class="featured-events">
-  <h2>
+  <h2 class="featured-events__headline">
     Headline
   </h2>
   <div class="cards cards--len-N">
@@ -16,7 +16,7 @@
 */
 
 .featured-events {
-  h2 {
+  .featured-events__headline {
     text-align: center;
     margin-bottom: var(--spacer-xxl);
   }
