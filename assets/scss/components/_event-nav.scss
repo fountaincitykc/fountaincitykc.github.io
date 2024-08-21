@@ -45,10 +45,10 @@
   }
   a {
     span {
-      // Shorten month names on smallest breakpoint
+      // Shorten month names on smaller breakpoints
       display: none;
 
-      @media (min-width: $min-breakpoint-sm) {
+      @media (min-width: $min-breakpoint-md) {
         display: inline;
       }
     }

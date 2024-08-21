@@ -1,8 +1,9 @@
 ---
-title: 5 Year Anniversary Party
+title: 5 Year Anniversary Dinner
 date: 2024-10-04
 params:
-  time: 6–9pm
+  time: 6–8pm
+  location: Meadowbrook Clubhouse
   featured: true
   image: /images/events/5-year-anniversary.jpg
 ---
