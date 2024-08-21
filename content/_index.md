@@ -38,7 +38,9 @@ params:
       text: Listen
       href: https://fcckc.podbean.com/
   events:
-    headline: Upcoming events
+    headline:
+      single: Join us
+      multiple: Upcoming events
     button:
       text: "View all events →"
       href: "/events/"

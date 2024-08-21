@@ -128,7 +128,10 @@
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
               <div class="content-section__body">
-                {{ .Render "event-header" }}
+                <h2>
+                  {{ $.Page.Params.events.headline.single }}
+                </h2>
+                {{ .Render "event-title" }}
                 {{ .Render "event-date" }}
                 {{ .Render "event-location" }}
                 <div class="content-section__content">
@@ -145,7 +148,7 @@
         {{/* Layout for multiple events */}}
         {{ else if gt $eventLen 1 }}
           <h2 class="featured-events__headline">
-            {{ .Params.events.headline }}
+            {{ .Params.events.headline.multiple }}
           </h2>
           <div class="cards cards--len-{{ $eventLen }}">
             {{ range $upcomingEvents }}
@@ -155,7 +158,7 @@
                   <img src="{{ $eventImage }}" alt="{{ .Title }}">
                 </div>
                 <div class="card__body">
-                  {{ .Render "event-header" }}
+                  {{ .Render "event-title" }}
                   <hr>
                   {{ .Render "event-date" }}
                   {{ .Render "event-location" }}

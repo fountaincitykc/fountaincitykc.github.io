@@ -49,12 +49,14 @@ Short text with media
   .content-section__body {
     width: 100%;
 
-    h2 + h3,
-    h3 + h4,
-    h4 + h5 {
-      margin-top: calc(var(--spacer-sm) * -1); // Negative margin
+    h3, h4, h5 {
       font-size: var(--font-size-base);
       font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-base);
+    }
+    h3 + h4,
+    h4 + h5 {
+      margin-top: calc(var(--spacer) * -1); // Negative margin
     }
   }
   .content-section__footer  {
