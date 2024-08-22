@@ -6,6 +6,6 @@ params:
   location: Meadowbrook Clubhouse
 ---
 
-Join us for a series that Pastor James will teach on “Going deeper in what we believe: essentials of the faith”. The time will include potluck dinner with the community.
+Join us for a series that Pastor James will teach on “Going deeper in what we believe: essentials of the faith”. The time will include a potluck dinner with the community.
 
 <!--more-->
