@@ -41,7 +41,7 @@ params:
 
       Helping people connect to Jesus and connect to community are some of Lindsay's greatest joys in ministry.
 
-      Lindsay loves raising her 3 favorite children – Libby, Henry, and Annie alongside James.
+      Lindsay loves raising her 3 favorite children alongside James.
     photo: /images/staff/lindsay.jpg
   - name: Danielle Beckham
     role: Administrator
