@@ -51,6 +51,6 @@ params:
 
       She is thankful that her gifts of organization, planning, and communications are being used and shared with the FCC community.
 
-      She is a devoted wife to Travis and mother and can be found walking through her neighborhood or cuddled up with a good book.
+      She is a devoted wife to Travis and mother to her son. In her free time she can be found walking or cuddled up with a good book.
     photo: /images/staff/danielle.jpg
 ---
