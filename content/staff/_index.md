@@ -11,7 +11,7 @@ params:
 
       As pastor of Fountain City, James loves preaching and teaching about God's grace to us in Jesus Christ. He is passionate about followers of Jesus maturing in their life of discipleship, and he has a strong desire to help the gospel of Jesus go to parts of the world where it is yet to be heard.
 
-      James and Lindsay have 3 children: Libby, Henry, and Annie. James loves just about any team sport, and he's is most content when fly fishing, preferably for trout.
+      James and Lindsay have 3 children. James loves just about any team sport, and he's is most content when fly fishing, preferably for trout.
     photo: /images/staff/james.jpg
   - name: Alex Davis
     role: Worship Leader
