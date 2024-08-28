@@ -38,6 +38,22 @@
     </div>
   </div>
 
+  {{/* Banner */}}
+  {{ with .Params.banner }}
+    <div class="banner animate">
+      <div class="banner__content">
+        <p>
+          {{ .content }}
+        </p>
+      </div>
+      {{ with .button }}
+        <div class="banner__button">
+          {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
   {{/* Featured content */}}
   <div class="container-fluid">
     <div class="cards cards--len-{{ .Params.cards | len }}">
