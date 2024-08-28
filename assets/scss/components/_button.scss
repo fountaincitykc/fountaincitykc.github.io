@@ -45,7 +45,7 @@
     background-color: var(--blue-a10);
 
     &:hover {
-      color: var(--blue);
+      color: var(--blue-dark);
       background-color: var(--blue-a20);
     }
     &:active {
@@ -71,7 +71,7 @@
     background-color: var(--white);
 
     &:hover {
-      color: var(--blue);
+      color: var(--blue-dark);
       background-color: var(--white-a80);
     }
     &:active {
