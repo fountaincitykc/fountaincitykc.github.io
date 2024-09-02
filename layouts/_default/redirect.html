@@ -4,6 +4,10 @@
     {{ with .Params.redirect }}
       <title>Redirecting</title>
       <meta http-equiv="Refresh" content="0; url={{ . }}">
+    {{ else }}
+      {{ with .File }}
+        {{ warnf ".Params.redirect is undefined in %q" .Filename }}
+      {{ end }}
     {{ end }}
   </head>
   <body>
