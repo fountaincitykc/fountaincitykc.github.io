@@ -11,11 +11,11 @@ params:
       text: Watch live
       href: https://www.youtube.com/@fountaincitychurchkc9519/
     photo: /images/photos/home-hero.jpg
-  banner:
-    content: We are now forming home groups. Please fill out the survey if you wish to participate by Tues Sept 3.
-    button:
-      text: Take survey
-      href: https://docs.google.com/forms/d/e/1FAIpQLSe54ZXI5B1KGuZwHvZ3Kq70ESwGOO_mFJaRBp7tfX6yHKKsXw/viewform?usp=sf_link
+  #banner:
+  #  content: We are now forming home groups. Please fill out the survey if you wish to participate by Tues Sept 3.
+  #  button:
+  #    text: Take survey
+  #    href: https://docs.google.com/forms/d/e/1FAIpQLSe54ZXI5B1KGuZwHvZ3Kq70ESwGOO_mFJaRBp7tfX6yHKKsXw/viewform?usp=sf_link
   cards:
   - headline: Sundays
     photo: /images/photos/sundays.jpg
