@@ -13,3 +13,16 @@ hugo new content events/2024-01-01-event-title.md
 ```bash
 hugo new content sermons/2024-01-01.md
 ```
+
+## Tasks
+
+### Create a redirect
+
+```yaml
+---
+type: _default
+layout: redirect
+params:
+  redirect: [URL]
+---
+```
