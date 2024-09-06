@@ -3,6 +3,7 @@
   <head>
     {{ with .Params.redirect }}
       <title>Redirecting</title>
+      <meta name="robots" content="noindex">
       <meta http-equiv="Refresh" content="0; url={{ . }}">
     {{ else }}
       {{ with .File }}

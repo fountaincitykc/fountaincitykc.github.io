@@ -13,12 +13,17 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="/images/ui/fountain-city-church.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    {{ with resources.Get "scss/main.scss" | toCSS (dict "transpiler" "libsass" "targetPath" "css/main.css") | resources.Minify | resources.Fingerprint }}
-      <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
-    {{ end }}
-    {{ with slice (resources.Get "js/main-nav.js") (resources.Get "js/animate.js") | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint }}
-      <script src="{{ .RelPermalink }}"></script>
-    {{ end }}
+
+    {{ $cssOpts := dict "transpiler" "libsass" "targetPath" "css/main.css"}}
+    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+    {{ if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+    {{ $scripts := slice (resources.Get "js/main-nav.js") (resources.Get "js/animate.js") }}
+    {{ $js := $scripts | resources.Concat "js/main.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
+    <script src="{{ $js.RelPermalink }}"></script>
+
     {{ block "head" . }}
     {{ end }}
   </head>
