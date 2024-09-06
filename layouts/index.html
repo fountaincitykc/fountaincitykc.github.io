@@ -1,7 +1,7 @@
 {{ define "head" }}
-  {{ with resources.Get "js/watch-live.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ .RelPermalink }}"></script>
-  {{ end }}
+  {{ $js := resources.Get "js/watch-live.js" }}
+  {{ if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
+  <script src="{{ $js.RelPermalink }}"></script>
 {{ end }}
 
 {{ define "main" }}
