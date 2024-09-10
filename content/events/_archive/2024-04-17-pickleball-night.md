@@ -7,5 +7,3 @@ params:
 ---
 
 **This event has been canceled.**
-
-<!--more-->

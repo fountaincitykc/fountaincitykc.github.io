@@ -10,5 +10,3 @@ params:
 ---
 
 Consider volunteering for the Kids Corner at the Meadowbrook Festival, an awesome time for families in our community! Our church is so excited to bless over 1000 kids with a fun time and let them know FCC is here for them.
-
-<!--more-->

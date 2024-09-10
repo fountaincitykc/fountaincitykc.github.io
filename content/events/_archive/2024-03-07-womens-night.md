@@ -12,5 +12,3 @@ params:
 ---
 
 Join us for a great night of food, fellowship, and growth together! We'll hear from speaker Carie Roth: You're Not Enough, And Why That's Great News. Dinner, dessert, and time to connect with others.
-
-<!--more-->

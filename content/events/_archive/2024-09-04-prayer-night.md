@@ -9,5 +9,3 @@ params:
 ---
 
 Join us for a time of prayer with one another. We will be serving dessert and coffee but please note no childcare will not be provided.
-
-<!--more-->

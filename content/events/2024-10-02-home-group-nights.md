@@ -11,5 +11,3 @@ params:
 ---
 
 Join us for a series that Pastor James will teach on “Going deeper in what we believe: essentials of the faith”. The time will include a potluck dinner with the community.
-
-<!--more-->

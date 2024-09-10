@@ -14,5 +14,3 @@ params:
 Join the Fountain City men for a night away for relationship, rest, and renewal. Lodging and food included.
 
 $70 per person or $30 for Saturday-only option. Lodging and food included. If the cost is prohibitive to you, please reach out to James, as scholarships are available.
-
-<!--more-->
