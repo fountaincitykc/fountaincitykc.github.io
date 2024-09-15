@@ -6,4 +6,4 @@ params:
   location: Meadowbrook Clubhouse - Rosewood B
 ---
 
-Every 1st Sunday of the month, please join us for fellowship, coffee, and pastries before service.
+**This event has been canceled.**
