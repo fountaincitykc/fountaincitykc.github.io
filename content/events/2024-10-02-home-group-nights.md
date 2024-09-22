@@ -4,7 +4,7 @@ date: 2024-10-02
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse
-  #featured: true
+  featured: true
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2501613
