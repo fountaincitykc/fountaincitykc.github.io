@@ -1,6 +1,6 @@
 ---
 title: Events
-description: "Upcoming events for Fountain City Church."
+description: Upcoming events for Fountain City Church.
 cascade:
   sitemap:
     # Prevent the event detail pages from being shown in the sitemap
