@@ -5,7 +5,7 @@
       {{ range .Paginator.Pages }}
         <div class="content-section animate">
           <div class="content-section__media">
-            <img src="{{ default site.Data.params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
+            <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
           </div>
           <div class="content-section__body">
             <h3>

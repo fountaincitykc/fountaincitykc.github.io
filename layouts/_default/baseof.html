@@ -76,7 +76,7 @@
       <div class="container-fluid">
         <div class="main-footer__top-row">
           <div class="main-footer__contact">
-            {{ with site.Data.params.connect }}
+            {{ with site.Params.connect }}
               <h3>
                 {{ .headline }}
               </h3>
@@ -89,7 +89,7 @@
             {{ end }}
           </div>
           <div class="main-footer__apps">
-            {{ with site.Data.params.apps }}
+            {{ with site.Params.apps }}
               <h3>
                 {{ .headline }}
               </h3>
@@ -104,27 +104,27 @@
             {{ end }}
           </div>
           <div class="main-footer__address">
-            {{ with site.Data.params.serviceAddress }}
+            {{ with site.Params.serviceAddress }}
               <address>
                 <strong>{{ .text }}</strong><br>
                 {{ .address }}
               </address>
             {{ end }}
-            {{ with site.Data.params.mailingAddress }}
+            {{ with site.Params.mailingAddress }}
               <address>
                 <strong>{{ .text }}</strong><br>
                 {{ .address }}
               </address>
             {{ end }}
             <p>
-              {{ with site.Data.params.contact.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}<br>{{ site.Data.params.contact.phone }}
+              {{ with site.Params.contact.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}<br>{{ site.Params.contact.phone }}
             </p>
           </div>
         </div>
         <div class="main-footer__bottom-row">
           <div class="main-footer__social">
             <ul>
-              {{ range site.Data.params.social }}
+              {{ range site.Params.social }}
                 <li>
                   <a href="{{ .href }}" target="_blank">
                     <img src="{{ .image }}" alt="{{ .title }}">

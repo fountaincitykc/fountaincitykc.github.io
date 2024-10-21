@@ -1,0 +1,5 @@
+goldmark:
+  parser:
+    attribute: # Enable Markdown attributes for block-level elements
+      block: true
+      title: true

@@ -9,13 +9,13 @@
 
   {{/* Mobile directions */}}
   <div class="mobile-directions animate">
-    {{ with site.Data.params.serviceAddress }}
+    {{ with site.Params.serviceAddress }}
       <address>
         <strong>{{ .text }}</strong><br>
         {{ .address }}
       </address>
     {{ end }}
-    {{ with site.Data.params.directions }}
+    {{ with site.Params.directions }}
       {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
@@ -90,7 +90,7 @@
     {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
     {{ $latestSermon.Set "title" .Title }}
     {{ $latestSermon.Set "content" .Content }}
-    {{ $latestSermon.Set "image" (default site.Data.params.sermons.defaultImage .Params.image) }}
+    {{ $latestSermon.Set "image" (default site.Params.sermons.defaultImage .Params.image) }}
     {{ $latestSermon.Set "alt" (default .Title .Params.series) }}
   {{ end }}
   <div class="container-fluid">
@@ -140,7 +140,7 @@
           {{ with index $upcomingEvents 0 }}
             <div class="content-section animate">
               <div class="content-section__media">
-                {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
+                {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
                 <img src="{{ $eventImage }}" alt="{{ .Title }}">
               </div>
               <div class="content-section__body">
@@ -170,7 +170,7 @@
             {{ range $upcomingEvents }}
               <div class="card animate">
                 <div class="card__media">
-                  {{ $eventImage := default site.Data.params.events.defaultImage .Params.image }}
+                  {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
                   <img src="{{ $eventImage }}" alt="{{ .Title }}">
                 </div>
                 <div class="card__body">

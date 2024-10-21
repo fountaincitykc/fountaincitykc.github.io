@@ -1,18 +1,4 @@
-baseURL: "https://www.fountaincitykc.org/"
-title: "Fountain City Church - Overland Park, KS"
-timeZone: America/Chicago
-disableKinds: ["RSS","taxonomy","term"]
-buildFuture: true # Needed to show future events
-
-markup:
-  goldmark:
-    parser:
-      attribute: # Enable Markdown attributes for block-level elements
-        block: true
-        title: true
-
-menu:
-  main:
+main:
   - name: About us
     pageRef: /vision/
     weight: 1
