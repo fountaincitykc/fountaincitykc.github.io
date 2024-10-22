@@ -8,5 +8,4 @@ params:
   image: /images/events/sips-and-sweets.jpg
 ---
 
-Every 1st Sunday of the month, please join us for fellowship, coffee, and
-pastries before service.
+Every 1st Sunday of the month, please join us for fellowship, coffee, and pastries before service.
