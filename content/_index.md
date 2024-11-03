@@ -41,9 +41,9 @@ params:
     headline: Latest sermon
     watch:
       text: Watch
-    #listen:
-    #  text: Listen
-    #  href: https://fcckc.podbean.com/
+    listen:
+      text: Listen
+      href: https://fcckc.podbean.com/
   events:
     headline:
       single: Join us
