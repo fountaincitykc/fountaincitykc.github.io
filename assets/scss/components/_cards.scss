@@ -15,23 +15,54 @@
   gap: var(--spacer);
   margin-bottom: var(--spacer-xxl);
 
-  & > .card {
+  .card {
     flex-grow: 1;
     width: 100%;
     max-width: $min-breakpoint-sm;
+
+    .card__media {
+      img {
+        height: 250px;
+      }
+    }
   }
+  // Medium breakpoint only
+  @media (min-width: $min-breakpoint-md) and (max-width: $max-breakpoint-md) {
+    .card {
+      .card__media {
+        img {
+          height: 300px;
+        }
+      }
+    }
+  }
+  // Large breakpoint and up
   @media (min-width: $min-breakpoint-lg) {
     flex-direction: row;
     align-items: stretch;
 
-    // Default to 3-up
-    & > .card { 
-      max-width: 33%;
+    .card { 
       flex: 1 1 0;
     }
+    // 3-up
+    &.cards--len-3 .card { 
+      max-width: 33%;
+
+      .card__media {
+        img {
+          height: 200px;
+        }
+      }
+    }
     // 2-up
-    &.cards--len-2 > .card {
+    &.cards--len-2 .card {
       max-width: 50%;
+
+      .card__media {
+        img {
+          height: 250px;
+        }
+      }
     }
   }
 }
