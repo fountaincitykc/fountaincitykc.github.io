@@ -4,6 +4,7 @@ date: 2024-12-11
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse
+  featured: true
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2501648
