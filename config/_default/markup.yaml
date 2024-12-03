@@ -3,3 +3,4 @@ goldmark:
     attribute: # Enable Markdown attributes for block-level elements
       block: true
       title: true
+    wrapStandAloneImageWithinParagraph: false # Do not wrap standalone images with paragraph tag

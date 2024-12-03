@@ -72,8 +72,8 @@ h6 {
   font-weight: var(--font-weight-bold);
 }
 
-p, ul, ol, address {
-  margin-top: 0;
+p, ul, ol, address, figure {
+  margin: 0;
   margin-bottom: var(--spacer);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
@@ -135,4 +135,11 @@ blockquote {
   padding: var(--spacer);
   background-color: var(--gray-light);
   border-left: solid 4px var(--blue-a50);
+}
+
+figure img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--border-radius);
 }
