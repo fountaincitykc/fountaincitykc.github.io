@@ -1,6 +1,5 @@
-{{- $src := .Destination }}
 {{- /* Process attributes */}}
-{{- $a := merge .Attributes (dict "alt" .Text "src" $src) }}
+{{- $a := merge .Attributes (dict "alt" .Text "src" .Destination) }}
 {{- $attributes := "" }}
 {{- range $k, $v := $a }}
   {{- if $v }}
