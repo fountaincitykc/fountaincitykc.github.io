@@ -11,7 +11,7 @@ params:
       href: https://www.youtube.com/@fountaincitychurchkc9519/
     photo: /images/photos/home-hero.jpg
   banner:
-    enabled: false
+    enabled: true
     content: |-
       We are moving! Starting Sunday January 12, 2025 our new location will be JOCO Arts & Heritage Center. 
     button:

@@ -1,7 +1,10 @@
 ---
-draft: true
 title: Moving FAQ
 ---
+
+#### When are we moving?
+
+Our first Sunday in our new location will be January 12 at 10am. 
 
 #### Why are we moving?
 
