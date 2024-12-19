@@ -22,7 +22,7 @@ params:
       Fountain City is filled with young families. As we seek to help each child grow in his or her knowledge and love of God, families are invited to worship together for portions of the service. Nursery is available for children ages 0–3, and a worship class for kids ages 3–6 during the sermon. Kids 7 and up join their parents and receive age-appropriate materials to engage them during the sermon. Our Children & Families ministry assists parents in training up children as faithful followers of Jesus.
     photo: /images/photos/families.jpg
   location:
-    headline: Were we meet
+    headline: Where we meet
     content: |-
       Meadowbrook Park Clubhouse has been our Sunday service gathering location since the fall of 2020. The clubhouse provides a beautiful space for our growing church - and opportunity to enjoy the playground or grab lunch in a pavilion after service. The clubhouse sits on the northwest corner of Meadowbrook Park.
   directions:
