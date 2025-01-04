@@ -18,11 +18,11 @@
   gap: var(--spacer);
   align-items: center;
   justify-content: center;
-  margin-top: calc(var(--spacer-xxl) * -1); // Negative margin
-  margin-bottom: var(--spacer-xxl);
+  //margin-top: calc(var(--spacer-xxl) * -1); // Negative margin
+  //margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-sm);
   background-color: var(--blue);
-  border-top: solid 2px var(--black-a30);
+  border-bottom: solid 2px var(--black-a30);
 
   .banner__content {
     color: var(--white);

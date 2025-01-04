@@ -8,6 +8,7 @@
 <div class="page--home">
 
   {{/* Mobile directions */}}
+  {{/*
   <div class="mobile-directions animate">
     {{ with site.Params.serviceAddress }}
       <address>
@@ -19,6 +20,25 @@
       {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
+  */}}
+
+  {{/* Banner */}}
+  {{ if .Params.banner.enabled }}
+    {{ with .Params.banner }}
+      <div class="banner animate">
+        <div class="banner__content">
+          <p>
+            {{ .content | markdownify }}
+          </p>
+        </div>
+        {{ with .button }}
+          <div class="banner__button">
+            {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
 
   {{/* Hero */}}
   <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
@@ -39,24 +59,6 @@
        */}}
     </div>
   </div>
-
-  {{/* Banner */}}
-  {{ if .Params.banner.enabled }}
-    {{ with .Params.banner }}
-      <div class="banner animate">
-        <div class="banner__content">
-          <p>
-            {{ .content | markdownify }}
-          </p>
-        </div>
-        {{ with .button }}
-          <div class="banner__button">
-            {{ partial "button.html" (dict "href" .href "label" .text "variant" "white" )}}
-          </div>
-        {{ end }}
-      </div>
-    {{ end }}
-  {{ end }}
 
   {{/* Featured content */}}
   <div class="container-fluid">
