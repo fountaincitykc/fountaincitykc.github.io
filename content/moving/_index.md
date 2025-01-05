@@ -4,7 +4,7 @@ title: Moving FAQ
 
 #### When did we move?
 
-Our first Sunday in our new location was January 12. 
+Our first Sunday in our new location will be on January 12. 
 
 #### Why did we move?
 
