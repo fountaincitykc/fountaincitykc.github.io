@@ -1,109 +1,104 @@
+// Layout
+
+$breakpoint-min-widths: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$breakpoint-max-widths: (
+  xs: 575px,
+  sm: 767px,
+  md: 991px,
+  lg: 1199px,
+  xl: 1399px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// Type
+
+$font-family-base: "Montserrat", sans-serif;
+$font-family-display: "Syne", sans-serif;
+
+$font-size-sm: 16px;
+$font-size-base: 18px;
+$font-size-lg: 24px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-heavy: 600;
+
+$line-height-base: 1.4;
+$line-height-tight: 1.2;
+
+//$font-size-h1: 60px;
+//$font-size-h2: 48px;
+//$font-size-h3: 32px;
+//$font-size-h4: 24px;
+//$font-size-h5: 18px;
+//$font-size-h6: 16px;
+
 :root {
-
-  --black-rgb: 0, 0, 0;
-  --black: rgb(var(--black-rgb));
-  --black-a10: rgba(var(--black-rgb), 0.1);
-  --black-a20: rgba(var(--black-rgb), 0.2);
-  --black-a30: rgba(var(--black-rgb), 0.3);
-  --black-a40: rgba(var(--black-rgb), 0.4);
-  --black-a50: rgba(var(--black-rgb), 0.5);
-
-  --dark-gray-rgb: 39, 39, 40;
-  --dark-gray: rgb(var(--dark-gray-rgb));
-  --dark-gray-a10: rgba(var(--dark-gray-rgb), 0.1);
-  --dark-gray-a20: rgba(var(--dark-gray-rgb), 0.2);
-  --dark-gray-a30: rgba(var(--dark-gray-rgb), 0.3);
-  --dark-gray-a40: rgba(var(--dark-gray-rgb), 0.4);
-  --dark-gray-a50: rgba(var(--dark-gray-rgb), 0.5);
-
-  --white-rgb: 255, 255, 255;
-  --white: rgb(var(--white-rgb));
-  --white-a10: rgba(var(--white-rgb), 0.1);
-  --white-a20: rgba(var(--white-rgb), 0.2);
-  --white-a30: rgba(var(--white-rgb), 0.3);
-  --white-a40: rgba(var(--white-rgb), 0.4);
-  --white-a50: rgba(var(--white-rgb), 0.5);
-  --white-a80: rgba(var(--white-rgb), 0.8);
-
-  --blue-rgb: 14, 113, 193;
-  --blue: rgb(var(--blue-rgb));
-  --blue-a10: rgba(var(--blue-rgb), 0.1);
-  --blue-a20: rgba(var(--blue-rgb), 0.2);
-  --blue-a30: rgba(var(--blue-rgb), 0.3);
-  --blue-a40: rgba(var(--blue-rgb), 0.4);
-  --blue-a50: rgba(var(--blue-rgb), 0.5);
-
-  --blue-light-rgb: 32, 140, 226;
-  --blue-light: rgb(var(--blue-light-rgb));
-
-  --blue-dark-rgb: 3, 88, 156;
-  --blue-dark: rgb(var(--blue-dark-rgb));
-
-  --gray-light-rgb: 245, 245, 245;
-  --gray-light: rgb(var(--gray-light-rgb));
-  
-  --font-family-base: 'Montserrat', Helvetica, Arial, sans-serif;
-  --font-size-root: 16px;
-  --font-size-small: 14px;
-  --font-size-base: 16px;
-  --font-size-large: 20px;
-  --font-size-h1: 36px;
-  --font-size-h2: 36px;
-  --font-size-h3: 28px;
-  --font-size-h4: 22px;
-  --font-size-h5: 16px;
-  --font-size-h6: 14px;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 500;
-  --font-weight-heavy: 600;
-  --line-height-base: 1.5;
-  --line-height-header: 1.2;
-  --uppercase-letter-spacing: 2px;
-
-  --border-radius: 3px;
-
-  --spacer-xxs: 4px;
-  --spacer-xs: 8px;
-  --spacer-sm: 16px;
-  --spacer: 24px;
-  --spacer-lg: 48px;
-  --spacer-xl: 64px;
-  --spacer-xxl: 80px;
-
-  --zindex-main-nav: 998;
-  --zindex-main-nav-submenu: 999;
-
-  // https://easings.net/
-  --easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
-
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 18px;
+  --font-size-h5: 18px;
+  --font-size-h6: 16px;
 }
-@media (min-width: 576px) {
+@media (min-width: breakpoint-min-width("lg")) {
   :root {
-    --font-size-h1: 48px;
+    --font-size-h1: 60px;
     --font-size-h2: 48px;
     --font-size-h3: 32px;
     --font-size-h4: 24px;
   }
 }
 
-// Breakpoint vars
+// Colors
 
-$min-breakpoint-xxl: 1400px;
-$max-width-xxl: 1320px;
+$white: rgb(255, 255, 255);
+//$black: rgb(0, 0, 0);
+$navy:       rgb(16, 37, 62);    // #10253E
+$dark-blue:  rgb(29, 90, 140);   // #1D5A8C
+$blue:       rgb(56, 116, 170);  // #3874AA
+$light-blue: rgb(158, 202, 218); // #9ECADA
 
-$min-breakpoint-xl: 1200px;
-$max-breakpoint-xl: ($min-breakpoint-xxl - 1);
-$max-width-xl: 1140px;
+$gray-900: tint-color($navy, 10%);
+$gray-800: tint-color($navy, 20%);
+$gray-700: tint-color($navy, 30%);
+$gray-600: tint-color($navy, 40%);
+$gray-500: tint-color($navy, 50%);
+$gray-400: tint-color($navy, 60%);
+$gray-300: tint-color($navy, 70%);
+$gray-200: tint-color($navy, 80%);
+$gray-100: tint-color($navy, 90%);
+$gray-50:  tint-color($navy, 95%);
 
-$min-breakpoint-lg: 992px;
-$max-breakpoint-lg: ($min-breakpoint-xl - 1);
-$max-width-lg: 960px;
+$foreground-color: $navy;
+$background-color: $white;
+$link-color: $blue;
+$link-color-hover: shade-color($blue, 20%);
+$border-color: $gray-100;
 
-$min-breakpoint-md: 768px;
-$max-breakpoint-md: ($min-breakpoint-lg - 1);
-$max-width-md: 720px;
+// Stlyes 
 
-$min-breakpoint-sm: 576px;
-$max-breakpoint-sm: ($min-breakpoint-md - 1);
-$max-width-sm: 540px;
+$box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.4);
+
+// Sizing
+
+$size-unit: 8px;
+
+// Animation (https://easings.net)
+
+$easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);

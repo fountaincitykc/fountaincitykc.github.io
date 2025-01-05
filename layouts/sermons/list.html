@@ -1,51 +1,32 @@
 {{ define "main" }}
-<div class="page--sermons">
-  <div class="container-fluid">
-    <div class="content-list content-list--dense">
-      {{ range .Paginator.Pages }}
-        <div class="content-section animate">
-          <div class="content-section__media">
-            <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}">
-          </div>
-          <div class="content-section__body">
-            <h3>
-              <a href="{{ .RelPermalink }}">
-                {{ dateFormat "January 2, 2006" .Date }}
-              </a>
-            </h3>
-            <h4>
-              {{ .Title }}
-            </h4>
-            <div class="content-section__content">
-              {{ .Content }}
+  <main class="main-content | sermons">
+    <div class="container">
+        {{ range .Paginator.Pages }}
+          <div class="content-section | animate">
+            <div class="content-section__media">
+              <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}" class="img img--fill img--rounded">
             </div>
-            <div class="content-section__footer">
-              {{ partial "button.html" (dict "href" .RelPermalink "label" $.Params.button.text "variant" "light" )}}
+            <div class="content-section__body">
+              <div class="content-section__header">
+                <h3>
+                  <a href="{{ .RelPermalink }}">
+                    {{ dateFormat "January 2, 2006" .Date }}
+                  </a>
+                </h3>
+                <h4 class="subtitle">
+                  {{ .Title }}
+                </h4>
+              </div>
+              <div class="content-section__content">
+                {{ .Content }}
+              </div>
+              <div class="content-section__footer">
+                {{ partial "components/button.html" (dict "href" .RelPermalink "text" $.Params.button.text "variant" "secondary" )}}
+              </div>
             </div>
           </div>
-        </div>
-      {{ end }}
-      {{ with .Paginator }}
-        {{ if or .HasPrev .HasNext }}
-          <ul class="paginator">
-            <li>
-              {{ if .HasNext }}
-                {{ partial "button.html" (dict "href" .Next.URL "label" "← Older" "variant" "white" )}}
-              {{ else }}
-                {{ partial "button.html" (dict "label" "← Older" "variant" "white" "disabled" true )}}
-              {{ end }}
-            </li>
-            <li>
-              {{ if .HasPrev }}
-                {{ partial "button.html" (dict "href" .Prev.URL "label" "Newer →" "variant" "white" )}}
-              {{ else }}
-                {{ partial "button.html" (dict "label" "Newer →" "variant" "white" "disabled" true )}}
-              {{ end }}
-            </li>
-          </ul>
         {{ end }}
-      {{ end }}
+        {{ partial "components/paginator" . }}
     </div>
-  </div>  
-</div>
+  </main>
 {{ end }}

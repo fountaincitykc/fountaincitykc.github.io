@@ -1,0 +1,106 @@
+.main-nav {
+
+  // =========================================
+  // Shared styles bewtween mobile and desktop
+  // =========================================
+
+  ul {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  ul ul {
+    padding-top: 0;
+  }
+  li {
+    margin-bottom: 0;
+  }
+  a {
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+  }
+
+  // ===============
+  // Mobile nav only
+  // ===============
+
+  @media (max-width: breakpoint-max-width("md")) {
+    ul {
+      flex-direction: column;
+    }
+    a {
+      display: block;
+      padding: size(1.5) size(6);
+      color: $white;
+      font-size: $font-size-lg;
+    }
+    li.main-nav--selected > a {
+      background-color: rgba($white, 0.1);
+    }
+
+    // Mobile submenu
+
+    li li {
+      padding-left: size(6);
+
+      a {
+        padding-left: size(4);
+        border-left: solid 3px $border-color;
+      }
+    }
+  }
+
+  // ================
+  // Desktop nav only
+  // ================
+
+  @media (min-width: breakpoint-min-width("lg")) {
+    & > ul {
+      position: relative; // Needed for desktop submenu
+      flex-direction: row;
+      justify-content: right;
+      align-items: center;
+      gap: size(4);
+    }
+    li {
+      font-size: $font-size-sm;
+    }
+    a {
+      display: inline-block;
+      padding: size(1) 0;
+    }
+    li.main-nav--selected > a {
+      color: $foreground-color;
+      text-decoration: underline;
+      text-decoration-color: rgba($light-blue, 0.4);
+      text-decoration-thickness: 3px;
+    }
+
+    // Desktop submenu
+
+    li:hover ul {
+      display: flex;
+      flex-direction: column;
+      gap: size(0.5);
+    }
+    ul ul {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      padding: size(2) size(3);
+      background-color: $white;
+      box-shadow: 0px size(1) size(2) 0px rgba($navy, 0.2);
+      border-radius: size(1);
+      z-index: 999;
+    }
+  }
+  @media (min-width: breakpoint-min-width("xl")) {
+    & > ul  {
+      gap: size(8);
+    }
+    li {
+      font-size: $font-size-base;
+    }
+  }
+}

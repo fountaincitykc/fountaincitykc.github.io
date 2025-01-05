@@ -1,32 +1,31 @@
 {{ define "main" }}
-{{ $today := time.AsTime (now.Format "2006-01-02") }}
-{{/* Note: This collection does not include pages without a Date (TBD events) */}}
-{{ $events := where .RegularPages "Date" "ge" $today }}
-<div class="page--events">
-  <div class="container-lg">
-    <nav class="event-nav animate">
-      <ul>
-        {{ $year := "" }}
-        {{ range $events.GroupByDate "2006" "asc" }}
-          {{ $year := .Key }}
-          <li>{{ .Key }}
-            <ul>
-              {{ range .Pages.GroupByDate "January" "asc" }}
-                {{ $anchor := printf "%s %s" .Key $year | anchorize }}
-                <li>
-                  <a href="#{{ $anchor }}">
-                    {{ substr .Key 0 3 }}<span>{{ substr .Key 3 }}</span>
-                  </a>
-                </li>
-              {{ end }}
-            </ul>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
-    <div class="content-list">
+  <main class="main-content | events">
+    <div class="container-lg">
+      <nav class="events-nav | animate">
+        <ul>
+          {{ $today := time.AsTime (now.Format "2006-01-02") }}
+          {{/* Note: This collection does not include pages without a Date (TBD events) */}}
+          {{ $events := where .RegularPages "Date" "ge" $today }}
+          {{ $year := "" }}
+          {{ range $events.GroupByDate "2006" "asc" }}
+            {{ $year := .Key }}
+            <li>{{ .Key }}
+              <ul>
+                {{ range .Pages.GroupByDate "January" "asc" }}
+                  {{ $anchor := printf "%s %s" .Key $year | anchorize }}
+                  <li>
+                    <a href="#{{ $anchor }}">
+                      {{ substr .Key 0 3 }}<span>{{ substr .Key 3 }}</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
       {{ range $events.GroupByDate "January 2006" "asc" }}
-        <h2 class="event-header animate" id="{{ .Key | anchorize }}">
+        <h2 class="events-header | animate" id="{{ .Key | anchorize }}">
           {{ .Key }}
         </h2>
         {{ range .Pages }}
@@ -34,6 +33,5 @@
         {{ end }}
       {{ end }}
     </div>
-  </div>
-</div>
+  </main>
 {{ end }}

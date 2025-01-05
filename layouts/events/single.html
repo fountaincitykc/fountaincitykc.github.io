@@ -1,25 +1,8 @@
 {{ define "main" }}
-<div class="page--event">
-  <div class="container-lg">
-    <div class="content-list content-list--dense">
+  <main class="main-content | events">
+    <div class="container-lg">
       {{ .Render "event" }}
-      {{ if or .NextInSection .PrevInSection }}
-        <ul class="paginator">
-          {{ with .PrevInSection }}
-            <li>
-              {{ $label := printf "← %s &ndash; %s" (dateFormat "Jan 2" .Date) .Title }}
-              {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
-            </li>
-          {{ end }}
-          {{ with .NextInSection }}
-            <li>
-              {{ $label := printf "%s &ndash; %s →" (dateFormat "Jan 2" .Date) .Title }}
-              {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
-            </li>
-          {{ end }}
-        </ul>
-      {{ end }}
-    </div>
-  </div>  
-</div>
+      {{ partial "components/pager" . }}
+    </div>  
+  </main>
 {{ end }}

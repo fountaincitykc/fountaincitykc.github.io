@@ -2,21 +2,21 @@
 title: Moving FAQ
 ---
 
-#### When are we moving?
+#### When did we move?
 
-Our first Sunday in our new location will be January 12 at 10am. 
+Our first Sunday in our new location was January 12. 
 
-#### Why are we moving?
+#### Why did we move?
 
 Over the past two years, the Lord has continued to grow our church community to the point that we have outgrown our current location at the Meadowbrook Park Clubhouse. We have loved our time at Meadowbrook, but we feel the Lord leading us to move. We want to be able to welcome as many people in worship as we can and, as a young growing church plant, we need more room to be able to grow into a church for generations to come. 
 
-#### Where are we moving?
+#### Where did we move?
 
-We are moving our primary gathering location for all Sunday services as well as all all-church functions to the Johnson County Arts & Heritage Center at 89th & Metcalf Ave in Overland Park, KS. 
+We moved our primary gathering location for all Sunday services as well as all all-church functions to the Johnson County Arts & Heritage Center at 89th & Metcalf Ave in Overland Park, KS. 
 
-![Heritage Center](/images/photos/heritage.png)
+![Heritage Center](heritage.png)
 
-#### Why are we moving to this location?
+#### Why did we move to this location?
 
 There are many reasons. To begin with, it’s close to where we’ve been gathering for the past few years and we desire to maintain a close connection with that community. It’s also a beautiful and inviting building that provides plenty of room for Fountain City to continue to grow, especially with our kids…there’s lots of room for kids! We love that we’ll be intimately connected to a hub of Overland Park. And we’re excited to continue enjoying our relationship with the Johnson County administration and hopefully be able to serve our community together. 
 
@@ -34,16 +34,15 @@ You will enter through the main entrance at the front of the building. A greeter
 
 #### Where’s the kids check-in?
 
-Kids check-in will be located just a few steps within the main entrance. Our team will be there to welcome you and help you get all your little ones ready for the morning. 
+Kids check-in is located just a few steps within the main entrance. Our team will be there to welcome you and help you get all your little ones ready for the morning. 
 
-#### What part of the building will we be using?
+#### What part of the building are we using?
 
-For worship and all-church events, we will be using the main event space that is off to the left of the main entry. We will also use a room attached to that space for our primary kids class. We will also be using a large conference room toward the front of the building as a nursery. As we grow, we will be able to use more rooms as needed. 
-
+For worship and all-church events, we are using the main event space that is off to the left of the main entry. We also use a room attached to that space for our primary kids class, and a large conference room toward the front of the building as a nursery. As we grow, we will be able to use more rooms as needed. 
 
 #### Do we have the entire building to ourselves?
 
-No. Because this is a large facility with many rentable spaces, it’s possible though not likely there could be a group using the space at the same time. However, our location within the building will be secluded and just for us. Plus, we will have exclusive access to an enclosed outdoor courtyard just off the worship space. 
+No. Because this is a large facility with many rentable spaces, it’s possible though not likely there could be a group using the space at the same time. However, our location within the building is secluded and just for us. Plus, we have exclusive access to an enclosed outdoor courtyard just off the worship space. 
 
 #### What’s the address?
 

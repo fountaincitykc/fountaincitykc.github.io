@@ -1,44 +1,36 @@
 {{ define "main" }}
-<div class="page--sermon">
-  <div class="container-lg">
-    <div class="content-list content-list--dense">
-      <div class="content-section content-section--stacked animate">
-        <div class="content-section__media">
-          {{ with .Params.youtubeId }}
-            <div class="youtube-embed">
-              <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen title="YouTube video"></iframe>
+  <main class="main-content | sermons">
+    <div class="container-lg">
+        <div class="content-section content-section--stack | animate">
+          <div class="content-section__media">
+            {{ with .Params.youtubeId }}
+              <div class="youtube-embed">
+                <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen title="YouTube video"></iframe>
+              </div>
+            {{ end }}
+          </div>
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h3>
+                {{ dateFormat "January 2, 2006" .Date }}
+              </h3>
+              <h4 class="subtitle">
+                {{ .Title }}
+              </h4>
             </div>
-          {{ end }}
-        </div>
-        <div class="content-section__body">
-          <h3>
-            {{ dateFormat "January 2, 2006" .Date }}
-          </h3>
-          <h4>
-            {{ .Title }}
-          </h4>
-          <div class="content-section__content">
-            {{ .Content }}
+            <div class="content-section__content">
+              {{ .Content }}
+              {{ with .Params.series }}
+                <p>
+                  <span class="badge">
+                    {{ . }}
+                  </span>
+                </p>
+              {{ end }}
+            </div>
           </div>
         </div>
-      </div>
-      {{ if or .NextInSection .PrevInSection }}
-        <ul class="paginator">
-          {{ with .PrevInSection }}
-            <li>
-              {{ $label := printf "← %s &ndash; %s" (dateFormat "Jan 2" .Date) .Title }}
-              {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
-            </li>
-          {{ end }}
-          {{ with .NextInSection }}
-            <li>
-              {{ $label := printf "%s &ndash; %s →" (dateFormat "Jan 2" .Date) .Title }}
-              {{ partial "button.html" (dict "href" .RelPermalink "label" $label "variant" "white" )}}
-            </li>
-          {{ end }}
-        </ul>
-      {{ end }}
-    </div>
-  </div>  
-</div>
+        {{ partial "components/pager" . }}
+    </div>  
+  </main>
 {{ end }}

@@ -1,53 +1,59 @@
+# Open Graph and Twitter Card defaults
+description: |-
+  Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.
+images: [/images/fountain-city-church.svg]
 contact:
   email: james@fountaincitykc.org
   phone: 303-618-3079
 
 serviceAddress:
   text: Sunday service
-  address: "9101 Nall Ave, Prairie Village, KS 66207"
+  address: 8788 Metcalf Ave, Overland Park, KS 66212
 
 mailingAddress:
   text: Mailing address
-  address: "PO Box 7521, Overland Park, KS 66207"
+  address: PO Box 7521, Overland Park, KS 66207
 
 directions:
   text: Get directions
-  href: https://goo.gl/maps/La7yYuc4yY75Cq5R6
+  href: https://maps.app.goo.gl/yRLoeGU1QisTNYLP9
 
 connect:
   headline: Interested in Fountain City Church?
-  content: "Visiting a new church can be difficult. We'd love to connect and answer any questions you may have before you come!"
+  content: |-
+    Visiting a new church can be difficult. We'd love to connect and answer any questions you may have before you come!
   button:
     text: Connect with us
     href: https://fountaincitykc.churchcenter.com/people/forms/283554
 
 apps:
   headline: Download our app
-  content: "The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory."
+  content: |-
+    The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory.
   buttons:
     - text: App Store
       href: https://apps.apple.com/us/app/church-center-app/id1357742931
-      image: /images/ui/app-store.svg
+      image: /images/app-store.svg
     - text: Google Play
       href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
-      image: /images/ui/google-play.svg
+      image: /images/google-play.svg
 
 social:
   - text: Instagram
     href: https://www.instagram.com/fountaincitychurch_kc/
-    image: /images/ui/instagram.svg
+    icon: instagram
   - text: Facebook
     href: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
-    image: /images/ui/facebook.svg
+    icon: facebook
   - text: Youtube
     href: https://www.youtube.com/@fountaincitychurchkc9519/
-    image: /images/ui/youtube.svg
+    icon: youtube
   - text: Podbean
     href: https://fcckc.podbean.com/
-    image: /images/ui/podbean.svg
+    icon: podbean
 
 events:
   defaultImage: /images/events/default.svg
 
 sermons:
-  defaultImage: /images/sermons/default.jpg
+  defaultImage: /images/sermons/default.svg

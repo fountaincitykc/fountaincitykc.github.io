@@ -1,0 +1,284 @@
+.main-content.home {
+  padding-top: 0;// Override .main-content
+}
+.home {
+  @include make-stack(10);
+  background-color: $dark-blue;
+}
+
+// Directions
+
+.home-directions {
+  padding-top: size(3);
+  padding-bottom: size(3);
+  background-color: $white;
+  border-top: solid 3px $border-color;
+  text-align: center;
+
+  @media (min-width: breakpoint-min-width("sm")) {
+    display: none;
+  }
+}
+
+// Hero
+
+.home-hero {
+  margin-top: 0;// Override stack
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: size(6);
+  padding: size(16) size(3) size(3) size(3);
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+    max-width: 1200px;
+    color: $white;
+    font-size: var(--font-size-h2);
+    font-weight: $font-weight-heavy;
+    text-wrap: balance;
+  }
+  h4 {
+    margin-bottom: 0;
+    color: $light-blue;
+    font-weight: $font-weight-bold;
+  }
+  .watch-live {
+    a {
+      font-weight: $font-weight-bold;
+    }
+    &.hide {
+      // Hide link by default
+      // The "hide" class is removed by JavaScript on Sunday (see assets/js/watch-live.js)
+      display: none;
+    }
+  }
+  @media (max-width: breakpoint-max-width("xs")) {
+    padding-top: size(8);
+    padding-bottom: 0;
+
+    img {
+      width: 140px;
+    }
+  }
+  @media (min-width: breakpoint-min-width("lg")) {
+    background-image: url("/home/hero-bkgd.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  // Animation
+
+  h1, img, h4 {
+    transform: translate(0, 40px);
+  }
+  &.js-start-animation {
+    h1, img, h4 {
+      transform: translate(0, 0);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    h1 {
+      transition: transform 1s $easeOutQuad;
+    }
+    img {
+      transition: transform 1.5s $easeOutQuad;
+    }
+    h4 {
+      transition: transform 2s $easeOutQuad;
+    }
+  }
+}
+
+// Banner
+
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  gap: size(3);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -(size(10));
+  padding: size(3);
+  background-color: $background-color;
+
+  .home-banner__content {
+    text-align: center;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: breakpoint-min-width("md")) {
+    flex-direction: row;
+    margin-left: size(3);
+    margin-right: size(3);
+    padding: size(2) size(5);
+    border-radius: 999px;
+
+    .home-banner__content {
+      text-align: left;
+    }
+  }
+}
+
+// Photos
+
+.home-photos {
+
+  img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .home-photos-main {
+    img {
+      display: block;
+    }
+  }
+  @media (min-width: breakpoint-min-width("md")) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "slot-1 slot-2 slot-main slot-main slot-5"
+      "slot-3 slot-4 slot-main slot-main slot-6";
+    gap: size(2);
+    padding: size(3);
+
+    img {
+      display: block;
+      border-radius: size(2);
+      object-fit: cover;
+      object-position: center center;
+      box-shadow: $box-shadow;
+    }
+
+    .home-photos-main { grid-area: slot-main; }
+    .home-photos-1 { grid-area: slot-1; }
+    .home-photos-2 { grid-area: slot-2; }
+    .home-photos-3 { grid-area: slot-3; }
+    .home-photos-4 { grid-area: slot-4; }
+    .home-photos-5 { grid-area: slot-5; }
+    .home-photos-6 { grid-area: slot-6; }
+
+    .home-photos-main {
+      position: relative;
+  
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+      }
+    }
+  }
+  @media (min-width: breakpoint-min-width("lg")) {
+    gap: size(3);
+  }
+}
+
+// Callout
+
+.home-callout {
+  .callout__content > * {
+    font-size: var(--font-size-h3);
+
+    @media (min-width: breakpoint-min-width("lg")) {
+      font-size: var(--font-size-h2);
+    }
+  }
+}
+
+// Cards
+
+.home-cards {
+  display: flex;
+  flex-direction: column;
+  gap: size(3);
+
+  .card {
+    border: none;
+    box-shadow: $box-shadow;
+  }
+
+  @media (min-width: breakpoint-min-width("lg")) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Sermon & single event
+
+.home-sermon,
+.home-events {
+  .content-section__media {
+    img {
+      box-shadow: $box-shadow;
+    }
+  }
+  .content-section__body,
+  .content-section__content {
+    color: $white;
+
+    a:not(.button) {
+      @include make-white-link;
+    }
+  }
+  .content-section__footer {
+    .button.button--primary {
+      &:hover,
+      &:active {
+        background-color: rgba($blue, 0.6);
+      }
+    }
+  }
+}
+
+// Events
+
+.home-events {
+  .home-events__headline {
+    margin-bottom: size(10);
+    color: $white;
+    text-align: center;
+  }
+  .home-events__cards {
+    display: flex;
+    flex-direction: column;
+    gap: size(3);
+
+    .card {
+      border: none;
+      box-shadow: $box-shadow;
+    }
+  }
+  .home-events__footer {
+    margin-bottom: 0;
+    padding-top: size(10);
+    text-align: center;
+
+    a {
+      color: $white;
+      font-size: $font-size-lg;
+      text-decoration: none;
+    }
+  }
+  @media (min-width: breakpoint-min-width("lg")) {
+    .home-events__cards {
+      display: grid;
+    }
+    &.home-events--len-2 {
+      .home-events__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &.home-events--len-3 {
+      .home-events__cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

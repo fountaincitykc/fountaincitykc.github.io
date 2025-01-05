@@ -1,16 +1,8 @@
 ---
-{{ $filename := .File.BaseFileName -}}
-{{/* Get date from filename */ -}}
-{{ $date := "" -}}
-{{/* If the filename only contains a date... */ -}}
-{{ if findRE `^\d{4}-\d{2}-\d{2}$` $filename -}}
-  {{/* Get the date from the filename */ -}}
-  {{ $date = $filename -}}
-{{ end -}}
-title: 
-date: {{ $date }}
+title: String
+date: YYYY-MM-DD
 params:
-  series: 
-  youtubeId: 
-  #image: /images/sermons/default.jpg
+  series: String
+  youtubeId: String
+  image: File path # Leave empty for default
 ---

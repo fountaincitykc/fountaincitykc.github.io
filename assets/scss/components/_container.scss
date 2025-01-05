@@ -1,62 +1,33 @@
 .container,
-.container-fluid,
 .container-sm,
 .container-md,
 .container-lg,
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-right: var(--spacer);
-  padding-left: var(--spacer);
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: $min-breakpoint-sm) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: $max-width-sm;
+  margin: 0 auto;
+  padding: 0 size(3);
+
+  @media (min-width: breakpoint-min-width("lg")) {
+    padding: 0 size(6);
   }
-  .container-fluid {
-    padding-right: var(--spacer-lg);
-    padding-left: var(--spacer-lg);
+  @media (min-width: breakpoint-min-width("xxl")) {
+    padding: 0 size(3);
   }
 }
-@media (min-width: $min-breakpoint-md) {
-  .container,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: $max-width-md;
-  }
+.container,
+.container-xxl {
+  max-width: container-max-width("xxl");
 }
-@media (min-width: $min-breakpoint-lg) {
-  .container,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: $max-width-lg;
-  }
+.container-sm {
+  max-width: container-max-width("sm");
 }
-@media (min-width: $min-breakpoint-xl) {
-  .container,
-  .container-xl,
-  .container-xxl {
-    max-width: $max-width-xl;
-  }
+.container-md {
+  max-width: container-max-width("md");
 }
-@media (min-width: $min-breakpoint-xxl) {
-  .container,
-  .container-fluid,
-  .container-xxl {
-    max-width: $max-width-xxl;
-  }
-  .container-fluid {
-    padding-right: var(--spacer);
-    padding-left: var(--spacer);
-  }
+.container-lg {
+  max-width: container-max-width("lg");
+}
+.container-xl {
+  max-width: container-max-width("xl");
 }

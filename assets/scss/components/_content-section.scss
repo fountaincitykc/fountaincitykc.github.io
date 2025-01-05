@@ -1,115 +1,32 @@
-/* 
-@description
-Short text with media
-
+/*
 @markup
 <div class="content-section">
   <div class="content-section__media">
-    <img>
+    Image
   </div>
   <div class="content-section__body">
-    <h2>
-      Headline
-    </h2>
+    <div class="content-section__header">
+      Title
+    </div>
     <div class="content-section__content">
       Content
     </div>
     <div class="content-section__footer">
-      <a class="button">
-        Button
-      </a>
+      Button(s)
     </div>
   </div>
 </div>
 */
 
 .content-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: var(--spacer);
-  width: 100%;
-  max-width: 576px;
-  margin: 0 auto;
-  // This margin will only be applied if the parent of .content-section is not .content-list
-  margin-bottom: var(--spacer-xxl);
-
-  .content-section__media {
-    width: 100%;
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      border-radius: var(--border-radius);
-    }
-  }
-  .content-section__body {
-    width: 100%;
-
-    h3, h4, h5 {
-      font-size: var(--font-size-base);
-      font-weight: var(--font-weight-normal);
-      line-height: var(--line-height-base);
-    }
-    h3 + h4,
-    h4 + h5 {
-      margin-top: calc(var(--spacer) * -1); // Negative margin
-    }
-  }
-  .content-section__footer  {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacer);
-  }
-  @media (min-width: $min-breakpoint-sm) {
-    .content-section__footer {
-      flex-direction: row;
-      gap: var(--spacer-sm);
-    }
-  }
-  @media (min-width: $min-breakpoint-lg) {
-    flex-direction: row;
-    gap: var(--spacer-lg);
-    max-width: none;
-  
-    .content-section__media {
-      width: 40%;
-    }
-    .content-section__body {
-      width: 60%;
-    }
-  }
+  @include make-content-section;
 
   // @options
 
-  &.content-section--centered {
-    .content-section__media,
-    .content-section__body {
-      text-align: center;
-      margin: 0 auto;
-    }
-    @media (min-width: $min-breakpoint-lg) {
-      align-items: center;
-
-      .content-section__body {
-        text-align: left;
-      }
-    }
+  &.content-section--stack {
+    @include make-content-section--stack;
   }
-  &.content-section--stacked {
-    @media (min-width: $min-breakpoint-lg) {
-      flex-direction: column;
-      gap: var(--spacer);
-
-      .content-section__media {
-        width: 100%;
-      }
-      .content-section__body {
-        width: 100%;
-      }
-    }
+  &.content-section--center {
+    @include make-content-section--center;
   }
 }

@@ -1,61 +1,73 @@
 {{ define "main" }}
-<div class="page--sunday-morning">
-  <div class="container-fluid">
-    <div class="content-list content-list--dense">
+  <main class="main-content | sunday-morning">
+    <div class="container">
       {{ range .Params.sections }}
-        <div class="content-section animate" id="{{ .headline | urlize }}">
-          <div class="content-section__media">
-            <img src="{{ .photo }}" alt="{{ .headline }}">
-          </div>
+        <div class="content-section | animate" id="{{ .headline | urlize }}">
+          {{ $alt := .headline }}
+          {{ with $.Resources.Get .photo }}
+            <div class="content-section__media">
+              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+            </div>
+          {{ end }}
           <div class="content-section__body">
-            <h2>
-              {{ .headline }}
-            </h2>
+            <div class="content-section__header">
+              <h2>
+                {{ .headline }}
+              </h2>
+            </div>
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
             {{ with .button }}
               <div class="content-section__footer">
-                {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
+                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
               </div>
             {{ end }}
           </div>
         </div>
       {{ end }}
     </div>
-  </div>
-  <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');"></div>
-  <div class="container-md">
-    <div class="content-list">
-      <div class="blurb animate">
-        <div class="blurb__body">
-          <h2>
-            {{ .Params.location.headline }}
-          </h2>
-          <div class="blurb__content">
-            {{ .Params.location.content | $.Page.RenderString (dict "display" "block") }}
+    {{ with .Resources.Get .Params.photo }}
+      <div class="sunday-morning__photo | animate">
+        <img src="{{ .RelPermalink }}">
+      </div>
+    {{ end }}
+    <div class="container-md">
+        <div class="sunday-morning__location | content-section | animate">
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h2>
+                {{ .Params.location.headline }}
+              </h2>
+            </div>
+            <div class="content-section__content">
+              {{ .Params.location.content | $.Page.RenderString (dict "display" "block") }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="blurb blurb--centered animate">
-        <div class="blurb__body">
-          <h2>
-            {{ .Params.directions.headline }}
-          </h2>
-          <div class="blurb__content">
-            {{ with site.Params.serviceAddress }}
-              <address>
-                <strong>{{ .text }}</strong><br>
-                {{ .address }}
-              </address>
-            {{ end }}
+        <div class="sunday-morning__directions | content-section | animate">
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h2>
+                {{ .Params.directions.headline }}
+              </h2>
+            </div>
+            <div class="content-section__content">
+              {{ with site.Params.serviceAddress }}
+                <address>
+                  <strong>{{ .text }}</strong><br>
+                  {{ .address }}
+                </address>
+              {{ end }}
+            </div>
+            <div class="content-section__footer">
+              {{ with site.Params.directions }}
+                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+              {{ end }}
+            </div>
           </div>
-          {{ with site.Params.directions }}
-            {{ partial "button.html" (dict "href" .href "label" .text )}}
-          {{ end }}
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </main>
 {{ end }}

@@ -1,0 +1,5 @@
+.connect {
+  > * {
+    @include make-stack(8);
+  }
+}

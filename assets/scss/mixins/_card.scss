@@ -1,0 +1,89 @@
+@mixin make-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  border: solid 3px $border-color;
+  border-radius: size(1);
+  overflow: hidden;
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: size(3);
+    padding: size(3);
+  }
+  .card__header,
+  .card__content,
+  .card__footer {
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  .card__content {
+    flex-grow: 1; // Push down footer
+  }
+  .card__footer {
+    display: flex;
+    flex-direction: row;
+    gap: size(2);
+  }
+}
+@mixin make-card--1x1 {
+  .card__media {
+    width: 50%;
+  }
+  .card__body {
+    width: 50%;
+  }
+}
+@mixin make-card--2x3 {
+  .card__media {
+    width: 40%;
+  }
+  .card__body {
+    width: 60%;
+  }
+}
+@mixin make-card--1x2 {
+  .card__media {
+    width: 33.333%;
+  }
+  .card__body {
+    width: 66.666%;
+  }
+}
+@mixin make-card--1x3 {
+  .card__media {
+    width: 25%;
+  }
+  .card__body {
+    width: 75%;
+  }
+}
+@mixin make-card--inset-media {
+  gap: size(3);
+  padding: size(3);
+
+  .card__body {
+    padding: 0;
+  }
+}
+@mixin make-card--horz {
+  align-items: center;
+  flex-direction: row;
+}
+@mixin make-card--reverse {
+  .card__body {
+    order: 1;
+  }
+  .card__media {
+    order: 2;
+  }
+}
+@mixin make-card--center {
+  .card__body {
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,43 @@
+/*
+@markup
+<img class="img">
+*/
+
+.img {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+
+  // @options
+  
+  &.img--round {
+    border-radius: 999px;
+  }
+  &.img--rounded {
+    border-radius: size(1);
+  }
+  &.img--center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.img--cover {
+    object-fit: cover;
+  }
+  &.img--fill {
+    width: 100%;
+  }
+  &.img--max-fill {
+    max-width: 100%;
+  }
+  @for $i from 1 through 16 {
+    $v: $i * 16;
+    &.img--w#{$v} {
+      width: #{$v}px;
+    }
+    &.img--h#{$v} {
+      height: #{$v}px;
+    }
+  }
+}

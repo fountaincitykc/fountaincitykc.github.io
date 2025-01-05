@@ -1,5 +1,4 @@
-baseURL: https://www.fountaincitykc.org/
-title: "Fountain City Church - Overland Park, KS"
-timeZone: America/Chicago
-disableKinds: [RSS, taxonomy, term]
+title: Fountain City Church - Overland Park, KS
+baseURL: https://fountaincitykc.org/
+disableKinds: [rss, taxonomy, term]
 buildFuture: true # Needed to show future events

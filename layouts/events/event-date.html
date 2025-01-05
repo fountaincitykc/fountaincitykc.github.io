@@ -1,15 +1,15 @@
 {{ if .Params.dateText }}
-  <h4>
+  <h4 class="subtitle">
     {{ .Params.dateText }}
   </h4>
 {{ else if or .Date .Params.time }}
-  <h4>
+  <h4 class="subtitle">
     {{ with .Date }}
       {{ time.Format ":date_full" . }}
     {{ end }}
     {{ if .Date }}
       {{ with .Params.endDate }}
-        – {{ time.Format ":date_long" . }}
+        &ndash; {{ time.Format ":date_long" . }}
       {{ end }}
     {{ end }}
     {{ if and .Date .Params.time }}

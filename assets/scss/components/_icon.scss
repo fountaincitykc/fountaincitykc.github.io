@@ -1,0 +1,65 @@
+/*
+@markup
+<svg class="icon">
+  ...
+</svg>
+*/
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: size(3);
+  height: size(3);
+  
+  path {
+    fill: currentColor;
+  }
+  
+  // @options
+
+  &.icon--primary {
+    path {
+      fill: $blue;
+    }
+  }
+  &.icon--secondary {
+    path {
+      fill: $gray-500;
+    }
+  }
+  &.icon--dark {
+    path {
+      fill: $foreground-color;
+    }
+  }
+  &.icon--white {
+    path {
+      fill: $white;
+    }
+  }
+  &.icon--current {
+    path {
+      fill: currentColor;
+    }
+  }
+  &.icon--xs {
+    width: size(2.25);
+    height: size(2.25);
+  }
+  &.icon--sm {
+    width: size(2.5);
+    height: size(2.5);
+  }
+  &.icon--md {
+    width: size(3);
+    height: size(3);
+  }
+  &.icon--lg {
+    width: size(4);
+    height: size(4);
+  }
+  &.icon--xl {
+    width: size(6);
+    height: size(6);
+  }
+}

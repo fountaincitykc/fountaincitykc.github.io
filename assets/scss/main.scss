@@ -1,32 +1,54 @@
-@import "variables";
-@import "fonts";
-@import "foundation";
-@import "animate";
+// Utility functions
+@import "functions";
 
-@import "components/banner";
-@import "components/blurb";
+// Values for colors, fonts, spacing, etc
+@import "variables";
+
+// Font file imports
+@import "fonts";
+
+// Global styling of html elements
+@import "base";
+
+// Mix-ins
+@import "mixins/button";
+@import "mixins/card";
+@import "mixins/content-section";
+@import "mixins/stack";
+@import "mixins/utils";
+
+// Components
+@import "components/animate";
+@import "components/badge";
 @import "components/button";
 @import "components/callout";
 @import "components/card";
-@import "components/cards";
 @import "components/container";
-@import "components/content-list";
 @import "components/content-section";
-@import "components/error";
-@import "components/event-header";
-@import "components/event-nav";
-@import "components/event";
-@import "components/fcc";
-@import "components/featured-events";
-@import "components/hero";
-@import "components/mobile-directions";
+@import "components/icon";
+@import "components/img";
 @import "components/page-header";
+@import "components/pager";
 @import "components/paginator";
+@import "components/stack";
+@import "components/subtitle";
 @import "components/youtube-embed";
 
-@import "components/main-content";
-@import "components/main-footer";
-@import "components/main-header";
-@import "components/main-nav";
+// Application
 
-@import "exceptions";
+@import "app/main-content";
+@import "app/main-footer";
+@import "app/main-header";
+@import "app/main-nav";
+
+@import "app/connect";
+@import "app/events";
+@import "app/home";
+@import "app/sermons";
+@import "app/staff";
+@import "app/sunday-morning";
+@import "app/vision";
+@import "app/what-we-believe";
+@import "app/404";
+
+@import "app/tests";

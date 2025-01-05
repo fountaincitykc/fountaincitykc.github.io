@@ -1,6 +1,7 @@
 goldmark:
+  renderer:
+    unsafe: true # Allow HTML in markdown files
   parser:
-    attribute: # Enable Markdown attributes for block-level elements
-      block: true
-      title: true
+    attribute:
+      block: true # Enable Markdown attributes
     wrapStandAloneImageWithinParagraph: false # Do not wrap standalone images with paragraph tag

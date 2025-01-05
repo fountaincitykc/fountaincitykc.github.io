@@ -1,0 +1,7 @@
+{{ if not .IsHome }}
+<div class="page-header animate">
+  <h1>
+    {{ cond .IsPage page.Type .Title }}
+  </h1>
+</div>
+{{ end }}

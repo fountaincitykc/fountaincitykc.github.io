@@ -1,0 +1,5 @@
+.sermons {
+  > * {
+    @include make-stack(8);
+  }
+}

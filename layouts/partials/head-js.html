@@ -1,0 +1,9 @@
+{{ $scripts := slice 
+  (resources.Get "js/animate.js")
+  (resources.Get "js/watch-live.js")
+}}
+{{ $js := $scripts | resources.Concat "js/main.js" }}
+{{ if hugo.IsProduction }}
+  {{ $js = $js | minify | fingerprint }}
+{{ end }}
+<script src="{{ $js.RelPermalink }}"></script>

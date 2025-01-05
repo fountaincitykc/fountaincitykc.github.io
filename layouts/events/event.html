@@ -1,4 +1,4 @@
-<div class="event animate">
+<div class="event | animate">
   <div class="event__date">
     {{ with .Date }}
       <div class="event__month">
@@ -15,9 +15,11 @@
     {{ end }}
   </div>
   <div class="event__body">
-    {{ .Render "event-title" }}
-    {{ .Render "event-date" }}
-    {{ .Render "event-location" }}
+    <div class="event__header">
+      {{ .Render "event-title" }}
+      {{ .Render "event-date" }}
+      {{ .Render "event-location" }}
+    </div>
     {{ with .Content }}
       <div class="event__content">
         {{ . }}
@@ -25,7 +27,7 @@
     {{ end }}
     {{ with .Params.button }}
       <div class="event__footer">
-        {{ partial "button.html" (dict "href" .href "label" .text "variant" "light" )}}
+        {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
       </div>
     {{ end }}
   </div>

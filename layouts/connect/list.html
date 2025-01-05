@@ -1,38 +1,43 @@
 {{ define "main" }}
-<div class="page--connect">
-  <div class="container-fluid">
-    <div class="content-list content-list--dense">
+  <main class="main-content | connect">
+    <div class="container">
       {{ range .Params.sections }}
-        <div class="content-section animate" id="{{ .headline | urlize }}">
-          <div class="content-section__media">
-            <img src="{{ .photo }}" alt="{{ .headline }}">
-          </div>
+        <div class="content-section | animate" id="{{ .headline | urlize }}">
+          {{ $alt := .headline }}
+          {{ with $.Resources.Get .photo }}
+            <div class="content-section__media">
+              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+            </div>
+          {{ end }}
           <div class="content-section__body">
-            <h2>
-              {{ .headline }}
-            </h2>
+            <div class="content-section__header">
+              <h2>
+                {{ .headline }}
+              </h2>
+            </div>
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
           </div>
         </div>
       {{ end }}
-    </div>
-  </div>
-  <div class="container-md">
-    <div class="blurb blurb--centered animate">
-      <div class="blurb__body">
-        {{ with .Params.contact }}
-          <h2>
-            {{ .headline }}
-          </h2>
-          <div class="blurb__content">
+      {{ with .Params.callout }}
+        <div class="callout">
+          <div class="callout__header">
+            <h2>
+              {{ .headline }}
+            </h2>
+          </div>
+          <div class="callout__content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
-          {{ partial "button.html" (dict "href" (printf `mailto:%s` site.Params.contact.email) "label" .button.text )}}
-        {{ end }}
-      </div>
+          <div class="callout__footer">
+            <a href="{{ printf `mailto:%s` site.Params.contact.email }}">
+              {{ .button.text }}
+            </a>
+          </div>
+        </div>
+      {{ end }}
     </div>
-  </div>
-</div>
+  </main>
 {{ end }}

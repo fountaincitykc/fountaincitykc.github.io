@@ -1,0 +1,5 @@
+.staff {
+  > * {
+    @include make-stack(8);
+  }
+}

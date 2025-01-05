@@ -1,0 +1,23 @@
+<header class="main-header">
+  <div class="main-header__container">
+    <div class="main-header__logo">
+      <a href="/">
+        <img src="/images/fountain-city-church.svg" alt="Fountain City Church">
+      </a>
+    </div>
+    <input class="main-header__toggle-checkbox" type="checkbox" id="main-header-toggle">
+    <label class="main-header__toggle" for="main-header-toggle">
+      <span class="main-header__toggle-icon">
+        <span class="main-header__toggle-icon--open">
+          {{ partial "components/icon" (dict "name" "menu" "variant" "primary" "size" "lg") }}
+        </span>
+        <span class="main-header__toggle-icon--close">
+          {{ partial "components/icon" (dict "name" "close" "variant" "white" "size" "lg") }}
+        </span>
+      </span>
+    </label>
+    <div class="main-header__nav">
+      {{ partial "main-nav" . }}
+    </div>
+  </div>
+</header>

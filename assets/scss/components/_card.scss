@@ -2,68 +2,60 @@
 @markup
 <div class="card">
   <div class="card__media">
-    <img>
+    Image
   </div>
   <div class="card__body">
-    <h3>
-      Headline
-    </h3>
-    <hr>
+    <div class="card__header">
+      Title
+    </div>
     <div class="card__content">
       Content
     </div>
-  </div>
-  <div class="card__footer">
-    <a class="button">
-      Button
-    </a>
+    <div class="card__footer">
+      Button(s)
+    </div>
   </div>
 </div>
 */
 
 .card {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: var(--spacer);
-  background-color: var(--blue-a10);
-  border-radius: var(--border-radius);
-  overflow: hidden;
+  @include make-card;
 
-  .card__media {
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-bottom: solid 3px var(--white);
+  // @options
+
+  // When card in horizontal, set ratio of media to body
+  &.card--horz {
+    &.card--1x1 {
+      @include make-card--1x1;
+    }
+    &.card--2x3 {
+      @include make-card--2x3;
+    }
+    &.card--1x2 {
+      @include make-card--1x2;
+    }
+    &.card--1x3 {
+      @include make-card--1x3;
     }
   }
-  .card__body {
-    flex-grow: 1; // Push down footer
-    padding: var(--spacer);
-    text-align: center;
 
-    h4, h5 {
-      font-size: var(--font-size-base);
-      font-weight: var(--font-weight-normal);
-      line-height: var(--line-height-base);
-    }
-    h4 + h5 {
-      margin-top: calc(var(--spacer) * -1); // Negative margin
-    }
-    :last-child {
-      margin-bottom: 0;
-    }
+  // Add padding around media to align with content
+  &.card--inset-media {
+    @include make-card--inset-media;
   }
-  .card__content {
-    text-align: left;
 
-    @media (min-width: $min-breakpoint-sm) {
-      text-align: center;
-    }
+  // Move media horizontal to content
+  &.card--horz {
+    @include make-card--horz;
   }
-  .card__footer {
-    padding: var(--spacer);
-    padding-top: 0;
-    text-align: center;
+
+  // Move media after content
+  &.card--reverse {
+    @include make-card--reverse;
+  }
+
+  // Center body
+  &.card--center {
+    @include make-card--center;
   }
 }

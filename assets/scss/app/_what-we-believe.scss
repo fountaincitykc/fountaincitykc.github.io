@@ -1,0 +1,11 @@
+.what-we-believe {
+  > * > p:first-of-type {
+    margin-bottom: size(8);
+    font-size: $font-size-lg;
+  }
+  hr {
+    width: size(4);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

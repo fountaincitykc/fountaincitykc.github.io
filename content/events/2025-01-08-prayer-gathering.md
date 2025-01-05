@@ -5,7 +5,7 @@ params:
   time: 7-8pm
   location: JOCO Arts and Heritage Center
   featured: true
-  image: /images/events/prayer-night.jpg
+  image: /images/events/prayer-night.svg
 ---
 
 Join us as we gather together for a time of fellowship and prayer.

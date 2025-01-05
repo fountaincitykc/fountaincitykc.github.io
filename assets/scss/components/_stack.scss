@@ -1,0 +1,8 @@
+.stack {
+  @include make-stack(0);
+}
+@for $i from 1 through 16 {
+  .stack-#{$i} {
+    @include make-stack($i);
+  }
+}

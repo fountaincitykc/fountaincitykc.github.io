@@ -1,0 +1,6 @@
+@mixin make-white-link {
+  color: $white;
+  text-decoration: underline;
+  text-decoration-color: rgba($white, 0.4);
+  text-decoration-thickness: 2px;
+}

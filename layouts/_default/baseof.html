@@ -1,148 +1,20 @@
-{{ $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
-{{ $description := cond (isset .Params "description") .Description (replaceRE "\n" " " .Summary) }}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ $title }}</title>
-    {{ if not hugo.IsProduction }}
-      <meta name="robots" content="noindex">
-    {{ end }}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ $description }}">
-    <meta property="og:title" content="{{ $title }}">
-    <meta property="og:description" content="{{ $description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="/images/ui/fountain-city-church.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-
-    {{ $cssOpts := dict "transpiler" "libsass" "targetPath" "css/main.css"}}
-    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-    {{ if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-
-    {{ $scripts := slice (resources.Get "js/main-nav.js") (resources.Get "js/animate.js") }}
-    {{ $js := $scripts | resources.Concat "js/main.js" }}
-    {{ if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
-    <script src="{{ $js.RelPermalink }}"></script>
-
+    <title>{{ partial "page-title" . }}</title>
+    {{ partial "head-favicon" . }}
+    {{ partial "head-meta" . }}
+    {{ partial "head-css" . }}
+    {{ partial "head-js" . }}
     {{ block "head" . }}
     {{ end }}
   </head>
   <body>
-    <header id="main-header" class="main-header">
-      <div class="container-fluid">
-        <div class="main-header__row">
-          <div class="main-header__logo">
-            <a href="/">
-              <img src="/images/ui/fountain-city-church.png" alt="Fountain City Church">
-            </a>
-          </div>
-          <div class="main-header__nav">
-            <nav id="main-nav" class="main-nav">
-              <ul>
-              {{ $page := . }}
-              {{ range site.Menus.main }}
-                <li{{ if or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} class="main-nav--selected"{{ end }}>
-                  <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank"{{ end }}>{{ .Name }}</a>
-                  {{ if .HasChildren }}
-                    <ul>
-                      {{ range .Children }}
-                        <li{{ if $page.IsMenuCurrent "main" . }} class="main-nav--selected"{{ end }}>
-                          <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank"{{ end }}>{{ .Name }}</a>
-                        </li>
-                      {{ end }}
-                    </ul>
-                  {{ end }}
-                </li>
-              {{ end }}
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="main-content">
-      {{ if not .IsHome }}
-        <div class="page-header animate">
-          <h1>
-            {{ cond .IsPage page.Type .Title }}
-          </h1>
-          <hr>
-        </div>
-      {{ end }}
-      {{ block "main" . }}
-      {{ end }}
-    </main>
-    <footer class="main-footer">
-      <div class="container-fluid">
-        <div class="main-footer__top-row">
-          <div class="main-footer__contact">
-            {{ with site.Params.connect }}
-              <h3>
-                {{ .headline }}
-              </h3>
-              <div>
-                {{ .content | $.Page.RenderString (dict "display" "block") }}
-              </div>
-              {{ with .button }}
-                {{ partial "button.html" (dict "href" .href "label" .text )}}
-              {{ end }}
-            {{ end }}
-          </div>
-          <div class="main-footer__apps">
-            {{ with site.Params.apps }}
-              <h3>
-                {{ .headline }}
-              </h3>
-              <div>
-                {{ .content | $.Page.RenderString (dict "display" "block") }}
-              </div>
-              <div class="main-footer__app-buttons">
-                {{ range .buttons }}
-                  {{ partial "button.html" (dict "href" .href "label" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
-                {{ end }}
-              </div>
-            {{ end }}
-          </div>
-          <div class="main-footer__address">
-            {{ with site.Params.serviceAddress }}
-              <address>
-                <strong>{{ .text }}</strong><br>
-                {{ .address }}
-              </address>
-            {{ end }}
-            {{ with site.Params.mailingAddress }}
-              <address>
-                <strong>{{ .text }}</strong><br>
-                {{ .address }}
-              </address>
-            {{ end }}
-            <p>
-              {{ with site.Params.contact.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}<br>{{ site.Params.contact.phone }}
-            </p>
-          </div>
-        </div>
-        <div class="main-footer__bottom-row">
-          <div class="main-footer__social">
-            <ul>
-              {{ range site.Params.social }}
-                <li>
-                  <a href="{{ .href }}" target="_blank">
-                    <img src="{{ .image }}" alt="{{ .title }}">
-                  </a>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
-          <div class="main-footer__copyright">
-            <p>
-              &copy; {{ dateFormat "2006" now }} by Fountain City Church
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {{ partial "main-header" . }}
+    {{ partial "page-header" . }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "main-footer" . }}
   </body>
 </html>

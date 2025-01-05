@@ -1,0 +1,74 @@
+<footer class="main-footer">
+  <div class="main-footer__top">
+    <div class="main-footer__top-container">
+      <div class="main-footer__contact">
+        {{ with site.Params.connect }}
+          <h3>
+            {{ .headline }}
+          </h3>
+          <div>
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          </div>
+          {{ with .button }}
+            {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="main-footer__apps">
+        {{ with site.Params.apps }}
+          <h3>
+            {{ .headline }}
+          </h3>
+          <div>
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          </div>
+          <div class="main-footer__app-buttons">
+            {{ range .buttons }}
+              {{ partial "components/button.html" (dict "href" .href "text" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+      <div class="main-footer__address">
+        {{ with site.Params.serviceAddress }}
+          <address>
+            <strong>{{ .text }}</strong><br>
+            {{ .address }}
+          </address>
+        {{ end }}
+        {{ with site.Params.mailingAddress }}
+          <address>
+            <strong>{{ .text }}</strong><br>
+            {{ .address }}
+          </address>
+        {{ end }}
+        <p>
+          {{ with site.Params.contact.email }}
+            <a href="mailto:{{ . }}">{{ . }}</a><br>
+          {{ end }}
+          {{ site.Params.contact.phone }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="main-footer__bottom">
+    <div class="main-footer__bottom-container">
+      <div class="main-footer__social">
+        <ul>
+          {{ range site.Params.social }}
+            <li>
+              <a href="{{ .href }}" target="_blank">
+                {{ partial "components/icon" (dict "name" .icon "variant" "white" "size" "lg") }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="main-footer__copyright">
+        <p>
+          &copy; {{ dateFormat "2006" now }} by Fountain City Church
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
