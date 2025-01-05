@@ -13,10 +13,10 @@ params:
   banner:
     enabled: true
     content: |-
-      ANNOUNCEMENT: Due to the winter storm, we will not be gathering for worship at Meadowbrook on January 5. 
-    #button:
-    #  text: Learn more
-    #  href: /moving/
+      We are moving! Starting Sunday January 12, 2025 our new location will be JOCO Arts & Heritage Center. 
+    button:
+      text: Learn more
+      href: /moving/
   cards:
   - headline: Sundays
     photo: /images/photos/sundays.jpg

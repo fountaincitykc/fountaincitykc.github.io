@@ -8,7 +8,6 @@
 <div class="page--home">
 
   {{/* Mobile directions */}}
-  {{/*
   <div class="mobile-directions animate">
     {{ with site.Params.serviceAddress }}
       <address>
@@ -20,7 +19,24 @@
       {{ partial "button.html" (dict "href" .href "label" .text )}}
     {{ end }}
   </div>
-  */}}
+
+  {{/* Hero */}}
+  <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
+    <div class="hero__body">
+      <h1 class="fcc">
+        <span>Welcome to</span> <span>Fountain City</span> <span>Church</span>
+      </h1>
+      <hr>
+      <h3>
+        {{ .Params.hero.headline2 }}
+      </h3>
+      {{ with .Params.hero.button }}
+        <div id="watch-live" class="watch-live hide">
+          {{ partial "button.html" (dict "href" .href "label" .text )}}
+        </div>
+      {{ end }}
+    </div>
+  </div>
 
   {{/* Banner */}}
   {{ if .Params.banner.enabled }}
@@ -39,26 +55,6 @@
       </div>
     {{ end }}
   {{ end }}
-
-  {{/* Hero */}}
-  <div class="hero hero--fixed animate" style="background-image:url('{{ .Params.hero.photo }}');">
-    <div class="hero__body">
-      <h1 class="fcc">
-        <span>Welcome to</span> <span>Fountain City</span> <span>Church</span>
-      </h1>
-      <hr>
-      <h3>
-        {{ .Params.hero.headline2 }}
-      </h3>
-      {{/*
-      {{ with .Params.hero.button }}
-        <div id="watch-live" class="watch-live hide">
-          {{ partial "button.html" (dict "href" .href "label" .text )}}
-        </div>
-      {{ end }}
-       */}}
-    </div>
-  </div>
 
   {{/* Featured content */}}
   <div class="container-fluid">
