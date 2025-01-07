@@ -99,9 +99,12 @@
   gap: size(3);
   align-items: center;
   justify-content: center;
-  margin-bottom: -(size(10));
+  margin-left: size(3);
+  margin-right: size(3);
+  margin-bottom: -(size(7));
   padding: size(3);
-  background-color: $background-color;
+  background-color: $light-blue;
+  border-radius: size(1);
 
   .home-banner__content {
     text-align: center;
@@ -112,8 +115,6 @@
   }
   @media (min-width: breakpoint-min-width("md")) {
     flex-direction: row;
-    margin-left: size(3);
-    margin-right: size(3);
     padding: size(2) size(5);
     border-radius: 999px;
 
@@ -126,7 +127,6 @@
 // Photos
 
 .home-photos {
-
   img {
     display: none;
     width: 100%;
@@ -144,7 +144,7 @@
       "slot-1 slot-2 slot-main slot-main slot-5"
       "slot-3 slot-4 slot-main slot-main slot-6";
     gap: size(2);
-    padding: size(3);
+    padding: 0 size(3);
 
     img {
       display: block;
