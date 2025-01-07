@@ -37,18 +37,16 @@
     {{/* Banner */}}
     {{ if .Params.banner.enabled }}
       {{ with .Params.banner }}
-        {{/*  <div class="container">  */}}
-          <div class="home-banner | animate">
-            <div class="home-banner__content">
-              {{ .content | $.Page.RenderString (dict "display" "block") }}
-            </div>
-            {{ with .button }}
-              <div class="home-banner__button">
-                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
-              </div>
-            {{ end }}
+        <div class="home-banner | animate">
+          <div class="home-banner__content">
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
-        {{/*  </div>  */}}
+          {{ with .button }}
+            <div class="home-banner__button">
+              {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+            </div>
+          {{ end }}
+        </div>
       {{ end }}
     {{ end }}
 

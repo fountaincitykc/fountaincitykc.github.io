@@ -9,7 +9,7 @@
 @example {{ partial "components/button" (dict "href" "/about" "text" "Learn more") }}
 */}}
 {{- $class := slice "button" }}
-{{/* Get variant */}}
+{{- /* Get variant */}}
 {{- if or (eq .variant "primary") (eq .variant "secondary") (eq .variant "dark") (eq .variant "white") }}
   {{- $class = $class | append (printf "button--%s" .variant) }}
 {{- end }}
