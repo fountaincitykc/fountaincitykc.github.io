@@ -3,3 +3,18 @@
     @include make-stack(8);
   }
 }
+
+// Sermon image
+
+.sermon-image {
+  position: relative;
+  margin-bottom: 0;
+
+  figcaption {
+    position: absolute;
+    bottom: size(3);
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}

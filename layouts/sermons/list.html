@@ -4,7 +4,16 @@
         {{ range .Paginator.Pages }}
           <div class="content-section | animate">
             <div class="content-section__media">
-              <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}" class="img img--fill img--rounded">
+              <figure class="sermon-image">
+                <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}" class="img img--fill img--rounded">
+                {{ with .Params.series }}
+                  <figcaption>
+                    <span class="pill-header">
+                      {{ . }}
+                    </span>
+                  </figcaption>
+                {{ end }}
+              </figure>
             </div>
             <div class="content-section__body">
               <div class="content-section__header">
