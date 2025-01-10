@@ -9,9 +9,8 @@ params:
       text: Learn more
       href: /moving/
   hero:
-    headline:
-      A Christ-Centered church making and sending disciples in this generation
-      and the next.
+    headline: |-
+      A Christ-Centered church making and sending disciples in this generation and the next.
     image: home/logo.svg
     subhead: Join us Sundays at 10
     button:
