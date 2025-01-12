@@ -46,7 +46,7 @@
   }
   .watch-live {
     a {
-      font-weight: $font-weight-bold;
+      @include make-white-link;
     }
     &.hide {
       // Hide link by default
