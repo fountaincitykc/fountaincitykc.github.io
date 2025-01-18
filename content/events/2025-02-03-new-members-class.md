@@ -6,4 +6,4 @@ params:
   location: Matt Ross Community Center
 ---
 
-This class serves as the first step in officially or formally becoming a member of the church, and it also doubles as an informational meeting for anyone wanting to learn more about FCC. Anyone is welcome to join! Please reach out to Pastor James for more information.
+This class serves as the first step in officially or formally becoming a member of the church, and it also doubles as an informational meeting for anyone wanting to learn more about FCC. Anyone is welcome to join!
