@@ -61,10 +61,7 @@
       flex-direction: row;
       justify-content: right;
       align-items: center;
-      gap: size(4);
-    }
-    li {
-      font-size: $font-size-sm;
+      gap: size(6);
     }
     a {
       display: inline-block;
@@ -98,9 +95,6 @@
   @media (min-width: breakpoint-min-width("xl")) {
     & > ul  {
       gap: size(8);
-    }
-    li {
-      font-size: $font-size-base;
     }
   }
 }
