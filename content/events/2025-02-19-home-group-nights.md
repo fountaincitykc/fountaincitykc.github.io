@@ -9,4 +9,4 @@ params:
     href: https://fountaincitykc.churchcenter.com/registrations/events/2655272
 ---
 
-Join us for a potluck dinner with the community followed by teaching.
+Join us for a potluck dinner with the community followed by teaching and discussion. Please RSVP and sign up to bring something.
