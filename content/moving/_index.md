@@ -1,14 +1,14 @@
 ---
-title: Moving FAQ
+title: We have moved!
 ---
 
 #### When did we move?
 
-Our first Sunday in our new location will be on January 12. 
+Our first Sunday in our new location was on January 12th. 
 
 #### Why did we move?
 
-Over the past two years, the Lord has continued to grow our church community to the point that we have outgrown our current location at the Meadowbrook Park Clubhouse. We have loved our time at Meadowbrook, but we feel the Lord leading us to move. We want to be able to welcome as many people in worship as we can and, as a young growing church plant, we need more room to be able to grow into a church for generations to come. 
+Over the past two years, the Lord has continued to grow our church community to the point that we have outgrown the location at the Meadowbrook Park Clubhouse. We loved our time at Meadowbrook, but we felt the Lord leading us to move. We want to be able to welcome as many people in worship as we can and, as a young growing church plant, we need more room to be able to grow into a church for generations to come. 
 
 #### Where did we move?
 
