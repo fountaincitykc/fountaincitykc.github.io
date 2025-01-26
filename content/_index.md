@@ -2,7 +2,7 @@
 title: Home
 params:
   banner:
-    enabled: true
+    enabled: false
     content: |-
       **We have moved!** Our new location is at JOCO Arts & Heritage Center. 
     button:
