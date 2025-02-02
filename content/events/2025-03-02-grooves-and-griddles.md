@@ -2,7 +2,8 @@
 title: Grooves and Griddles
 date: 2025-03-02
 params:
-  time: Right after service
+  time: 10am-1:30pm
+  location: JOCO Arts and Heritage Center
   featured: true
   image: /images/events/grooves-and-griddles.png
   button:
