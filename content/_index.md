@@ -2,12 +2,12 @@
 title: Home
 params:
   banner:
-    enabled: false
+    enabled: true
     content: |-
-      **We have moved!** Our new location is at JOCO Arts & Heritage Center. 
+      **New location grand opening event:** Join us March 2nd for Grooves and Griddles! 
     button:
       text: Learn more
-      href: /moving/
+      href: /events/2025-03-02-grooves-and-griddles/
   hero:
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
