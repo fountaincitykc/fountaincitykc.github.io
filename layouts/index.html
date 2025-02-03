@@ -38,6 +38,9 @@
     {{ if .Params.banner.enabled }}
       {{ with .Params.banner }}
         <div class="home-banner | animate">
+          <div class="mrpancake">
+            <img src="/home/mrpancake.png" alt="" width="80" height="100">
+          </div>
           <div class="home-banner__content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
