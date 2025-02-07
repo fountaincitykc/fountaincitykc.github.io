@@ -10,4 +10,4 @@ params:
     href: https://fountaincitykc.churchcenter.com/registrations/events/2755210
 ---
 
-Calling all adult gamers. FCC is hosting a zoom game night where we'd play several rounds of the game Confident?, which is a simple trivia-ish game where we'd assign people breakout rooms and you'd play on teams and compete for a prize.
+Calling all adults! FCC is hosting a zoom game night where we will play several rounds of the game Confident?, which is a simple trivia-ish game. We will assign people breakout rooms and you'll play on teams to compete for Taco Naco gift cards!
