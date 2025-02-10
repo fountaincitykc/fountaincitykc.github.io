@@ -124,29 +124,9 @@
   }
 
   // Mr. Pancake
-  position: relative;
-
   .mrpancake {
-    display: none;
-  }
-  @media (min-width: breakpoint-min-width("lg")) {
-    .home-banner__content {
-      padding-left: size(7);
-    }
-    .mrpancake {
-      display: block;
-      position: absolute;
-      bottom: 5px;
-      left: 15px;
-    }
-  }
-  @media (min-width: breakpoint-min-width("xl")) {
-    .home-banner__content {
-      padding-left: 0;
-    }
-    .mrpancake {
-      left: 8%;
-    }
+    margin-top: -(size(8));
+    margin-bottom: -(size(2));
   }
 }
 
