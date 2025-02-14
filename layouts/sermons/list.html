@@ -5,13 +5,15 @@
           <div class="content-section | animate">
             <div class="content-section__media">
               <figure class="sermon-image">
-                <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ default .Title .Params.series }}" class="img img--fill img--rounded">
                 {{ with .Params.series }}
-                  <figcaption>
-                    <span class="pill-header">
-                      {{ . }}
-                    </span>
-                  </figcaption>
+                  {{ with index site.Params.sermons.series . }}
+                    <img src="{{ .image }}" alt="{{ .title }}" class="img img--fill">
+                    <figcaption>
+                      {{ .title }}
+                    </figcaption>
+                  {{ end }}
+                {{ else }}
+                  <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
                 {{ end }}
               </figure>
             </div>

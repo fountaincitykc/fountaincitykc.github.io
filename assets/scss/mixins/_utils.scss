@@ -1,3 +1,15 @@
+@mixin make-base-font {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+}
+@mixin make-header-font {
+  font-family: $font-family-display;
+  font-weight: $font-weight-heavy;
+  line-height: $line-height-tight;
+  font-feature-settings: "ss04"; // Use alternate "g" (https://gitlab.com/bonjour-monde/fonderie/syne-typeface/-/issues/4)
+}
 @mixin make-white-link {
   color: $white;
   text-decoration: underline;

@@ -21,11 +21,13 @@
             <div class="content-section__content">
               {{ .Content }}
               {{ with .Params.series }}
-                <p>
-                  <span class="badge">
-                    {{ . }}
-                  </span>
-                </p>
+                {{ with index site.Params.sermons.series . }}
+                  <p>
+                    <span class="badge">
+                      {{ .title }}
+                    </span>
+                  </p>
+                {{ end }}
               {{ end }}
             </div>
           </div>

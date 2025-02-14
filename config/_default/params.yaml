@@ -57,3 +57,22 @@ events:
 
 sermons:
   defaultImage: /images/sermons/default.svg
+  series:
+    first-peter:
+      title: 1 Peter
+      image: /images/sermons/1-peter.jpg
+    advent:
+      title: Advent
+      image: /images/sermons/advent.jpg
+    making-disciples:
+      title: Making disciples in this generation and the next
+      image: /images/sermons/making-disciples.jpg
+    acts:
+      title: Acts
+      image: /images/sermons/acts.jpg
+    direction:
+      title: The Next Chapter
+      image: /images/sermons/direction.jpg
+    ruth:
+      title: Ruth
+      image: /images/sermons/ruth.jpg

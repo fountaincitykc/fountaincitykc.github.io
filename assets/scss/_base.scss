@@ -27,10 +27,7 @@ body {
   margin: 0;
   background-color: $background-color;
   color: $foreground-color;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  @include make-header-font;
 }
 
 // Block elements
@@ -38,10 +35,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: size(3);
-  font-family: $font-family-display;
-  font-weight: $font-weight-heavy;
-  line-height: $line-height-tight;
-  font-feature-settings: "ss04"; // Use alternate "g" (https://gitlab.com/bonjour-monde/fonderie/syne-typeface/-/issues/4)
+  @include make-header-font;
 }
 
 h1 {
@@ -71,10 +65,7 @@ h6 {
 p, ul, ol, figure, address {
   margin: 0;
   margin-bottom: size(3);
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  @include make-base-font;
 }
 
 ul, ol {

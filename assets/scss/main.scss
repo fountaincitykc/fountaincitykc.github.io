@@ -7,15 +7,15 @@
 // Font file imports
 @import "fonts";
 
-// Global styling of html elements
-@import "base";
-
 // Mix-ins
 @import "mixins/button";
 @import "mixins/card";
 @import "mixins/content-section";
 @import "mixins/stack";
 @import "mixins/utils";
+
+// Global styling of html elements
+@import "base";
 
 // Components
 @import "components/animate";

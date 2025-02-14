@@ -118,21 +118,22 @@
         {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
         {{ $latestSermon.Set "title" .Title }}
         {{ $latestSermon.Set "content" .Content }}
-        {{ $latestSermon.Set "image" (default site.Params.sermons.defaultImage .Params.image) }}
-        {{ $latestSermon.Set "alt" (default .Title .Params.series) }}
         {{ $latestSermon.Set "series" .Params.series }}
+        {{ $latestSermon.Set "image" (default site.Params.sermons.defaultImage .Params.image) }}
       {{ end }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <figure class="sermon-image">
-              <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "alt" }}" class="img img--fill img--rounded">
               {{ with $latestSermon.Get "series" }}
-                <figcaption>
-                  <span class="pill-header">
-                    {{ . }}
-                  </span>
-                </figcaption>
+                {{ with index site.Params.sermons.series . }}
+                  <img src="{{ .image }}" alt="{{ .title }}" class="img img--fill">
+                  <figcaption>
+                    {{ .title }}
+                  </figcaption>
+                {{ end }}
+              {{ else }}
+                <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "title" }}" class="img img--fill img--rounded">
               {{ end }}
             </figure>
           </div>
