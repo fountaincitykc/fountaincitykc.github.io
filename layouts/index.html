@@ -119,7 +119,7 @@
         {{ $latestSermon.Set "title" .Title }}
         {{ $latestSermon.Set "content" .Content }}
         {{ $latestSermon.Set "series" .Params.series }}
-        {{ $latestSermon.Set "image" (default site.Params.sermons.defaultImage .Params.image) }}
+        {{ $latestSermon.Set "image" .Params.image }}
       {{ end }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
@@ -127,13 +127,15 @@
             <figure class="sermon-image">
               {{ with $latestSermon.Get "series" }}
                 {{ with index site.Params.sermons.series . }}
-                  <img src="{{ .image }}" alt="{{ .title }}" class="img img--fill">
+                  {{ $src := default .image ($latestSermon.Get "image") }}
+                  <img src="{{ $src }}" alt="{{ .title }}" class="img img--fill">
                   <figcaption>
                     {{ .title }}
                   </figcaption>
                 {{ end }}
               {{ else }}
-                <img src="{{ $latestSermon.Get "image" }}" alt="{{ $latestSermon.Get "title" }}" class="img img--fill img--rounded">
+              {{ $src := default site.Params.sermons.defaultImage ($latestSermon.Get "image") }}
+                <img src="{{ $src }}" alt="{{ $latestSermon.Get "title" }}" class="img img--fill img--rounded">
               {{ end }}
             </figure>
           </div>
