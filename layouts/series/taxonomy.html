@@ -5,7 +5,11 @@
         {{ range .Pages.ByDate.Reverse }}
           <a href="{{ .RelPermalink }}">
             <figure class="sermon-image">
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img img--fill">
+              {{ with .Resources.ByType "image" }}
+                {{ with index . 0 }}
+                  <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="img img--fill">
+                {{ end }}
+              {{ end }}
               <figcaption>
                 {{ .Title }}
               </figcaption>

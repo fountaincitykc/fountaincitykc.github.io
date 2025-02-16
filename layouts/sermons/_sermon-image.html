@@ -2,7 +2,11 @@
 <figure class="sermon-image">
   {{ with .GetTerms "series" }}
     {{ range first 1 . }}
-      <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
+      {{ with .Resources.ByType "image" }}
+        {{ with index . 0 }}
+          <img src="{{ default .RelPermalink $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
+        {{ end }}
+      {{ end }}
       <figcaption>
         {{ .Title }}
       </figcaption>
