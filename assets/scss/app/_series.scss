@@ -1,0 +1,15 @@
+.series {
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .series__list {
+    display: grid;
+    gap: size(3);
+    grid-template-columns: 1fr;
+    
+    @media (min-width: breakpoint-min-width("lg")) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

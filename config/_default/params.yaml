@@ -57,3 +57,5 @@ events:
 
 sermons:
   defaultImage: /images/sermons/default.svg
+  watchButton:
+    text: Watch
