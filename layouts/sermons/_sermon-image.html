@@ -1,0 +1,13 @@
+{{ $sermon := . }}
+<figure class="sermon-image">
+  {{ with .GetTerms "series" }}
+    {{ range first 1 . }}
+      <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
+      <figcaption>
+        {{ .Title }}
+      </figcaption>
+    {{ end }}
+  {{ else }}
+    <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
+  {{ end }}
+</figure>

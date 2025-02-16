@@ -112,22 +112,10 @@
 
     {{/* Latest sermon */}}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-      {{ $sermon := . }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
-            <figure class="sermon-image">
-              {{ with .GetTerms "series" }}
-                {{ range first 1 . }}
-                  <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
-                  <figcaption>
-                    {{ .Title }}
-                  </figcaption>
-                {{ end }}
-              {{ else }}
-                <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
-              {{ end }}
-            </figure>
+            {{ .Render "_sermon-image" }}
           </div>
           <div class="content-section__body">
             <div class="content-section__header">
@@ -142,6 +130,7 @@
               {{ .Content }}
             </div>
             <div class="content-section__footer">
+              {{ $sermon := . }}
               {{ with $.Params.sermon.watch }}
                 {{ partial "components/button.html" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
               {{ end }}

@@ -4,19 +4,7 @@
         {{ range .Paginator.Pages }}
           <div class="content-section | animate">
             <div class="content-section__media">
-              <figure class="sermon-image">
-                {{ $sermon := . }}
-                {{ with .GetTerms "series" }}
-                  {{ range first 1 . }}
-                    <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
-                    <figcaption>
-                      {{ .Title }}
-                    </figcaption>
-                  {{ end }}
-                {{ else }}
-                  <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
-                {{ end }}
-              </figure>
+              {{ .Render "_sermon-image" }}
             </div>
             <div class="content-section__body">
               <div class="content-section__header">
