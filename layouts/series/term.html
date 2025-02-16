@@ -5,18 +5,20 @@
         {{ .Title }}
       </h2>
       {{ .Content }}
-      <h3>
-        Sermons
-      </h3>
-      <ul>
-        {{ range .Pages.ByDate.Reverse }}
-          <li>
-            <a href="{{ .RelPermalink }}">
-              {{ dateFormat "January 2, 2006" .Date }} &ndash; {{ .Title }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+      {{ with .Pages }}
+        <h3>
+          Sermons
+        </h3>
+        <ul>
+          {{ range .ByDate.Reverse }}
+            <li>
+              <a href="{{ .RelPermalink }}">
+                {{ dateFormat "January 2, 2006" .Date }} &ndash; {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
     </div>
   </main>
 {{ end }}
