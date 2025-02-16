@@ -29,17 +29,9 @@ params:
 
 ### Create a sermon series
 
-To create a new sermon series, add a new map entry to `sermons.series` in `config/_default/params.yaml`. The title and image path are required. For example:
+To create a new sermon series, add a new term page to the `/content/series/` taxonomy.
 
-```yaml
-sermons:
-  series:
-    my-series:
-      title: My Series
-      image: /images/sermons/my-series.jpg
-```
-
-To associate a sermon to a sermon series, set the map key of the sermon series in the frontmatter of the sermon. For example:
+To associate a sermon to a sermon series, set the term of the sermon series in the frontmatter of the sermon. For example:
 
 ```yaml
 params:

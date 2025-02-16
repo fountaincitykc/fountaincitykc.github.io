@@ -111,51 +111,41 @@
     {{ end }}
 
     {{/* Latest sermon */}}
-    {{ with .Params.sermon }}
-      {{ $latestSermon := newScratch }}
-      {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-        {{ $latestSermon.Set "link" .RelPermalink }}
-        {{ $latestSermon.Set "date" (dateFormat "January 2, 2006" .Date) }}
-        {{ $latestSermon.Set "title" .Title }}
-        {{ $latestSermon.Set "content" .Content }}
-        {{ $latestSermon.Set "series" .Params.series }}
-        {{ $latestSermon.Set "image" .Params.image }}
-      {{ end }}
+    {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+      {{ $sermon := . }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <figure class="sermon-image">
-              {{ with $latestSermon.Get "series" }}
-                {{ with index site.Params.sermons.series . }}
-                  {{ $src := default .image ($latestSermon.Get "image") }}
-                  <img src="{{ $src }}" alt="{{ .title }}" class="img img--fill">
+              {{ with .GetTerms "series" }}
+                {{ range first 1 . }}
+                  <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
                   <figcaption>
-                    {{ .title }}
+                    {{ .Title }}
                   </figcaption>
                 {{ end }}
               {{ else }}
-              {{ $src := default site.Params.sermons.defaultImage ($latestSermon.Get "image") }}
-                <img src="{{ $src }}" alt="{{ $latestSermon.Get "title" }}" class="img img--fill img--rounded">
+                <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
               {{ end }}
             </figure>
           </div>
           <div class="content-section__body">
             <div class="content-section__header">
               <h2>
-                {{ .headline }}
+                {{ $.Params.sermon.headline }}
               </h2>
               <h3 class="subtitle">
-                {{ $latestSermon.Get "date" }} &ndash; {{ $latestSermon.Get "title" }}
+                {{ dateFormat "January 2, 2006" .Date }} &ndash; {{ .Title }}
               </h3>
             </div>
             <div class="content-section__content">
-              {{ $latestSermon.Get "content" }}
+              {{ .Content }}
             </div>
             <div class="content-section__footer">
-              {{ with .watch }}
-                {{ partial "components/button.html" (dict "href" ($latestSermon.Get "link") "text" .text "variant" "primary" )}}
+              {{ with $.Params.sermon.watch }}
+                {{ partial "components/button.html" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
               {{ end }}
-              {{ with .listen }}
+              {{ with $.Params.sermon.listen }}
                 {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
               {{ end }}
             </div>

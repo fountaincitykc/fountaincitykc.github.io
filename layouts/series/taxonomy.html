@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <main class="main-content">
+    <div class="container-lg | animate">
+      <ul>
+        {{ range .Pages.ByDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </main>
+{{ end }}

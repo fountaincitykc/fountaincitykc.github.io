@@ -20,11 +20,11 @@
             </div>
             <div class="content-section__content">
               {{ .Content }}
-              {{ with .Params.series }}
-                {{ with index site.Params.sermons.series . }}
+              {{ with .GetTerms "series" }}
+                {{ range first 1 . }}
                   <p>
                     <span class="badge">
-                      {{ .title }}
+                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </span>
                   </p>
                 {{ end }}

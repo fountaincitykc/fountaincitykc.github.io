@@ -2,15 +2,15 @@
   <main class="main-content | sermons">
     <div class="container">
         {{ range .Paginator.Pages }}
-          {{ $ctx := . }}
           <div class="content-section | animate">
             <div class="content-section__media">
               <figure class="sermon-image">
-                {{ with .Params.series }}
-                  {{ with index site.Params.sermons.series . }}
-                    <img src="{{ default .image $ctx.Params.image }}" alt="{{ .title }}" class="img img--fill">
+                {{ $sermon := . }}
+                {{ with .GetTerms "series" }}
+                  {{ range first 1 . }}
+                    <img src="{{ default .Params.image $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
                     <figcaption>
-                      {{ .title }}
+                      {{ .Title }}
                     </figcaption>
                   {{ end }}
                 {{ else }}

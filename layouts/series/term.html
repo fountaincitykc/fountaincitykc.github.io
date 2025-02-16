@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <main class="main-content">
+    <div class="container-lg | animate">
+      <h2>
+        {{ .Title }}
+      </h2>
+      {{ .Content }}
+      <h3>
+        Sermons
+      </h3>
+      <ul>
+        {{ range .Pages.ByDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              {{ dateFormat "January 2, 2006" .Date }} &ndash; {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </main>
+{{ end }}

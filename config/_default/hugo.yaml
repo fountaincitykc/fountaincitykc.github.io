@@ -1,4 +1,4 @@
 title: Fountain City Church - Overland Park, KS
 baseURL: https://fountaincitykc.org/
-disableKinds: [rss, taxonomy, term]
+disableKinds: [rss]
 buildFuture: true # Needed to show future events
