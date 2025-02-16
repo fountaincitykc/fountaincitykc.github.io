@@ -23,5 +23,6 @@
     color: $white;
     @include make-header-font;
     font-size: var(--font-size-h4);
+    text-wrap: balance;
   }
 }
