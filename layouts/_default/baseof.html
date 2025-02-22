@@ -12,7 +12,9 @@
   </head>
   <body>
     {{ partial "main-header" . }}
-    {{ partial "page-header" . }}
+    {{ block "header" . }}
+      {{ partial "page-header" . }}
+    {{ end }}
     {{ block "main" . }}
     {{ end }}
     {{ partial "main-footer" . }}

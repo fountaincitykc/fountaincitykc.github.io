@@ -1,0 +1,6 @@
+.families {
+  > * > p:first-of-type {
+    margin-bottom: size(8);
+    font-size: $font-size-lg;
+  }
+}

@@ -1,0 +1,12 @@
+{{ define "header" }}
+  <div class="page-header page-header__families animate">
+    <img src="/images/kids-and-families.svg" alt="Kids and Families">
+  </div>
+{{ end }}
+{{ define "main" }}
+  <main class="main-content | families">
+    <div class="container-lg | animate">
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}

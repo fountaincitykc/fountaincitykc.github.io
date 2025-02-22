@@ -30,6 +30,13 @@ params:
       button:
         text: Learn more
         href: /sunday-morning/
+    - headline: Kids and Families
+      photo: home/families.jpg
+      content: |-
+        Families are a significant part of our community. We aim to help kids of all ages grow as faithful followers of Jesus as we assist parents to raise them in the ways of God.
+      button:
+        text: Learn more
+        href: /families/
     - headline: Home groups
       photo: home/home-groups.jpg
       content: |-
@@ -37,13 +44,6 @@ params:
       button:
         text: Learn more
         href: /connect/#home-groups
-    - headline: Families
-      photo: home/families.jpg
-      content: |-
-        Families are a significant part of our community. We aim to help kids of all ages grow as faithful followers of Jesus as we assist parents to raise them in the ways of God.
-      button:
-        text: Learn more
-        href: /sunday-morning/#families
   sermon:
     headline: Latest sermon
     watch:
