@@ -37,7 +37,7 @@ params:
       button:
         text: Learn more
         href: /families/
-    - headline: Home groups
+    - headline: Home Groups
       photo: home/home-groups.jpg
       content: |-
         Gathering in homes throughout the week allows us to grow in relationship with God and others. Our groups share meals, discuss life and God's Word, and pray for one another.
@@ -45,7 +45,7 @@ params:
         text: Learn more
         href: /connect/#home-groups
   sermon:
-    headline: Latest sermon
+    headline: Latest Sermon
     watch:
       text: Watch
       # href: /sermons/
@@ -55,7 +55,7 @@ params:
   events:
     headline:
       single: Join us
-      multiple: Upcoming events
+      multiple: Upcoming Events
     button:
       text: View all events →
       href: /events/

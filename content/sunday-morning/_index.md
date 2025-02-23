@@ -1,11 +1,11 @@
 ---
-title: Sunday morning
+title: Sunday Morning
 description: |-
   Fountain City is a church that values community and connection which you will notice right away. No matter your age or background, you will find a place here.
 params:
   photo: heritage.jpg
   sections:
-  - headline: What to expect
+  - headline: What to Expect
     content: |-
       Fountain City is a church that values community and connection which you will notice right away. No matter your age or background, you will find a place here. The service usually lasts about an hour and fifteen minutes. Attire varies – generally casual. You are more than welcome to stick around after service and get to know people. We are so glad to have you worship with us and can’t wait to meet you.
     photo: what-to-expect.jpg
@@ -22,9 +22,9 @@ params:
     photo: families.jpg
     button:
       text: Learn more
-      href: /families/
+      href: /sunday-morning/families/
   location:
-    headline: Where we meet
+    headline: Where We Meet
     content: |-
       Johnson County Arts and Heritage Center is our newest meeting location as of January 2025. Over the past two years, the Lord has continued to grow our church community to the point that we have outgrown our previous location at the Meadowbrook Park Clubhouse. We have loved our time at Meadowbrook, but we feel the Lord leading us to move. We want to be able to welcome as many people in worship as we can and, as a young growing church plant, we need more room to be able to grow into a church for generations to come.
   directions:

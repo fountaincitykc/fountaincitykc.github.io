@@ -7,11 +7,11 @@ contact:
   phone: 303-618-3079
 
 serviceAddress:
-  text: Sunday service
+  text: Sunday Service
   address: 8788 Metcalf Ave, Overland Park, KS 66212
 
 mailingAddress:
-  text: Mailing address
+  text: Mailing Address
   address: PO Box 7521, Overland Park, KS 66207
 
 directions:
@@ -27,7 +27,7 @@ connect:
     href: https://fountaincitykc.churchcenter.com/people/forms/283554
 
 apps:
-  headline: Download our app
+  headline: Download Our App
   content: |-
     The Church Center app is a central hub that includes registrations for events, giving, volunteer schedules, and a church directory.
   buttons:

@@ -1,30 +1,34 @@
 main:
-  - name: About us
+  - name: About Us
     pageRef: /vision/
     weight: 1
   - name: Vision
     pageRef: /vision/
-    parent: About us
+    parent: About Us
     weight: 2
-  - name: Our staff
+  - name: Our Staff
     pageRef: /staff/
-    parent: About us
+    parent: About Us
     weight: 3
-  - name: What we believe
+  - name: What We Believe
     pageRef: /what-we-believe/
-    parent: About us
+    parent: About Us
     weight: 4
-  - name: Sunday morning
-    pageRef: /sunday-morning/
+  - name: Kids and Families
+    pageRef: /families/
+    parent: About Us
     weight: 5
+  - name: Sunday Morning
+    pageRef: /sunday-morning/
+    weight: 6
   - name: Events
     pageRef: /events/
-    weight: 6
+    weight: 7
   - name: Connect
     pageRef: /connect/
-    weight: 7
+    weight: 8
   - name: Give
     params:
       rel: external
     url: https://fountaincitykc.churchcenter.com/giving
-    weight: 8
+    weight: 9

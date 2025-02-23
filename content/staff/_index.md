@@ -1,5 +1,5 @@
 ---
-title: Our staff
+title: Our Staff
 description: Get to know the staff at Fountain City Church.
 params:
   staff:
