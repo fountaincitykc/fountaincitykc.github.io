@@ -1,6 +1,6 @@
 ---
 title: Meadowbrook Park Festival
-date: 2025-06-07
+date: 2025-06-06
 params:
   time: 4-9pm
 ---
