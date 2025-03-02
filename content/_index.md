@@ -2,7 +2,7 @@
 title: Home
 params:
   banner:
-    enabled: true
+    enabled: false
     content: |-
       **New location grand opening event:** Join us March 2nd for Grooves and Griddles! 
     button:
