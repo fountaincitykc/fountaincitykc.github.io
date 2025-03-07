@@ -1,7 +1,11 @@
-.what-we-believe {
-  > * > p:first-of-type {
+.basic-page {
+  .lead {
     margin-bottom: size(8);
     font-size: $font-size-lg;
+
+    &.lead--lg {
+      font-size: var(--font-size-h3);
+    }
   }
   hr {
     width: size(4);

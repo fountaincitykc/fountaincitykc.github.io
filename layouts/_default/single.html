@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <main class="main-content">
-    {{ .Content }}
+  <main class="main-content | basic-page">
+    <div class="container-lg | animate">
+      {{ .Content }}
+    </div>
   </main>
 {{ end }}

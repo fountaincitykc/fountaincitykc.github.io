@@ -4,6 +4,7 @@ title: Children's and Family Ministry
 
 “We will not hide them from their descendants; we will tell the next generation the praiseworthy deeds of the LORD, his power, and the wonders he has done”  
 — Psalms 78:4
+{.lead}
 
 ## Vision
 
