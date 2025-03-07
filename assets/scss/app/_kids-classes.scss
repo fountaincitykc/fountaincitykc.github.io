@@ -1,0 +1,5 @@
+.kids-classes {
+  > * {
+    @include make-stack(8);
+  }
+}

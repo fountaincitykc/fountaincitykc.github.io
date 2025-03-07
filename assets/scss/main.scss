@@ -27,7 +27,6 @@
 @import "components/content-section";
 @import "components/icon";
 @import "components/img";
-@import "components/page-header";
 @import "components/pager";
 @import "components/paginator";
 @import "components/pill-header";
@@ -41,11 +40,13 @@
 @import "app/main-footer";
 @import "app/main-header";
 @import "app/main-nav";
+@import "app/page-header";
 
+@import "app/childrens-and-family-ministry";
 @import "app/connect";
 @import "app/events";
-@import "app/families";
 @import "app/home";
+@import "app/kids-classes";
 @import "app/series";
 @import "app/sermons";
 @import "app/staff";

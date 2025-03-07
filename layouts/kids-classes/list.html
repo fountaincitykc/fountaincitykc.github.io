@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <main class="main-content | kids-classes">
+    <div class="container">
+      {{ range .Params.sections }}
+        <div class="content-section | animate" id="{{ .headline | urlize }}">
+          {{ $alt := .headline }}
+          {{ with $.Resources.Get .photo }}
+            <div class="content-section__media">
+              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+            </div>
+          {{ end }}
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h2>
+                {{ .headline }}
+              </h2>
+            </div>
+            <div class="content-section__content">
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

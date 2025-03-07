@@ -1,5 +1,5 @@
 ---
-title: Children’s and Family Ministry
+title: Children's and Family Ministry
 ---
 
 “We will not hide them from their descendants; we will tell the next generation the praiseworthy deeds of the LORD, his power, and the wonders he has done”  
@@ -7,13 +7,14 @@ title: Children’s and Family Ministry
 
 ## Vision
 
-The vision of the Children’s and Family Ministry at FCC is for children to grow into men and women who boldly take their place within God’s grand redemptive story. 
+The vision of the Children's and Family Ministry at FCC is for children to grow into men and women who boldly take their place within God’s grand redemptive story. 
 
 To do this, we want Fountain City Church to be a place where children grow as followers of Jesus who **belong**, both to God through Jesus Christ and to their church community, who **believe** the gospel and God’s Word, developing a robust biblical worldview, and **become** men and women who faithfully love God and love others through Christ. 
 
 We also want Fountain City Church to be a place where parents find rest and hope in the life-giving power of God and  families become living witnesses of the gospel by loving God with all their hearts, souls, and strength, their neighbors as themselves, and each other in Christ.
 
-_We pray for our children to grow into young adult men and women who are…_  
+_We pray for our children to grow into young adult men and women who are…_
+
 **Faithful** – Possess discernment to decide what is most faithful to Scripture and honors Christ.  
 **Fearless** – Fearless through life’s challenges from knowing God is in control.  
 **Spiritually Fervent** – Hearts of devotion to the Lord, actively obeying Christ in everything.  

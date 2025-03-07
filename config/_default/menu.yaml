@@ -14,21 +14,29 @@ main:
     pageRef: /what-we-believe/
     parent: About Us
     weight: 4
-  - name: Kids and Families
-    pageRef: /families/
+  - name: Children's and Family Ministry
+    pageRef: /childrens-and-family-ministry/
     parent: About Us
     weight: 5
-  - name: Sunday Morning
+  - name: Visit
     pageRef: /sunday-morning/
     weight: 6
+  - name: Sunday Morning
+    pageRef: /sunday-morning/
+    parent: Visit
+    weight: 7
+  - name: Kids' Classes
+    pageRef: /kids-classes/
+    parent: Visit
+    weight: 8
   - name: Events
     pageRef: /events/
-    weight: 7
+    weight: 9
   - name: Connect
     pageRef: /connect/
-    weight: 8
+    weight: 10
   - name: Give
     params:
       rel: external
     url: https://fountaincitykc.churchcenter.com/giving
-    weight: 9
+    weight: 11
