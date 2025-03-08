@@ -18,6 +18,11 @@
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
+            {{ with .button }}
+              <div class="content-section__footer">
+                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
+              </div>
+            {{ end }}
           </div>
         </div>
       {{ end }}

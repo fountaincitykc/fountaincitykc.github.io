@@ -12,6 +12,9 @@ params:
     content: |-
       Gathering in smaller groups throughout the week allows us to grow in relationship with God and with others in a more personal setting. Sharing meals in homes, we discuss life and God's Word, and pray for one another. An extension of Sunday worship in a way, Home Groups provide space to grow in faith while connecting more deeply with others.
     photo: home-groups.jpg
+    button:
+      text: View events
+      href: /tags/home-groups/
   - headline: Park Play Dates
     content: |-
       A casual meet&ndash;up at local parks gives moms space to connect while kids play together. The parks are on a rotation to provide a variety of scenery and geography. A great place to build relationships, meet other moms in similar life stages, and have fun!
