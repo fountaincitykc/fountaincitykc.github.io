@@ -1,6 +1,8 @@
 ---
 title: String
 date: YYYY-MM-DD
+tags:
+  - tag
 params:
   dateText: String # Overide default date format with custom text
   endDate: YYYY-MM-DD
