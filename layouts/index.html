@@ -153,7 +153,7 @@
     {{/* Handle layout for 1 event or multiple events */}}
     {{ $eventLen := $upcomingEvents | len }}
     {{ if gt $eventLen 0 }}
-      <div class="container">
+      <div class="container" data-date="{{ $today }}">
         <div class="home-events home-events--len-{{ $eventLen }}">
           {{/* Layout for 1 event */}}
           {{ if eq $eventLen 1 }}
