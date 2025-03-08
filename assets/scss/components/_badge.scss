@@ -9,4 +9,8 @@
   background-color: $gray-100;
   border-radius: 999px;
   font-size: $font-size-sm;
+
+  &.badge--condensed {
+    padding: size(0.5) size(2);
+  }
 }

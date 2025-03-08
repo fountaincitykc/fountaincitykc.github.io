@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <main class="main-content | tags">
+    <div class="container-lg | animate">
+      <p>
+        {{ range .Pages }}
+          <span class="badge">
+            <a href="{{ .RelPermalink }}">
+              {{ .Title  | humanize | title }}
+            </a>
+          </span>
+        {{ end }}
+        </p>
+    </div>
+  </main>
+{{ end }}

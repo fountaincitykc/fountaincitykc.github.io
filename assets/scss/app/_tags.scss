@@ -1,0 +1,5 @@
+.tags {
+  > * {
+    @include make-stack(8);
+  }
+}

@@ -1,6 +1,8 @@
 ---
 title: Home Group Nights
 date: 2025-04-30
+tags:
+  - home-groups
 params:
   time: 6-8pm
   location: JOCO Arts and Heritage Center

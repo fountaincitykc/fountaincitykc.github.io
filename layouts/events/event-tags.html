@@ -1,0 +1,11 @@
+{{ with .GetTerms "tags" }}
+  <p>
+    {{ range . }}
+      <span class="badge badge--condensed">
+        <a href="{{ .RelPermalink }}">
+          {{ .Title  | humanize | title }}
+        </a>
+      </span>
+    {{ end }}
+  </p>
+{{ end }}

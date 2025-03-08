@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <main class="main-content | tags">
+    <div class="container-lg | animate">
+      <h2>
+        {{ .Title | humanize | title }}
+      </h2>
+      {{ with .Pages }}
+        {{ range .ByDate }}
+          {{ .Render "event" }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
