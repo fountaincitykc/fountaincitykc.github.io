@@ -18,10 +18,12 @@
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
-            {{ with .button }}
-              <div class="content-section__footer">
-                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
-              </div>
+            {{ with .tag }}
+              {{ if isset site.Taxonomies.tags . }}
+                <div class="content-section__footer">
+                  {{ partial "components/button.html" (dict "href" (printf "/tags/%s/" . ) "text" "View events" "variant" "secondary" )}}
+                </div>
+              {{ end }}
             {{ end }}
           </div>
         </div>
