@@ -3,26 +3,3 @@
     @include make-stack(8);
   }
 }
-
-// Sermon image
-
-.sermon-image {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0;
-  border-radius: size(1);
-
-  figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    padding: size(2) size(3);
-    background-color: rgba($navy, 0.8);
-    color: $white;
-    @include make-header-font;
-    font-size: var(--font-size-h4);
-    text-wrap: balance;
-  }
-}
