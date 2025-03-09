@@ -45,11 +45,3 @@ To associate a sermon to a sermon series, set the term of the sermon series in t
 params:
   series: my-series
 ```
-
-A sermon can override the image set by the sermon series by setting the `image` frontmatter param. For example:
-
-```yaml
-params:
-  series: my-series
-  image: some-image.jpg
-```

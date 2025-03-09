@@ -1,17 +1,9 @@
-{{ $sermon := . }}
-<figure class="sermon-image">
-  {{ with .GetTerms "series" }}
-    {{ range first 1 . }}
-      {{ with .Resources.ByType "image" }}
-        {{ with index . 0 }}
-          <img src="{{ default .RelPermalink $sermon.Params.image }}" alt="{{ .Title }}" class="img img--fill">
-        {{ end }}
-      {{ end }}
-      <figcaption>
-        {{ .Title }}
-      </figcaption>
-    {{ end }}
-  {{ else }}
-    <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
+{{ with .GetTerms "series" }}
+  {{ range first 1 . }}
+    {{ .Render "_series-image" }}
   {{ end }}
-</figure>
+{{ else }}
+  <figure class="sermon-image">
+    <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
+  </figure>
+{{ end }}

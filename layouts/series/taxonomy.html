@@ -4,16 +4,7 @@
       <div class="series__list">
         {{ range .Pages.ByDate.Reverse }}
           <a href="{{ .RelPermalink }}">
-            <figure class="sermon-image">
-              {{ with .Resources.ByType "image" }}
-                {{ with index . 0 }}
-                  <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="img img--fill">
-                {{ end }}
-              {{ end }}
-              <figcaption>
-                {{ .Title }}
-              </figcaption>
-            </figure>
+            {{ .Render "_series-image" }}
           </a>
         {{ end }}
       </div>
