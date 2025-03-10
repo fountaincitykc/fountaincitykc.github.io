@@ -20,15 +20,7 @@
             </div>
             <div class="content-section__content">
               {{ .Content }}
-              {{ with .GetTerms "series" }}
-                {{ range first 1 . }}
-                  <p>
-                    <span class="badge">
-                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </span>
-                  </p>
-                {{ end }}
-              {{ end }}
+              {{ .Render "_series-badge" }}
             </div>
           </div>
         </div>

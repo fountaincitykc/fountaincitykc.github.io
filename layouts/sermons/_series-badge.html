@@ -1,0 +1,9 @@
+{{ with .GetTerms "series" }}
+  {{ range first 1 . }}
+    <p>
+      <span class="badge">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </span>
+    </p>
+  {{ end }}
+{{ end }}

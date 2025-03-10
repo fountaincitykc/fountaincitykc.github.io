@@ -46,6 +46,7 @@ params:
         href: /connect/#home-groups
   sermon:
     headline: Latest Sermon
+    photo: home/latest-sermon.jpg
     watch:
       text: Watch
       # href: /sermons/
