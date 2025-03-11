@@ -30,50 +30,48 @@
     {{ with .Params.photo }}
       {{ with $.Resources.Get . }}
         <div class="sunday-morning__photo | animate">
-          <img src="{{ .RelPermalink }}">
+          <img src="{{ .RelPermalink }}" alt="">
         </div>
       {{ end }}
     {{ end }}
-    {{ if or .Params.location .Params.directions }}
-      <div class="container-md">
-        {{ with .Params.location }}
-          <div class="sunday-morning__location | content-section | animate">
-            <div class="content-section__body">
-              <div class="content-section__header">
-                <h2>
-                  {{ .headline }}
-                </h2>
-              </div>
-              <div class="content-section__content">
-                {{ .content | $.Page.RenderString (dict "display" "block") }}
-              </div>
+    <div class="container-md">
+      {{ with .Params.location }}
+        <div class="sunday-morning__location | content-section | animate">
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h2>
+                {{ .headline }}
+              </h2>
+            </div>
+            <div class="content-section__content">
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
           </div>
-        {{ end }}
-        {{ with .Params.directions }}
-          <div class="sunday-morning__directions | content-section | animate">
-            <div class="content-section__body">
-              <div class="content-section__header">
-                <h2>
-                  {{ .headline }}
-                </h2>
-              </div>
-              <div class="content-section__content">
-                {{ with site.Params.serviceAddress }}
-                  <address>
-                    <strong>{{ .text }}</strong><br>
-                    {{ .address }}
-                  </address>
-                {{ end }}
-              </div>
-              <div class="content-section__footer">
-                {{ with site.Params.directions }}
-                  {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
-                {{ end }}
-              </div>
+        </div>
+      {{ end }}
+      {{ with .Params.directions }}
+        <div class="sunday-morning__directions | content-section | animate">
+          <div class="content-section__body">
+            <div class="content-section__header">
+              <h2>
+                {{ .headline }}
+              </h2>
+            </div>
+            <div class="content-section__content">
+              {{ with site.Params.serviceAddress }}
+                <address>
+                  <strong>{{ .text }}</strong><br>
+                  {{ .address }}
+                </address>
+              {{ end }}
+            </div>
+            <div class="content-section__footer">
+              {{ with site.Params.directions }}
+                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+              {{ end }}
             </div>
           </div>
-        {{ end }}
+        </div>
       {{ end }}
     </div>
   </main>
