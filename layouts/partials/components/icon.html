@@ -4,7 +4,7 @@
 @param {string} [size] "xs", "sm", "md", "lg", or "xl"
 @param {string} [class] Additional class name
 
-@example {{ partial "components/icon" (dict "name" "file" "variant" "primary" "size" "large") }}
+@example {{ partial "components/icon" (dict "name" "file" "variant" "primary" "size" "lg") }}
 */}}
 {{ $svg := "" }}
 {{ with resources.Get (printf "icons/%s.svg" .name) }}

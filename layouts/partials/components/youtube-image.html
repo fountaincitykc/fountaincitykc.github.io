@@ -1,0 +1,6 @@
+<div class="youtube-image">
+  <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="Play video">
+  <a href="{{ .url }}">
+    {{ partial "components/icon" (dict "name" "play" "variant" "white") }}
+  </a>
+</div>

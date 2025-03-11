@@ -54,8 +54,3 @@ social:
 
 events:
   defaultImage: /images/events/default.svg
-
-sermons:
-  defaultImage: /images/sermons/default.svg
-  watchButton:
-    text: Watch

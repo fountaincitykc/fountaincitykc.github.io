@@ -4,7 +4,7 @@
         {{ range .Paginator.Pages }}
           <div class="content-section | animate">
             <div class="content-section__media">
-              {{ .Render "_sermon-image" }}
+              {{ partial "components/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtubeId) }}
             </div>
             <div class="content-section__body">
               <div class="content-section__header">
@@ -19,9 +19,7 @@
               </div>
               <div class="content-section__content">
                 {{ .Content }}
-              </div>
-              <div class="content-section__footer">
-                {{ partial "components/button.html" (dict "href" .RelPermalink "text" site.Params.sermons.watchButton.text "variant" "secondary" )}}
+                {{ .Render "_series-badge" }}
               </div>
             </div>
           </div>

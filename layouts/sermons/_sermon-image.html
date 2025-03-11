@@ -1,9 +1,0 @@
-{{ with .GetTerms "series" }}
-  {{ range first 1 . }}
-    {{ .Render "_series-image" }}
-  {{ end }}
-{{ else }}
-  <figure class="sermon-image">
-    <img src="{{ default site.Params.sermons.defaultImage .Params.image }}" alt="{{ .Title }}" class="img img--fill img--rounded">
-  </figure>
-{{ end }}

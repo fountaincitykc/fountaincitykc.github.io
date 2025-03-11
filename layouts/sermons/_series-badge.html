@@ -2,7 +2,7 @@
   {{ range first 1 . }}
     <p>
       <span class="badge">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}">Series: {{ .Title }}</a>
       </span>
     </p>
   {{ end }}
