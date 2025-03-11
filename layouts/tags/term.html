@@ -4,10 +4,8 @@
       <h2>
         {{ .Title | humanize | title }}
       </h2>
-      {{ with .Pages }}
-        {{ range .ByDate }}
-          {{ .Render "event" }}
-        {{ end }}
+      {{ range .Pages.ByDate }}
+        {{ .Render "event" }}
       {{ end }}
     </div>
   </main>
