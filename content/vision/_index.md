@@ -13,3 +13,7 @@ We also believe that the way God works to bless this world is through his Church
 Our vision is that God would make our church a community where we all are flourishing in our new life with Jesus. That we all are growing in our love for God and our calling in his kingdom. That we all participate in His renewing work around us. That we would do this in our generation and bring up our young ones to do it in the next.
 
 We long to know God and bring him glory. We long to see all people find true and abundant life in Christ. We long to see our lives and communities renewed by Christ. So, we long to live as a church sent into this world as people who faithfully follow Jesus in every generation.
+
+### Get to know Fountain City Church
+
+{{< youtube sWzRG_5IbcU >}}

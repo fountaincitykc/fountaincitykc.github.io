@@ -4,6 +4,7 @@
     font-size: $font-size-lg;
 
     &.lead--lg {
+      @include make-header-font;
       font-size: var(--font-size-h3);
     }
   }
