@@ -164,8 +164,7 @@
             {{ with index $upcomingEvents 0 }}
               <div class="content-section | animate">
                 <div class="content-section__media">
-                  {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
-                  {{ with resources.Get $eventImage }}
+                  {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
                     <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
@@ -198,8 +197,7 @@
               {{ range $upcomingEvents }}
                 <div class="card | animate">
                   <div class="card__media">
-                    {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
-                    {{ with resources.Get $eventImage }}
+                    {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
                       <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>
