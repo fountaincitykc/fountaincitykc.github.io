@@ -5,7 +5,7 @@ params:
   time: 7-8:30pm
   location: Meadowbrook Clubhouse
   featured: true
-  image: /images/events/screen-sanity.svg
+  image: events/screen-sanity.svg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/calendar/event/166546387

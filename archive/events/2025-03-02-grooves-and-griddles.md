@@ -5,7 +5,7 @@ params:
   time: 10am-1:30pm
   location: JOCO Arts and Heritage Center
   featured: true
-  image: /images/events/grooves-and-griddles.png
+  image: events/grooves-and-griddles.png
   button:
     text: RSVP
     href: https://www.eventbrite.com/e/grooves-griddles-fountain-city-church-new-location-grand-opening-event-tickets-1225309095489

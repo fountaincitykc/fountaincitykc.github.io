@@ -5,7 +5,7 @@ params:
   time: 7-8pm
   location: JOCO Arts and Heritage Center
   featured: true
-  image: /images/events/abstract-3.svg
+  image: events/abstract-3.svg
 ---
 
 Join us as we gather together on Ash Wednesday for a time of fellowship and prayer. Please note there will be no childcare provided.

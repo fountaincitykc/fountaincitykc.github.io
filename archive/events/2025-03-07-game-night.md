@@ -4,7 +4,7 @@ date: 2025-03-07
 params:
   time: 8:30-10pm
   featured: true
-  image: /images/events/game-night.png
+  image: events/game-night.png
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2755210

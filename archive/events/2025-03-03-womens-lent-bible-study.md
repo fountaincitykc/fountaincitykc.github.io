@@ -5,7 +5,7 @@ params:
   dateText: Every Friday from March 3 – April 21
   endDate: 2025-04-21
   featured: true
-  image: /images/events/womens-lent-bible-study.jpg
+  image: events/womens-lent-bible-study.jpg
   button:
     text: Sign up
     href: https://fountaincitykc.churchcenter.com/registrations/events/2782801

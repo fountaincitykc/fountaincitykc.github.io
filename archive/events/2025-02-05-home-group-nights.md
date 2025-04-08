@@ -5,7 +5,7 @@ params:
   time: 6-8pm
   location: JOCO Arts and Heritage Center
   featured: true
-  image: /images/events/abstract-1.svg
+  image: events/abstract-1.svg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2655252

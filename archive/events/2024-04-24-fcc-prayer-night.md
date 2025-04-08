@@ -4,7 +4,7 @@ date: 2024-04-24
 params:
   time: 6–8pm
   featured: true
-  image: /images/events/prayer-night.jpg
+  image: events/prayer-night.jpg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2237210

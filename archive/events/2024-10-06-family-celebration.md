@@ -5,7 +5,7 @@ params:
   time: After service
   location: Grand Pavilion at Meadowbrook Park
   featured: true
-  image: /images/events/5-year-celebration.jpg
+  image: events/5-year-celebration.jpg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2502539

@@ -5,7 +5,7 @@ params:
   time: 6:30–8:30pm
   location: Meadowbrook Clubhouse
   featured: true
-  image: /images/events/5-year-anniversary.jpg
+  image: events/5-year-anniversary.jpg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2502536

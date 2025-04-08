@@ -3,7 +3,7 @@ title: Meadowbrook Festival Kids Corner
 date: 2024-06-07
 params:
   featured: true
-  image: /images/events/kids-corner.jpg
+  image: events/kids-corner.jpg
   button:
     text: Sign Up
     href: https://www.signupgenius.com/go/10C0A48AAAE23A0F58-49277923-meadowbrook

@@ -165,7 +165,9 @@
               <div class="content-section | animate">
                 <div class="content-section__media">
                   {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
-                  <img src="{{ $eventImage }}" alt="{{ .Title }}" class="img img--fill img--rounded">
+                  {{ with resources.Get $eventImage }}
+                    <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
+                  {{ end }}
                 </div>
                 <div class="content-section__body">
                   <div class="content-section__header">
@@ -197,7 +199,9 @@
                 <div class="card | animate">
                   <div class="card__media">
                     {{ $eventImage := default site.Params.events.defaultImage .Params.image }}
-                    <img src="{{ $eventImage }}" alt="{{ .Title }}" class="img img--fill img--h256 img--cover">
+                    {{ with resources.Get $eventImage }}
+                      <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
+                    {{ end }}
                   </div>
                   <div class="card__body">
                     <div class="card__header">
