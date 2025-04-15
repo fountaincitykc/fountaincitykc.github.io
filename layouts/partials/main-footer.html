@@ -10,7 +10,7 @@
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
           {{ with .button }}
-            {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+            {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
           {{ end }}
         {{ end }}
       </div>
@@ -24,7 +24,7 @@
           </div>
           <div class="main-footer__app-buttons">
             {{ range .buttons }}
-              {{ partial "components/button.html" (dict "href" .href "text" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
+              {{ partial "components/button" (dict "href" .href "text" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
             {{ end }}
           </div>
         {{ end }}

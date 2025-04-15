@@ -8,13 +8,13 @@
     {{- with .PrevInSection }}
       <li class="pager__prev">
         {{- $text := printf "← <span>%s &ndash; %s</span>" (dateFormat "Jan 2" .Date) .Title }}
-        {{ partial "components/button.html" (dict "href" .RelPermalink "text" $text )}}
+        {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
       </li>
     {{- end }}
     {{- with .NextInSection }}
       <li class="pager__next">
         {{- $text := printf "<span>%s &ndash; %s</span> →" (dateFormat "Jan 2" .Date) .Title }}
-        {{ partial "components/button.html" (dict "href" .RelPermalink "text" $text )}}
+        {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
       </li>
     {{- end }}
   </ul>

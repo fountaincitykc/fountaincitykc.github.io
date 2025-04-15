@@ -21,7 +21,7 @@
             {{ with .tag }}
               {{ if isset site.Taxonomies.tags . }}
                 <div class="content-section__footer">
-                  {{ partial "components/button.html" (dict "href" (printf "/tags/%s/" . ) "text" "View events" "variant" "secondary" )}}
+                  {{ partial "components/button" (dict "href" (printf "/tags/%s/" . ) "text" "View events" "variant" "secondary" )}}
                 </div>
               {{ end }}
             {{ end }}

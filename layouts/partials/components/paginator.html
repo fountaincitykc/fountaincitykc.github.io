@@ -8,16 +8,16 @@
     <ul class="paginator">
       <li>
         {{- if .HasNext }}
-          {{ partial "components/button.html" (dict "href" .Next.URL "text" "← Older" )}}
+          {{ partial "components/button" (dict "href" .Next.URL "text" "← Older" )}}
         {{- else }}
-          {{ partial "components/button.html" (dict "text" "← Older" "disabled" true )}}
+          {{ partial "components/button" (dict "text" "← Older" "disabled" true )}}
         {{- end }}
       </li>
       <li>
         {{- if .HasPrev }}
-          {{ partial "components/button.html" (dict "href" .Prev.URL "text" "Newer →" )}}
+          {{ partial "components/button" (dict "href" .Prev.URL "text" "Newer →" )}}
         {{- else }}
-          {{ partial "components/button.html" (dict "text" "Newer →" "disabled" true )}}
+          {{ partial "components/button" (dict "text" "Newer →" "disabled" true )}}
         {{- end }}
       </li>
     </ul>

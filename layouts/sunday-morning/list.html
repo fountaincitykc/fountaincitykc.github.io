@@ -20,7 +20,7 @@
             </div>
             {{ with .button }}
               <div class="content-section__footer">
-                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
+                {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
               </div>
             {{ end }}
           </div>
@@ -67,7 +67,7 @@
             </div>
             <div class="content-section__footer">
               {{ with site.Params.directions }}
-                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
               {{ end }}
             </div>
           </div>

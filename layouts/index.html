@@ -10,7 +10,7 @@
         </address>
       {{ end }}
       {{ with site.Params.directions }}
-        {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+        {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
       {{ end }}
     </div>
 
@@ -43,7 +43,7 @@
           </div>
           {{ with .button }}
             <div class="home-banner__button">
-              {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+              {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
             </div>
           {{ end }}
         </div>
@@ -97,7 +97,7 @@
                 </div>
                 {{ with .button }}
                   <div class="card__footer">
-                    {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
+                    {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
                   </div>
                 {{ end }}
               </div>
@@ -133,10 +133,10 @@
             <div class="content-section__footer">
               {{ $sermon := . }}
               {{ with $.Params.sermon.watch }}
-                {{ partial "components/button.html" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
+                {{ partial "components/button" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
               {{ end }}
               {{ with $.Params.sermon.listen }}
-                {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
               {{ end }}
             </div>
           </div>
@@ -182,7 +182,7 @@
                   </div>
                   {{ with .Params.button }}
                     <div class="content-section__footer">
-                      {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "primary" )}}
+                      {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
                     </div>
                   {{ end }}
                 </div>
@@ -212,7 +212,7 @@
                     </div>
                     {{ with .Params.button }}
                       <div class="card__footer">
-                        {{ partial "components/button.html" (dict "href" .href "text" .text "variant" "secondary" )}}
+                        {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
                       </div>
                     {{ end }}
                   </div>

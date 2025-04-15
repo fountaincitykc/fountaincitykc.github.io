@@ -4,7 +4,7 @@
         {{ range .Paginator.Pages }}
           <div class="content-section | animate">
             <div class="content-section__media">
-              {{ partial "components/youtube-image.html" (dict "url" .RelPermalink "id" .Params.youtubeId) }}
+              {{ partial "components/youtube-image" (dict "url" .RelPermalink "id" .Params.youtubeId) }}
             </div>
             <div class="content-section__body">
               <div class="content-section__header">
