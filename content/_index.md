@@ -2,12 +2,12 @@
 title: Home
 params:
   banner:
-    enabled: false
+    enabled: true
     content: |-
-      **New location grand opening event:** Join us March 2nd for Grooves and Griddles! 
-    button:
-      text: Learn more
-      href: /events/2025-03-02-grooves-and-griddles/
+      #### Please join us this evening at 7pm for our Good Friday service. 
+#    button:
+#      text:
+#      href:
   hero:
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
