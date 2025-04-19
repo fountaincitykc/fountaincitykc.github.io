@@ -2,12 +2,11 @@
 title: Home
 params:
   banner:
-    enabled: true
-    content: |-
-      #### Please join us this evening at 7pm for our Good Friday service. 
-#    button:
-#      text:
-#      href:
+    enabled: false
+    content:
+    button:
+      text:
+      href:
   hero:
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
