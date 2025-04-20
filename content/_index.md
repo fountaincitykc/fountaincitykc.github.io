@@ -2,8 +2,8 @@
 title: Home
 params:
   banner:
-    enabled: false
-    content:
+    enabled: true
+    content:  __Reminder:__ Sunday service on April 27th will be held at Meadowbrook Clubhouse.
     button:
       text:
       href:
