@@ -41,8 +41,8 @@
           <div class="home-banner__content">
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
-          {{ if and .button.text .button.href }}
-            {{ with .button }}
+          {{ with .button }}
+            {{ if and .href .text }}
               <div class="home-banner__button">
                 {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
               </div>
