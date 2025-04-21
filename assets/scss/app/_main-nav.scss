@@ -70,7 +70,7 @@
     li.main-nav--selected > a {
       color: $foreground-color;
       text-decoration: underline;
-      text-decoration-color: rgba($light-blue, 0.4);
+      text-decoration-color: rgba($blue-300, 0.4);
       text-decoration-thickness: 3px;
     }
 
@@ -87,7 +87,7 @@
       min-width: 160px;
       padding: size(2) size(3);
       background-color: $white;
-      box-shadow: 0px size(1) size(2) 0px rgba($navy, 0.2);
+      box-shadow: 0px size(1) size(2) 0px rgba($blue-900, 0.2);
       border-radius: size(1);
       z-index: 999;
     }

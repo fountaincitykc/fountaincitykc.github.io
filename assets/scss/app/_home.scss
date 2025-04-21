@@ -3,7 +3,7 @@
 }
 .home {
   @include make-stack(10);
-  background-color: $dark-blue;
+  background-color: $blue-700;
 }
 
 // Directions
@@ -41,7 +41,7 @@
   }
   h4 {
     margin-bottom: 0;
-    color: $light-blue;
+    color: $blue-300;
     font-weight: $font-weight-bold;
   }
   .watch-live {
@@ -103,7 +103,7 @@
   margin-right: size(3);
   margin-bottom: -(size(7));
   padding: size(3);
-  background-color: $light-blue;
+  background-color: $blue-100;
   border-radius: size(1);
 
   .home-banner__content {
@@ -231,7 +231,7 @@
     .button.button--primary {
       &:hover,
       &:active {
-        background-color: rgba($blue, 0.6);
+        background-color: rgba($blue-500, 0.6);
       }
     }
   }

@@ -75,7 +75,7 @@
   .event__month,
   .event__tbd {
     padding: size(1) 0 size(0.5) 0;
-    background-color: $light-blue;
+    background-color: $blue-300;
     border-top-left-radius: size(1);
     border-top-right-radius: size(1);
     color: $white;
@@ -84,7 +84,7 @@
   }
   .event__day {
     padding: 0;
-    border: 6px solid $light-blue;
+    border: 6px solid $blue-300;
     border-bottom-left-radius: size(1);
     border-bottom-right-radius: size(1);
     font-family: $font-family-base;

@@ -1,7 +1,7 @@
 @mixin make-button {
   display: inline-block;
   padding: 8.5px 16px;
-  color: $blue;
+  color: $blue-500;
   background-color: transparent;
   border-radius: size(0.5);
   outline-width: 0;
@@ -21,8 +21,8 @@
   }
   &:hover,
   &:active {
-    color: shade-color($blue, 20%);
-    background-color: rgba($blue, 0.1);
+    color: shade-color($blue-500, 20%);
+    background-color: rgba($blue-500, 0.1);
     text-decoration: none;
   }
   img {
@@ -31,22 +31,22 @@
 }
 @mixin make-button--primary {
   color: $white;
-  background-color: $blue;
+  background-color: $blue-500;
 
   &:hover,
   &:active {
     color: $white;
-    background-color: shade-color($blue, 20%);
+    background-color: shade-color($blue-500, 20%);
   }
 }
 @mixin make-button--secondary {
-  color: $blue;
-  background-color: rgba($light-blue, 0.3);
+  color: $blue-500;
+  background-color: rgba($blue-300, 0.3);
 
   &:hover,
   &:active {
-    color: shade-color($blue, 20%);
-    background-color: rgba($light-blue, 0.4);
+    color: shade-color($blue-500, 20%);
+    background-color: rgba($blue-300, 0.4);
   }
 }
 @mixin make-button--dark {
@@ -60,13 +60,13 @@
   }
 }
 @mixin make-button--white {
-  color: $blue;
+  color: $blue-500;
   background-color: $white;
 
   &:hover,
   &:active {
-    color: shade-color($blue, 20%);
-    background-color: tint-color($blue, 90%);
+    color: shade-color($blue-500, 20%);
+    background-color: tint-color($blue-500, 90%);
   }
 }
 @mixin make-button--lg {
