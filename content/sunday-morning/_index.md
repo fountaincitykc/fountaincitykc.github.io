@@ -7,7 +7,7 @@ params:
   sections:
   - headline: What to Expect
     content: |-
-      Fountain City is a church that values community and connection which you will notice right away. No matter your age or background, you will find a place here. The service usually lasts about an hour and fifteen minutes. Attire varies – generally casual. You are more than welcome to stick around after service and get to know people. We are so glad to have you worship with us and can’t wait to meet you.
+      Fountain City is a church that values community and connection which you will notice right away. No matter your age or background, you will find a place here. The service usually lasts about an hour and fifteen minutes. Attire varies — generally casual. You are more than welcome to stick around after service and get to know people. We are so glad to have you worship with us and can’t wait to meet you.
     photo: what-to-expect.jpg
   - headline: Worship
     content: |-

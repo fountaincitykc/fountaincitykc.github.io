@@ -16,11 +16,11 @@ We also want Fountain City Church to be a place where parents find rest and hope
 
 _We pray for our children to grow into young adult men and women who are…_
 
-**Faithful** – Possess discernment to decide what is most faithful to Scripture and honors Christ.  
-**Fearless** – Fearless through life’s challenges from knowing God is in control.  
-**Spiritually Fervent** – Hearts of devotion to the Lord, actively obeying Christ in everything.  
-**Resilient and Perseverant** – Through adversity, continue walking with the Lord in peace.  
-**Take their Place in God’s Redemptive Narrative** – Love, lead, and serve others well in their families and communities in the name of Jesus Christ.
+**Faithful** — Possess discernment to decide what is most faithful to Scripture and honors Christ.  
+**Fearless** — Fearless through life’s challenges from knowing God is in control.  
+**Spiritually Fervent** — Hearts of devotion to the Lord, actively obeying Christ in everything.  
+**Resilient and Perseverant** — Through adversity, continue walking with the Lord in peace.  
+**Take their Place in God’s Redemptive Narrative** — Love, lead, and serve others well in their families and communities in the name of Jesus Christ.
 
 ## Values
 
