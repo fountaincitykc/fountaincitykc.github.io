@@ -9,7 +9,7 @@
     {{ end }}
     {{ if .Date }}
       {{ with .Params.endDate }}
-        &ndash; {{ time.Format ":date_long" . }}
+        – {{ time.Format ":date_long" . }}
       {{ end }}
     {{ end }}
     {{ if and .Date .Params.time }}

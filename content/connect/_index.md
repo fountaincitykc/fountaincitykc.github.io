@@ -16,7 +16,7 @@ params:
     tag: home-groups
   - headline: Park Play Dates
     content: |-
-      A casual meet&ndash;up at local parks gives moms space to connect while kids play together. The parks are on a rotation to provide a variety of scenery and geography. A great place to build relationships, meet other moms in similar life stages, and have fun!
+      A casual meet–up at local parks gives moms space to connect while kids play together. The parks are on a rotation to provide a variety of scenery and geography. A great place to build relationships, meet other moms in similar life stages, and have fun!
     photo: park-play-dates.jpg
     tag: park-play-dates
   callout:

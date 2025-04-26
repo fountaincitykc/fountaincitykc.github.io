@@ -13,7 +13,7 @@
           {{ range .ByDate.Reverse }}
             <li>
               <a href="{{ .RelPermalink }}">
-                {{ dateFormat "January 2, 2006" .Date }} &ndash; {{ .Title }}
+                {{ dateFormat "January 2, 2006" .Date }} — {{ .Title }}
               </a>
             </li>
           {{ end }}
