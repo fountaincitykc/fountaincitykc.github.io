@@ -4,8 +4,8 @@ date: 2025-06-02
 tags:
   - park-play-dates
 params:
-  time: 3:30pm
-  location: "[Franklin Park](https://maps.app.goo.gl/Gsia2sKAm2CsX56v5)"
+  time: 9:30am
+  location: Antioch Park
 ---
 
 Please join other families for our bimonthly park play date. All are welcome and feel free to invite friends and neighbors.
