@@ -23,4 +23,4 @@ All Scripture is self-attesting and being Truth, requires our unreserved submiss
 
 ---
 
-These essentials of our faith are further explained in the [Westminster Confession of Faith](https://epc.org/wp-content/uploads/Files/1-Who-We-Are/B-About-The-EPC/WCF-ModernEnglish.pdf), the guiding document of our EPC denomination.
+These essentials of our faith are further explained in the [Westminster Confession of Faith](https://epconnect.org/wp-content/uploads/Files/1-Who-We-Are/B-About-The-EPC/WCF-ModernEnglish.pdf), the guiding document of our EPC denomination.
