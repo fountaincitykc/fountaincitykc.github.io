@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: size(6);
 
+  .content-section__media {
+    figure {
+      margin-bottom: 0;
+    }
+  }
   .content-section__body {
     display: flex;
     flex-direction: column;
