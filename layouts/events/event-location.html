@@ -1,5 +1,5 @@
 {{ with .Params.location }}
   <h5 class="subtitle">
-    {{ . | markdownify }}
+    {{ . | $.Page.RenderString }}
   </h5>
 {{ end }}
