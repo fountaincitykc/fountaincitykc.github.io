@@ -1,9 +1,24 @@
+{{- /* Get .RelPermalink of resources */}}
+{{- $url := urls.Parse .Destination }}
+{{- $src := $url.String }}
+{{- if not $url.IsAbs }}
+  {{- $path := strings.TrimPrefix "./" $url.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) }}
+    {{- $src = .RelPermalink }}
+    {{- with $url.RawQuery }}
+      {{- $src = printf "%s?%s" $src . }}
+    {{- end }}
+    {{- with $url.Fragment }}
+      {{- $src = printf "%s#%s" $src . }}
+    {{- end }}
+  {{- end }}
+{{- end }}
 {{- /* Process attributes */}}
-{{- $a := merge .Attributes (dict "alt" .Text "src" .Destination) }}
+{{- $a := merge .Attributes (dict "alt" .PlainText "src" $src) }}
 {{- $attributes := "" }}
 {{- range $k, $v := $a }}
   {{- if $v }}
-    {{- $attributes = printf "%s %s=%q" $attributes $k $v }}
+    {{- $attributes = printf "%s %s=%q" $attributes $k ($v | transform.HTMLEscape) }}
   {{- end }}
 {{- end }}
 {{- /* Output standalone image */}}
