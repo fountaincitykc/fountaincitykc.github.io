@@ -5,7 +5,7 @@ params:
   time: 6-8pm
   location: Meadowbrook Park - Shelter 1
   featured: true
-  image: events/abstract-3.svg
+  image: events/img1-blue.svg
 ---
 
 FCC will provide drinks and desert. Please bring something to share.
