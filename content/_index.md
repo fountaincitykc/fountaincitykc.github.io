@@ -2,8 +2,8 @@
 title: Home
 params:
   banner:
-    enabled: true
-    content:  __Reminder:__ Sunday service on [May 4th](/events/2025-05-04-sunday-worship/) will be held at Meadowbrook Clubhouse.
+    enabled: false
+    content:
     button:
       text:
       href:
