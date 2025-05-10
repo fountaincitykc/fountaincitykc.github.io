@@ -20,9 +20,7 @@
         <h1>
           {{ .headline }}
         </h1>
-        {{ with $.Resources.Get .image }}
-          <img src="{{ .RelPermalink }}" alt="Fountain City Church" class="img img--center">
-        {{ end }}
+        <img src="/images/fountain-city-church-logo.svg" alt="Fountain City Church" class="img img--center">
         <h4>
           {{ .subhead }}
           {{ with .button }}
@@ -53,15 +51,17 @@
     {{ end }}
 
     {{/* Photos */}}
-    <div class="home-photos | animate">
-      <div class="home-photos-main"><img src="/home/photo-main.jpg" alt="Photo"></div>
-      <div class="home-photos-1"><img src="/home/photo-1.jpg" alt="Photo"></div>
-      <div class="home-photos-2"><img src="/home/photo-2.jpg" alt="Photo"></div>
-      <div class="home-photos-3"><img src="/home/photo-3.jpg" alt="Photo"></div>  
-      <div class="home-photos-4"><img src="/home/photo-4.jpg" alt="Photo"></div>
-      <div class="home-photos-5"><img src="/home/photo-5.jpg" alt="Photo"></div>
-      <div class="home-photos-6"><img src="/home/photo-6.jpg" alt="Photo"></div>
-    </div>
+    {{ with .Params.photos }}
+      <div class="home-photos | animate">
+        <div class="home-photos-main"><img src="{{ .photoMain }}" alt="Photo"></div>
+        <div class="home-photos-1"><img src="{{ .photo1 }}" alt="Photo"></div>
+        <div class="home-photos-2"><img src="{{ .photo2 }}" alt="Photo"></div>
+        <div class="home-photos-3"><img src="{{ .photo3 }}" alt="Photo"></div>  
+        <div class="home-photos-4"><img src="{{ .photo4 }}" alt="Photo"></div>
+        <div class="home-photos-5"><img src="{{ .photo5 }}" alt="Photo"></div>
+        <div class="home-photos-6"><img src="{{ .photo6 }}" alt="Photo"></div>
+      </div>
+    {{ end }}
 
     {{/* Callout */}}
     {{ with .Params.callout }}
@@ -164,8 +164,8 @@
             {{ with index $upcomingEvents 0 }}
               <div class="content-section | animate">
                 <div class="content-section__media">
-                  {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
-                    <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
+                  {{ with or .Params.image site.Params.events.defaultImage }}
+                    <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
                 <div class="content-section__body">
@@ -197,8 +197,8 @@
               {{ range $upcomingEvents }}
                 <div class="card | animate">
                   <div class="card__media">
-                    {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
-                      <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
+                    {{ with or .Params.image site.Params.events.defaultImage }}
+                      <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>
                   <div class="card__body">

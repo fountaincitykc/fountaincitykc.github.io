@@ -58,7 +58,7 @@
           {{ range site.Params.social }}
             <li>
               <a href="{{ .href }}" target="_blank">
-                {{ partial "components/icon" (dict "name" .icon "variant" "white" "size" "lg") }}
+                {{ partial "components/icon" (dict "path" .icon "variant" "white" "size" "lg") }}
               </a>
             </li>
           {{ end }}

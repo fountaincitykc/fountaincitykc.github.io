@@ -33,24 +33,24 @@ apps:
   buttons:
     - text: App Store
       href: https://apps.apple.com/us/app/church-center-app/id1357742931
-      image: /images/app-store.svg
+      image: /images/uploads/apps/app-store.svg
     - text: Google Play
       href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
-      image: /images/google-play.svg
+      image: /images/uploads/apps/google-play.svg
 
 social:
   - text: Instagram
     href: https://www.instagram.com/fountaincitychurch_kc/
-    icon: instagram
+    icon: /images/uploads/icons/instagram.svg
   - text: Facebook
     href: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
-    icon: facebook
+    icon: /images/uploads/icons/facebook.svg
   - text: Youtube
     href: https://www.youtube.com/@fountaincitychurchkc9519/
-    icon: youtube
+    icon: /images/uploads/icons/youtube.svg
   - text: Podbean
     href: https://fcckc.podbean.com/
-    icon: podbean
+    icon: /images/uploads/icons/podbean.svg
 
 events:
-  defaultImage: events/default.svg
+  defaultimage: /images/uploads/events/default.svg

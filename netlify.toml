@@ -1,0 +1,11 @@
+[build]
+  publish = "static/admin"
+  command = ""
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[build.environment]
+  HUGO_VERSION = "0.147.0"
