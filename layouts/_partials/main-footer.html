@@ -24,11 +24,11 @@
           </div>
           <div class="main-footer__app-buttons">
             {{ range .buttons }}
-              {{ $src := "" }}
+              {{ $text := .text }}
               {{ with resources.Get (printf "apps/%s" (path.Base .image)) }}
-                {{ $src = .RelPermalink }}
+                {{ $text = printf `<img src=%q alt=%q>` .RelPermalink $text }}
               {{ end }}
-              {{ partial "components/button" (dict "href" .href "text" (printf `<img src=%q alt=%q>` $src .text) "variant" "dark")}}
+              {{ partial "components/button" (dict "href" .href "text" $text "variant" "dark")}}
             {{ end }}
           </div>
         {{ end }}
