@@ -21,10 +21,9 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-
-      - name: "home"
+      - file: "content/_index.md"
+        name: "home"
         label: "Home"
-        file: "content/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -128,18 +127,18 @@ collections:
                       - {label: "Text", name: "text", widget: "string"}
                       - {label: "Link", name: "href", widget: "string"}
 
-      - name: "vision"
+      - file: "content/vision/_index.md"
+        name: "vision"
         label: "Vision"
-        file: "content/vision/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text", required: false}
           - {label: "Content", name: "body", widget: "markdown"}
 
-      - name: "staff"
+      - file: "content/staff/_index.md"
+        name: "staff"
         label: "Staff"
-        file: "content/staff/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -158,27 +157,27 @@ collections:
                   - {label: "Content", name: "content", widget: "markdown"}
                   - {label: "Photo", name: "photo", widget: "image", choose_url: false, allow_multiple: false, media_folder: "/content/staff", public_folder: "/staff"}
 
-      - name: "what-we-believe"
+      - file: "content/what-we-believe/_index.md"
+        name: "what-we-believe"
         label: "What We Believe"
-        file: "content/what-we-believe/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text", required: false}
           - {label: "Content", name: "body", widget: "markdown"}
 
-      - name: "childrens-and-family-ministry"
+      - file: "content/childrens-and-family-ministry/_index.md"
+        name: "childrens-and-family-ministry"
         label: "Children's and Family Ministry"
-        file: "content/childrens-and-family-ministry/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text", required: false}
           - {label: "Content", name: "body", widget: "markdown"}
 
-      - name: "sunday-morning"
+      - file: "content/sunday-morning/_index.md"
+        name: "sunday-morning"
         label: "Sunday Morning"
-        file: "content/sunday-morning/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -214,9 +213,9 @@ collections:
                 fields:
                   - {label: "Headline", name: "headline", widget: "string"}
 
-      - name: "kids-classes"
+      - file: "content/kids-classes/_index.md"
+        name: "kids-classes"
         label: "Kids Classes"
-        file: "content/kids-classes/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -289,9 +288,9 @@ collections:
           - {label: "Description", name: "description", widget: "text", required: false}
           - {label: "Content", name: "body", widget: "markdown"}
 
-      - name: "connect"
+      - file: "content/connect/_index.md"
+        name: "connect"
         label: "Connect"
-        file: "content/connect/_index.md"
         format: "frontmatter"
         fields:
           - {label: "Title", name: "title", widget: "string"}
