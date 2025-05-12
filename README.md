@@ -1,12 +1,5 @@
 # fountaincitykc.org
 
-## Development notes
-
-- This site is built with Hugo and hosted on GitHub Pages
-- The CMS is served from Netlify and is available at `/admin/`
-- Content changes made through the CMS will be committed to the GitHub repository
-- GitHub Pages will automatically rebuild when content changes are pushed
-
 ## Archetypes
 
 ### Add new event
