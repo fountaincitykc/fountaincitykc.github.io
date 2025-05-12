@@ -1,7 +1,7 @@
 ---
-title: String
-date: YYYY-MM-DD
+title: String # Required
+date: YYYY-MM-DD # Required
 params:
   series: String
-  youtubeId: String
+  youtubeId: String # Required
 ---

@@ -1,6 +1,6 @@
 ---
-title: String
-date: YYYY-MM-DD
+title: String # Required
+date: YYYY-MM-DD # Required
 tags:
   - tag
 params:
@@ -9,7 +9,7 @@ params:
   time: String
   location: "Markdown"
   featured: Boolean
-  image: File path # Leave empty for default
+  image: Filename # Image must be located in `/assets/events/`. Leave empty for default image.
   button:
     text: String
     href: URL
