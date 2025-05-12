@@ -55,7 +55,7 @@
       <div class="home-images | animate">
         {{ range $k, $v := . }}
           {{ with $.Resources.Get (printf "home/%s" (path.Base $v)) }}
-              <img class="home-images__{{ $k }}" src="{{ .RelPermalink }}" alt="">
+            <div class="home-images__{{ $k }}"><img src="{{ .RelPermalink }}" alt=""></div>
           {{ end }}
         {{ end }}
       </div>
