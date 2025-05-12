@@ -63,7 +63,7 @@
     }
   }
   @media (min-width: breakpoint-min-width("lg")) {
-    background-image: url("/home/hero-bkgd.svg");
+    background-image: url("/images/home-hero-bkgd.svg");
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -132,7 +132,7 @@
     width: 100%;
     height: auto;
   }
-  .home-photos-main {
+  .home-photos__photo0 { // Main photo
     img {
       display: block;
     }
@@ -154,15 +154,15 @@
       box-shadow: $box-shadow;
     }
 
-    .home-photos-main { grid-area: slot-main; }
-    .home-photos-1 { grid-area: slot-1; }
-    .home-photos-2 { grid-area: slot-2; }
-    .home-photos-3 { grid-area: slot-3; }
-    .home-photos-4 { grid-area: slot-4; }
-    .home-photos-5 { grid-area: slot-5; }
-    .home-photos-6 { grid-area: slot-6; }
+    .home-photos__photo0 { grid-area: slot-main; }
+    .home-photos__photo1 { grid-area: slot-1; }
+    .home-photos__photo2 { grid-area: slot-2; }
+    .home-photos__photo3 { grid-area: slot-3; }
+    .home-photos__photo4 { grid-area: slot-4; }
+    .home-photos__photo5 { grid-area: slot-5; }
+    .home-photos__photo6 { grid-area: slot-6; }
 
-    .home-photos-main {
+    .home-photos__photo0 { // Main photo
       position: relative;
   
       img {

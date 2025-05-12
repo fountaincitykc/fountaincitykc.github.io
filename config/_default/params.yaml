@@ -33,10 +33,10 @@ apps:
   buttons:
     - text: App Store
       href: https://apps.apple.com/us/app/church-center-app/id1357742931
-      image: /images/app-store.svg
+      image: app-store.svg
     - text: Google Play
       href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
-      image: /images/google-play.svg
+      image: google-play.svg
 
 social:
   - text: Instagram
@@ -53,4 +53,4 @@ social:
     icon: podbean
 
 events:
-  defaultImage: events/default.svg
+  defaultImage: default.svg
