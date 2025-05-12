@@ -232,62 +232,6 @@ collections:
                   - {label: "Content", name: "content", widget: "markdown"}
                   - {label: "Photo", name: "photo", widget: "image", choose_url: false, allow_multiple: false, media_folder: "/content/kids-classes", public_folder: "/kids-classes"}
 
-      - name: "events"
-        label: "Events"
-        folder: "content/events"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
-          - {label: "Tags", name: "tags", widget: "list", default: []}
-          - {label: "Description", name: "description", widget: "text", required: false}
-          - {label: "Content", name: "body", widget: "markdown"}
-          - {label: "Draft", name: "draft", widget: "boolean", default: false}
-          - label: "Parameters"
-            name: "params"
-            widget: "object"
-            fields:
-              - {label: "Featured", name: "featured", widget: "boolean", default: false}
-              - {label: "Featured Image", name: "image", widget: "image", choose_url: false, allow_multiple: false, media_folder: "/content/events", public_folder: "/events", required: false}
-              - {label: "Time", name: "time", widget: "string", required: false}
-              - {label: "Location", name: "location", widget: "string", required: false, hint: "Can include markdown links"}
-              - label: "Button"
-                name: "button"
-                widget: "object"
-                required: false
-                fields:
-                  - {label: "Text", name: "text", widget: "string"}
-                  - {label: "Link", name: "href", widget: "string"}
-
-      - name: "sermons"
-        label: "Sermons"
-        folder: "content/sermons"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text", required: false}
-          - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
-          - {label: "Content", name: "body", widget: "markdown"}
-          - {label: "Draft", name: "draft", widget: "boolean", default: false}
-          - label: "Parameters"
-            name: "params"
-            widget: "object"
-            fields:
-              - {label: "Series", name: "series", widget: "relation", collection: "series", value_field: "title", search_fields: ["title"], required: false}
-              - {label: "YouTube ID", name: "youtubeId", widget: "string", required: false, hint: "The ID from the YouTube video URL (e.g., '0tTNH7CE6dM' from 'https://www.youtube.com/watch?v=0tTNH7CE6dM')"}
-
-      - name: "series"
-        label: "Sermon Series"
-        folder: "content/series"
-        create: true
-        slug: "{{slug}}"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text", required: false}
-          - {label: "Content", name: "body", widget: "markdown"}
-
       - file: "content/connect/_index.md"
         name: "connect"
         label: "Connect"
@@ -318,6 +262,62 @@ collections:
                     widget: "object"
                     fields:
                       - {label: "Text", name: "text", widget: "string"}
+
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: []}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - label: "Parameters"
+        name: "params"
+        widget: "object"
+        fields:
+          - {label: "Featured", name: "featured", widget: "boolean", default: false}
+          - {label: "Featured Image", name: "image", widget: "image", choose_url: false, allow_multiple: false, media_folder: "/content/events", public_folder: "/events", required: false}
+          - {label: "Time", name: "time", widget: "string", required: false}
+          - {label: "Location", name: "location", widget: "string", required: false, hint: "Can include markdown links"}
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Link", name: "href", widget: "string"}
+
+  - name: "sermons"
+    label: "Sermons"
+    folder: "content/sermons"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - label: "Parameters"
+        name: "params"
+        widget: "object"
+        fields:
+          - {label: "Series", name: "series", widget: "relation", collection: "series", value_field: "title", search_fields: ["title"], required: false}
+          - {label: "YouTube ID", name: "youtubeId", widget: "string", required: false, hint: "The ID from the YouTube video URL (e.g., '0tTNH7CE6dM' from 'https://www.youtube.com/watch?v=0tTNH7CE6dM')"}
+
+  - name: "series"
+    label: "Sermon Series"
+    folder: "content/series"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "config"
     label: "Configuration"
