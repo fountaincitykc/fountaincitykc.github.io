@@ -1,4 +1,5 @@
 ---
 title: Sermons
-description: Watch the latest sermons from Fountain City Church.
+description: |-
+  Watch the latest sermons from Fountain City Church.
 ---

@@ -1,5 +1,7 @@
 ---
 title: Home
+description: |-
+  Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.
 params:
   banner:
     enabled: false

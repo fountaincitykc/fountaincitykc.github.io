@@ -1,6 +1,7 @@
 ---
 title: Our Staff
-description: Get to know the staff at Fountain City Church.
+description: |-
+  Get to know the staff at Fountain City Church.
 params:
   staff:
   - name: James Cottier

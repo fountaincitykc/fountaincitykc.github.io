@@ -1,5 +1,7 @@
 ---
 title: Kids' Classes
+description: |-
+  Families are a significant part of our community. We aim to help kids of all ages grow as faithful followers of Jesus as we assist parents to raise them in the ways of God.
 params:
   sections:
   - headline: Family Welcome Center
