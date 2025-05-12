@@ -20,9 +20,7 @@
         <h1>
           {{ .headline }}
         </h1>
-        {{ with $.Resources.Get .image }}
-          <img src="{{ .RelPermalink }}" alt="Fountain City Church" class="img img--center">
-        {{ end }}
+        <img src="/images/fountain-city-church-logo.svg" alt="Fountain City Church" class="img img--center">
         <h4>
           {{ .subhead }}
           {{ with .button }}
@@ -53,15 +51,15 @@
     {{ end }}
 
     {{/* Photos */}}
-    <div class="home-photos | animate">
-      <div class="home-photos-main"><img src="/home/photo-main.jpg" alt="Photo"></div>
-      <div class="home-photos-1"><img src="/home/photo-1.jpg" alt="Photo"></div>
-      <div class="home-photos-2"><img src="/home/photo-2.jpg" alt="Photo"></div>
-      <div class="home-photos-3"><img src="/home/photo-3.jpg" alt="Photo"></div>  
-      <div class="home-photos-4"><img src="/home/photo-4.jpg" alt="Photo"></div>
-      <div class="home-photos-5"><img src="/home/photo-5.jpg" alt="Photo"></div>
-      <div class="home-photos-6"><img src="/home/photo-6.jpg" alt="Photo"></div>
-    </div>
+    {{ with .Params.photos }}
+      <div class="home-photos | animate">
+        {{ range $k, $v := . }}
+          {{ with $.Resources.Get (printf "home/%s" (path.Base $v)) }}
+              <img class="home-photos__{{ $k }}" src="{{ .RelPermalink }}" alt="Photo">
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
 
     {{/* Callout */}}
     {{ with .Params.callout }}
@@ -86,7 +84,9 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                <img src="{{ .photo }}" alt="{{ .headline }}" class="img img--fill img--h256 img--cover">
+                {{ with $.Resources.Get (printf "home/%s" (path.Base .photo)) }}
+                  <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
+                {{ end }}
               </div>
               <div class="card__body">
                 <div class="card__header">
@@ -115,7 +115,9 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ $.Params.sermon.photo }}" alt="Latest sermon" class="img img--fill img--rounded">
+              {{ with $.Resources.Get (printf "home/%s" (path.Base $.Params.sermon.photo)) }}
+                <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
+              {{ end }}
             </a>
           </div>
           <div class="content-section__body">
@@ -164,7 +166,8 @@
             {{ with index $upcomingEvents 0 }}
               <div class="content-section | animate">
                 <div class="content-section__media">
-                  {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
+                  {{ $src := default site.Params.events.defaultImage .Params.image }}
+                  {{ with resources.Get (printf "events/%s" (path.Base $src)) }}
                     <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
@@ -197,7 +200,8 @@
               {{ range $upcomingEvents }}
                 <div class="card | animate">
                   <div class="card__media">
-                    {{ with resources.Get (default site.Params.events.defaultImage .Params.image) }}
+                    {{ $src := default site.Params.events.defaultImage .Params.image }}
+                    {{ with resources.Get (printf "events/%s" (path.Base $src)) }}
                       <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>

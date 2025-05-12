@@ -24,7 +24,11 @@
           </div>
           <div class="main-footer__app-buttons">
             {{ range .buttons }}
-              {{ partial "components/button" (dict "href" .href "text" (printf `<img src=%q alt=%q>` .image .text) "variant" "dark")}}
+              {{ $src := "" }}
+              {{ with resources.Get (printf "apps/%s" (path.Base .image)) }}
+                {{ $src = .RelPermalink }}
+              {{ end }}
+              {{ partial "components/button" (dict "href" .href "text" (printf `<img src=%q alt=%q>` $src .text) "variant" "dark")}}
             {{ end }}
           </div>
         {{ end }}
@@ -58,7 +62,7 @@
           {{ range site.Params.social }}
             <li>
               <a href="{{ .href }}" target="_blank">
-                {{ partial "components/icon" (dict "name" .icon "variant" "white" "size" "lg") }}
+                {{ partial "components/icon" (dict "name" (path.BaseName .icon) "variant" "white" "size" "lg") }}
               </a>
             </li>
           {{ end }}

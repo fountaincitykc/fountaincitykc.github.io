@@ -1,5 +1,12 @@
 # fountaincitykc.org
 
+## Development notes
+
+- This site is built with Hugo and hosted on GitHub Pages
+- The CMS is served from Netlify and is available at `/admin/`
+- Content changes made through the CMS will be committed to the GitHub repository
+- GitHub Pages will automatically rebuild when content changes are pushed
+
 ## Archetypes
 
 ### Add new event
@@ -28,14 +35,13 @@ params:
 
 ### Create a sermon series
 
-To create a new sermon series, add a new term page to the `/content/series/` taxonomy. The first image found in this term directory will be used as the sermon series image. For example:
+To create a new sermon series, add a new term page to the `/content/series/` taxonomy.
 
 ```text
 content/
 ├── series/
 └── new-series/
-    ├── _index.md
-    └── cover.jpg
+    └── _index.md
 ```
 
 To associate a sermon to a sermon series, set the term of the sermon series in the frontmatter of the sermon. For example:
