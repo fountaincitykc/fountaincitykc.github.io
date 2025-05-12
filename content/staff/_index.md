@@ -12,7 +12,7 @@ params:
       As pastor of Fountain City, James loves preaching and teaching about God's grace to us in Jesus Christ. He is passionate about followers of Jesus maturing in their life of discipleship, and he has a strong desire to help the gospel of Jesus go to parts of the world where it is yet to be heard.
 
       James and Lindsay have 3 children. James loves just about any team sport, and he's is most content when fly fishing, preferably for trout.
-    photo: james.jpg
+    image: james.jpg
   - name: Alex Davis
     role: Worship Leader
     email: alex@fountaincitykc.org
@@ -22,7 +22,7 @@ params:
       Alex loves seeing how the rhythms of the church calendar align with the life season of our church and how that all shapes our corporate worship during service. Each week we are able to "sing to the Lord a new song", rejoice, confess, and pray together without falling into rote worship because His mercies are always new.
 
       Alex married Kathryn, his high school friends and college sweetheart, and they now live in Overland Park with their cat Imogene.
-    photo: alex.jpg
+    image: alex.jpg
   - name: Risha Flannagan
     role: |-
       Children's and Family Ministry Director
@@ -33,7 +33,7 @@ params:
       Risha's love for family ministry grew in her home as she witnessed the love and grace of God work powerfully in her family. Risha was raised in Texas and studied Journalism at Texas A&amp;M University before moving to Kansas City, where she met her husband, Mark, in their adjoining backyards. After marriage, they became a blended family with four children under three years old. Now that her children are nearly grown, Risha feels she can relate to the struggles many parents experience and she looks forward to sharing the hope of Christ with families.
 
       Risha is pursuing a Master of Divinity (M. Div) through Gordon Conwell Theological Seminary.
-    photo: risha.jpg
+    image: risha.jpg
   - name: Lindsay Cottier
     role: Hospitality and Connections Coordinator
     email: lindsay@fountaincitykc.org
@@ -43,7 +43,7 @@ params:
       Helping people connect to Jesus and connect to community are some of Lindsay's greatest joys in ministry.
 
       Lindsay loves raising her 3 favorite children alongside James.
-    photo: lindsay.jpg
+    image: lindsay.jpg
   - name: Danielle Beckham
     role: Administrator
     email: danielle@fountaincitykc.org
@@ -53,5 +53,5 @@ params:
       She is thankful that her gifts of organization, planning, and communications are being used and shared with the FCC community.
 
       She is a loving wife to Travis and a dedicated mother to her son. In her free time, she enjoys taking walks or curling up with a good book.
-    photo: danielle.jpg
+    image: danielle.jpg
 ---

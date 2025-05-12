@@ -50,12 +50,12 @@
       {{ end }}
     {{ end }}
 
-    {{/* Photos */}}
-    {{ with .Params.photos }}
-      <div class="home-photos | animate">
+    {{/* Images */}}
+    {{ with .Params.images }}
+      <div class="home-images | animate">
         {{ range $k, $v := . }}
           {{ with $.Resources.Get (printf "home/%s" (path.Base $v)) }}
-              <img class="home-photos__{{ $k }}" src="{{ .RelPermalink }}" alt="Photo">
+              <img class="home-images__{{ $k }}" src="{{ .RelPermalink }}" alt="">
           {{ end }}
         {{ end }}
       </div>
@@ -84,7 +84,7 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                {{ with $.Resources.Get (printf "home/%s" (path.Base .photo)) }}
+                {{ with $.Resources.Get (printf "home/%s" (path.Base .image)) }}
                   <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                 {{ end }}
               </div>
@@ -115,7 +115,7 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              {{ with $.Resources.Get (printf "home/%s" (path.Base $.Params.sermon.photo)) }}
+              {{ with $.Resources.Get (printf "home/%s" (path.Base $.Params.sermon.image)) }}
                 <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
               {{ end }}
             </a>

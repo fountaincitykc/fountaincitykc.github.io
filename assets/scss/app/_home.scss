@@ -124,15 +124,15 @@
   }
 }
 
-// Photos
+// Images
 
-.home-photos {
+.home-images {
   img {
     display: none;
     width: 100%;
     height: auto;
   }
-  .home-photos__photo0 { // Main photo
+  .home-images__image0 { // Main image
     img {
       display: block;
     }
@@ -154,15 +154,15 @@
       box-shadow: $box-shadow;
     }
 
-    .home-photos__photo0 { grid-area: slot-main; }
-    .home-photos__photo1 { grid-area: slot-1; }
-    .home-photos__photo2 { grid-area: slot-2; }
-    .home-photos__photo3 { grid-area: slot-3; }
-    .home-photos__photo4 { grid-area: slot-4; }
-    .home-photos__photo5 { grid-area: slot-5; }
-    .home-photos__photo6 { grid-area: slot-6; }
+    .home-images__image0 { grid-area: slot-main; }
+    .home-images__image1 { grid-area: slot-1; }
+    .home-images__image2 { grid-area: slot-2; }
+    .home-images__image3 { grid-area: slot-3; }
+    .home-images__image4 { grid-area: slot-4; }
+    .home-images__image5 { grid-area: slot-5; }
+    .home-images__image6 { grid-area: slot-6; }
 
-    .home-photos__photo0 { // Main photo
+    .home-images__image0 { // Main image
       position: relative;
   
       img {
