@@ -25,7 +25,7 @@
           <div class="main-footer__app-buttons">
             {{ range .buttons }}
               {{ $text := .text }}
-              {{ with resources.Get (printf "apps/%s" (path.Base .image)) }}
+              {{ with resources.Get (printf "apps/%s" .image) }}
                 {{ $text = printf `<img src=%q alt=%q>` .RelPermalink $text }}
               {{ end }}
               {{ partial "components/button" (dict "href" .href "text" $text "variant" "dark")}}
@@ -62,7 +62,7 @@
           {{ range site.Params.social }}
             <li>
               <a href="{{ .href }}" target="_blank">
-                {{ partial "components/icon" (dict "name" (path.BaseName .icon) "variant" "white" "size" "lg") }}
+                {{ partial "components/icon" (dict "name" .icon "variant" "white" "size" "lg") }}
               </a>
             </li>
           {{ end }}
