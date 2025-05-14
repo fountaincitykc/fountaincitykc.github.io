@@ -3,7 +3,12 @@
     @include make-stack(6);
   }
   .search-form {
+    @include make-stack(3);
     text-align: center;
+  }
+  .search-form__caption {
+    margin-top: size(1); // Override stack
+    color: $gray-500;
   }
   .search-results {
     @include make-stack(6);
