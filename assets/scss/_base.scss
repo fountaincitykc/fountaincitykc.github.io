@@ -150,3 +150,44 @@ figcaption {
   font-size: $font-size-sm;
   text-align: center;
 }
+
+// Form elements
+
+select,
+input,
+textarea,
+button {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+}
+
+input[type=text],
+textarea {
+  padding: size(1) size(2);
+  width: 100%;
+  border: solid 1px $border-color;
+  border-radius: size(0.5);
+  background-color: $background-color;
+  color: $foreground-color;
+
+  &:focus {
+    outline: $blue-500;
+  }
+  &::placeholder {
+    color: $gray-500;
+  }
+}
+
+input[type=text] {
+  // Remove Chrome's autofill background color
+  // https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: $foreground-color;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}

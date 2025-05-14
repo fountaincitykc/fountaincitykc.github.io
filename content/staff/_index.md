@@ -3,7 +3,7 @@ title: Our Staff
 description: |-
   Get to know the staff at Fountain City Church.
 params:
-  staff:
+  sections:
   - name: James Cottier
     role: Lead Pastor
     email: james@fountaincitykc.org

@@ -1,0 +1,28 @@
+.search {
+  > * {
+    @include make-stack(6);
+  }
+  .search-form {
+    text-align: center;
+  }
+  .search-results {
+    @include make-stack(6);
+  }
+  .search-results-entry {
+    @include make-stack(3);
+    padding-bottom: size(3);
+    border-bottom: solid 3px $border-color;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  .search-results-entry__title {
+    margin-top: size(1); // Override stack
+  }
+  .search-results-entry__section {
+    color: $gray-500;
+    font-size: $font-size-sm;
+  }
+}

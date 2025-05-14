@@ -27,9 +27,11 @@
 @import "components/content-section";
 @import "components/icon";
 @import "components/img";
+@import "components/loader";
 @import "components/pager";
 @import "components/paginator";
 @import "components/pill-header";
+@import "components/search-input";
 @import "components/stack";
 @import "components/subtitle";
 @import "components/youtube-embed";
@@ -48,6 +50,7 @@
 @import "app/events";
 @import "app/home";
 @import "app/kids-classes";
+@import "app/search";
 @import "app/series";
 @import "app/sermons";
 @import "app/staff";

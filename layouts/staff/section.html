@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="main-content | staff">
     <div class="container">
-      {{ range .Params.staff }}
+      {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .name | urlize }}">
           {{ $alt := .name }}
           {{ with $.Resources.Get .image }}
