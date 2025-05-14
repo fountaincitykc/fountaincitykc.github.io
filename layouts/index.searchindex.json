@@ -1,0 +1,47 @@
+{{- $pages := site.Pages }}
+{{- /* Remove pages that should not be indexed */}}
+{{- $pages := where $pages "Params.noIndex" "ne" true }}
+{{- /* Remove page redirects */}}
+{{- $pages := where $pages "Layout" "ne" "redirect" }}
+{{- $s := newScratch }}
+{{- $s.Add "search-index" slice }}
+{{- range $index, $page := $pages }}
+  {{- /* Don't index home page */}}
+  {{- if .IsHome }}
+    {{- continue }}
+  {{- end }}
+  {{- /* If the current page is not a top-level section, get top-level section title */}}
+  {{- $section := "" }}
+  {{- if gt (len $page.Ancestors) 1 }}
+    {{- $section = $page.FirstSection.Title }}
+  {{- end }}
+  {{- /* Get content from selected frontmatter params and markdown content */}}
+  {{- $content := "" }}
+  {{- with $page.Params.sections }}
+    {{- range . }}
+      {{- with .content }}
+        {{- $content = printf "%s %s" $content (. | markdownify | plainify | htmlUnescape) }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- $content = printf "%s %s" $content ($page.Plain | htmlUnescape) }}
+  {{- $content = trim $content "\n\r\t " }}
+  {{- $content = replaceRE "[\n\r\t]+" " " $content }}
+  {{- if not $content }}
+    {{- $content = $page.Description }}
+  {{- end }}
+  {{- /* Add page to search index */}}
+  {{- $s.Add
+    "search-index"
+    (dict
+      "uri"         $page.Permalink
+      "title"       $page.Title
+      "description" $page.Description
+      "keywords"    $page.Keywords
+      "section"     $section
+      "content"     $content
+    )
+  }}
+{{- end }}
+{{- /* Output */}}
+{{- $s.Get "search-index" | jsonify }}

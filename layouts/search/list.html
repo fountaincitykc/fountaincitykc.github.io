@@ -1,0 +1,53 @@
+{{ define "head" }}
+  {{ $scripts := slice 
+    (resources.Get "js/lunr.js")
+    (resources.Get "js/search.js")
+  }}
+  {{ $js := $scripts | resources.Concat "js/lunr-search.js" }}
+  {{ if hugo.IsProduction }}
+    {{ $js = $js | minify | fingerprint }}
+  {{ end }}
+  <script src="{{ $js.RelPermalink }}"></script>
+{{ end }}
+
+{{ define "main" }}
+  <main class="main-content | search">
+    <div class="container-lg">
+      <div class="search-form">
+        <h2>
+          What can we help you find?
+        </h2>
+        <form action="/search" method="get">
+          <div class="search-input search-input--lg">
+            {{ partial "components/icon" (dict "name" "search") }}
+            <input type="text" name="q" placeholder="Search">
+          </div>
+        </form>
+      </div>
+      <div class="search-results"></div>
+    </div>
+  </main>
+  <template id="search-results-loader-template" hidden>
+    <div class="loader loader--center"></div>
+  </template>
+  <template id="search-results-header-template" hidden>
+    <div class="search-results-header">
+      <h3><span class="search-results-header__text"></span> “<strong class="search-results-header__query"></strong>”</h3>
+      <p class="search-results-header__empty"><a href="#" onclick="history.back()">Back</a></p>
+    </div>
+  </template>
+  <template id="search-results-error-template" hidden>
+    <div class="search-results-error">
+      <p>Sorry, an error occurred while processing your search results.</p>
+    </div>
+  </template>
+  <template id="search-results-entry-template" hidden>
+    <article class="search-results-entry">
+      <p class="search-results-entry__section"></p>
+      <h4 class="search-results-entry__title">
+        <a class="search-results-entry__link"></a>
+      </h4>
+      <p class="search-results-entry__summary"></p>
+    </article>
+  </template>
+{{ end }}
