@@ -15,15 +15,15 @@
     <div class="container-lg">
       <div class="search-form">
         <h2>
-          What can we help you find?
+          {{ .Params.headline }}
         </h2>
-        <p class="search-form__caption">
-          Search for events, sermons, and more.
+        <p class="search-form__subtitle">
+          {{ .Params.subtitle }}
         </p>
         <form action="/search" method="get">
           <div class="search-input search-input--lg">
             {{ partial "components/icon" (dict "name" "search") }}
-            <input type="text" name="q" placeholder="Search">
+            <input type="text" name="q" placeholder="{{ .Params.searchInput.placeholder }}">
           </div>
         </form>
       </div>

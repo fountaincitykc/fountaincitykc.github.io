@@ -6,7 +6,7 @@
     @include make-stack(3);
     text-align: center;
   }
-  .search-form__caption {
+  .search-form__subtitle {
     margin-top: size(1); // Override stack
     color: $gray-500;
   }
