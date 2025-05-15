@@ -40,3 +40,8 @@ main:
       rel: external
     url: https://fountaincitykc.churchcenter.com/giving
     weight: 11
+  - name: Search
+    pageRef: /search/
+    params:
+      icon: search
+    weight: 12

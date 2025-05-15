@@ -14,6 +14,8 @@ window.addEventListener(
         let node = template.content.cloneNode(true);
         target.appendChild(node);
         loadSearchIndex();
+      } else {
+        document.querySelector(".search-input input").focus();
       }
     };
     const loadSearchIndex = () => {

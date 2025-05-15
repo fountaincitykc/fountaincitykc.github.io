@@ -3,22 +3,27 @@
     {{ $page := . }}
     {{ range site.Menus.main }}
       <li{{ if or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} class="main-nav--selected"{{ end }}>
-        <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+        {{ template "main-nav-menu-item" . }}
         {{ if .HasChildren }}
           <ul>
             {{ range .Children }}
               <li{{ if $page.IsMenuCurrent "main" . }} class="main-nav--selected"{{ end }}>
-                <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+                {{ template "main-nav-menu-item" . }}
               </li>
             {{ end }}
           </ul>
         {{ end }}
       </li>
     {{ end }}
-    <li>
-      <a href="/search/">
-        {{ partial "components/icon" (dict "name" "search") }}
-      </a>
-    </li>
   </ul>
 </nav>
+
+{{ define "main-nav-menu-item" }}
+  <a href="{{ .URL }}"{{ if eq .Params.rel "external" }} target="_blank" rel="noopener"{{ end }}>
+    {{ with .Params.icon }}
+      {{ partial "components/icon" (dict "name" . "variant" "primary") }}
+    {{ else }}
+      {{ .Name }}
+    {{ end }}
+  </a>
+{{ end }}

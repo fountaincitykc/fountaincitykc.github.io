@@ -3,13 +3,11 @@
 {{- $pages := where $pages "Params.noIndex" "ne" true }}
 {{- /* Remove page redirects */}}
 {{- $pages := where $pages "Layout" "ne" "redirect" }}
+{{- /* Remove the home page */}}
+{{ $pages := where $pages "IsHome" "ne" true }}
 {{- $s := newScratch }}
 {{- $s.Add "search-index" slice }}
 {{- range $index, $page := $pages }}
-  {{- /* Don't index home page */}}
-  {{- if .IsHome }}
-    {{- continue }}
-  {{- end }}
   {{- /* If the current page is not a top-level section, get top-level section title */}}
   {{- $section := "" }}
   {{- if gt (len $page.Ancestors) 1 }}
