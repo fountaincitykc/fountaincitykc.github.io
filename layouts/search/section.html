@@ -1,13 +1,5 @@
 {{ define "head" }}
-  {{ $scripts := slice 
-    (resources.Get "js/lunr.js")
-    (resources.Get "js/search.js")
-  }}
-  {{ $js := $scripts | resources.Concat "js/lunr-search.js" }}
-  {{ if hugo.IsProduction }}
-    {{ $js = $js | minify | fingerprint }}
-  {{ end }}
-  <script src="{{ $js.RelPermalink }}"></script>
+  {{ partial "components/script" (dict "src" (slice "js/lunr.js" "js/search.js") "dst" "js/lunr-search.js") }}
 {{ end }}
 
 {{ define "main" }}

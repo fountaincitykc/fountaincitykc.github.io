@@ -18,7 +18,7 @@ hugo new content sermons/2025-01-01.md
 
 ### Create a redirect
 
-To create a redirect, add to follow frontmatter params to the page.
+To create a redirect, add the following frontmatter params to the page.
 
 ```yaml
 layout: redirect
