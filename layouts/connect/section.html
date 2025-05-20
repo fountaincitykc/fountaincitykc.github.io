@@ -18,10 +18,13 @@
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
-            {{ with .tag }}
-              {{ if isset site.Taxonomies.tags . }}
+            {{ if .tag }}
+              {{ $today := time.AsTime (now.Format "2006-01-02") }}
+              {{ $events := where site.RegularPages "Params.tags" "intersect" (slice .tag) }}
+              {{ $events := where $events "Date" "ge" $today }}
+              {{ if gt ($events | len) 0 }}
                 <div class="content-section__footer">
-                  {{ partial "components/button" (dict "href" (printf "/tags/%s/" . ) "text" "View events" "variant" "secondary" )}}
+                  {{ partial "components/button" (dict "href" (printf "/tags/%s/" .tag ) "text" "View events" "variant" "secondary" )}}
                 </div>
               {{ end }}
             {{ end }}

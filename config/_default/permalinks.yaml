@@ -1,0 +1,3 @@
+page:
+  events: :section/:year-:month-:day-:slug/
+  sermons: :section/:year-:month-:day/
