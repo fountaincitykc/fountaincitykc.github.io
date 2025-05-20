@@ -1,5 +1,7 @@
 ---
-title: Summer Teaching Nights
+title: Summer Teaching Night
+tags:
+  - summer-teaching-nights
 date: 2025-07-09
 params:
   time: 6-8pm
