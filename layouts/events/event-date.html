@@ -1,22 +1,24 @@
 {{ if .Params.dateText }}
-  <h4 class="subtitle">
+  <h4 class="subtitle | has-icon">
+    {{ partial "components/icon" (dict "name" "date" "size" "sm") }}
     {{ .Params.dateText }}
   </h4>
-{{ else if or .Date .Params.time }}
-  <h4 class="subtitle">
-    {{ with .Date }}
-      {{ time.Format ":date_full" . }}
-    {{ end }}
-    {{ if .Date }}
+{{ else }}
+  {{ if .Date }}
+    <h4 class="subtitle | has-icon">
+      {{ partial "components/icon" (dict "name" "date" "size" "sm") }}
+      {{ with .Date }}
+        {{ time.Format ":date_full" . }}
+      {{ end }}
       {{ with .Params.endDate }}
         – {{ time.Format ":date_long" . }}
       {{ end }}
-    {{ end }}
-    {{ if and .Date .Params.time }}
-      <br> 
-    {{ end }}
-    {{ with .Params.time }}
+    </h4>
+  {{ end }}
+  {{ with .Params.time }}
+    <h4 class="subtitle | has-icon">
+      {{ partial "components/icon" (dict "name" "time" "size" "sm") }}
       {{ . }}
-    {{ end }}
-  </h4>
+    </h4>
+  {{ end }}
 {{ end }}

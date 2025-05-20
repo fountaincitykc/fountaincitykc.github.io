@@ -1,5 +1,6 @@
 {{ with .Params.location }}
-  <h5 class="subtitle">
+  <h4 class="subtitle | has-icon">
+    {{ partial "components/icon" (dict "name" "location" "size" "sm") }}
     {{ . | $.Page.RenderString }}
-  </h5>
+  </h4>
 {{ end }}

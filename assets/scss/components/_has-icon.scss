@@ -1,0 +1,16 @@
+/*
+@markup
+<h4 class="has-icon">
+  <svg class="icon">
+    ...
+  </svg>
+  Heading
+</div>
+*/
+
+.has-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: size(1);
+}
