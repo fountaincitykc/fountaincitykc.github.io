@@ -38,6 +38,11 @@
     li.main-nav--selected > a {
       background-color: rgba($white, 0.1);
     }
+    .icon {
+      path {
+        fill: $white;
+      }
+    }
 
     // Mobile submenu
 
