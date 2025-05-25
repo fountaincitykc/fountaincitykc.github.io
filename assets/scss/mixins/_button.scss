@@ -1,6 +1,6 @@
 @mixin make-button {
   display: inline-block;
-  padding: 8.5px 16px;
+  padding: 8px 16px;
   color: $blue-500;
   background-color: transparent;
   border-radius: size(0.5);
@@ -51,12 +51,12 @@
 }
 @mixin make-button--dark {
   color: $white;
-  background-color: $foreground-color;
+  background-color: tint-color($foreground-color, 10%);
 
   &:hover,
   &:active {
     color: $white;
-    background-color: tint-color($foreground-color, 10%);
+    background-color: tint-color($foreground-color, 15%);
   }
 }
 @mixin make-button--white {
@@ -70,15 +70,15 @@
   }
 }
 @mixin make-button--lg {
-  padding: 13px 24px;
+  padding: 12px 24px;
   font-size: $font-size-lg;
 }
 @mixin make-button--md {
-  padding: 8.5px 16px;
+  padding: 8px 16px;
   font-size: $font-size-base;
 }
 @mixin make-button--sm {
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-size: $font-size-sm;
 }
 @mixin make-button--block {
