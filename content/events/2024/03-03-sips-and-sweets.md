@@ -1,7 +1,7 @@
 ---
 title: Sips and Sweets
+date: 2024-03-03
 params:
-  date: 2024-03-03
   time: 9:30am
 ---
 
