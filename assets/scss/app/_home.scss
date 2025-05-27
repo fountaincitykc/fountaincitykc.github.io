@@ -23,49 +23,82 @@
 // Hero
 
 .home-hero {
+  position: relative;
+  overflow: hidden;
   margin-top: 0;// Override stack
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: size(6);
-  padding: size(16) size(3) size(3) size(3);
-  text-align: center;
+  box-shadow: $box-shadow;
 
-  h1 {
-    margin-bottom: 0;
-    max-width: 1200px;
-    color: $white;
-    font-size: var(--font-size-h2);
-    font-weight: $font-weight-heavy;
-    text-wrap: balance;
-  }
-  h4 {
-    margin-bottom: 0;
-    color: $blue-300;
-    font-weight: $font-weight-bold;
-  }
-  .watch-live {
-    a {
-      @include make-white-link;
-    }
-    &.hide {
-      // Hide link by default
-      // The "hide" class is removed by JavaScript on Sunday (see assets/js/watch-live.js)
-      display: none;
+  .home-hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
     }
   }
+  .home-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .home-hero__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: size(6);
+    padding: size(16) size(3);
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0;
+      max-width: 1200px;
+      color: $white;
+      font-size: var(--font-size-h2);
+      font-weight: $font-weight-heavy;
+      text-wrap: balance;
+    }
+    h4 {
+      margin-bottom: 0;
+      color: $blue-300;
+      font-weight: $font-weight-bold;
+    }
+    .watch-live {
+      a {
+        @include make-white-link;
+      }
+      &.hide {
+        // Hide link by default
+        // The "hide" class is removed by JavaScript on Sunday (see assets/js/watch-live.js)
+        display: none;
+      }
+    }
+  }
+
   @media (max-width: breakpoint-max-width("xs")) {
-    padding-top: size(8);
-    padding-bottom: 0;
+    .home-hero__content {
+      padding: size(8) size(3);
 
-    img {
-      width: 140px;
+      img {
+        width: 140px;
+      }
     }
-  }
-  @media (min-width: breakpoint-min-width("lg")) {
-    background-image: url("/images/home-hero-bkgd.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
   }
 
   // Animation
@@ -94,14 +127,14 @@
 // Banner
 
 .home-banner {
+  position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   gap: size(3);
   align-items: center;
   justify-content: center;
-  margin-left: size(3);
-  margin-right: size(3);
-  margin-bottom: -(size(7));
+  margin-top: -(size(12));
   padding: size(3);
   background-color: $blue-100;
   border-radius: size(1);
@@ -115,68 +148,13 @@
   }
   @media (min-width: breakpoint-min-width("md")) {
     flex-direction: row;
+    margin-top: -(size(13.5));
     padding: size(2) size(5);
     border-radius: 999px;
 
     .home-banner__content {
       text-align: left;
     }
-  }
-}
-
-// Images
-
-.home-images {
-  img {
-    display: none;
-    width: 100%;
-    height: auto;
-  }
-  .home-images__image0 { // Main image
-    img {
-      display: block;
-    }
-  }
-  @media (min-width: breakpoint-min-width("md")) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
-      "slot-1 slot-2 slot-main slot-main slot-5"
-      "slot-3 slot-4 slot-main slot-main slot-6";
-    gap: size(2);
-    padding: 0 size(3);
-
-    img {
-      display: block;
-      border-radius: size(2);
-      object-fit: cover;
-      object-position: center center;
-      box-shadow: $box-shadow;
-    }
-
-    .home-images__image0 { grid-area: slot-main; }
-    .home-images__image1 { grid-area: slot-1; }
-    .home-images__image2 { grid-area: slot-2; }
-    .home-images__image3 { grid-area: slot-3; }
-    .home-images__image4 { grid-area: slot-4; }
-    .home-images__image5 { grid-area: slot-5; }
-    .home-images__image6 { grid-area: slot-6; }
-
-    .home-images__image0 { // Main image
-      position: relative;
-  
-      img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-      }
-    }
-  }
-  @media (min-width: breakpoint-min-width("lg")) {
-    gap: size(3);
   }
 }
 
@@ -189,6 +167,11 @@
     @media (min-width: breakpoint-min-width("lg")) {
       font-size: var(--font-size-h2);
     }
+  }
+  @media (min-width: breakpoint-min-width("lg")) {
+    background-image: url("/images/home-callout-bkgd.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 }
 

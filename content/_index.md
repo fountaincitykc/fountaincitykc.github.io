@@ -10,20 +10,13 @@ params:
       text:
       href:
   hero:
+    video: loop.mp4
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
     subhead: Join us Sundays at 10
     button:
       text: Watch live
       href: https://www.youtube.com/@fountaincitychurchkc9519/
-  images:
-    image0: image-main.jpg
-    image1: image-1.jpg
-    image2: image-2.jpg
-    image3: image-3.jpg
-    image4: image-4.jpg
-    image5: image-5.jpg
-    image6: image-6.jpg
   callout:
     content: |-
       We believe God is working in our world to bring healing and new life to all people and places through Jesus Christ. God wants people to know  him, find their true selves in him, flourish in all of life with him.

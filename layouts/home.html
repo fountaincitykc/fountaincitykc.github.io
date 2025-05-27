@@ -17,48 +17,49 @@
     {{/* Hero */}}
     {{ with .Params.hero }}
       <div class="home-hero | animate">
-        <h1>
-          {{ .headline }}
-        </h1>
-        <img src="/images/fountain-city-church-logo.svg" alt="Fountain City Church" class="img img--center">
-        <h4>
-          {{ .subhead }}
-          {{ with .button }}
-            <span id="watch-live" class="watch-live hide">
-              — <a href="{{ .href }}">{{ .text }}</a>
-            </span>
-          {{ end }}
-        </h4>
+        {{ with $.Resources.Get (printf "home/%s" .video) }}
+          <div class="home-hero__background">
+            <video preload="auto" autoplay muted loop playsinline disablePictureInPicture>
+              <source src="{{ .RelPermalink }}" type="video/mp4">
+            </video>
+          </div>
+          <div class="home-hero__overlay"></div>
+        {{ end }}
+        <div class="home-hero__content">
+          <h1>
+            {{ .headline }}
+          </h1>
+          <img src="/images/fountain-city-church-logo.svg" alt="Fountain City Church" class="img img--center">
+          <h4>
+            {{ .subhead }}
+            {{ with .button }}
+              <span id="watch-live" class="watch-live hide">
+                — <a href="{{ .href }}">{{ .text }}</a>
+              </span>
+            {{ end }}
+          </h4>
+        </div>
       </div>
     {{ end }}
 
     {{/* Banner */}}
     {{ if .Params.banner.enabled }}
       {{ with .Params.banner }}
-        <div class="home-banner | animate">
-          <div class="home-banner__content">
-            {{ .content | $.Page.RenderString (dict "display" "block") }}
-          </div>
-          {{ with .button }}
-            {{ if and .href .text }}
-              <div class="home-banner__button">
-                {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
-              </div>
+        <div class="container">
+          <div class="home-banner | animate">
+            <div class="home-banner__content">
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+            </div>
+            {{ with .button }}
+              {{ if and .href .text }}
+                <div class="home-banner__button">
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                </div>
+              {{ end }}
             {{ end }}
-          {{ end }}
+          </div>
         </div>
       {{ end }}
-    {{ end }}
-
-    {{/* Images */}}
-    {{ with .Params.images }}
-      <div class="home-images | animate">
-        {{ range $k, $v := . }}
-          {{ with $.Resources.Get (printf "home/%s" $v) }}
-            <div class="home-images__{{ $k }}"><img src="{{ .RelPermalink }}" alt=""></div>
-          {{ end }}
-        {{ end }}
-      </div>
     {{ end }}
 
     {{/* Callout */}}
