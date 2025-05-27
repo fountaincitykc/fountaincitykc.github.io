@@ -11,6 +11,7 @@ params:
       href:
   hero:
     video: loop.mp4
+    poster: loop.jpg
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
     subhead: Join us Sundays at 10

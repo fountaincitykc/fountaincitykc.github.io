@@ -17,14 +17,12 @@
     {{/* Hero */}}
     {{ with .Params.hero }}
       <div class="home-hero | animate">
-        {{ with $.Resources.Get (printf "home/%s" .video) }}
-          <div class="home-hero__background">
-            <video preload="auto" autoplay muted loop playsinline disablePictureInPicture>
-              <source src="{{ .RelPermalink }}" type="video/mp4">
-            </video>
-          </div>
-          <div class="home-hero__overlay"></div>
-        {{ end }}
+        <div class="home-hero__background">
+          <video preload="auto" poster="/home/{{ .poster }}" autoplay muted loop playsinline disablePictureInPicture>
+            <source src="/home/{{ .video }}" type="video/mp4">
+          </video>
+        </div>
+        <div class="home-hero__overlay"></div>
         <div class="home-hero__content">
           <h1>
             {{ .headline }}
