@@ -90,14 +90,20 @@
       }
     }
   }
-
   @media (max-width: breakpoint-max-width("xs")) {
+    // xs width only
     .home-hero__content {
       padding: size(8) size(3);
 
       img {
         width: 140px;
       }
+    }
+  }
+  @media (min-width: breakpoint-min-width("xxl")) {
+    // xxl width and up
+    .home-hero__content {
+      padding: size(20) size(3);
     }
   }
 
