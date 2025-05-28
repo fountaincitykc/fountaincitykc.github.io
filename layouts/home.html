@@ -18,9 +18,13 @@
     {{ with .Params.hero }}
       <div class="home-hero | animate">
         <div class="home-hero__background">
-          <video preload="auto" poster="/home/{{ .poster }}" autoplay muted loop playsinline disablePictureInPicture>
-            <source src="/home/{{ .video }}" type="video/mp4">
-          </video>
+          {{ $video := $.Resources.Get (add "home/" .video) }}
+          {{ $poster := $.Resources.Get (add "home/" .poster) }}
+          {{ with $video }}
+            <video {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }} preload="auto" autoplay muted loop playsinline disablePictureInPicture>
+              <source src="{{ .RelPermalink }}" type="video/mp4">
+            </video>
+          {{ end }}
         </div>
         <div class="home-hero__overlay"></div>
         <div class="home-hero__content">
@@ -83,7 +87,7 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                {{ with $.Resources.Get (printf "home/%s" .image) }}
+                {{ with $.Resources.Get (add "home/" .image) }}
                   <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                 {{ end }}
               </div>
@@ -114,7 +118,7 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              {{ with $.Resources.Get (printf "home/%s" $.Params.sermon.image) }}
+              {{ with $.Resources.Get (add "home/" $.Params.sermon.image) }}
                 <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
               {{ end }}
             </a>
