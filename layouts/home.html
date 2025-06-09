@@ -36,7 +36,7 @@
             {{ .subhead }}
             {{ with .button }}
               <span id="watch-live" class="watch-live hide">
-                — <a href="{{ .href }}">{{ .text }}</a>
+                &mdash; <a href="{{ .href }}">{{ .text }}</a>
               </span>
             {{ end }}
           </h4>
@@ -129,7 +129,7 @@
                 {{ $.Params.sermon.headline }}
               </h2>
               <h3 class="subtitle">
-                {{ dateFormat "January 2, 2006" .Date }} — {{ .Title }}
+                {{ dateFormat "January 2, 2006" .Date }} &mdash; {{ .Title }}
               </h3>
             </div>
             <div class="content-section__content">

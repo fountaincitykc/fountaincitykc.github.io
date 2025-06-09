@@ -7,13 +7,13 @@
   <ul class="pager">
     {{- with .PrevInSection }}
       <li class="pager__prev">
-        {{- $text := printf "← <span>%s — %s</span>" (dateFormat "Jan 2" .Date) .Title }}
+        {{- $text := printf "← <span>%s &mdash; %s</span>" (dateFormat "Jan 2" .Date) .Title }}
         {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
       </li>
     {{- end }}
     {{- with .NextInSection }}
       <li class="pager__next">
-        {{- $text := printf "<span>%s — %s</span> →" (dateFormat "Jan 2" .Date) .Title }}
+        {{- $text := printf "<span>%s &mdash; %s</span> →" (dateFormat "Jan 2" .Date) .Title }}
         {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
       </li>
     {{- end }}
