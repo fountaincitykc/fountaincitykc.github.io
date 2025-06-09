@@ -11,7 +11,7 @@
         {{ time.Format ":date_full" . }}
       {{ end }}
       {{ with .Params.endDate }}
-        – {{ time.Format ":date_long" . }}
+        &mdash; {{ time.Format ":date_long" . }}
       {{ end }}
     </h4>
   {{ end }}
