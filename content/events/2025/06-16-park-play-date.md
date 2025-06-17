@@ -6,8 +6,6 @@ tags:
 params:
   time: 9:30am
   location: Black Hoof Park
-  featured: true
-  image: park-play-date.svg
 ---
 
 Please join other families for our bimonthly park play date. All are welcome and feel free to invite friends and neighbors.
