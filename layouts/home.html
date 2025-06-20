@@ -18,8 +18,8 @@
     {{ with .Params.hero }}
       <div class="home-hero | animate">
         <div class="home-hero__background">
-          {{ $video := $.Resources.Get (add "home/" .video) }}
-          {{ $poster := $.Resources.Get (add "home/" .poster) }}
+          {{ $video := $.Resources.Get .video }}
+          {{ $poster := $.Resources.Get .poster }}
           {{ with $video }}
             <video {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }} preload="auto" autoplay muted loop playsinline disablePictureInPicture>
               <source src="{{ .RelPermalink }}" type="video/mp4">
@@ -87,7 +87,7 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                {{ with $.Resources.Get (add "home/" .image) }}
+                {{ with $.Resources.Get .image }}
                   <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                 {{ end }}
               </div>
@@ -118,7 +118,7 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              {{ with $.Resources.Get (add "home/" $.Params.sermon.image) }}
+              {{ with $.Resources.Get $.Params.sermon.image }}
                 <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
               {{ end }}
             </a>
@@ -170,7 +170,7 @@
               <div class="content-section | animate">
                 <div class="content-section__media">
                   {{ $src := default site.Params.events.defaultImage .Params.image }}
-                  {{ with resources.Get (printf "events/%s" $src) }}
+                  {{ with resources.Get (add "events/" $src) }}
                     <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
@@ -204,7 +204,7 @@
                 <div class="card | animate">
                   <div class="card__media">
                     {{ $src := default site.Params.events.defaultImage .Params.image }}
-                    {{ with resources.Get (printf "events/%s" $src) }}
+                    {{ with resources.Get (add "events/" $src) }}
                       <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>
