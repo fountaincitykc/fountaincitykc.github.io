@@ -76,6 +76,9 @@
     li {
       margin-bottom: 0;
     }
+    a {
+      display: block;
+    }
   }
   @media (min-width: breakpoint-min-width("lg")) {
     .main-footer__bottom-container {
