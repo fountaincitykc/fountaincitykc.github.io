@@ -20,14 +20,16 @@ content:
           - name: main
             label: Fountain City Church Logo
             type: image
-            multiple: false
-            path: logos
+            options:
+              multiple: false
+              path: logos
             required: true
           - name: kids
             label: FCC Kids & Families Logo
             type: image
-            multiple: false
-            path: logos
+            options:
+              multiple: false
+              path: logos
             required: true
       - name: contact
         label: Contact
@@ -115,7 +117,8 @@ content:
             required: true
           - name: buttons
             label: App Buttons
-            type: list
+            type: object
+            list: true
             fields:
               - name: text
                 label: Button Text
@@ -128,12 +131,14 @@ content:
               - name: image
                 label: Button Image
                 type: image
-                multiple: false
-                path: apps
+                options:
+                  multiple: false
+                  path: apps
                 required: true
       - name: social
         label: Social Links
-        type: list
+        type: object
+        list: true
         fields:
           - name: text
             label: Social Platform
@@ -146,8 +151,9 @@ content:
           - name: image
             label: Social Icon
             type: image
-            multiple: false
-            path: social
+            options:
+              multiple: false
+              path: social
             required: true
       - name: events
         label: Events
@@ -156,8 +162,9 @@ content:
           - name: defaultImage
             label: Default Event Image
             type: image
-            multiple: false
-            path: events
+            options:
+              multiple: false
+              path: events
             required: true
 # Home Page
   - name: home
@@ -210,14 +217,16 @@ content:
               - name: poster
                 label: Poster Image
                 type: image
-                multiple: false
-                path: home
+                options:
+                  multiple: false
+                  path: home
                 required: true
               - name: logo
                 label: Logo
                 type: image
-                multiple: false
-                path: home
+                options:
+                  multiple: false
+                  path: home
                 required: true
               - name: headline
                 label: Headline
@@ -261,7 +270,8 @@ content:
                     required: true
           - name: cards
             label: Cards
-            type: list
+            type: object
+            list: true
             fields:
               - name: headline
                 label: Headline
@@ -270,8 +280,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: home
+                options:
+                  multiple: false
+                  path: home
                 required: true
               - name: content
                 label: Content
@@ -298,8 +309,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: home
+                options:
+                  multiple: false
+                  path: home
                 required: true
               - name: watch
                 label: Watch
@@ -384,7 +396,8 @@ content:
         fields:
           - name: sections
             label: Staff Members
-            type: list
+            type: object
+            list: true
             fields:
               - name: name
                 label: Name
@@ -403,8 +416,9 @@ content:
               - name: image
                 label: Photo
                 type: image
-                multiple: false
-                path: staff
+                options:
+                  multiple: false
+                  path: staff
                 required: true
   # What We Believe
   - name: what-we-believe
@@ -467,7 +481,8 @@ content:
         fields:
           - name: sections
             label: Sections
-            type: list
+            type: object
+            list: true
             fields:
               - name: headline
                 label: Headline
@@ -480,8 +495,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: sunday-morning
+                options:
+                  multiple: false
+                  path: sunday-morning
                 required: true
               - name: button
                 label: Button
@@ -502,8 +518,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: sunday-morning
+                options:
+                  multiple: false
+                  path: sunday-morning
                 required: true
               - name: headline
                 label: Headline
@@ -546,7 +563,8 @@ content:
         fields:
           - name: sections
             label: Sections
-            type: list
+            type: object
+            list: true
             fields:
               - name: headline
                 label: Headline
@@ -559,8 +577,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: kids-classes
+                options:
+                  multiple: false
+                  path: kids-classes
                 required: true
   # Connect
   - name: connect
@@ -582,7 +601,8 @@ content:
         fields:
           - name: sections
             label: Sections
-            type: list
+            type: object
+            list: true
             fields:
               - name: headline
                 label: Headline
@@ -595,8 +615,9 @@ content:
               - name: image
                 label: Image
                 type: image
-                multiple: false
-                path: connect
+                options:
+                  multiple: false
+                  path: connect
                 required: true
               - name: tag
                 label: Tag
@@ -621,4 +642,3 @@ content:
                     label: Button Text
                     type: string
                     required: true
-  
