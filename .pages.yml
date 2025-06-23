@@ -48,21 +48,21 @@ content:
                 label: Video
                 type: file
                 multiple: false
-                path: media/home
+                path: static/media/home
                 required: true
               - name: poster
                 label: Poster Image
                 type: image
                 options:
                   multiple: false
-                  path: media/home
+                  path: static/media/home
                 required: true
               - name: logo
                 label: Logo
                 type: image
                 options:
                   multiple: false
-                  path: media/home
+                  path: static/media/home
                 required: true
               - name: headline
                 label: Headline
@@ -118,7 +118,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/home
+                  path: static/media/home
                 required: true
               - name: content
                 label: Content
@@ -147,7 +147,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/home
+                  path: static/media/home
                 required: true
               - name: watch
                 label: Watch
@@ -254,7 +254,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/staff
+                  path: static/media/staff
                 required: true
   # What We Believe
   - name: what-we-believe
@@ -333,7 +333,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/sunday-morning
+                  path: static/media/sunday-morning
                 required: true
               - name: button
                 label: Button
@@ -354,7 +354,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/sunday-morning
+                  path: static/media/sunday-morning
                 required: true
               - name: headline
                 label: Headline
@@ -413,7 +413,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/kids-classes
+                  path: static/media/kids-classes
                 required: true
   # Connect
   - name: connect
@@ -451,7 +451,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/connect
+                  path: static/media/connect
                 required: true
               - name: tag
                 label: Tag
@@ -496,14 +496,14 @@ content:
             type: image
             options:
               multiple: false
-              path: media/logos
+              path: static/media/logos
             required: true
           - name: kids
             label: FCC Kids & Families Logo
             type: image
             options:
               multiple: false
-              path: media/logos
+              path: static/media/logos
             required: true
       - name: contact
         label: Contact
@@ -607,7 +607,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: media/apps
+                  path: static/media/apps
                 required: true
       - name: social
         label: Social Links
@@ -627,7 +627,7 @@ content:
             type: image
             options:
               multiple: false
-              path: media/social
+              path: static/media/social
             required: true
       - name: events
         label: Events
@@ -638,5 +638,5 @@ content:
             type: image
             options:
               multiple: false
-              path: media/events
+              path: static/media/events
             required: true
