@@ -565,10 +565,6 @@ content:
     type: collection
     path: content/series
     filename: '{fields.params.term}/_index.md'
-    view:
-      node:
-        filename: _index.md
-        hideDirs: nodes
     fields:
       - name: title
         label: Title
