@@ -564,15 +564,7 @@ content:
     label: Series
     type: collection
     path: content/series
-    exclude: 
-      - _index.md
     filename: '{fields.params.term}/_index.md'
-    view:
-      fields: [title]
-      primary: title
-      node:
-        filename: _index.md
-        hideDirs: others
     fields:
       - name: title
         label: Title
