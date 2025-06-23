@@ -483,13 +483,12 @@ content:
     path: content/events
     exclude: 
       - _index.md
-    filename: '{year}-{month}-{day}-{primary}.md'
+    filename: '{fields.date}-{primary}.md'
     view:
       fields: [title, date, draft]
       primary: title
       sort: [date, title]
       default:
-        search: ''
         sort: date
         order: desc
     subfolders: false
