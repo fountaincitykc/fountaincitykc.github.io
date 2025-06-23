@@ -10,9 +10,9 @@ params:
       text:
       href:
   hero:
-    video: /uploads/home/loop.mp4
-    poster: /uploads/home/loop.jpg
-    logo: /uploads/home/fountain-city-church-logo.svg
+    video: /media/home/loop.mp4
+    poster: /media/home/loop.jpg
+    logo: /media/home/fountain-city-church-logo.svg
     headline: |-
       A Christ-Centered church making and sending disciples in this generation and the next.
     subhead: Join us Sundays at 10
@@ -27,21 +27,21 @@ params:
       href: /what-we-believe/
   cards:
     - headline: Sundays
-      image: /uploads/home/sundays.jpg
+      image: /media/home/sundays.jpg
       content: |-
         Our Sunday service is a gathering of people wanting to know God. Together we worship God and learn from Him as we sing, pray, and hear from Scripture.
       button:
         text: Learn more
         href: /sunday-morning/
     - headline: Kids and Families
-      image: /uploads/home/families.jpg
+      image: /media/home/families.jpg
       content: |-
         Families are a significant part of our community. We aim to help kids of all ages grow as faithful followers of Jesus as we assist parents to raise them in the ways of God.
       button:
         text: Learn more
         href: /kids-classes/
     - headline: Home Groups
-      image: /uploads/home/home-groups.jpg
+      image: /media/home/home-groups.jpg
       content: |-
         Gathering in homes throughout the week allows us to grow in relationship with God and others. Our groups share meals, discuss life and God's Word, and pray for one another.
       button:
@@ -49,7 +49,7 @@ params:
         href: /connect/#home-groups
   sermon:
     headline: Latest Sermon
-    image: /uploads/home/latest-sermon.jpg
+    image: /media/home/latest-sermon.jpg
     watch:
       text: Watch
     listen:
