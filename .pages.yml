@@ -558,6 +558,33 @@ content:
               - name: href
                 label: Button Link
                 type: string
+  # Series
+  - name: series
+    label: Series
+    type: collection
+    path: content/series
+    exclude: 
+      - _index.md
+    filename: '{fields.params.term}/_index.md'
+    view:
+      fields: [title]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: body
+        label: Content
+        type: text
+      - name: params
+        label: Params
+        type: object
+        fields:
+          - name: term
+            label: Taxonomy Term
+            type: string
+            required: true
   # Site Settings
   - name: site-settings
     label: Site Settings

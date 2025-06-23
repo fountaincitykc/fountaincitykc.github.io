@@ -1,5 +1,7 @@
 ---
 title: Acts
+params:
+  term: acts
 ---
 
 As we study the book of Acts, we will pursue the answer to the question, **"now what?"**. What happens now that Jesus has brought salvation? What have the past 2,000 years been about? What is the church and what role does it have?
