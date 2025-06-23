@@ -14,6 +14,6 @@ Our vision is that God would make our church a community where we all are flouri
 
 We long to know God and bring him glory. We long to see all people find true and abundant life in Christ. We long to see our lives and communities renewed by Christ. So, we long to live as a church sent into this world as people who faithfully follow Jesus in every generation.
 
-### Get to know Fountain City Church.
+### Get to know Fountain City Church
 
 {{< youtube sWzRG_5IbcU >}}
