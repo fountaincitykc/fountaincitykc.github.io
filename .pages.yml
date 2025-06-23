@@ -565,6 +565,9 @@ content:
     type: collection
     path: content/series
     filename: '{fields.params.term}/_index.md'
+    view:
+      fields: [title]
+      primary: title
     fields:
       - name: title
         label: Title
