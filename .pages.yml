@@ -1,6 +1,6 @@
 media:
   input: static/media
-  output: media
+  output: /media
 content:
   # Site Settings
   - name: site-settings
