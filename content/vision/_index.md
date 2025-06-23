@@ -1,7 +1,7 @@
 ---
 title: Vision
-description: A Christ-Centered church making and sending disciples in this
-  generation and the next. x
+description: |-
+  A Christ-Centered church making and sending disciples in this generation and the next.
 ---
 A Christ-Centered church making and sending disciples in this generation and the next. {.lead, .lead--lg}
 
@@ -15,6 +15,4 @@ We long to know God and bring him glory. We long to see all people find true and
 
 ### Get to know Fountain City Church
 
-{{< youtube sWzRG\_5IbcU >}}
-
-x
+{{< youtube sWzRG_5IbcU >}}
