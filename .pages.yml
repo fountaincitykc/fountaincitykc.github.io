@@ -212,6 +212,7 @@ content:
         label: Content
         type: text
         required: true
+        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
   # Staff
   - name: staff
     label: Our Staff
@@ -274,6 +275,7 @@ content:
         label: Content
         type: text
         required: true
+        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
   # Children's and Family Ministry
   - name: childrens-and-family-ministry
     label: Children's and Family Ministry
@@ -297,6 +299,7 @@ content:
         label: Content
         type: text
         required: true
+        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
   # Sunday Morning
   - name: sunday-morning
     label: Sunday Morning
