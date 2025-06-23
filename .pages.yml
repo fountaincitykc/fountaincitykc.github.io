@@ -570,10 +570,9 @@ content:
     view:
       fields: [title]
       primary: title
-      layout: tree
       node:
         filename: _index.md
-        hideDirs: all
+        hideDirs: others
     fields:
       - name: title
         label: Title
