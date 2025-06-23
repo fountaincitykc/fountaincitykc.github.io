@@ -342,11 +342,9 @@ content:
                   - name: text
                     label: Button Text
                     type: string
-                    required: true
                   - name: href
                     label: Button Link
                     type: string
-                    required: true
           - name: location
             label: Location
             type: object

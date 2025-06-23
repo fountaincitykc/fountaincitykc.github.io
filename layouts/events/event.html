@@ -27,9 +27,11 @@
       </div>
     {{ end }}
     {{ with .Params.button }}
-      <div class="event__footer">
-        {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
-      </div>
+      {{ if and .href .text }}
+        <div class="event__footer">
+          {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 </div>

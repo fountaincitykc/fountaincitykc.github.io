@@ -10,7 +10,9 @@
         </address>
       {{ end }}
       {{ with site.Params.directions }}
-        {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+        {{ if and .href .text }}
+          {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+        {{ end }}
       {{ end }}
     </div>
 
@@ -193,9 +195,11 @@
                     {{ .Render "event-summary" }}
                   </div>
                   {{ with .Params.button }}
-                    <div class="content-section__footer">
-                      {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
-                    </div>
+                    {{ if and .href .text }}
+                      <div class="content-section__footer">
+                        {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                      </div>
+                    {{ end }}
                   {{ end }}
                 </div>
               </div>
@@ -224,9 +228,11 @@
                       {{ .Render "event-summary" }}
                     </div>
                     {{ with .Params.button }}
-                      <div class="card__footer">
-                        {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
-                      </div>
+                      {{ if and .href .text }}
+                        <div class="card__footer">
+                          {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
+                        </div>
+                      {{ end }}
                     {{ end }}
                   </div>
                 </div>

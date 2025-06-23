@@ -10,7 +10,9 @@
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           </div>
           {{ with .button }}
-            {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+            {{ if and .href .text }}
+              {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+            {{ end }}
           {{ end }}
         {{ end }}
       </div>
