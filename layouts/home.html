@@ -101,9 +101,11 @@
                   {{ .content | $.Page.RenderString (dict "display" "block") }}
                 </div>
                 {{ with .button }}
-                  <div class="card__footer">
-                    {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
-                  </div>
+                  {{ if and .href .text }}
+                    <div class="card__footer">
+                      {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
+                    </div>
+                  {{ end }}
                 {{ end }}
               </div>
             </div>
@@ -138,10 +140,14 @@
             <div class="content-section__footer">
               {{ $sermon := . }}
               {{ with $.Params.sermon.watch }}
-                {{ partial "components/button" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
+                {{ if .text }}
+                  {{ partial "components/button" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
+                {{ end }}
               {{ end }}
               {{ with $.Params.sermon.listen }}
-                {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ if and .href .text }}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ end }}
               {{ end }}
             </div>
           </div>

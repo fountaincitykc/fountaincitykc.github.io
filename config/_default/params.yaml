@@ -2,8 +2,8 @@ description: |-
   Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.
 
 logos:
-  main: /uploads/logos/fountain-city-church.svg
-  kids: /uploads/logos/fcc-kids-and-families.svg
+  main: /media/logos/fountain-city-church.svg
+  kids: /media/logos/fcc-kids-and-families.svg
 
 contact:
   email: james@fountaincitykc.org
@@ -36,24 +36,24 @@ apps:
   buttons:
     - text: App Store
       href: https://apps.apple.com/us/app/church-center-app/id1357742931
-      image: /uploads/apps/app-store.svg
+      image: /media/apps/app-store.svg
     - text: Google Play
       href: https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter
-      image: /uploads/apps/google-play.svg
+      image: /media/apps/google-play.svg
 
 social:
   - text: Instagram
     href: https://www.instagram.com/fountaincitychurch_kc/
-    image: /uploads/social/instagram.svg
+    image: /media/social/instagram.svg
   - text: Facebook
     href: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
-    image: /uploads/social/facebook.svg
+    image: /media/social/facebook.svg
   - text: Youtube
     href: https://www.youtube.com/@fountaincitychurchkc9519/
-    image: /uploads/social/youtube.svg
+    image: /media/social/youtube.svg
   - text: Podbean
     href: https://fcckc.podbean.com/
-    image: /uploads/social/podbean.svg
+    image: /media/social/podbean.svg
 
 events:
-  defaultImage: /uploads/events/default.svg
+  defaultImage: /media/events/default.svg
