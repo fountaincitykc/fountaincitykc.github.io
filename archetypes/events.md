@@ -9,7 +9,7 @@ params:
   time: String
   location: "Markdown"
   featured: Boolean
-  image: Filename # Image must be located in `/assets/events/`. Leave empty for default image.
+  image: Filename
   button:
     text: String
     href: URL

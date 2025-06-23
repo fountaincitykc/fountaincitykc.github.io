@@ -476,6 +476,86 @@ content:
                     label: Button Text
                     type: string
                     required: true
+  # Events
+  - name: events
+    label: Events
+    type: collection
+    path: content/events
+    exclude: 
+      - _index.md
+    filename: '{year}-{month}-{day}-{primary}.md'
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        search: ''
+        sort: date
+        order: desc
+    subfolders: false
+    fields:
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+        required: true
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Content
+        type: text
+        required: true
+      - name: params
+        label: Params
+        type: object
+        fields:
+          - name: dateText
+            label: Date Text
+            type: string
+            description: Overide default date format with custom text
+          - name: endDate
+            label: End Date
+            type: date
+            options:
+              format: yyyy-MM-dd
+            description: Only needed if event spans multiple days
+          - name: time
+            label: Time
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: featured
+            label: Feature on Home Page
+            type: boolean
+            default: false
+          - name: image
+            label: Feature Image
+            type: image
+            options:
+              multiple: false
+              path: static/media/events
+          - name: button
+            label: Button
+            type: object
+            fields:
+              - name: text
+                label: Button Text
+                type: string
+              - name: href
+                label: Button Link
+                type: string
   # Site Settings
   - name: site-settings
     label: Site Settings
