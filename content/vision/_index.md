@@ -1,8 +1,9 @@
 ---
 title: Vision
-description: A Christ-Centered church making and sending disciples in this
-  generation and the next.
+description: |-
+  A Christ-Centered church making and sending disciples in this generation and the next.
 ---
+
 A Christ-Centered church making and sending disciples in this generation and the next.
 {.lead, .lead--lg}
 
