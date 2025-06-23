@@ -48,21 +48,21 @@ content:
                 label: Video
                 type: file
                 multiple: false
-                path: home
+                path: media/home
                 required: true
               - name: poster
                 label: Poster Image
                 type: image
                 options:
                   multiple: false
-                  path: home
+                  path: media/home
                 required: true
               - name: logo
                 label: Logo
                 type: image
                 options:
                   multiple: false
-                  path: home
+                  path: media/home
                 required: true
               - name: headline
                 label: Headline
@@ -118,7 +118,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: home
+                  path: media/home
                 required: true
               - name: content
                 label: Content
@@ -147,7 +147,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: home
+                  path: media/home
                 required: true
               - name: watch
                 label: Watch
@@ -254,7 +254,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: staff
+                  path: media/staff
                 required: true
   # What We Believe
   - name: what-we-believe
@@ -333,7 +333,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: sunday-morning
+                  path: media/sunday-morning
                 required: true
               - name: button
                 label: Button
@@ -354,7 +354,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: sunday-morning
+                  path: media/sunday-morning
                 required: true
               - name: headline
                 label: Headline
@@ -413,7 +413,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: kids-classes
+                  path: media/kids-classes
                 required: true
   # Connect
   - name: connect
@@ -451,7 +451,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: connect
+                  path: media/connect
                 required: true
               - name: tag
                 label: Tag
@@ -496,14 +496,14 @@ content:
             type: image
             options:
               multiple: false
-              path: logos
+              path: media/logos
             required: true
           - name: kids
             label: FCC Kids & Families Logo
             type: image
             options:
               multiple: false
-              path: logos
+              path: media/logos
             required: true
       - name: contact
         label: Contact
@@ -607,7 +607,7 @@ content:
                 type: image
                 options:
                   multiple: false
-                  path: apps
+                  path: media/apps
                 required: true
       - name: social
         label: Social Links
@@ -627,7 +627,7 @@ content:
             type: image
             options:
               multiple: false
-              path: social
+              path: media/social
             required: true
       - name: events
         label: Events
@@ -638,5 +638,5 @@ content:
             type: image
             options:
               multiple: false
-              path: events
+              path: media/events
             required: true
