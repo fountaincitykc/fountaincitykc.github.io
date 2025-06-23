@@ -568,7 +568,7 @@ content:
     view:
       node:
         filename: _index.md
-        hideDirs: others
+        hideDirs: nodes
     fields:
       - name: title
         label: Title
