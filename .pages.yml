@@ -2,170 +2,6 @@ media:
   input: static/media
   output: /media
 content:
-  # Site Settings
-  - name: site-settings
-    label: Site Settings
-    type: file
-    format: yaml
-    path: config/_default/params.yaml
-    fields:
-      - name: description
-        label: Site Description
-        type: text
-        required: true
-      - name: logos
-        label: Logos
-        type: object
-        fields:
-          - name: main
-            label: Fountain City Church Logo
-            type: image
-            options:
-              multiple: false
-              path: logos
-            required: true
-          - name: kids
-            label: FCC Kids & Families Logo
-            type: image
-            options:
-              multiple: false
-              path: logos
-            required: true
-      - name: contact
-        label: Contact
-        type: object
-        fields:
-          - name: email
-            label: Email
-            type: string
-            required: true
-          - name: phone
-            label: Phone
-            type: string
-            required: true
-      - name: serviceAddress
-        label: Service Address
-        type: object
-        fields:
-          - name: text
-            label: Service Label
-            type: string
-            required: true
-          - name: address
-            label: Service Address
-            type: string
-            required: true
-      - name: mailingAddress
-        label: Mailing Address
-        type: object
-        fields:
-          - name: text
-            label: Mailing Label
-            type: string
-            required: true
-          - name: address
-            label: Mailing Address
-            type: string
-            required: true
-      - name: directions
-        label: Directions
-        type: object
-        fields:
-          - name: text
-            label: Directions Label
-            type: string
-            required: true
-          - name: href
-            label: Directions Link
-            type: string
-            required: true
-      - name: connect
-        label: Connect Section
-        type: object
-        fields:
-          - name: headline
-            label: Headline
-            type: string
-            required: true
-          - name: content
-            label: Content
-            type: rich-text
-            required: true
-          - name: button
-            label: Button
-            type: object
-            fields:
-              - name: text
-                label: Button Text
-                type: string
-                required: true
-              - name: href
-                label: Button Link
-                type: string
-                required: true
-      - name: apps
-        label: Apps Section
-        type: object
-        fields:
-          - name: headline
-            label: Headline
-            type: string
-            required: true
-          - name: content
-            label: Content
-            type: rich-text
-            required: true
-          - name: buttons
-            label: App Buttons
-            type: object
-            list: true
-            fields:
-              - name: text
-                label: Button Text
-                type: string
-                required: true
-              - name: href
-                label: Button Link
-                type: string
-                required: true
-              - name: image
-                label: Button Image
-                type: image
-                options:
-                  multiple: false
-                  path: apps
-                required: true
-      - name: social
-        label: Social Links
-        type: object
-        list: true
-        fields:
-          - name: text
-            label: Social Platform
-            type: string
-            required: true
-          - name: href
-            label: Social Link
-            type: string
-            required: true
-          - name: image
-            label: Social Icon
-            type: image
-            options:
-              multiple: false
-              path: social
-            required: true
-      - name: events
-        label: Events
-        type: object
-        fields:
-          - name: defaultImage
-            label: Default Event Image
-            type: image
-            options:
-              multiple: false
-              path: events
-            required: true
 # Home Page
   - name: home
     label: Home
@@ -642,3 +478,167 @@ content:
                     label: Button Text
                     type: string
                     required: true
+  # Site Settings
+  - name: site-settings
+    label: Site Settings
+    type: file
+    format: yaml
+    path: config/_default/params.yaml
+    fields:
+      - name: description
+        label: Site Description
+        type: text
+        required: true
+      - name: logos
+        label: Logos
+        type: object
+        fields:
+          - name: main
+            label: Fountain City Church Logo
+            type: image
+            options:
+              multiple: false
+              path: logos
+            required: true
+          - name: kids
+            label: FCC Kids & Families Logo
+            type: image
+            options:
+              multiple: false
+              path: logos
+            required: true
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - name: email
+            label: Email
+            type: string
+            required: true
+          - name: phone
+            label: Phone
+            type: string
+            required: true
+      - name: serviceAddress
+        label: Service Address
+        type: object
+        fields:
+          - name: text
+            label: Service Label
+            type: string
+            required: true
+          - name: address
+            label: Service Address
+            type: string
+            required: true
+      - name: mailingAddress
+        label: Mailing Address
+        type: object
+        fields:
+          - name: text
+            label: Mailing Label
+            type: string
+            required: true
+          - name: address
+            label: Mailing Address
+            type: string
+            required: true
+      - name: directions
+        label: Directions
+        type: object
+        fields:
+          - name: text
+            label: Directions Label
+            type: string
+            required: true
+          - name: href
+            label: Directions Link
+            type: string
+            required: true
+      - name: connect
+        label: Connect Section
+        type: object
+        fields:
+          - name: headline
+            label: Headline
+            type: string
+            required: true
+          - name: content
+            label: Content
+            type: rich-text
+            required: true
+          - name: button
+            label: Button
+            type: object
+            fields:
+              - name: text
+                label: Button Text
+                type: string
+                required: true
+              - name: href
+                label: Button Link
+                type: string
+                required: true
+      - name: apps
+        label: Apps Section
+        type: object
+        fields:
+          - name: headline
+            label: Headline
+            type: string
+            required: true
+          - name: content
+            label: Content
+            type: rich-text
+            required: true
+          - name: buttons
+            label: App Buttons
+            type: object
+            list: true
+            fields:
+              - name: text
+                label: Button Text
+                type: string
+                required: true
+              - name: href
+                label: Button Link
+                type: string
+                required: true
+              - name: image
+                label: Button Image
+                type: image
+                options:
+                  multiple: false
+                  path: apps
+                required: true
+      - name: social
+        label: Social Links
+        type: object
+        list: true
+        fields:
+          - name: text
+            label: Social Platform
+            type: string
+            required: true
+          - name: href
+            label: Social Link
+            type: string
+            required: true
+          - name: image
+            label: Social Icon
+            type: image
+            options:
+              multiple: false
+              path: social
+            required: true
+      - name: events
+        label: Events
+        type: object
+        fields:
+          - name: defaultImage
+            label: Default Event Image
+            type: image
+            options:
+              multiple: false
+              path: events
+            required: true
