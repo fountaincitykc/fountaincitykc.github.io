@@ -32,9 +32,9 @@ To create a new sermon series, add a new term page to the `/content/series/` tax
 
 ```text
 content/
-├── series/
-└── new-series/
-    └── _index.md
+└── series/
+    └── new-series/
+        └── _index.md
 ```
 
 To associate a sermon to a sermon series, set the term of the sermon series in the frontmatter of the sermon. For example:
