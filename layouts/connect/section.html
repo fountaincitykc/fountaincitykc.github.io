@@ -3,10 +3,14 @@
     <div class="container">
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .headline | urlize }}">
-          {{ $alt := .headline }}
-          {{ with resources.Get .image }}
+          {{ with partial "utils/process-image.html" (dict
+            "res" (resources.Get .image)
+            "width" 800
+            "height" 533
+            "process" "fit jpg q80 lanczos"
+          )}}
             <div class="content-section__media">
-              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+              <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}" class="img img--fill img--rounded">
             </div>
           {{ end }}
           <div class="content-section__body">

@@ -90,8 +90,13 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                {{ with resources.Get .image }}
-                  <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
+                {{ with partial "utils/process-image.html" (dict
+                  "res" (resources.Get .image)
+                  "width" 800
+                  "height" 533
+                  "process" "fit jpg q80 lanczos"
+                )}}
+                  <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}" class="img img--fill img--h256 img--cover">
                 {{ end }}
               </div>
               <div class="card__body">
@@ -123,7 +128,12 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              {{ with resources.Get $.Params.sermon.image }}
+              {{ with partial "utils/process-image.html" (dict
+                "res" (resources.Get $.Params.sermon.image)
+                "width" 800
+                "height" 600
+                "process" "fit jpg q80 lanczos"
+              )}}
                 <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
               {{ end }}
             </a>
@@ -179,7 +189,12 @@
               <div class="content-section | animate">
                 <div class="content-section__media">
                   {{ $src := default site.Params.events.defaultImage .Params.image }}
-                  {{ with resources.Get $src }}
+                  {{ with partial "utils/process-image.html" (dict
+                    "res" (resources.Get $src)
+                    "width" 800
+                    "height" 533
+                    "process" "fit jpg q80 lanczos"
+                  )}}
                     <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
@@ -215,7 +230,12 @@
                 <div class="card | animate">
                   <div class="card__media">
                     {{ $src := default site.Params.events.defaultImage .Params.image }}
-                    {{ with resources.Get $src }}
+                    {{ with partial "utils/process-image.html" (dict
+                      "res" (resources.Get $src)
+                      "width" 800
+                      "height" 533
+                      "process" "fit jpg q80 lanczos"
+                    )}}
                       <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>
