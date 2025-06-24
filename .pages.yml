@@ -608,12 +608,7 @@ content:
         fields:
           - name: series
             label: Series
-            type: reference
-            options:
-              collection: series
-              search: title
-              label: "{title}"
-              value: "{params.term}"
+            type: string
           - name: youtubeId
             label: Youtube Id
             type: string
