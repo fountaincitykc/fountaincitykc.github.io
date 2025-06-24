@@ -20,9 +20,10 @@
     {{ with .Params.hero }}
       <div class="home-hero | animate">
         <div class="home-hero__background">
-          {{ if .video }}
-            <video {{ with .poster }}poster="{{ . }}"{{ end }} preload="auto" autoplay muted loop playsinline disablePictureInPicture>
-              <source src="{{ .video  }}" type="video/mp4">
+          {{ $poster := resources.Get .poster }}
+          {{ with resources.Get .video }}
+            <video {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }} preload="auto" autoplay muted loop playsinline disablePictureInPicture>
+              <source src="{{ .RelPermalink  }}" type="video/mp4">
             </video>
           {{ end }}
         </div>
@@ -31,8 +32,8 @@
           <h1>
             {{ .headline }}
           </h1>
-          {{ with .logo }}
-            <img src="{{ . }}" alt="Fountain City Church" class="img img--center">
+          {{ with resources.Get .logo }}
+            <img src="{{ .RelPermalink }}" alt="Fountain City Church" class="img img--center">
           {{ end }}
           <h4>
             {{ .subhead }}
@@ -89,8 +90,8 @@
           {{ range . }}
             <div class="card | animate">
               <div class="card__media">
-                {{ with .image }}
-                  <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--fill img--h256 img--cover">
+                {{ with resources.Get .image }}
+                  <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                 {{ end }}
               </div>
               <div class="card__body">
@@ -122,8 +123,8 @@
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
-              {{ with $.Params.sermon.image }}
-                <img src="{{ . }}" alt="Latest sermon" class="img img--fill img--rounded">
+              {{ with resources.Get $.Params.sermon.image }}
+                <img src="{{ .RelPermalink }}" alt="Latest sermon" class="img img--fill img--rounded">
               {{ end }}
             </a>
           </div>
@@ -178,8 +179,8 @@
               <div class="content-section | animate">
                 <div class="content-section__media">
                   {{ $src := default site.Params.events.defaultImage .Params.image }}
-                  {{ with $src }}
-                    <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--fill img--rounded">
+                  {{ with resources.Get $src }}
+                    <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--rounded">
                   {{ end }}
                 </div>
                 <div class="content-section__body">
@@ -214,8 +215,8 @@
                 <div class="card | animate">
                   <div class="card__media">
                     {{ $src := default site.Params.events.defaultImage .Params.image }}
-                    {{ with $src }}
-                      <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--fill img--h256 img--cover">
+                    {{ with resources.Get $src }}
+                      <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--fill img--h256 img--cover">
                     {{ end }}
                   </div>
                   <div class="card__body">

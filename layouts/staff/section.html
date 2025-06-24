@@ -4,9 +4,9 @@
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .name | urlize }}">
           {{ $alt := .name }}
-          {{ with .image }}
+          {{ with resources.Get .image }}
             <div class="content-section__media">
-              <img src="{{ . }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
             </div>
           {{ end }}
           <div class="content-section__body">

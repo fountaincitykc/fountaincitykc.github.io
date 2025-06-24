@@ -27,8 +27,8 @@
           <div class="main-footer__app-buttons">
             {{ range .buttons }}
               {{ $text := .text }}
-              {{ if .image }}
-                {{ $text = printf `<img src=%q alt=%q>` .image .text }}
+              {{ with resources.Get .image }}
+                {{ $text = printf `<img src=%q alt=%q>` .RelPermalink $text }}
               {{ end }}
               {{ partial "components/button" (dict "href" .href "text" $text "variant" "dark")}}
             {{ end }}
@@ -64,8 +64,8 @@
           {{ range site.Params.social }}
             <li>
               <a href="{{ .href }}" target="_blank">
-                {{ with .image }}
-                  <img src="{{ . }}" alt="{{ path.BaseName . | humanize }}" class="img img--w32 img--h32">
+                {{ with resources.Get .image }}
+                  <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Title | humanize }}" class="img img--w32 img--h32">
                 {{ end }}
               </a>
             </li>

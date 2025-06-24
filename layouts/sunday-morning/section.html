@@ -4,9 +4,9 @@
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .headline | urlize }}">
           {{ $alt := .headline }}
-          {{ with .image }}
+          {{ with resources.Get .image }}
             <div class="content-section__media">
-              <img src="{{ . }}" alt="{{ $alt }}" class="img img--fill img--rounded">
+              <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="img img--fill img--rounded">
             </div>
           {{ end }}
           <div class="content-section__body">
@@ -30,9 +30,9 @@
       {{ end }}
     </div>
     {{ with .Params.location }}
-      {{ with .image }}
+      {{ with resources.Get .image }}
         <div class="sunday-morning__image | animate">
-          <img src="{{ . }}" alt="Location Photo">
+          <img src="{{ .RelPermalink }}" alt="Location Photo">
         </div>
       {{ end }}
     {{ end }}

@@ -2,7 +2,9 @@
   <div class="main-header__container">
     <div class="main-header__logo">
       <a href="/">
-        <img src="{{ site.Params.logos.main }}" alt="Fountain City Church">
+        {{ with resources.Get site.Params.logos.main }}
+          <img src="{{ .RelPermalink }}" alt="Fountain City Church">
+        {{ end }}
       </a>
     </div>
     <input class="main-header__toggle-checkbox" type="checkbox" id="main-header-toggle">

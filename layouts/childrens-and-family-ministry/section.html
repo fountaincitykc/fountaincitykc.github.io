@@ -1,7 +1,9 @@
 {{ define "header" }}
-  <div class="page-header page-header__fcc-kids-and-families animate">
-    <img src="{{ site.Params.logos.kids }}" alt="FCC Kids and Families">
-  </div>
+  {{ with resources.Get site.Params.logos.kids }}
+    <div class="page-header page-header__fcc-kids-and-families animate">
+      <img src="{{ .RelPermalink }}" alt="FCC Kids and Families">
+    </div>
+  {{ end }}
 {{ end }}
 {{ define "main" }}
   <main class="main-content | basic-page">
