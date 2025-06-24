@@ -1,5 +1,7 @@
 settings:
-  hide: true
+  hide: true # Hide the settings editor in Pages CMS UI
+  content:
+    merge: true # Fields present only in the file will be preserved
 media:
   input: assets/media
   output: /media
@@ -293,11 +295,6 @@ content:
       - name: description
         label: Description
         type: text
-      - name: keywords
-        label: Keywords
-        type: string
-        list: true
-        hidden: true
       - name: body
         label: Content
         type: text
@@ -392,11 +389,6 @@ content:
       - name: description
         label: Description
         type: text
-      - name: keywords
-        label: Keywords
-        type: string
-        list: true
-        hidden: true
       - name: params
         label: Params
         type: object
