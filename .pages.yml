@@ -399,6 +399,16 @@ content:
         label: Params
         type: object
         fields:
+          - name: banner
+            label: Banner
+            type: object
+            fields:
+              - name: enabled
+                label: Enabled
+                type: boolean
+              - name: content
+                label: Content
+                type: text
           - name: sections
             label: Sections
             type: object

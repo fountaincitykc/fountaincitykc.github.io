@@ -1,6 +1,20 @@
 {{ define "main" }}
   <main class="main-content | kids-classes">
     <div class="container">
+      {{/* Banner */}}
+      {{ if .Params.banner.enabled }}
+        {{ with .Params.banner }}
+          <div class="banner">
+            <div class="banner__icon">
+              {{ partial "components/icon" (dict "name" "information" "variant" "current" "size" "xl") }}
+            </div>
+            <div class="banner__content">
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+      {{/* Sections */}}
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .headline | urlize }}">
           {{ $alt := .headline }}
