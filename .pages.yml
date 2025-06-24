@@ -618,6 +618,8 @@ content:
     label: Series
     type: collection
     path: content/series
+    exclude: 
+      - _index.html # Note that .html is excluded, not .md
     filename: '{fields.params.term}/_index.md'
     view:
       fields: [title]
