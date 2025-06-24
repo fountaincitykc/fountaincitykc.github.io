@@ -505,7 +505,6 @@ content:
       default:
         sort: date
         order: desc
-    subfolders: false
     fields:
       - name: draft
         label: Draft
@@ -569,6 +568,56 @@ content:
               - name: href
                 label: Button Link
                 type: string
+  # Sermons
+  - name: sermons
+    label: Sermons
+    type: collection
+    path: content/sermons
+    exclude: 
+      - _index.md
+    filename: '{fields.date}.md'
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+        required: true
+      - name: body
+        label: Content
+        type: text
+        required: true
+      - name: params
+        label: Params
+        type: object
+        fields:
+          - name: series
+            label: Series
+            type: reference
+            options:
+              collection: series
+              search: title
+              label: "{title}"
+              value: "{term}"
+          - name: youtubeId
+            label: Youtube Id
+            type: string
+            required: true
   # Series
   - name: series
     label: Series
