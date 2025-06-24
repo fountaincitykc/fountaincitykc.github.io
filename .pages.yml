@@ -613,9 +613,9 @@ content:
             label: Youtube Id
             type: string
             required: true
-  # Series
+  # Sermon Series
   - name: series
-    label: Series
+    label: Sermon Series
     type: collection
     path: content/series
     exclude: 
