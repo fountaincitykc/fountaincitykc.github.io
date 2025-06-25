@@ -1,5 +1,5 @@
 settings:
-  hide: true # Hide the settings editor in Pages CMS UI
+  hide: false # Show the settings editor in Pages CMS UI
   content:
     merge: true # Fields present only in the file will be preserved
 media:
@@ -644,6 +644,7 @@ content:
       - name: main
         label: Main Menu
         type: object
+        list: true
         fields:
           - name: name
             label: Name
@@ -675,6 +676,7 @@ content:
               - name: enabled
                 label: Enabled
                 type: boolean
+                default: true
   # Site Settings
   - name: site-settings
     label: Site Settings
