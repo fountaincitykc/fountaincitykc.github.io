@@ -1,81 +1,80 @@
 main:
-  - name: About Us
+  - type: internal
+    name: About Us
     pageRef: /vision/
     weight: 1
     params:
       enabled: true
-    type: internal
-  - name: Vision
+  - type: internal
+    name: Vision
     parent: About Us
     pageRef: /vision/
     weight: 2
     params:
       enabled: true
-    type: internal
-  - name: Our Staff
+  - type: internal
+    name: Our Staff
     parent: About Us
     pageRef: /staff/
     weight: 3
     params:
       enabled: true
-    type: internal
-  - name: What We Believe
+  - type: internal
+    name: What We Believe
     parent: About Us
     pageRef: /what-we-believe/
     weight: 4
     params:
       enabled: true
-    type: internal
-  - name: Children's and Family Ministry
+  - type: internal
+    name: Children's and Family Ministry
     parent: About Us
     pageRef: /childrens-and-family-ministry/
     weight: 5
     params:
       enabled: true
-    type: internal
-  - name: Visit
+  - type: internal
+    name: Visit
     pageRef: /sunday-morning/
     weight: 6
     params:
       enabled: true
-    type: internal
-  - name: Sunday Morning
+  - type: internal
+    name: Sunday Morning
     parent: Visit
     pageRef: /sunday-morning/
     weight: 7
     params:
       enabled: true
-    type: internal
-  - name: Kids' Classes
+  - type: internal
+    name: Kids' Classes
     parent: Visit
     pageRef: /kids-classes/
     weight: 8
     params:
       enabled: true
-    type: internal
-  - name: Events
+  - type: internal
+    name: Events
     pageRef: /events/
     weight: 9
     params:
       enabled: true
-    type: internal
-  - name: Connect
+  - type: internal
+    name: Connect
     pageRef: /connect/
     weight: 10
     params:
       enabled: true
-    type: internal
-  - name: Give
+  - type: external
+    name: Give
     url: https://fountaincitykc.churchcenter.com/giving
     weight: 11
     params:
       rel: external
       enabled: true
-    type: external
-  - name: Search
+  - type: internal
+    name: Search
     pageRef: /search/
     weight: 12
     params:
-      icon: search
       enabled: true
-    type: internal
