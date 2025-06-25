@@ -1,7 +1,7 @@
 settings:
   hide: false # Show the settings editor in Pages CMS UI
   content:
-    merge: true # Fields present only in the file will be preserved
+    merge: true # Preserve fields that are only present in the file
 media:
   input: assets/media
   output: /media
