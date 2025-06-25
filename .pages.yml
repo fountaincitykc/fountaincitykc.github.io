@@ -641,7 +641,7 @@ content:
     format: yaml
     path: config/_default/menu.yaml
     fields:
-      - name: menu
+      - name: main
         label: Main Menu
         type: block
         list: true
