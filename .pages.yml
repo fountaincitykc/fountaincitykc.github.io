@@ -669,7 +669,7 @@ content:
                 label: Relationship
                 type: select
                 options:
-                  values: ['', external]
+                  values: [external]
               - name: icon
                 label: Icon
                 type: string
