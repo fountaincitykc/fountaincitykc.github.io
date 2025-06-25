@@ -7,7 +7,7 @@
 @example {{ partial "components/icon" (dict "name" "file" "variant" "primary" "size" "lg") }}
 */}}
 {{ $svg := "" }}
-{{ with resources.Get (printf "icons/%s.svg" .name) }}
+{{ with resources.Get (printf "media/icons/%s.svg" .name) }}
   {{ $svg = .Content }}
 {{ end }}
 {{ if $svg }}
