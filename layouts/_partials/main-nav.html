@@ -2,18 +2,20 @@
   <ul>
     {{ $page := . }}
     {{ range site.Menus.main }}
-      <li{{ if or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} class="main-nav--selected"{{ end }}>
-        {{ template "main-nav-menu-item" . }}
-        {{ if .HasChildren }}
-          <ul>
-            {{ range .Children }}
-              <li{{ if $page.IsMenuCurrent "main" . }} class="main-nav--selected"{{ end }}>
-                {{ template "main-nav-menu-item" . }}
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      </li>
+      {{ if eq .Params.enabled true }}
+        <li{{ if or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }} class="main-nav--selected"{{ end }}>
+          {{ template "main-nav-menu-item" . }}
+          {{ if .HasChildren }}
+            <ul>
+              {{ range .Children }}
+                <li{{ if $page.IsMenuCurrent "main" . }} class="main-nav--selected"{{ end }}>
+                  {{ template "main-nav-menu-item" . }}
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 </nav>

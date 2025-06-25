@@ -634,6 +634,47 @@ content:
             label: Taxonomy Term
             type: string
             required: true
+  # Navigation
+  - name: navigation
+    label: Navigation
+    type: file
+    format: yaml
+    path: config/_default/menu.yaml
+    fields:
+      - name: main
+        label: Main Menu
+        type: object
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: parent
+            label: Parent
+            type: string
+          - name: pageRef
+            label: Page Reference
+            type: string
+          - name: url
+            label: External URL
+            type: string
+          - name: weight
+            label: Weight
+            type: number
+          - name: params
+            label: Params
+            type: object
+            fields:
+              - name: rel
+                label: Relationship
+                type: select
+                options:
+                  values: ['', external]
+              - name: icon
+                label: Icon
+                type: string
+              - name: enabled
+                label: Enabled
+                type: boolean
   # Site Settings
   - name: site-settings
     label: Site Settings

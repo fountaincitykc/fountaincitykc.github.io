@@ -2,46 +2,68 @@ main:
   - name: About Us
     pageRef: /vision/
     weight: 1
+    params:
+      enabled: true
   - name: Vision
+    parent: About Us
     pageRef: /vision/
-    parent: About Us
     weight: 2
+    params:
+      enabled: true
   - name: Our Staff
+    parent: About Us
     pageRef: /staff/
-    parent: About Us
     weight: 3
+    params:
+      enabled: true
   - name: What We Believe
+    parent: About Us
     pageRef: /what-we-believe/
-    parent: About Us
     weight: 4
+    params:
+      enabled: true
   - name: Children's and Family Ministry
-    pageRef: /childrens-and-family-ministry/
     parent: About Us
+    pageRef: /childrens-and-family-ministry/
     weight: 5
+    params:
+      enabled: true
   - name: Visit
     pageRef: /sunday-morning/
     weight: 6
+    params:
+      enabled: true
   - name: Sunday Morning
+    parent: Visit
     pageRef: /sunday-morning/
-    parent: Visit
     weight: 7
+    params:
+      enabled: true
   - name: Kids' Classes
-    pageRef: /kids-classes/
     parent: Visit
+    pageRef: /kids-classes/
     weight: 8
+    params:
+      enabled: true
   - name: Events
     pageRef: /events/
     weight: 9
+    params:
+      enabled: true
   - name: Connect
     pageRef: /connect/
     weight: 10
-  - name: Give
     params:
-      rel: external
+      enabled: true
+  - name: Give
     url: https://fountaincitykc.churchcenter.com/giving
     weight: 11
+    params:
+      rel: external
+      enabled: true
   - name: Search
     pageRef: /search/
+    weight: 12
     params:
       icon: search
-    weight: 12
+      enabled: true
