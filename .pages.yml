@@ -641,43 +641,71 @@ content:
     format: yaml
     path: config/_default/menu.yaml
     fields:
-      - name: main
+      - name: menu
         label: Main Menu
-        type: object
+        type: block
         list: true
-        fields:
-          - name: name
-            label: Name
-            type: string
-            required: true
-          - name: parent
-            label: Parent
-            type: string
-          - name: pageRef
-            label: Page Reference
-            type: string
-          - name: url
-            label: External URL
-            type: string
-          - name: weight
-            label: Weight
-            type: number
-          - name: params
-            label: Params
-            type: object
+        blockKey: type
+        blocks:
+          - name: internal
+            label: Add Page Link
             fields:
-              - name: rel
-                label: Relationship
-                type: select
-                options:
-                  values: [external]
-              - name: icon
-                label: Icon
+              - name: name
+                label: Name
                 type: string
-              - name: enabled
-                label: Enabled
-                type: boolean
-                default: true
+                required: true
+              - name: parent
+                label: Parent
+                type: string
+              - name: pageRef
+                label: Page Reference
+                type: string
+              - name: weight
+                label: Weight
+                type: number
+              - name: params
+                label: Params
+                type: object
+                fields:
+                  - name: icon
+                    label: Use Icon
+                    type: string
+                  - name: enabled
+                    label: Enabled
+                    type: boolean
+                    default: true
+          - name: external
+            label: Add External Link
+            fields:
+              - name: name
+                label: Name
+                type: string
+                required: true
+              - name: parent
+                label: Parent
+                type: string
+              - name: url
+                label: External URL
+                type: string
+              - name: weight
+                label: Weight
+                type: number
+              - name: params
+                label: Params
+                type: object
+                fields:
+                  - name: rel
+                    label: rel
+                    type: string
+                    default: external
+                    hidden: true
+                  - name: icon
+                    label: Use Icon
+                    type: string
+                  - name: enabled
+                    label: Enabled
+                    type: boolean
+                    default: true
   # Site Settings
   - name: site-settings
     label: Site Settings
