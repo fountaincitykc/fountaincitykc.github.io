@@ -67,8 +67,3 @@ main:
     params:
       icon: search
       enabled: true
-  - name: Test
-    parent: Visit
-    pageRef: /
-    params:
-      enabled: true
