@@ -649,6 +649,7 @@ content:
           - name: name
             label: Name
             type: string
+            required: true
           - name: parent
             label: Parent
             type: string
