@@ -2,7 +2,7 @@
 
 ## Development
 
-This site is built with [Hugo](https://gohugo.io/), and contains a [Pages CMS](https://pagescms.org/) admin config, along with a GitHub action that automattically deploys the site to GitHub Pages when any change is pushed to `master`.
+This site is built with [Hugo](https://gohugo.io/).
 
 ### Install Hugo
 
@@ -19,6 +19,16 @@ hugo server --cleanDestinationDir --buildFuture
 ```
 
 You should see the site on localhost:1313.
+
+## Hosting
+
+The site is hosted on GitHub Pages.
+
+There is a GitHub action that automatically deploys the site when any change is pushed to `master`. The site is also deployed every day at 6am CDT, so old events will be removed from the calendar.
+
+## Content Management
+
+This site has a CMS located at [Pages CMS](https://app.pagescms.org/).
 
 ## Archetypes
 
