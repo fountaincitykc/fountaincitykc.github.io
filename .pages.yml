@@ -464,6 +464,7 @@ content:
               - name: tag
                 label: Tag
                 type: string
+                description: If there are any events matching this tag, a button will be displayed linking to them
           - name: callout
             label: Callout
             type: object
