@@ -516,8 +516,11 @@ content:
         required: true
       - name: tags
         label: Tags
-        type: string
-        list: true
+        type: select
+        options:
+          creatable: true
+          multiple: true
+          values: [home-groups, park-play-dates]
       - name: body
         label: Content
         type: text
