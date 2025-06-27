@@ -607,7 +607,12 @@ content:
         fields:
           - name: series
             label: Series
-            type: string
+            type: select
+            options:
+              creatable: true
+              multiple: true
+              fetch:
+                url: https://fountaincitykc.org/series.json
           - name: youtubeId
             label: Youtube Id
             type: string
