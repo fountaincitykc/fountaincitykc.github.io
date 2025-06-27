@@ -1,6 +1,7 @@
+{{- /* Generate data used to populate a select in Pages CMS */}}
 {{- $s := newScratch }}
 {{- $s.Add "tags" slice }}
 {{- range $tag, $pages := site.Taxonomies.tags }}
-  {{- $s.Add "tags" $tag }}
+  {{- $s.Add "tags" (dict "id" $tag "name" $tag) }}
 {{- end }}
 {{- $s.Get "tags" | jsonify }}
