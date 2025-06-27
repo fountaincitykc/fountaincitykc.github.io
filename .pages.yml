@@ -610,7 +610,6 @@ content:
             type: select
             options:
               creatable: true
-              multiple: true
               fetch:
                 url: https://fountaincitykc.org/series.json
           - name: youtubeId
