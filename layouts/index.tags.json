@@ -1,0 +1,6 @@
+{{- $s := newScratch }}
+{{- $s.Add "tags" slice }}
+{{- range $tag, $pages := site.Taxonomies.tags }}
+  {{- $s.Add "tags" $tag }}
+{{- end }}
+{{- $s.Get "tags" | jsonify }}

@@ -1,3 +1,11 @@
-SearchIndex:
+Search:
   baseName: search
+  mediaType: application/json
+
+Tags:
+  baseName: tags
+  mediaType: application/json
+
+Series:
+  baseName: series
   mediaType: application/json

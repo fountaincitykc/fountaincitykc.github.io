@@ -1,0 +1,6 @@
+{{- $s := newScratch }}
+{{- $s.Add "series" slice }}
+{{- range $series, $pages := site.Taxonomies.series }}
+  {{- $s.Add "series" $series }}
+{{- end }}
+{{- $s.Get "series" | jsonify }}

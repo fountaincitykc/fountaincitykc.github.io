@@ -6,7 +6,7 @@
 {{- /* Remove the home page */}}
 {{ $pages := where $pages "IsHome" "ne" true }}
 {{- $s := newScratch }}
-{{- $s.Add "search-index" slice }}
+{{- $s.Add "search" slice }}
 {{- range $index, $page := $pages }}
   {{- /* If the current page is not a top-level section, get top-level section title */}}
   {{- $section := "" }}
@@ -30,7 +30,7 @@
   {{- end }}
   {{- /* Add page to search index */}}
   {{- $s.Add
-    "search-index"
+    "search"
     (dict
       "uri"         $page.Permalink
       "title"       $page.Title
@@ -42,4 +42,4 @@
   }}
 {{- end }}
 {{- /* Output */}}
-{{- $s.Get "search-index" | jsonify }}
+{{- $s.Get "search" | jsonify }}
