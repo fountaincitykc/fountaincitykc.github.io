@@ -225,7 +225,7 @@ content:
         label: Content
         type: text
         required: true
-        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
+        description: 'Format with Markdown. To learn how, see: https://fountaincitykc.org/markdown.html'
   # Staff
   - name: staff
     label: Our Staff
@@ -292,7 +292,7 @@ content:
         label: Content
         type: text
         required: true
-        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
+        description: 'Format with Markdown. To learn how, see: https://fountaincitykc.org/markdown.html'
   # Children's and Family Ministry
   - name: childrens-and-family-ministry
     label: Children's and Family Ministry
@@ -313,7 +313,7 @@ content:
         label: Content
         type: text
         required: true
-        description: 'Format with Markdown. To learn how, see: https://www.markdownguide.org/cheat-sheet/'
+        description: 'Format with Markdown. To learn how, see: https://fountaincitykc.org/markdown.html'
   # Sunday Morning
   - name: sunday-morning
     label: Sunday Morning
