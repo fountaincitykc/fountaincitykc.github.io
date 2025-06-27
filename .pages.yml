@@ -523,6 +523,8 @@ content:
           multiple: true
           fetch:
             url: https://fountaincitykc.org/tags.json
+            value: ''
+            label: ''
       - name: body
         label: Content
         type: text
