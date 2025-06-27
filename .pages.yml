@@ -522,7 +522,7 @@ content:
           creatable: true
           multiple: true
           fetch:
-            url: https://fountaincitykc.github.io/tags.json
+            url: https://fountaincitykc.org/tags.json
       - name: body
         label: Content
         type: text
