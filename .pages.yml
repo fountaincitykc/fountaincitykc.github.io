@@ -21,7 +21,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: params
         label: Params
         type: object
@@ -73,7 +73,7 @@ content:
                 required: true
               - name: headline
                 label: Headline
-                type: text
+                type: string
                 required: true
               - name: subhead
                 label: Subhead
@@ -98,6 +98,8 @@ content:
               - name: content
                 label: Content
                 type: text
+                options:
+                  rows: 3
                 required: true
               - name: link
                 label: Link
@@ -130,6 +132,8 @@ content:
               - name: content
                 label: Content
                 type: text
+                options:
+                  rows: 3
                 required: true
               - name: button
                 label: Button
@@ -216,7 +220,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: body
         label: Content
         type: text
@@ -237,7 +241,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: params
         label: Params
         type: object
@@ -283,7 +287,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: body
         label: Content
         type: text
@@ -304,7 +308,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: body
         label: Content
         type: text
@@ -325,7 +329,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: params
         label: Params
         type: object
@@ -402,7 +406,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: params
         label: Params
         type: object
@@ -418,7 +422,7 @@ content:
                 label: Content
                 type: text
                 options:
-                  rows: 2
+                  rows: 3
           - name: sections
             label: Sections
             type: object
@@ -454,7 +458,7 @@ content:
         label: Description
         type: text
         options:
-          rows: 2
+          rows: 3
       - name: params
         label: Params
         type: object
@@ -743,6 +747,8 @@ content:
       - name: description
         label: Site Description
         type: text
+        options:
+          rows: 3
         required: true
       - name: logos
         label: Logos
@@ -821,6 +827,8 @@ content:
           - name: content
             label: Content
             type: text
+            options:
+              rows: 3
             required: true
           - name: button
             label: Button
@@ -845,6 +853,8 @@ content:
           - name: content
             label: Content
             type: text
+            options:
+              rows: 3
             required: true
           - name: buttons
             label: App Buttons
