@@ -1,4 +1,4 @@
-{{- /* Generate data used to populate a select in Pages CMS */}}
+{{- /* This json string is used in Pages CMS to show a list of tag taxonomy terms used on the site */}}
 {{- $s := newScratch }}
 {{- $s.Add "tags" slice }}
 {{- range $tag, $pages := site.Taxonomies.tags }}
