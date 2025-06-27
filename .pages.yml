@@ -521,7 +521,10 @@ content:
         options:
           creatable: true
           multiple: true
-          values: [home-groups, park-play-dates]
+          fetch:
+            url: https://fountaincitykc.github.io/tags.json
+            value: ''
+            label: ''
       - name: body
         label: Content
         type: text
