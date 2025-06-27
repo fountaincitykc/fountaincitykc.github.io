@@ -1,3 +1,4 @@
+{{- /* Generate data used to populate a select in Pages CMS */}}
 {{- $s := newScratch }}
 {{- $s.Add "series" slice }}
 {{- range $series, $pages := site.Taxonomies.series }}
