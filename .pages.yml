@@ -598,7 +598,7 @@ content:
       - _index.md
     filename: '{fields.date}.md'
     view:
-      fields: [title, date, draft]
+      fields: [title, params.series, date, draft]
       primary: title
       sort: [date, title]
       default:

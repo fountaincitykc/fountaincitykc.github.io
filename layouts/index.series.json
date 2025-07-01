@@ -2,6 +2,10 @@
 {{- $s := newScratch }}
 {{- $s.Add "series" slice }}
 {{- range $series, $pages := site.Taxonomies.series }}
-  {{- $s.Add "series" (dict "id" $series "name" $series) }}
+  {{- $name := $series }}
+  {{- with site.GetPage (printf "/series/%s" $series) }}
+    {{- $name = .Title }}
+  {{- end }}
+  {{- $s.Add "series" (dict "id" $series "name" $name) }}
 {{- end }}
 {{- $s.Get "series" | jsonify }}
