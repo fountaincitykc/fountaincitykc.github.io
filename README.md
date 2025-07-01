@@ -35,13 +35,13 @@ This site has a CMS located at [Pages CMS](https://app.pagescms.org/).
 ### Add new event
 
 ```bash
-hugo new content events/2025/01-01-event-title.md
+hugo new content events/2025-01-01-event-title.md
 ```
 
 ### Add new sermon
 
 ```bash
-hugo new content sermons/2025/01-01.md
+hugo new content sermons/2025-01-01.md
 ```
 
 ## Tasks
