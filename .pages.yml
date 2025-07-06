@@ -681,7 +681,7 @@ content:
         blockKey: type
         blocks:
           - name: internal
-            label: Add Page Link
+            label: Page Link
             fields:
               - name: name
                 label: Name
@@ -708,7 +708,7 @@ content:
                     type: boolean
                     default: true
           - name: external
-            label: Add External Link
+            label: External Link
             fields:
               - name: name
                 label: Name
