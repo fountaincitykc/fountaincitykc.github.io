@@ -622,22 +622,24 @@ content:
       - name: body
         label: Content
         type: text
-        required: true
       - name: params
         label: Params
         type: object
         fields:
+          - name: youtubeId
+            label: Youtube Id
+            type: string
+            required: true
           - name: series
-            label: Series
+            label: Sermon Series
             type: select
             options:
               creatable: true
               fetch:
                 url: https://fountaincitykc.org/series.json
-          - name: youtubeId
-            label: Youtube Id
+          - name: guestSpeaker
+            label: Guest Speaker
             type: string
-            required: true
   # Sermon Series
   - name: series
     label: Sermon Series
