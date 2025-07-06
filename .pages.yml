@@ -746,6 +746,10 @@ content:
     format: yaml
     path: config/_default/params.yaml
     fields:
+      - name: title
+        label: Site Title
+        type: string
+        required: true
       - name: description
         label: Site Description
         type: text
