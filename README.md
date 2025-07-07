@@ -12,7 +12,7 @@ The minimum version required is `0.147.0`.
 
 ### Run Hugo
 
-From the root directory, build site and run Hugo in development mode by running:
+From the root directory, build the site and run Hugo in development mode by running:
 
 ```bash
 hugo server --cleanDestinationDir --buildFuture
@@ -30,15 +30,15 @@ There is a GitHub action that automatically deploys the site when any change is 
 
 This site has a CMS located at [Pages CMS](https://app.pagescms.org/).
 
-## Archetypes
+## Hugo Archetypes
 
-### Add new event
+### Create a new event
 
 ```bash
 hugo new content events/2025-01-01-event-title.md
 ```
 
-### Add new sermon
+### Create a new sermon
 
 ```bash
 hugo new content sermons/2025-01-01.md
@@ -62,9 +62,9 @@ To create a new sermon series, add a new term page to the `/content/series/` tax
 
 ```text
 content/
-└── series/
-    └── new-series/
-        └── _index.md
+├── series/
+│   ├── my-series/
+│   │   └── _index.md
 ```
 
 To associate a sermon to a sermon series, set the term of the sermon series in the frontmatter of the sermon. For example:
