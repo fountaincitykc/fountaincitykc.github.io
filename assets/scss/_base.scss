@@ -27,7 +27,7 @@ body {
   margin: 0;
   background-color: $background-color;
   color: $foreground-color;
-  @include make-header-font;
+  @include make-base-font;
 }
 
 // Block elements
