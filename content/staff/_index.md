@@ -45,14 +45,4 @@ params:
 
       Lindsay loves raising her 3 favorite children alongside James.
     image: /media/staff/lindsay.jpg
-  - name: Danielle Beckham
-    role: Administrator
-    email: danielle@fountaincitykc.org
-    content: |-
-      Danielle is a hometown native of Overland Park, KS who graduated from Moody Bible Institute with a Communications degree. She spent 15 years building her career in project management before stepping away to focus on her family.
-
-      She is thankful that her gifts of organization, planning, and communications are being used and shared with the FCC community.
-
-      She is a loving wife to Travis and a dedicated mother to her son. In her free time, she enjoys taking walks or curling up with a good book.
-    image: /media/staff/danielle.jpg
 ---
