@@ -23,8 +23,8 @@
     {{- end }}
   {{- end }}
   {{- $content = printf "%s %s" $content ($page.Plain | htmlUnescape) }}
-  {{- $content = trim $content "\n\r\t " }}
   {{- $content = replaceRE "[\n\r\t]+" " " $content }}
+  {{- $content = trim $content " " }}
   {{- if not $content }}
     {{- $content = $page.Description }}
   {{- end }}
