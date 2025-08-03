@@ -6,10 +6,6 @@ keywords:
   - kids
   - children
 params:
-  banner:
-    enabled: true
-    content: |-
-      Please note we will not have our Kids’ Worship Class from June 29 - August 3 to allow our teachers to rest. However, kids of all ages are welcome to join us in worship; clipboards with coloring sheets will be available. We will continue with our Nursery and Toddler Class throughout the summer.
   sections:
   - headline: Family Welcome Center
     content: |-
