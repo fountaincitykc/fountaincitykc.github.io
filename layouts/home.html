@@ -124,6 +124,10 @@
 
     {{/* Latest sermon */}}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
+      {{ if lt .Date (now.AddDate 0 0 -15) }}
+        {{/* Don't show latest sermon if it hasn't been updated in over 2 weeks */}}
+        {{ break }}
+      {{ end }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
