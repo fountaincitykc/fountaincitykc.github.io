@@ -159,7 +159,7 @@ content:
                 options:
                   rows: 3
                 required: true
-                description: This content will be shown if there hasn't been a sermon published in over 2 weeks.
+                description: This content will only be shown if sermons are inactive.
               - name: image
                 label: Image
                 type: image
@@ -187,6 +187,13 @@ content:
                   - name: href
                     label: Listen Link
                     type: string
+              - name: daysBeforeInactive
+                label: Days Before Inactive
+                type: number
+                default: 15
+                options:
+                  min: 1
+                required: true
           - name: events
             label: Events
             type: object

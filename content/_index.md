@@ -58,6 +58,7 @@ params:
     listen:
       text: Listen
       href: https://fcckc.podbean.com/
+    daysBeforeInactive: 15
   events:
     headline:
       single: Join us

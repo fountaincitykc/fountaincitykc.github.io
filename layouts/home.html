@@ -123,8 +123,10 @@
     {{ end }}
 
     {{/* Latest sermon */}}
+    {{ $daysBeforeInactive := default 15 .Params.sermon.daysBeforeInactive }}
+    {{ $daysBeforeInactive = int (mul $daysBeforeInactive -1) }}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-      {{ $hasRecentSermon := gt .Date (now.AddDate 0 0 -15) }}
+      {{ $hasRecentSermon := gt .Date (now.AddDate 0 0 $daysBeforeInactive) }}
       {{ $watchHref := cond $hasRecentSermon .RelPermalink $.Params.sermon.watch.href }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
