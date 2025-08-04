@@ -27,31 +27,34 @@ params:
       href: /what-we-believe/
   cards:
     - headline: Sundays
-      image: /media/home/sundays.jpg
       content: |-
         Our Sunday service is a gathering of people wanting to know God. Together we worship God and learn from Him as we sing, pray, and hear from Scripture.
+      image: /media/home/sundays.jpg
       button:
         text: Learn more
         href: /sunday-morning/
     - headline: Kids and Families
-      image: /media/home/families.jpg
       content: |-
         Families are a significant part of our community. We aim to help kids of all ages grow as faithful followers of Jesus as we assist parents to raise them in the ways of God.
+      image: /media/home/families.jpg
       button:
         text: Learn more
         href: /kids-classes/
     - headline: Home Groups
-      image: /media/home/home-groups.jpg
       content: |-
         Gathering in homes throughout the week allows us to grow in relationship with God and others. Our groups share meals, discuss life and God's Word, and pray for one another.
+      image: /media/home/home-groups.jpg
       button:
         text: Learn more
         href: /connect/#home-groups
   sermon:
     headline: Latest Sermon
+    content: |-
+      Missed Sunday morning service? Watch recent sermons from Fountain City Church or listen to our podcast.
     image: /media/home/latest-sermon.jpg
     watch:
       text: Watch
+      href: https://www.youtube.com/@fountaincitychurchkc9519/videos
     listen:
       text: Listen
       href: https://fcckc.podbean.com/

@@ -122,18 +122,19 @@ content:
                 label: Headline
                 type: string
                 required: true
+              - name: content
+                label: Content
+                type: text
+                options:
+                  rows: 3
+                required: true
+                description: This content will be shown if there hasn't been a sermon published in over 2 weeks.
               - name: image
                 label: Image
                 type: image
                 options:
                   multiple: false
                   path: assets/media/home
-                required: true
-              - name: content
-                label: Content
-                type: text
-                options:
-                  rows: 3
                 required: true
               - name: button
                 label: Button
@@ -153,6 +154,12 @@ content:
                 label: Headline
                 type: string
                 required: true
+              - name: content
+                label: Content
+                type: text
+                options:
+                  rows: 3
+                required: true
               - name: image
                 label: Image
                 type: image
@@ -166,6 +173,9 @@ content:
                 fields:
                   - name: text
                     label: Watch Text
+                    type: string
+                  - name: href
+                    label: Watch Link
                     type: string
               - name: listen
                 label: Listen
@@ -474,7 +484,7 @@ content:
               - name: tag
                 label: Tag
                 type: string
-                description: If there are any events matching this tag, a button will be displayed linking to them
+                description: If there are any events matching this tag, a button will be displayed linking to them.
           - name: callout
             label: Callout
             type: object

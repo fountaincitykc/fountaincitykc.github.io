@@ -124,14 +124,12 @@
 
     {{/* Latest sermon */}}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-      {{ if lt .Date (now.AddDate 0 0 -15) }}
-        {{/* Don't show latest sermon if it hasn't been updated in over 2 weeks */}}
-        {{ break }}
-      {{ end }}
+      {{ $hasRecentSermon := gt .Date (now.AddDate 0 0 -15) }}
+      {{ $watchHref := cond $hasRecentSermon .RelPermalink $.Params.sermon.watch.href }}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
-            <a href="{{ .RelPermalink }}">
+            <a href="{{ $watchHref }}">
               {{ with partial "utils/process-image.html" (dict
                 "res" (resources.Get $.Params.sermon.image)
                 "width" 800
@@ -147,18 +145,23 @@
               <h2>
                 {{ $.Params.sermon.headline }}
               </h2>
-              <h3 class="subtitle">
-                {{ dateFormat "January 2, 2006" .Date }} &mdash; {{ .Title }}
-              </h3>
+              {{ if $hasRecentSermon }}
+                <h3 class="subtitle">
+                  {{ dateFormat "January 2, 2006" .Date }} &mdash; {{ .Title }}
+                </h3>
+              {{ end }}
             </div>
             <div class="content-section__content">
-              {{ .Render "sermon-content" }}
+              {{ if $hasRecentSermon }}
+                {{ .Render "sermon-content" }}
+              {{ else }}
+                {{ $.Params.sermon.content | $.Page.RenderString (dict "display" "block") }}
+              {{ end }}
             </div>
             <div class="content-section__footer">
-              {{ $sermon := . }}
               {{ with $.Params.sermon.watch }}
-                {{ if .text }}
-                  {{ partial "components/button" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
+                {{ if and $watchHref .text }}
+                  {{ partial "components/button" (dict "href" $watchHref "text" .text "variant" "primary" )}}
                 {{ end }}
               {{ end }}
               {{ with $.Params.sermon.listen }}
