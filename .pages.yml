@@ -128,7 +128,6 @@ content:
                 options:
                   rows: 3
                 required: true
-                description: This content will be shown if there hasn't been a sermon published in over 2 weeks.
               - name: image
                 label: Image
                 type: image
@@ -160,6 +159,7 @@ content:
                 options:
                   rows: 3
                 required: true
+                description: This content will be shown if there hasn't been a sermon published in over 2 weeks.
               - name: image
                 label: Image
                 type: image
