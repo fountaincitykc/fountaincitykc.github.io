@@ -1,5 +1,5 @@
 ---
-title: Events
+title: Calendar
 description: |-
   Upcoming events for Fountain City Church.
 sitemap:
