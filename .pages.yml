@@ -550,6 +550,9 @@ content:
           multiple: true
           fetch:
             url: https://fountaincitykc.org/tags.json
+        pattern:
+          message: 'This text can only contain lowercase characters, numbers, or a dash'
+          regex: '^(|[a-z0-9-]+)$' # must be valid OR empty
       - name: body
         label: Content
         type: text
@@ -642,6 +645,9 @@ content:
               creatable: true
               fetch:
                 url: https://fountaincitykc.org/series.json
+            pattern:
+              message: 'This text can only contain lowercase characters, numbers, or a dash'
+              regex: '^(|[a-z0-9-]+)$' # must be valid OR empty
           - name: guestSpeaker
             label: Guest Speaker
             type: string
@@ -672,6 +678,9 @@ content:
             label: Taxonomy Term
             type: string
             required: true
+            pattern:
+              message: 'This text can only contain lowercase characters, numbers, or a dash'
+              regex: '^[a-z0-9-]+$' # must be valid AND not be empty
   # Navigation
   - name: navigation
     label: Navigation
