@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="main-content">
     <div class="container">
-      <script src="https://fountaincitykc.churchcenter.com/assets/calendar_embed.js" data-view="list" data-height="auto"></script>
+      <script src="https://fountaincitykc.churchcenter.com/assets/calendar_embed.js" data-view="{{ .Params.view }}" data-height="auto"></script>
     </div>
   </main>
 {{ end }}

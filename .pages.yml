@@ -145,8 +145,20 @@ content:
                   - name: href
                     label: Button Link
                     type: string
-          - name: sermon
-            label: Sermon
+          - name: welcome
+            label: Welcome
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: youtubeId
+                label: Youtube Id
+                type: string
+                required: true
+          - name: sermons
+            label: Sermons
             type: object
             fields:
               - name: headline
@@ -158,14 +170,6 @@ content:
                 type: text
                 options:
                   rows: 3
-                required: true
-                description: This content will only be shown if sermons are inactive.
-              - name: image
-                label: Image
-                type: image
-                options:
-                  multiple: false
-                  path: assets/media/home
                 required: true
               - name: watch
                 label: Watch
@@ -187,13 +191,6 @@ content:
                   - name: href
                     label: Listen Link
                     type: string
-              - name: daysBeforeInactive
-                label: Days Before Inactive
-                type: number
-                default: 15
-                options:
-                  min: 1
-                required: true
           - name: events
             label: Events
             type: object

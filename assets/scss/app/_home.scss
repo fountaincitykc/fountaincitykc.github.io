@@ -167,17 +167,25 @@
 // Callout
 
 .home-callout {
-  .callout__content > * {
+  p {
     font-size: var(--font-size-h3);
 
-    @media (min-width: breakpoint-min-width("lg")) {
-      font-size: var(--font-size-h2);
+    &.home-callout__link {
+      font-size: $font-size-base;
     }
   }
   @media (min-width: breakpoint-min-width("lg")) {
     background-image: url("/images/home-callout-bkgd.svg");
     background-repeat: no-repeat;
     background-position: top right;
+
+    p {
+      font-size: var(--font-size-h2);
+
+      &.home-callout__link {
+        font-size: $font-size-lg;
+      }
+    }
   }
 }
 
@@ -199,9 +207,9 @@
   }
 }
 
-// Sermon & single event
+// Latest sermon & single event
 
-.home-sermon,
+//.home-sermon, (LATEST SERMON HAS BEEN DIABLED)
 .home-events {
   .content-section__media {
     img {
@@ -221,6 +229,35 @@
       &:hover,
       &:active {
         background-color: rgba($blue-500, 0.6);
+      }
+    }
+  }
+}
+
+// Welcome
+
+.home-welcome {
+  .home-welcome__headline {
+    margin-bottom: size(4);
+    color: $white;
+    text-align: center;
+  }
+}
+
+// Sermons
+
+.home-sermons {
+  .home-sermons__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: size(3);
+
+    @media (min-width: breakpoint-min-width("lg")) {
+      gap: size(4);
+
+      .button {
+        @include make-button--lg;
       }
     }
   }

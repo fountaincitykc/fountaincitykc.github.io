@@ -47,18 +47,19 @@ params:
       button:
         text: Learn more
         href: /connect/#home-groups
-  sermon:
-    headline: Latest Sermon
+  welcome:
+    headline: Get to know Fountain City Church
+    youtubeId: sWzRG_5IbcU
+  sermons:
+    headline: Missed Sunday morning service?
     content: |-
-      Missed Sunday morning service? Watch recent sermons from Fountain City Church or listen to our podcast.
-    image: /media/home/latest-sermon.jpg
+      Watch recent sermons from Fountain City Church or listen to our podcast.
     watch:
       text: Watch
       href: https://www.youtube.com/@fountaincitychurchkc9519/videos
     listen:
       text: Listen
       href: https://fcckc.podbean.com/
-    daysBeforeInactive: 15
   events:
     headline:
       single: Join us

@@ -14,7 +14,7 @@ params:
     image: /media/sunday-morning/worship.jpg
     button:
       text: Watch sermons
-      href: /sermons/
+      href: https://www.youtube.com/@fountaincitychurchkc9519/videos
   - headline: Kids' Classes
     content: |-
       Fountain City is filled with young families. As we seek to help each child grow in his or her knowledge and love of God, families are invited to worship together for portions of the service. Nursery is available for children eight weeks to three years old, and a worship class for kids four years old through the first grade during the sermon. Kids in second grade and up join their parents and receive age-appropriate materials to engage them during the sermon. Our Children's and Family Ministry assists parents in training up children as faithful followers of Jesus.

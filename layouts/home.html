@@ -71,13 +71,11 @@
     {{ with .Params.callout }}
       <div class="container">
         <div class="home-callout | callout callout--dark | animate">
-          <div class="callout__content">
-            {{ .content | $.Page.RenderString (dict "display" "block") }}
-          </div>
+          {{ .content | $.Page.RenderString (dict "display" "block") }}
           {{ with .link }}
-            <div class="callout__footer">
+            <p class="home-callout__link">
               <a href="{{ .href }}">{{ .text }}</a>
-            </div>
+            </p>
           {{ end }}
         </div>
       </div>
@@ -122,16 +120,63 @@
       </div>
     {{ end }}
 
+    {{/* Welcome */}}
+    {{ with .Params.welcome }}
+      <div class="container-lg">
+        <div class="home-welcome | animate">
+          <h2 class="home-welcome__headline">
+            {{ .headline }}
+          </h2>
+          {{ partial "components/youtube-embed" (dict "id" .youtubeId) }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{/* Sermons */}}
+    {{ with .Params.sermons }}
+      <div class="container-lg">
+        <div class="home-sermons | callout callout--dark callout--condensed callout--center | animate">
+            <h3>
+              {{ .headline }}
+            </h3>
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+            <p class="home-sermons__buttons">
+              {{ with .watch }}
+                {{ if and .href .text }}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ end }}
+              {{ end }}
+              {{ with .listen }}
+                {{ if and .href .text }}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                {{ end }}
+              {{ end }}
+            </p>
+        </div>
+      </div>
+    {{ end }}
+
     {{/* Latest sermon */}}
-    {{ $daysBeforeInactive := default 15 .Params.sermon.daysBeforeInactive }}
-    {{ $daysBeforeInactive = int (mul $daysBeforeInactive -1) }}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-      {{ $hasRecentSermon := gt .Date (now.AddDate 0 0 $daysBeforeInactive) }}
-      {{ $watchHref := cond $hasRecentSermon .RelPermalink $.Params.sermon.watch.href }}
+      {{ break }}
+      {{/* LATEST SERMON HAS BEEN DIABLED */}}
+      {{/*
+        This is the frontmatter that was removed for this component:
+        ```yaml
+        sermon:
+          headline: Latest Sermon
+          image: /media/home/latest-sermon.jpg
+          watch:
+            text: Watch
+          listen:
+            text: Listen
+            href: https://fcckc.podbean.com/
+        ```
+      */}}
       <div class="container">
         <div class="home-sermon | content-section | animate">
           <div class="content-section__media">
-            <a href="{{ $watchHref }}">
+            <a href="{{ .RelPermalink }}">
               {{ with partial "utils/process-image.html" (dict
                 "res" (resources.Get $.Params.sermon.image)
                 "width" 800
@@ -147,23 +192,18 @@
               <h2>
                 {{ $.Params.sermon.headline }}
               </h2>
-              {{ if $hasRecentSermon }}
-                <h3 class="subtitle">
-                  {{ dateFormat "January 2, 2006" .Date }} &mdash; {{ .Title }}
-                </h3>
-              {{ end }}
+              <h3 class="subtitle">
+                {{ dateFormat "January 2, 2006" .Date }} &mdash; {{ .Title }}
+              </h3>
             </div>
             <div class="content-section__content">
-              {{ if $hasRecentSermon }}
-                {{ .Render "sermon-content" }}
-              {{ else }}
-                {{ $.Params.sermon.content | $.Page.RenderString (dict "display" "block") }}
-              {{ end }}
+              {{ .Render "sermon-content" }}
             </div>
             <div class="content-section__footer">
+              {{ $sermon := . }}
               {{ with $.Params.sermon.watch }}
-                {{ if and $watchHref .text }}
-                  {{ partial "components/button" (dict "href" $watchHref "text" .text "variant" "primary" )}}
+                {{ if .text }}
+                  {{ partial "components/button" (dict "href" $sermon.RelPermalink "text" .text "variant" "primary" )}}
                 {{ end }}
               {{ end }}
               {{ with $.Params.sermon.listen }}

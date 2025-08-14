@@ -37,19 +37,15 @@
       {{ end }}
       {{ with .Params.callout }}
         <div class="callout">
-          <div class="callout__header">
-            <h2>
-              {{ .headline }}
-            </h2>
-          </div>
-          <div class="callout__content">
-            {{ .content | $.Page.RenderString (dict "display" "block") }}
-          </div>
-          <div class="callout__footer">
+          <h2>
+            {{ .headline }}
+          </h2>
+          {{ .content | $.Page.RenderString (dict "display" "block") }}
+          <p>
             <a href="{{ printf `mailto:%s` site.Params.contact.email }}">
               {{ .button.text }}
             </a>
-          </div>
+          </p>
         </div>
       {{ end }}
     </div>
