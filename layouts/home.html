@@ -135,7 +135,7 @@
     {{/* Sermons */}}
     {{ with .Params.sermons }}
       <div class="container-lg">
-        <div class="home-sermons | callout callout--dark callout--condensed callout--center | animate">
+        <div class="home-sermons | callout callout--condensed callout--center | animate">
             <h3>
               {{ .headline }}
             </h3>
@@ -143,12 +143,12 @@
             <p class="home-sermons__buttons">
               {{ with .watch }}
                 {{ if and .href .text }}
-                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "white" )}}
                 {{ end }}
               {{ end }}
               {{ with .listen }}
                 {{ if and .href .text }}
-                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "white" )}}
                 {{ end }}
               {{ end }}
             </p>
@@ -159,7 +159,7 @@
     {{/* Latest sermon */}}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
       {{ break }}
-      {{/* LATEST SERMON HAS BEEN DIABLED */}}
+      {{/* THIS SECTION HAS BEEN DISABLED */}}
       {{/*
         This is the frontmatter that was removed for this component:
         ```yaml
