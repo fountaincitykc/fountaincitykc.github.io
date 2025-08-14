@@ -9,8 +9,6 @@ params:
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2907117
-  featured: true
-  image: /media/events/img2-blue.svg
 ---
 
 Join us for a potluck dinner with the community followed by teaching and discussion. Please RSVP and sign up to bring something.
