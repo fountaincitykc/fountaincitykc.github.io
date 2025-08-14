@@ -1,10 +1,17 @@
-{{ define "head" }}
-  {{ with .Params.redirect }}
-    <meta name="robots" content="noindex">
-    <meta http-equiv="Refresh" content="0; url={{ . }}">
-  {{ else }}
-    {{ with .File }}
-      {{ errorf ".Params.redirect is undefined in %q" .Filename }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirect</title>
+    {{ with .Params.redirect }}
+      <meta name="robots" content="noindex">
+      <meta http-equiv="Refresh" content="0; url={{ . }}">
+    {{ else }}
+      {{ with .File }}
+        {{ errorf ".Params.redirect is undefined in %q" .Filename }}
+      {{ end }}
     {{ end }}
-  {{ end }}
-{{ end }}
+  </head>
+  <body>
+  </body>
+</html>

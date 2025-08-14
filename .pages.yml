@@ -594,90 +594,90 @@ content:
               - name: href
                 label: Button Link
                 type: string
-  # Sermons
-  - name: sermons
-    label: Sermons
-    type: collection
-    path: content/sermons
-    exclude: 
-      - _index.md
-    filename: '{fields.date}.md'
-    view:
-      fields: [title, params.series, date, draft]
-      primary: title
-      sort: [date, title]
-      default:
-        sort: date
-        order: desc
-    fields:
-      - name: draft
-        label: Draft
-        type: boolean
-        default: false
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: date
-        label: Date
-        type: date
-        options:
-          format: yyyy-MM-dd
-        required: true
-      - name: body
-        label: Content
-        type: text
-      - name: params
-        label: Params
-        type: object
-        fields:
-          - name: youtubeId
-            label: Youtube Id
-            type: string
-            required: true
-          - name: series
-            label: Sermon Series
-            type: select
-            options:
-              creatable: true
-              fetch:
-                url: https://fountaincitykc.org/series.json
-            pattern:
-              message: 'This text can only contain lowercase characters, numbers, or a dash'
-              regex: '^(|[a-z0-9-]+)$' # must be valid OR empty
-          - name: guestSpeaker
-            label: Guest Speaker
-            type: string
-  # Sermon Series
-  - name: series
-    label: Sermon Series
-    type: collection
-    path: content/series
-    exclude: 
-      - _index.html # Note that .html is excluded, not .md
-    filename: '{fields.params.term}/_index.md'
-    view:
-      fields: [title]
-      primary: title
-    fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: body
-        label: Content
-        type: text
-      - name: params
-        label: Params
-        type: object
-        fields:
-          - name: term
-            label: Taxonomy Term
-            type: string
-            required: true
-            pattern:
-              message: 'This text can only contain lowercase characters, numbers, or a dash'
-              regex: '^[a-z0-9-]+$' # must be valid AND not be empty
+  # Sermons (DISABLED)
+  #- name: sermons
+  #  label: Sermons
+  #  type: collection
+  #  path: content/sermons
+  #  exclude: 
+  #    - _index.md
+  #  filename: '{fields.date}.md'
+  #  view:
+  #    fields: [title, params.series, date, draft]
+  #    primary: title
+  #    sort: [date, title]
+  #    default:
+  #      sort: date
+  #      order: desc
+  #  fields:
+  #    - name: draft
+  #      label: Draft
+  #      type: boolean
+  #      default: false
+  #    - name: title
+  #      label: Title
+  #      type: string
+  #      required: true
+  #    - name: date
+  #      label: Date
+  #      type: date
+  #      options:
+  #        format: yyyy-MM-dd
+  #      required: true
+  #    - name: body
+  #      label: Content
+  #      type: text
+  #    - name: params
+  #      label: Params
+  #      type: object
+  #      fields:
+  #        - name: youtubeId
+  #          label: Youtube Id
+  #          type: string
+  #          required: true
+  #        - name: series
+  #          label: Sermon Series
+  #          type: select
+  #          options:
+  #            creatable: true
+  #            fetch:
+  #              url: https://fountaincitykc.org/series.json
+  #          pattern:
+  #            message: 'This text can only contain lowercase characters, numbers, or a dash'
+  #            regex: '^(|[a-z0-9-]+)$' # must be valid OR empty
+  #        - name: guestSpeaker
+  #          label: Guest Speaker
+  #          type: string
+  # Sermon Series (DISABLED)
+  #- name: series
+  #  label: Sermon Series
+  #  type: collection
+  #  path: content/series
+  #  exclude: 
+  #    - _index.html # Note that .html is excluded, not .md
+  #  filename: '{fields.params.term}/_index.md'
+  #  view:
+  #    fields: [title]
+  #    primary: title
+  #  fields:
+  #    - name: title
+  #      label: Title
+  #      type: string
+  #      required: true
+  #    - name: body
+  #      label: Content
+  #      type: text
+  #    - name: params
+  #      label: Params
+  #      type: object
+  #      fields:
+  #        - name: term
+  #          label: Taxonomy Term
+  #          type: string
+  #          required: true
+  #          pattern:
+  #            message: 'This text can only contain lowercase characters, numbers, or a dash'
+  #            regex: '^[a-z0-9-]+$' # must be valid AND not be empty
   # Navigation
   - name: navigation
     label: Navigation
