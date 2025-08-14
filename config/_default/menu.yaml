@@ -59,29 +59,23 @@ main:
     params:
       enabled: true
     type: internal
-  - name: Calendar
-    pageRef: /calendar/
-    weight: 10
-    params:
-      enabled: false
-    type: internal
   - name: Connect
     pageRef: /connect/
-    weight: 11
+    weight: 10
     params:
       enabled: true
     type: internal
   - name: Give
     url: https://fountaincitykc.churchcenter.com/giving
-    weight: 12
+    weight: 11
     params:
       rel: external
       enabled: true
     type: external
   - name: Search
     pageRef: /search/
-    weight: 13
+    weight: 12
     params:
       icon: search
-      enabled: true
+      enabled: false
     type: internal

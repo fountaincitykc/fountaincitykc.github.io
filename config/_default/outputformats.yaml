@@ -6,6 +6,6 @@ Tags:
   baseName: tags
   mediaType: application/json
 
-Series:
-  baseName: series
-  mediaType: application/json
+#Series:
+#  baseName: series
+#  mediaType: application/json

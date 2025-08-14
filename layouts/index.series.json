@@ -1,3 +1,4 @@
+{{- /* THIS TAXONOMY HAS BEEN DISABLED */}}
 {{- /* This json string is used in Pages CMS to show a list of series taxonomy terms used on the site */}}
 {{- $s := newScratch }}
 {{- $s.Add "series" slice }}
