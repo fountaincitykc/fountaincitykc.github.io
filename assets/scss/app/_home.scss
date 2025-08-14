@@ -247,6 +247,10 @@
 // Sermons
 
 .home-sermons {
+  background-image: url("/images/home-sermons-bkgd.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
   .home-sermons__buttons {
     display: flex;
     flex-direction: row;
