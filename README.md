@@ -24,7 +24,7 @@ You should see the site on localhost:1313.
 
 The site is hosted on GitHub Pages.
 
-There is a GitHub action that automatically deploys the site when any change is pushed to `master`. The site is also deployed every morning, so old events will be removed from the calendar.
+There is a GitHub action that automatically deploys the site when any change is pushed to `master`. ~~The site is also deployed every morning, so old events will be removed from the calendar.~~
 
 ## Content Management
 
