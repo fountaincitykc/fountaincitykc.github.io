@@ -57,7 +57,7 @@ main:
     pageRef: /events/
     weight: 9
     params:
-      enabled: false
+      enabled: true
     type: internal
   - name: Connect
     pageRef: /connect/
