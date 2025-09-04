@@ -219,14 +219,15 @@ content:
                     type: string
                     required: true
                     description: "This headline will be shown if there's not any featured events, but there are multiple upcoming events."
-                  - name: defaultImages
-                    label: Default Images
-                    type: image
-                    list: true
-                    options:
-                      multiple: false
-                      path: assets/media/events
-                    required: true
+              - name: defaultImages
+                label: Default Images
+                type: image
+                list:
+                  min: 3
+                options:
+                  multiple: false
+                  path: assets/media/events
+                required: true
               - name: button
                 label: View All Events Button
                 type: object
