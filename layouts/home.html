@@ -158,10 +158,9 @@
 
     {{/* Latest sermon */}}
     {{ range first 1 (where site.RegularPages "Section" "sermons") }}
-      {{ break }}
-      {{/* THIS SECTION HAS BEEN DISABLED */}}
+      {{/* THIS SECTION HAS BEEN DISABLED */}}{{ break }}
       {{/*
-        This is the frontmatter that was removed for this component:
+        This was the frontmatter in content/_index.md that was removed for this section:
         ```yaml
         sermon:
           headline: Latest Sermon
@@ -220,11 +219,11 @@
     {{/* Events */}}
     {{ $events := slice }}
     {{ $hasFeaturedEvents := false }}
-    {{ $today := time.AsTime (now.Format "2006-01-02") }}
+    {{ $buildTime := time.AsTime (now.Format "2006-01-02") }}
     {{/* Get all events */}}
     {{ $allEvents := where site.RegularPages "Section" "events" }}
     {{/* Filter down to upcoming events */}}
-    {{ $upcomingEvents := where $allEvents "Date" "ge" $today }}
+    {{ $upcomingEvents := where $allEvents "Date" "ge" $buildTime }}
     {{/* Filter down to featured events */}}
     {{ $featuredEvents := where $upcomingEvents "Params.featured" true }}
     {{/* If there are one or more featured events... */}}
