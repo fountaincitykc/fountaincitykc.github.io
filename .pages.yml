@@ -199,13 +199,35 @@ content:
                 label: Headline
                 type: object
                 fields:
-                  - name: single
-                    label: Single Event
+                  - name: singleFeatured
+                    label: Single Featured Event
                     type: string
                     required: true
-                  - name: multiple
-                    label: Multiple Events
+                    description: "This headline will be shown if there's only one featured event."
+                  - name: singleUpcoming
+                    label: Single Upcoming Event
                     type: string
+                    required: true
+                    description: "This headline will be shown if there's not any featured events, but there's only one upcoming event."
+                  - name: multipleFeatured
+                    label: Multiple Featured Events
+                    type: string
+                    required: true
+                    description: "This headline will be shown if there's multiple featured events."
+                  - name: multipleUpcoming
+                    label: Multiple Upcoming Events
+                    type: string
+                    required: true
+                    description: "This headline will be shown if there's not any featured events, but there are multiple upcoming events."
+                  - name: defaultImages
+                    label: Default Images
+                    type: image
+                    list:
+                      min: 3
+                      max: 3
+                    options:
+                      multiple: false
+                      path: assets/media/events
                     required: true
               - name: button
                 label: View All Events Button
@@ -912,15 +934,4 @@ content:
             options:
               multiple: false
               path: assets/media/social
-            required: true
-      - name: events
-        label: Events
-        type: object
-        fields:
-          - name: defaultImage
-            label: Default Event Image
-            type: image
-            options:
-              multiple: false
-              path: assets/media/events
             required: true

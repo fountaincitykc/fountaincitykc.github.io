@@ -217,27 +217,37 @@
       </div>
     {{ end }}
 
-    {{/* Featured events */}}
+    {{/* Events */}}
+    {{ $events := slice }}
+    {{ $hasFeaturedEvents := false }}
     {{ $today := time.AsTime (now.Format "2006-01-02") }}
     {{/* Get all events */}}
-    {{ $events := where site.RegularPages "Section" "events" }}
+    {{ $allEvents := where site.RegularPages "Section" "events" }}
+    {{/* Filter down to upcoming events */}}
+    {{ $upcomingEvents := where $allEvents "Date" "ge" $today }}
     {{/* Filter down to featured events */}}
-    {{ $featuredEvents := where $events "Params.featured" true }}
-    {{/* Filter down to upcoming featured events */}}
-    {{ $futureEvents := where $featuredEvents "Date" "ge" $today }}
-    {{/* Filter down to the next 3 upcoming featured events */}}
-    {{ $upcomingEvents := sort $futureEvents "Date" "asc" | first 3 }}
-    {{/* Handle layout for 1 event or multiple events */}}
-    {{ $eventLen := $upcomingEvents | len }}
+    {{ $featuredEvents := where $upcomingEvents "Params.featured" true }}
+    {{/* If there are one or more featured events... */}}
+    {{ if gt ($featuredEvents | len) 0 }}
+      {{/* Filter down to the next 3 featured events */}}
+      {{ $events = sort $featuredEvents "Date" "asc" | first 3 }}
+      {{ $hasFeaturedEvents := true }}
+    {{ else }}
+      {{/* Filter down to the next 3 upcoming events */}}
+      {{ $events = sort $upcomingEvents "Date" "asc" | first 3 }}
+    {{ end }}
+    {{/* Get count of events */}}
+    {{ $eventLen := $events | len }}
+    {{/* Render events */}}
     {{ if gt $eventLen 0 }}
       <div class="container">
         <div class="home-events home-events--len-{{ $eventLen }}">
           {{/* Layout for 1 event */}}
           {{ if eq $eventLen 1 }}
-            {{ with index $upcomingEvents 0 }}
+            {{ with index $events 0 }}
               <div class="content-section | animate">
                 <div class="content-section__media">
-                  {{ $src := default site.Params.events.defaultImage .Params.image }}
+                  {{ $src := default (index $.Page.Params.events.defaultImages 0) .Params.image }}
                   {{ with partial "utils/process-image.html" (dict
                     "res" (resources.Get $src)
                     "width" 800
@@ -250,7 +260,9 @@
                 <div class="content-section__body">
                   <div class="content-section__header">
                     <h2>
-                      {{ $.Page.Params.events.headline.single }}
+                      {{ with $.Page.Params.events.headline }}
+                        {{ cond $hasFeaturedEvents .singleFeatured .singleUpcoming }}
+                      {{ end }}
                     </h2>
                     {{ .Render "event-title" }}
                     {{ .Render "event-date" }}
@@ -272,13 +284,16 @@
           {{/* Layout for multiple events */}}
           {{ else }}
             <h2 class="home-events__headline | animate">
-              {{ .Params.events.headline.multiple }}
+              {{ with $.Page.Params.events.headline }}
+                {{ cond $hasFeaturedEvents .multipleFeatured .multipleUpcoming }}
+              {{ end }}
             </h2>
             <div class="home-events__cards">
-              {{ range $upcomingEvents }}
+              {{ $index := 0 }}
+              {{ range $events }}
                 <div class="card | animate">
                   <div class="card__media">
-                    {{ $src := default site.Params.events.defaultImage .Params.image }}
+                    {{ $src := default (index $.Page.Params.events.defaultImages $index) .Params.image }}
                     {{ with partial "utils/process-image.html" (dict
                       "res" (resources.Get $src)
                       "width" 800
@@ -306,6 +321,7 @@
                     {{ end }}
                   </div>
                 </div>
+                {{ $index = add $index 1 }}
               {{ end }}
             </div>
             {{ with .Params.events.button }}

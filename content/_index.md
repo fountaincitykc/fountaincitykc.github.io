@@ -62,8 +62,14 @@ params:
       href: https://fcckc.podbean.com/
   events:
     headline:
-      single: Join us
-      multiple: Upcoming Events
+      singleFeatured: Join us
+      singleUpcoming: Join us
+      multipleFeatured: Featured Events
+      multipleUpcoming: Upcoming Events
+    defaultImages:
+      - /media/events/img1-green.svg
+      - /media/events/img2-blue.svg
+      - /media/events/img3-red.svg
     button:
       text: View all events →
       href: /events/
