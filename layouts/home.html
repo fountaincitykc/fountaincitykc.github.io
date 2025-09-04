@@ -230,7 +230,7 @@
     {{ if gt ($featuredEvents | len) 0 }}
       {{/* Filter down to the next 3 featured events */}}
       {{ $events = sort $featuredEvents "Date" "asc" | first 3 }}
-      {{ $hasFeaturedEvents := true }}
+      {{ $hasFeaturedEvents = true }}
     {{ else }}
       {{/* Filter down to the next 3 upcoming events */}}
       {{ $events = sort $upcomingEvents "Date" "asc" | first 3 }}
