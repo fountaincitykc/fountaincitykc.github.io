@@ -222,9 +222,7 @@ content:
                   - name: defaultImages
                     label: Default Images
                     type: image
-                    list:
-                      min: 3
-                      max: 3
+                    list: true
                     options:
                       multiple: false
                       path: assets/media/events
