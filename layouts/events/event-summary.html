@@ -1,15 +1,5 @@
 {{ .Summary }}
-{{/*
-  The .Truncated method is not used to show the "More details" link because it
-  does not reliably return true.
-
-  If there is a page that has a single paragraph that has more words than
-  summaryLength, .Truncated will return true, even though all of the content
-  is rendered. This is because .Summary returns content truncated at the
-  paragraph boundary, and there’s only one paragraph. This results in showing
-  the "More details" link, even though the page doesn’t have any more content.
-*/}}
-{{ if ne (chomp .Summary) (chomp .Content) }}
+{{ if .Truncated }}
   <a href="{{ .RelPermalink }}">
     More details →
   </a>
