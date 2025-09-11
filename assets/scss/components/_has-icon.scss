@@ -13,4 +13,8 @@
   flex-direction: row;
   align-items: center;
   gap: size(1);
+
+  svg {
+    flex-shrink: 0;
+  }
 }
