@@ -2,6 +2,7 @@
 title: "Women's Gathering : Book Exchange and Dessert"
 date: 2025-09-27
 params:
+  time: 7–9pm
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/3140193
