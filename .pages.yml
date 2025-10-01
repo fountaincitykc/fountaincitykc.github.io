@@ -539,17 +539,13 @@ content:
       - _index.md
     filename: '{fields.date}-{primary}.md'
     view:
-      fields: [title, date, draft]
+      fields: [title, date]
       primary: title
       sort: [date, title]
       default:
         sort: date
         order: desc
     fields:
-      - name: draft
-        label: Draft
-        type: boolean
-        default: false
       - name: title
         label: Title
         type: string
@@ -624,17 +620,13 @@ content:
   #    - _index.md
   #  filename: '{fields.date}.md'
   #  view:
-  #    fields: [title, params.series, date, draft]
+  #    fields: [title, params.series, date]
   #    primary: title
   #    sort: [date, title]
   #    default:
   #      sort: date
   #      order: desc
   #  fields:
-  #    - name: draft
-  #      label: Draft
-  #      type: boolean
-  #      default: false
   #    - name: title
   #      label: Title
   #      type: string
