@@ -391,17 +391,7 @@ content:
                 required: true
               - name: button
                 label: Button
-                type: object
-                fields:
-                  - name: text
-                    label: Button Text
-                    type: string
-                  - name: href
-                    label: Button Link
-                    type: string
-                  - name: variant
-                    label: Button variant
-                    component: buttonVariant
+                component: buttonVariant
           - name: location
             label: Location
             type: object
@@ -945,7 +935,7 @@ components:
         label: Button Link
         type: string
       - name: variant
-        label: Button variant
+        label: Button Variant
         type: select
         options:
           values: [ primary, secondary, dark, white ]
