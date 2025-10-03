@@ -22,6 +22,13 @@
             <div class="content-section__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
+            {{ with .button }}
+              {{ if and .href .text }}
+                <div class="content-section__footer">
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" (or .variant "secondary") )}}
+                </div>
+              {{ end }}
+            {{ end }}
           </div>
         </div>
       {{ end }}

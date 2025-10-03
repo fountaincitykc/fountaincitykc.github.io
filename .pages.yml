@@ -399,6 +399,9 @@ content:
                   - name: href
                     label: Button Link
                     type: string
+                  - name: variant
+                    label: Button variant
+                    component: buttonVariant
           - name: location
             label: Location
             type: object
@@ -466,6 +469,9 @@ content:
                   multiple: false
                   path: assets/media/kids-classes
                 required: true
+              - name: button
+                label: Button
+                component: buttonVariant
   # Connect
   - name: connect
     label: Connect
@@ -926,3 +932,20 @@ content:
               multiple: false
               path: assets/media/social
             required: true
+components:
+  # buttonVariant
+  buttonVariant:
+    label: Button
+    type: object
+    fields:
+      - name: text
+        label: Button Text
+        type: string
+      - name: href
+        label: Button Link
+        type: string
+      - name: variant
+        label: Button variant
+        type: select
+        options:
+          values: [ "", primary, secondary, dark, white ]

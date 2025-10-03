@@ -25,7 +25,7 @@
             {{ with .button }}
               {{ if and .href .text }}
                 <div class="content-section__footer">
-                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "secondary" )}}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" (or .variant "secondary") )}}
                 </div>
               {{ end }}
             {{ end }}

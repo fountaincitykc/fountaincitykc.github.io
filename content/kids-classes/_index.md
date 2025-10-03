@@ -10,7 +10,13 @@ params:
   - headline: Family Welcome Center
     content: |-
       We would love to meet your family! No matter the ages of your kids, please stop by the Family Welcome Center before worship so we can answer any questions you might have and help your family get situated and comfortable.
+
+      Is it your first time visiting Fountain City Church? Save some time on Sunday by pre-registering your kids here:
     image: /media/kids-classes/welcome.jpg
+    button:
+      text: Register your kids
+      href: https://fountaincitykc.churchcenter.com/people/forms/1065096
+      variant: primary
   - headline: Nursery and Toddler Class
     content: |-
       Our Nursery/Toddler Class welcomes children eight weeks to three years old during worship and is led by our screened and trained adult FCC Kids’ Leaders. The Nursery/Toddler Class is a nurturing environment for children to learn that God is real, good, and trustworthy through loving, attentive, and secure care. Toddlers learn the attributes of God through singing, short Bible stories, and activities designed just for them. 
