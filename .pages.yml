@@ -38,14 +38,7 @@ content:
                 type: string
               - name: button
                 label: Button
-                type: object
-                fields:
-                  - name: text
-                    label: Button Text
-                    type: string
-                  - name: href
-                    label: Button Link
-                    type: string
+                component: button
           - name: hero
             label: Hero
             type: object
@@ -81,16 +74,7 @@ content:
                 required: true
               - name: button
                 label: Watch Live Button
-                type: object
-                fields:
-                  - name: text
-                    label: Button Text
-                    type: string
-                    required: true
-                  - name: href
-                    label: Button Link
-                    type: string
-                    required: true
+                component: requiredButton
           - name: callout
             label: Callout
             type: object
@@ -137,14 +121,7 @@ content:
                 required: true
               - name: button
                 label: Button
-                type: object
-                fields:
-                  - name: text
-                    label: Button Text
-                    type: string
-                  - name: href
-                    label: Button Link
-                    type: string
+                component: button
           - name: welcome
             label: Welcome
             type: object
@@ -230,16 +207,7 @@ content:
                 required: true
               - name: button
                 label: View All Events Button
-                type: object
-                fields:
-                  - name: text
-                    label: Button Text
-                    type: string
-                    required: true
-                  - name: href
-                    label: Button Link
-                    type: string
-                    required: true
+                component: requiredButton
   # Vision
   - name: vision
     label: Vision
@@ -599,14 +567,7 @@ content:
               path: assets/media/events
           - name: button
             label: Button
-            type: object
-            fields:
-              - name: text
-                label: Button Text
-                type: string
-              - name: href
-                label: Button Link
-                type: string
+            component: button
   # Sermons (DISABLED)
   #- name: sermons
   #  label: Sermons
@@ -858,16 +819,7 @@ content:
             required: true
           - name: button
             label: Button
-            type: object
-            fields:
-              - name: text
-                label: Button Text
-                type: string
-                required: true
-              - name: href
-                label: Button Link
-                type: string
-                required: true
+            component: requiredButton
       - name: apps
         label: Apps Section
         type: object
@@ -923,6 +875,30 @@ content:
               path: assets/media/social
             required: true
 components:
+  # button
+  button:
+    label: Button
+    type: object
+    fields:
+      - name: text
+        label: Button Text
+        type: string
+      - name: href
+        label: Button Link
+        type: string
+  # requiredButton
+  requiredButton:
+    label: Button
+    type: object
+    fields:
+      - name: text
+        label: Button Text
+        type: string
+        required: true
+      - name: href
+        label: Button Link
+        type: string
+        required: true
   # buttonVariant
   buttonVariant:
     label: Button
