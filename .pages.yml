@@ -948,4 +948,4 @@ components:
         label: Button variant
         type: select
         options:
-          values: [ "", primary, secondary, dark, white ]
+          values: [ primary, secondary, dark, white ]
