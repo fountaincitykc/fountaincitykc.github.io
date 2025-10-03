@@ -85,18 +85,9 @@ content:
                 options:
                   rows: 3
                 required: true
-              - name: link
-                label: Link
-                type: object
-                fields:
-                  - name: text
-                    label: Link Text
-                    type: string
-                    required: true
-                  - name: href
-                    label: Link URL
-                    type: string
-                    required: true
+              - name: button
+                label: Button
+                component: requiredButton
           - name: cards
             label: Cards
             type: object

@@ -22,7 +22,7 @@ params:
   callout:
     content: |-
       We believe God is working in our world to bring healing and new life to all people and places through Jesus Christ. God wants people to know  him, find their true selves in him, flourish in all of life with him.
-    link:
+    button:
       text: Learn more about what we believe
       href: /what-we-believe/
   cards:

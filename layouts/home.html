@@ -72,7 +72,7 @@
       <div class="container">
         <div class="home-callout | callout callout--dark | animate">
           {{ .content | $.Page.RenderString (dict "display" "block") }}
-          {{ with .link }}
+          {{ with .button }}
             <p class="home-callout__link">
               <a href="{{ .href }}">{{ .text }}</a>
             </p>
