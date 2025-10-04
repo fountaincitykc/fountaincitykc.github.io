@@ -14,14 +14,9 @@ content:
     path: content/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: params
         label: Params
         type: object
@@ -86,7 +81,6 @@ content:
                   rows: 3
                 required: true
               - name: button
-                label: Button
                 component: requiredButton
           - name: cards
             label: Cards
@@ -111,7 +105,6 @@ content:
                   path: assets/media/home
                 required: true
               - name: button
-                label: Button
                 component: button
           - name: welcome
             label: Welcome
@@ -207,14 +200,9 @@ content:
     path: content/vision/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: body
         label: Content
         type: text
@@ -228,14 +216,9 @@ content:
     path: content/staff/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: params
         label: Params
         type: object
@@ -274,14 +257,9 @@ content:
     path: content/what-we-believe/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: body
         label: Content
         type: text
@@ -295,14 +273,9 @@ content:
     path: content/childrens-and-family-ministry/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: body
         label: Content
         type: text
@@ -316,14 +289,9 @@ content:
     path: content/sunday-morning/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: params
         label: Params
         type: object
@@ -349,7 +317,6 @@ content:
                   path: assets/media/sunday-morning
                 required: true
               - name: button
-                label: Button
                 component: buttonVariant
           - name: location
             label: Location
@@ -386,14 +353,9 @@ content:
     path: content/kids-classes/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: params
         label: Params
         type: object
@@ -419,7 +381,6 @@ content:
                   path: assets/media/kids-classes
                 required: true
               - name: button
-                label: Button
                 component: buttonVariant
   # Connect
   - name: connect
@@ -429,14 +390,9 @@ content:
     path: content/connect/_index.md
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Description
-        type: text
-        options:
-          rows: 3
+        component: description
       - name: params
         label: Params
         type: object
@@ -502,9 +458,7 @@ content:
         order: desc
     fields:
       - name: title
-        label: Title
-        type: string
-        required: true
+        component: title
       - name: date
         label: Date
         type: date
@@ -557,7 +511,6 @@ content:
               multiple: false
               path: assets/media/events
           - name: button
-            label: Button
             component: button
   # Sermons (DISABLED)
   #- name: sermons
@@ -576,9 +529,7 @@ content:
   #      order: desc
   #  fields:
   #    - name: title
-  #      label: Title
-  #      type: string
-  #      required: true
+  #      component: title
   #    - name: date
   #      label: Date
   #      type: date
@@ -622,9 +573,7 @@ content:
   #    primary: title
   #  fields:
   #    - name: title
-  #      label: Title
-  #      type: string
-  #      required: true
+  #      component: title
   #    - name: body
   #      label: Content
   #      type: text
@@ -719,15 +668,9 @@ content:
     path: config/_default/params.yaml
     fields:
       - name: title
-        label: Site Title
-        type: string
-        required: true
+        component: title
       - name: description
-        label: Site Description
-        type: text
-        options:
-          rows: 3
-        required: true
+        component: description
       - name: logos
         label: Logos
         type: object
@@ -809,7 +752,6 @@ content:
               rows: 3
             required: true
           - name: button
-            label: Button
             component: requiredButton
       - name: apps
         label: Apps Section
@@ -866,6 +808,17 @@ content:
               path: assets/media/social
             required: true
 components:
+  # title
+  title:
+    label: Title
+    type: string
+    required: true
+  # description
+  description:
+    label: Description
+    type: text
+    options:
+      rows: 3
   # button
   button:
     label: Button
