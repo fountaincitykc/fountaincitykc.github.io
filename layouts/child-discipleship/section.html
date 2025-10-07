@@ -33,10 +33,10 @@
         </div>
       {{ end }}
       {{ with .Params.faqs }}
-        <h2>
+        <h2 class="animate">
           {{ .headline }}
         </h2>
-        <div class="accordion">
+        <div class="accordion | animate">
           {{ range .questions }}
             <details name="faqs">
               <summary>{{ .question }}</summary>
