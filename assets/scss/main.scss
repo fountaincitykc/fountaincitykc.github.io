@@ -18,6 +18,7 @@
 @import "base";
 
 // Components
+@import "components/accordion";
 @import "components/animate";
 @import "components/badge";
 @import "components/banner";
@@ -48,10 +49,10 @@
 @import "app/page-header";
 @import "app/basic-page";
 
+@import "app/child-discipleship";
 @import "app/connect";
 @import "app/events";
 @import "app/home";
-@import "app/kids-classes";
 @import "app/search";
 @import "app/series";
 @import "app/sermons";

@@ -39,7 +39,7 @@ params:
       image: /media/home/families.jpg
       button:
         text: Learn more
-        href: /kids-classes/
+        href: /child-discipleship/
     - headline: Home Groups
       content: |-
         Gathering in homes throughout the week allows us to grow in relationship with God and others. Our groups share meals, discuss life and God's Word, and pray for one another.

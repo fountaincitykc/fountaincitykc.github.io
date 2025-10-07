@@ -74,6 +74,7 @@ $blue-700: rgb(29, 90, 140);   // #1D5A8C
 $blue-500: rgb(56, 116, 170);  // #3874AA
 $blue-300: rgb(158, 202, 218); // #9ECADA
 $blue-100: rgb(191, 223, 232); // #BFDFE8
+$blue-50:  rgb(222, 238, 243); // #DEEEF3
 
 $gray-900: tint-color($blue-900, 10%);
 $gray-800: tint-color($blue-900, 20%);

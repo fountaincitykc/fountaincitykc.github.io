@@ -46,9 +46,9 @@ main:
     params:
       enabled: true
     type: internal
-  - name: Kids' Classes
+  - name: Child Discipleship
     parent: Visit
-    pageRef: /kids-classes/
+    pageRef: /child-discipleship/
     weight: 8
     params:
       enabled: true

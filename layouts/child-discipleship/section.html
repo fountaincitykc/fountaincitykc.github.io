@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <main class="main-content | kids-classes">
+  <main class="main-content | child-discipleship">
     <div class="container">
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .headline | urlize }}">
@@ -30,6 +30,19 @@
               {{ end }}
             {{ end }}
           </div>
+        </div>
+      {{ end }}
+      {{ with .Params.faqs }}
+        <h2>
+          {{ .headline }}
+        </h2>
+        <div class="accordion">
+          {{ range .questions }}
+            <details name="faqs">
+              <summary>{{ .question }}</summary>
+              {{ .answer | $.Page.RenderString (dict "display" "block") }}
+            </details>
+          {{ end }}
         </div>
       {{ end }}
     </div>
