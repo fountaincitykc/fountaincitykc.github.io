@@ -184,6 +184,7 @@ content:
                 type: image
                 list:
                   min: 3
+                  collapsible: true
                 options:
                   multiple: false
                   path: assets/media/events
