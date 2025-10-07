@@ -1,7 +1,7 @@
 settings:
   hide: false # If true, hide the settings editor in Pages CMS UI
   content:
-    merge: true # Preserve fields that are only present in the file
+    merge: true # Preserve params that are only present in the frontmatter
 media:
   input: assets/media
   output: /media
@@ -32,8 +32,7 @@ content:
                 label: Content
                 type: string
               - name: button
-                label: Button
-                component: button
+                component: optionalButton
           - name: hero
             label: Hero
             type: object
@@ -105,7 +104,7 @@ content:
                   path: assets/media/home
                 required: true
               - name: button
-                component: button
+                component: optionalButton
           - name: welcome
             label: Welcome
             type: object
@@ -511,7 +510,7 @@ content:
               multiple: false
               path: assets/media/events
           - name: button
-            component: button
+            component: optionalButton
   # Sermons (DISABLED)
   #- name: sermons
   #  label: Sermons
@@ -819,8 +818,8 @@ components:
     type: text
     options:
       rows: 3
-  # button
-  button:
+  # optionalButton
+  optionalButton:
     label: Button
     type: object
     fields:
