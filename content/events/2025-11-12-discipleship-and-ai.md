@@ -5,7 +5,7 @@ summary: |-
   With the rise of Artificial Intelligence in the last three years, AI has gone from the fringes of society to the center of our shared life together. Join us as we have an in-depth discussion about what it means to follow Jesus in the age of AI.
 params:
   image: /media/events/discipleship-and-ai.jpg
-  time: 5:30-7:30pm
+  time: 5:30-8:30
   location: Johnson County Arts & Heritage Center
   button:
     text: Register
