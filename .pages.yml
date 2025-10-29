@@ -503,6 +503,12 @@ content:
         label: Content
         type: text
         required: true
+      - name: summary
+        label: Summary (optional)
+        type: text
+        options:
+          rows: 3
+        description: This text is only used when an event is featured on the home page. If this text is empty, then the Content field will be used.
       - name: params
         label: Params
         type: object
