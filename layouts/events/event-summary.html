@@ -1,5 +1,12 @@
-{{ .Summary }}
-{{ if .Truncated }}
+{{ if .Params.summary }}
+  {{/* Summary is set in front matter */}}
+  {{ .Summary | $.Page.RenderString (dict "display" "block") }}
+{{ else }}
+  {{/* Summary is set manually or automatically */}}
+  {{ .Summary }}
+{{ end }}
+{{ if or .Params.summary .Truncated }}
+  {{/* Either the front matter summary is set, or the content length exceeds the summary length */}}
   <a href="{{ .RelPermalink }}">
     More details →
   </a>
