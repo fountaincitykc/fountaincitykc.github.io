@@ -5,7 +5,7 @@ summary: |-
   Join us for our first-ever Gingerbread Bash, a fun and interactive Christmas celebration for the whole family, designed to give families intentional time together at the start of the Christmas season.
 params:
   image: /media/events/gingerbread-bash.jpg
-  time: 6:30-8:30pm
+  time: 6:30-8:00pm
   location: Meadowbrook Park Clubhouse
   button:
     text: Register
