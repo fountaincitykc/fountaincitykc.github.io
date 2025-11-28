@@ -1,8 +1,8 @@
 ---
-title: "FCC Fellowship Time "
+title: FCC Fellowship Time
 date: 2025-12-07
 params:
-  featured: false
-  time: "Right after service "
+  time: Right after service
 ---
+
 Everyone is invited to stick around after the service for a time of fellowship over coffee and a mix of pastries, fruits, and bagels. We look forward to this monthly time of connection, encouragement, and fun.
