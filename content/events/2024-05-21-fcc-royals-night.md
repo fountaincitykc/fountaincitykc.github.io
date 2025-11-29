@@ -6,8 +6,8 @@ params:
   button:
     text: Register
     href: https://fountaincitykc.churchcenter.com/registrations/events/2255838
+  featured: false
 ---
-
 Join us for a night at the K cheering on our boys in blue. 
 
 If you did not pre-order tickets through FCC, you can always purchase your tickets through the box office or royals.com but we can't guarantee space in our designated section.

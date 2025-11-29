@@ -7,6 +7,6 @@ params:
   button:
     text: Sign up
     href: https://fountaincitykc.churchcenter.com/registrations/events/2782801
+  featured: false
 ---
-
 Join the ladies of FCC in a Bible reading plan through the book of Isaiah through She Reads Truth. Additionally you can join the Friday morning Bible Study where we will discuss the week's reading together over coffee, getting to know each other as well. Sign up to purchase the book and let us know if you are interested in joining the discussion.

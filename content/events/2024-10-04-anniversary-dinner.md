@@ -7,8 +7,8 @@ params:
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2502536
+  featured: false
 ---
-
 This October marks the 5th year anniversary since we launched. The night will include dinner, a night of remembering and praise. 
 
 <!--more-->

@@ -7,6 +7,6 @@ params:
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/calendar/event/166546387
+  featured: false
 ---
-
 Join us as we take a deep dive into Screen Sanity’s five starting points for digital health. Pre-school to high school parents will walk away with tools to build a foundation of digital health for their family + some ideas for their own digital health.

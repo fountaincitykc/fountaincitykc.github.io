@@ -7,8 +7,8 @@ params:
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/2502539
+  featured: false
 ---
-
 Join us during and after the service for fun, fellowship and lunch right after service to celebrate our 5 year anniversary. 
 
 <!--more-->

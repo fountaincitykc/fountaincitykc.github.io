@@ -1,8 +1,9 @@
 ---
 title: Cram the Cruiser Toy Drive
 date: 2024-12-08
+params:
+  featured: false
 ---
-
 Join us as we partner with Cram the Cruiser Toy Drive. We will be collecting toys at in the lobby before and after service. 
 
 <!--more-->
