@@ -1,5 +1,5 @@
 settings:
-  hide: false # If true, hide the settings editor in Pages CMS UI
+  hide: true # If true, hide the settings editor in Pages CMS UI
   content:
     merge: true # Preserve params that are only present in the frontmatter
 media:
