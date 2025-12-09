@@ -6,8 +6,6 @@ description: |-
 
 All Scripture is self-attesting and being Truth, requires our unreserved submission in all areas of life. The infallible Word of God, the 66 books of the Old and New Testaments, is a complete and unified witness to God’s redemptive acts culminating in the incarnation of the Living Word, the Lord Jesus Christ. The Bible, uniquely and fully inspired by the Holy Spirit, is the supreme and final authority on all matters on which it speaks. On this sure foundation we affirm these Essentials:
 
----
-
 1. We believe in one God, the sovereign Creator and Sustainer of all things, infinitely perfect and eternally existing in three Persons: Father, Son, and Holy Spirit. To Him be all honor, glory and praise forever!
 
 2. Jesus Christ, the living Word, became flesh through His miraculous conception by the Holy Spirit and His virgin birth. He who is true God became true man united in one Person forever. He died on the cross a sacrifice for our sins according to the Scriptures. On the third day He arose bodily from the dead, ascended into heaven, where, at the right hand of the Majesty on High, He now is our High Priest and Mediator.
@@ -21,7 +19,5 @@ All Scripture is self-attesting and being Truth, requires our unreserved submiss
 6. Jesus Christ will come again to the earth—personally, visibly, and bodily—to judge the living and the dead, and to consummate history and the eternal plan of God. “Even so, come, Lord Jesus” (Revelation 22:20).
 
 7. The Lord Jesus Christ commands all believers to proclaim the Gospel throughout the world and to make disciples of all nations. Obedience to the Great Commission requires total commitment to “Him who loved us and gave Himself for us.” He calls us to a life of self-denying love and service. “For we are His workmanship, created in Christ Jesus for good works, which God prepared beforehand that we should walk in them” (Ephesians 2:10).
-
----
 
 These essentials of our faith are further explained in the [Westminster Confession of Faith](https://epconnect.org/wp-content/uploads/Files/1-Who-We-Are/B-About-The-EPC/WCF-ModernEnglish.pdf), the guiding document of our EPC denomination.

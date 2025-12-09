@@ -9,8 +9,6 @@ keywords:
 
 “We will not hide them from their descendants; we will tell the next generation the praiseworthy deeds of the LORD, his power, and the wonders he has done” — Psalms 78:4
 
----
-
 ## Vision
 
 The vision of the Children's and Family Ministry at FCC is for children to grow into men and women who boldly take their place within God’s grand redemptive story. 
