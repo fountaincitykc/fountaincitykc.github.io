@@ -5,7 +5,8 @@ description: |-
 ---
 
 All Scripture is self-attesting and being Truth, requires our unreserved submission in all areas of life. The infallible Word of God, the 66 books of the Old and New Testaments, is a complete and unified witness to God’s redemptive acts culminating in the incarnation of the Living Word, the Lord Jesus Christ. The Bible, uniquely and fully inspired by the Holy Spirit, is the supreme and final authority on all matters on which it speaks. On this sure foundation we affirm these Essentials:
-{.lead}
+
+---
 
 1. We believe in one God, the sovereign Creator and Sustainer of all things, infinitely perfect and eternally existing in three Persons: Father, Son, and Holy Spirit. To Him be all honor, glory and praise forever!
 
