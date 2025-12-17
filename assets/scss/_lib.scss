@@ -1,6 +1,8 @@
 @use "sass:color";
 @use "sass:map";
 
+// Color functions
+
 // Mix a color with white
 @function tint-color($color, $percentage) {
   @return color.mix(white, $color, $percentage);
@@ -35,7 +37,7 @@
   @return map.get($container-max-widths, $breakpoint);
 }
 
-// Layout
+// Layout variables
 
 $breakpoint-min-widths: (
   xs: 0,
@@ -62,7 +64,7 @@ $container-max-widths: (
   xxl: 1320px,
 );
 
-// Type
+// Type variables
 
 $font-family-base: "Outfit", sans-serif;
 $font-family-display: "Syne", sans-serif;
@@ -102,7 +104,7 @@ $line-height-tight: 1.2;
   }
 }
 
-// Colors
+// Color variables
 
 $white: rgb(255, 255, 255);
 //$black: rgb(0, 0, 0);
@@ -130,14 +132,14 @@ $link-color: $blue-500;
 $link-color-hover: shade-color($blue-500, 20%);
 $border-color: $gray-100;
 
-// Stlyes 
+// Style variables
 
 $box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.4);
 
-// Sizing
+// Size variables
 
 $size-unit: 8px;
 
-// Animation (https://easings.net)
+// Animation variables (https://easings.net)
 
 $easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
