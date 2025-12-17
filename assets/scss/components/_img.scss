@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <img class="img">
@@ -16,7 +18,7 @@
     border-radius: 999px;
   }
   &.img--rounded {
-    border-radius: size(2);
+    border-radius: lib.size(2);
   }
   &.img--center {
     margin-right: auto;

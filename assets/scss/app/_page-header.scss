@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <div class="page-header">
@@ -8,19 +10,19 @@
 */
 
 .page-header {
-  padding: size(6) size(3);
-  background-color: $blue-700;
+  padding: lib.size(6) lib.size(3);
+  background-color: lib.$blue-700;
   background-image: url("/images/page-header-bkgd.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   text-align: center;
 
-  @media (min-width: breakpoint-min-width("lg")) {
-    padding: size(8) size(3);
+  @media (min-width: lib.breakpoint-min-width("lg")) {
+    padding: lib.size(8) lib.size(3);
   }
 
   &.page-header__fcc-kids-and-families {
-    padding: size(3);
+    padding: lib.size(3);
 
     img {
       display: block;
@@ -29,7 +31,7 @@
       height: auto;
       margin: 0 auto;
     }
-    @media (max-width: breakpoint-max-width("md")) {
+    @media (max-width: lib.breakpoint-max-width("md")) {
       background-image: none;
     }
   }

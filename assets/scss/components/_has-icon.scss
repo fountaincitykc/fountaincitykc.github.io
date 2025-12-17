@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <h4 class="has-icon">
@@ -12,7 +14,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: size(1);
+  gap: lib.size(1);
 
   svg {
     flex-shrink: 0;

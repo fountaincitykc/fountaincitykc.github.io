@@ -1,22 +1,25 @@
+@use "../lib";
+@use "../mixins/stack";
+
 .search {
   > * {
-    @include make-stack(6);
+    @include stack.make-stack(6);
   }
   .search-form {
-    @include make-stack(3);
+    @include stack.make-stack(3);
     text-align: center;
   }
   .search-form__subtitle {
-    margin-top: size(1); // Override stack
-    color: $gray-500;
+    margin-top: lib.size(1); // Override stack
+    color: lib.$gray-500;
   }
   .search-results {
-    @include make-stack(6);
+    @include stack.make-stack(6);
   }
   .search-results-entry {
-    @include make-stack(3);
-    padding-bottom: size(3);
-    border-bottom: solid 3px $border-color;
+    @include stack.make-stack(3);
+    padding-bottom: lib.size(3);
+    border-bottom: solid 3px lib.$border-color;
 
     &:last-of-type {
       padding-bottom: 0;
@@ -24,10 +27,10 @@
     }
   }
   .search-results-entry__title {
-    margin-top: size(1); // Override stack
+    margin-top: lib.size(1); // Override stack
   }
   .search-results-entry__section {
-    color: $gray-500;
-    font-size: $font-size-sm;
+    color: lib.$gray-500;
+    font-size: lib.$font-size-sm;
   }
 }

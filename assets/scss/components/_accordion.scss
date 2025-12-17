@@ -1,31 +1,33 @@
+@use "../lib";
+
 .accordion {
   
   details {
-    padding: size(3);
-    background-color: $blue-50;
-    border-bottom: solid 1px $white;
+    padding: lib.size(3);
+    background-color: lib.$blue-50;
+    border-bottom: solid 1px lib.$white;
     transition: background-color .2s ease;
 
     summary {
-      padding-right: size(4);
+      padding-right: lib.size(4);
       list-style-type: none;
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="%233874AA" /></svg>');
       background-repeat: no-repeat;
       background-position: right center;
-      background-size: size(3) size(3);
-      font-size: $font-size-lg;
+      background-size: lib.size(3) lib.size(3);
+      font-size: lib.$font-size-lg;
       cursor: pointer;
       transition: color .2s ease;
 
       &:hover {
-        color: $link-color;
+        color: lib.$link-color;
       }
     }
     &[open] {
-      background-color: $gray-50;
+      background-color: lib.$gray-50;
 
       summary {
-        margin-bottom: size(3);
+        margin-bottom: lib.size(3);
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" fill="%233874AA" /></svg>');  
       }
     }

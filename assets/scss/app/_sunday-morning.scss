@@ -1,8 +1,12 @@
+@use "../lib";
+@use "../mixins/content-section";
+@use "../mixins/stack";
+
 .sunday-morning {
-  @include make-stack(8);
+  @include stack.make-stack(8);
 
   > * {
-    @include make-stack(8);
+    @include stack.make-stack(8);
   }
   .sunday-morning__image {
     img {
@@ -12,18 +16,18 @@
       width: 100%;
       height: 400px;
 
-      @media (min-width: breakpoint-min-width("sm")) {
+      @media (min-width: lib.breakpoint-min-width("sm")) {
         min-height: 500px;
       }
-      @media (min-width: breakpoint-min-width("md")) {
+      @media (min-width: lib.breakpoint-min-width("md")) {
         min-height: 600px;
       }
     }
   }
-  @media (min-width: breakpoint-min-width("lg")) {
+  @media (min-width: lib.breakpoint-min-width("lg")) {
     .sunday-morning__location,
     .sunday-morning__directions {
-      @include make-content-section--center;
+      @include content-section.make-content-section--center;
     }
   }
 }

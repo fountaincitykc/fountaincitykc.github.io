@@ -1,3 +1,5 @@
+@use "../mixins/content-section";
+
 /*
 @markup
 <div class="content-section">
@@ -19,14 +21,14 @@
 */
 
 .content-section {
-  @include make-content-section;
+  @include content-section.make-content-section;
 
   // @options
 
   &.content-section--stack {
-    @include make-content-section--stack;
+    @include content-section.make-content-section--stack;
   }
   &.content-section--center {
-    @include make-content-section--center;
+    @include content-section.make-content-section--center;
   }
 }

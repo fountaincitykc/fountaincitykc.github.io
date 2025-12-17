@@ -1,21 +1,26 @@
+@use "../lib";
+@use "../mixins/button";
+@use "../mixins/stack";
+@use "../mixins/utils";
+
 .main-content.home {
   padding-top: 0;// Override .main-content
 }
 .home {
-  @include make-stack(10);
-  background-color: $blue-700;
+  @include stack.make-stack(10);
+  background-color: lib.$blue-700;
 }
 
 // Directions
 
 .home-directions {
-  padding-top: size(3);
-  padding-bottom: size(3);
-  background-color: $white;
-  border-top: solid 3px $border-color;
+  padding-top: lib.size(3);
+  padding-bottom: lib.size(3);
+  background-color: lib.$white;
+  border-top: solid 3px lib.$border-color;
   text-align: center;
 
-  @media (min-width: breakpoint-min-width("sm")) {
+  @media (min-width: lib.breakpoint-min-width("sm")) {
     display: none;
   }
 }
@@ -26,7 +31,7 @@
   position: relative;
   overflow: hidden;
   margin-top: 0;// Override stack
-  box-shadow: $box-shadow;
+  box-shadow: lib.$box-shadow;
 
   .home-hero__background {
     position: absolute;
@@ -62,26 +67,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: size(6);
-    padding: size(16) size(3);
+    gap: lib.size(6);
+    padding: lib.size(16) lib.size(3);
     text-align: center;
 
     h1 {
       margin-bottom: 0;
       max-width: 1200px;
-      color: $white;
+      color: lib.$white;
       font-size: var(--font-size-h2);
-      font-weight: $font-weight-heavy;
+      font-weight: lib.$font-weight-heavy;
       text-wrap: balance;
     }
     h4 {
       margin-bottom: 0;
-      color: $blue-300;
-      font-weight: $font-weight-bold;
+      color: lib.$blue-300;
+      font-weight: lib.$font-weight-bold;
     }
     .watch-live {
       a {
-        @include make-white-link;
+        @include utils.make-white-link;
       }
       &.hide {
         // Hide link by default
@@ -90,20 +95,20 @@
       }
     }
   }
-  @media (max-width: breakpoint-max-width("xs")) {
+  @media (max-width: lib.breakpoint-max-width("xs")) {
     // xs width only
     .home-hero__content {
-      padding: size(8) size(3);
+      padding: lib.size(8) lib.size(3);
 
       img {
         width: 140px;
       }
     }
   }
-  @media (min-width: breakpoint-min-width("xxl")) {
+  @media (min-width: lib.breakpoint-min-width("xxl")) {
     // xxl width and up
     .home-hero__content {
-      padding: size(20) size(3);
+      padding: lib.size(20) lib.size(3);
     }
   }
 
@@ -119,13 +124,13 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     h1 {
-      transition: transform 1s $easeOutQuad;
+      transition: transform 1s lib.$easeOutQuad;
     }
     img {
-      transition: transform 1.5s $easeOutQuad;
+      transition: transform 1.5s lib.$easeOutQuad;
     }
     h4 {
-      transition: transform 2s $easeOutQuad;
+      transition: transform 2s lib.$easeOutQuad;
     }
   }
 }
@@ -137,13 +142,13 @@
   z-index: 5;
   display: flex;
   flex-direction: column;
-  gap: size(3);
+  gap: lib.size(3);
   align-items: center;
   justify-content: center;
-  margin-top: -(size(12));
-  padding: size(3);
-  background-color: $blue-100;
-  border-radius: size(1);
+  margin-top: -(lib.size(12));
+  padding: lib.size(3);
+  background-color: lib.$blue-100;
+  border-radius: lib.size(1);
 
   .home-banner__content {
     text-align: center;
@@ -152,10 +157,10 @@
       margin-bottom: 0;
     }
   }
-  @media (min-width: breakpoint-min-width("md")) {
+  @media (min-width: lib.breakpoint-min-width("md")) {
     flex-direction: row;
-    margin-top: -(size(13.5));
-    padding: size(2) size(5);
+    margin-top: -(lib.size(13.5));
+    padding: lib.size(2) lib.size(5);
     border-radius: 999px;
 
     .home-banner__content {
@@ -171,10 +176,10 @@
     font-size: var(--font-size-h3);
 
     &.home-callout__link {
-      font-size: $font-size-base;
+      font-size: lib.$font-size-base;
     }
   }
-  @media (min-width: breakpoint-min-width("lg")) {
+  @media (min-width: lib.breakpoint-min-width("lg")) {
     background-image: url("/images/home-callout-bkgd.svg");
     background-repeat: no-repeat;
     background-position: top right;
@@ -183,7 +188,7 @@
       font-size: var(--font-size-h2);
 
       &.home-callout__link {
-        font-size: $font-size-lg;
+        font-size: lib.$font-size-lg;
       }
     }
   }
@@ -194,14 +199,14 @@
 .home-cards {
   display: flex;
   flex-direction: column;
-  gap: size(3);
+  gap: lib.size(3);
 
   .card {
     border: none;
-    box-shadow: $box-shadow;
+    box-shadow: lib.$box-shadow;
   }
 
-  @media (min-width: breakpoint-min-width("lg")) {
+  @media (min-width: lib.breakpoint-min-width("lg")) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -213,22 +218,22 @@
 .home-events {
   .content-section__media {
     img {
-      box-shadow: $box-shadow;
+      box-shadow: lib.$box-shadow;
     }
   }
   .content-section__body,
   .content-section__content {
-    color: $white;
+    color: lib.$white;
 
     a:not(.button) {
-      @include make-white-link;
+      @include utils.make-white-link;
     }
   }
   .content-section__footer {
     .button.button--primary {
       &:hover,
       &:active {
-        background-color: rgba($blue-500, 0.6);
+        background-color: rgba(lib.$blue-500, 0.6);
       }
     }
   }
@@ -238,8 +243,8 @@
 
 .home-welcome {
   .home-welcome__headline {
-    margin-bottom: size(4);
-    color: $white;
+    margin-bottom: lib.size(4);
+    color: lib.$white;
     text-align: center;
   }
 }
@@ -255,13 +260,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: size(3);
+    gap: lib.size(3);
 
-    @media (min-width: breakpoint-min-width("lg")) {
-      gap: size(4);
+    @media (min-width: lib.breakpoint-min-width("lg")) {
+      gap: lib.size(4);
 
       .button {
-        @include make-button--lg;
+        @include button.make-button--lg;
       }
     }
   }
@@ -271,32 +276,32 @@
 
 .home-events {
   .home-events__headline {
-    margin-bottom: size(10);
-    color: $white;
+    margin-bottom: lib.size(10);
+    color: lib.$white;
     text-align: center;
   }
   .home-events__cards {
     display: flex;
     flex-direction: column;
-    gap: size(3);
+    gap: lib.size(3);
 
     .card {
       border: none;
-      box-shadow: $box-shadow;
+      box-shadow: lib.$box-shadow;
     }
   }
   .home-events__footer {
     margin-bottom: 0;
-    padding-top: size(10);
+    padding-top: lib.size(10);
     text-align: center;
 
     a {
-      color: $white;
-      font-size: $font-size-lg;
+      color: lib.$white;
+      font-size: lib.$font-size-lg;
       text-decoration: none;
     }
   }
-  @media (min-width: breakpoint-min-width("lg")) {
+  @media (min-width: lib.breakpoint-min-width("lg")) {
     .home-events__cards {
       display: grid;
     }

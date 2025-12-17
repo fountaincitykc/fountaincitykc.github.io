@@ -1,3 +1,5 @@
+@use "../mixins/card";
+
 /*
 @markup
 <div class="card">
@@ -19,43 +21,43 @@
 */
 
 .card {
-  @include make-card;
+  @include card.make-card;
 
   // @options
 
   // When card in horizontal, set ratio of media to body
   &.card--horz {
     &.card--1x1 {
-      @include make-card--1x1;
+      @include card.make-card--1x1;
     }
     &.card--2x3 {
-      @include make-card--2x3;
+      @include card.make-card--2x3;
     }
     &.card--1x2 {
-      @include make-card--1x2;
+      @include card.make-card--1x2;
     }
     &.card--1x3 {
-      @include make-card--1x3;
+      @include card.make-card--1x3;
     }
   }
 
   // Add padding around media to align with content
   &.card--inset-media {
-    @include make-card--inset-media;
+    @include card.make-card--inset-media;
   }
 
   // Move media horizontal to content
   &.card--horz {
-    @include make-card--horz;
+    @include card.make-card--horz;
   }
 
   // Move media after content
   &.card--reverse {
-    @include make-card--reverse;
+    @include card.make-card--reverse;
   }
 
   // Center body
   &.card--center {
-    @include make-card--center;
+    @include card.make-card--center;
   }
 }

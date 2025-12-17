@@ -1,5 +1,8 @@
+@use "lib";
+@use "mixins/utils";
+
 :root {
-  font-size: $font-size-base;
+  font-size: lib.$font-size-base;
   
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
@@ -13,8 +16,8 @@
 }
 
 ::selection {
-  color: $white;
-  background-color: tint-color($blue-500, 20%);
+  color: lib.$white;
+  background-color: lib.tint-color(lib.$blue-500, 20%);
 }
 
 html {
@@ -25,17 +28,17 @@ html {
 
 body {
   margin: 0;
-  background-color: $background-color;
-  color: $foreground-color;
-  @include make-base-font;
+  background-color: lib.$background-color;
+  color: lib.$foreground-color;
+  @include utils.make-base-font;
 }
 
 // Block elements
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  margin-bottom: size(3);
-  @include make-header-font;
+  margin-bottom: lib.size(3);
+  @include utils.make-header-font;
 }
 
 h1 {
@@ -64,12 +67,12 @@ h6 {
 
 p, ul, ol, figure, address {
   margin: 0;
-  margin-bottom: size(3);
-  @include make-base-font;
+  margin-bottom: lib.size(3);
+  @include utils.make-base-font;
 }
 
 ul, ol {
-  padding-left: size(3);
+  padding-left: lib.size(3);
 }
 
 ul ul,
@@ -77,11 +80,11 @@ ol ol,
 ol ul,
 ul ol {
   margin-bottom: 0;
-  padding-top: size(1);
+  padding-top: lib.size(1);
 }
 
 li {
-  margin-bottom: size(1);
+  margin-bottom: lib.size(1);
 
   &:last-child {
     margin-bottom: 0;
@@ -100,9 +103,9 @@ address {
 
 blockquote {
   margin: 0;
-  margin-bottom: size(3);
-  padding: size(3);
-  border-left: solid 3px $border-color;
+  margin-bottom: lib.size(3);
+  padding: lib.size(3);
+  border-left: solid 3px lib.$border-color;
 
   & > :last-child {
     margin-bottom: 0;
@@ -113,10 +116,10 @@ hr {
   overflow: visible;
   height: 0;
   margin: 0;
-  margin-bottom: size(3);
+  margin-bottom: lib.size(3);
   box-sizing: content-box;
   border: none;
-  border-top: solid 3px $border-color;
+  border-top: solid 3px lib.$border-color;
 }
 
 // Inline elements
@@ -126,28 +129,28 @@ img {
 }
 
 a {
-  color: $link-color;
+  color: lib.$link-color;
   text-decoration: underline;
-  text-decoration-color: rgba($link-color, 0.15);
+  text-decoration-color: rgba(lib.$link-color, 0.15);
   text-decoration-thickness: 2px;
   transition: color .2s ease, text-decoration-color .2s ease;
   
   &:hover,
   &:active {
-    color: $link-color-hover;
-    text-decoration-color: rgba($link-color, 0.3);
+    color: lib.$link-color-hover;
+    text-decoration-color: rgba(lib.$link-color, 0.3);
   }
 }
 
 strong,
 b {
-  font-weight: $font-weight-heavy;
+  font-weight: lib.$font-weight-heavy;
 }
 
 figcaption {
-  padding-top: size(1);
-  color: $gray-500;
-  font-size: $font-size-sm;
+  padding-top: lib.size(1);
+  color: lib.$gray-500;
+  font-size: lib.$font-size-sm;
   text-align: center;
 }
 
@@ -157,26 +160,26 @@ select,
 input,
 textarea,
 button {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  font-family: lib.$font-family-base;
+  font-size: lib.$font-size-base;
+  font-weight: lib.$font-weight-normal;
+  line-height: lib.$line-height-base;
 }
 
 input[type=text],
 textarea {
-  padding: size(1) size(2);
+  padding: lib.size(1) lib.size(2);
   width: 100%;
-  border: solid 1px $border-color;
-  border-radius: size(0.5);
-  background-color: $background-color;
-  color: $foreground-color;
+  border: solid 1px lib.$border-color;
+  border-radius: lib.size(0.5);
+  background-color: lib.$background-color;
+  color: lib.$foreground-color;
 
   &:focus {
-    outline: $blue-500;
+    outline: lib.$blue-500;
   }
   &::placeholder {
-    color: $gray-500;
+    color: lib.$gray-500;
   }
 }
 
@@ -187,7 +190,7 @@ input[type=text] {
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    -webkit-text-fill-color: $foreground-color;
+    -webkit-text-fill-color: lib.$foreground-color;
     transition: background-color 5000s ease-in-out 0s;
   }
 }

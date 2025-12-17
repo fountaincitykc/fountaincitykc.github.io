@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <div class="banner">
@@ -16,17 +18,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: size(3);
-  padding: size(3);
-  background-color: $blue-100;
-  border-radius: size(1);
+  gap: lib.size(3);
+  padding: lib.size(3);
+  background-color: lib.$blue-100;
+  border-radius: lib.size(1);
 
   .banner__content {
     & > :last-child {
       margin-bottom: 0;
     }
   }
-  @media (min-width: breakpoint-min-width("md")) {
+  @media (min-width: lib.breakpoint-min-width("md")) {
     flex-direction: row;
   }
 }

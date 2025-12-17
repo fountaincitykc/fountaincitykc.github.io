@@ -4,11 +4,24 @@
 
 This site is built with [Hugo](https://gohugo.io/).
 
-### Install Hugo
+### Local installation
 
-To develop locally, install the **extended** release of Hugo. It can be downloaded from the GitHub [release page](https://github.com/gohugoio/hugo/releases/tag/v0.147.0), or installed using `brew` or another package manager.
+To develop locally, Dart Sass and Hugo need to be installed using `brew` or
+another package manager.
 
-The minimum version required is `0.147.0`.
+Dart Sass:
+
+```bash
+brew install sass/sass/sass
+```
+
+Hugo:
+
+```bash
+brew install hugo
+```
+
+The minimum Hugo version required is `0.147.0`.
 
 ### Run Hugo
 

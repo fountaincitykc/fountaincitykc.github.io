@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <div class="search-input">
@@ -12,19 +14,19 @@
   display: flex;
   align-items: center;
   min-width: 200px;
-  padding-left: size(2);
-  border: solid 1px $border-color;
+  padding-left: lib.size(2);
+  border: solid 1px lib.$border-color;
   border-radius: 999px;
-  background-color: $white;
+  background-color: lib.$white;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   
   svg {
     flex-shrink: 0;
-    width: size(3);
-    height: size(3);
+    width: lib.size(3);
+    height: lib.size(3);
     
     path {
-      color: $gray-500;
+      color: lib.$gray-500;
     }
   }
   input[type=text],
@@ -34,8 +36,8 @@
     outline: none;
   }
   input[type=reset] {
-    padding-right: size(3);
-    color: $link-color;
+    padding-right: lib.size(3);
+    color: lib.$link-color;
     cursor: pointer;
   }
   // Hide reset button if search input is empty
@@ -48,22 +50,22 @@
 
   &.search-input--sm {
     svg {
-      width: size(2.5);
-      height: size(2.5);
+      width: lib.size(2.5);
+      height: lib.size(2.5);
     }
     input[type=text],
     input[type=reset] {
-      font-size: $font-size-sm;
+      font-size: lib.$font-size-sm;
     }
   }
   &.search-input--lg {
     svg {
-      width: size(4);
-      height: size(4);
+      width: lib.size(4);
+      height: lib.size(4);
     }
     input[type=text],
     input[type=reset] {
-      font-size: $font-size-lg;
+      font-size: lib.$font-size-lg;
     }
   }
 }

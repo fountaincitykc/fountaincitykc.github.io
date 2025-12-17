@@ -1,6 +1,8 @@
+@use "../lib";
+
 .basic-page {
   hr {
-    width: size(4);
+    width: lib.size(4);
     margin-left: auto;
     margin-right: auto;
   }

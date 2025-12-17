@@ -1,8 +1,10 @@
+@use "../mixins/stack";
+
 .stack {
-  @include make-stack(0);
+  @include stack.make-stack(0);
 }
 @for $i from 1 through 16 {
   .stack-#{$i} {
-    @include make-stack($i);
+    @include stack.make-stack($i);
   }
 }

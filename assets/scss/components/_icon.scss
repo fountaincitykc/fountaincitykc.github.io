@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <svg class="icon">
@@ -8,8 +10,8 @@
 .icon {
   display: inline-block;
   vertical-align: middle;
-  width: size(3);
-  height: size(3);
+  width: lib.size(3);
+  height: lib.size(3);
   
   path {
     fill: currentColor;
@@ -19,22 +21,22 @@
 
   &.icon--primary {
     path {
-      fill: $blue-500;
+      fill: lib.$blue-500;
     }
   }
   &.icon--secondary {
     path {
-      fill: $gray-500;
+      fill: lib.$gray-500;
     }
   }
   &.icon--dark {
     path {
-      fill: $foreground-color;
+      fill: lib.$foreground-color;
     }
   }
   &.icon--white {
     path {
-      fill: $white;
+      fill: lib.$white;
     }
   }
   &.icon--current {
@@ -43,23 +45,23 @@
     }
   }
   &.icon--xs {
-    width: size(2.25);
-    height: size(2.25);
+    width: lib.size(2.25);
+    height: lib.size(2.25);
   }
   &.icon--sm {
-    width: size(2.5);
-    height: size(2.5);
+    width: lib.size(2.5);
+    height: lib.size(2.5);
   }
   &.icon--md {
-    width: size(3);
-    height: size(3);
+    width: lib.size(3);
+    height: lib.size(3);
   }
   &.icon--lg {
-    width: size(4);
-    height: size(4);
+    width: lib.size(4);
+    height: lib.size(4);
   }
   &.icon--xl {
-    width: size(6);
-    height: size(6);
+    width: lib.size(6);
+    height: lib.size(6);
   }
 }
