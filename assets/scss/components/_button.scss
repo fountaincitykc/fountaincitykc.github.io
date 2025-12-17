@@ -1,3 +1,5 @@
+@use "../mixins/button";
+
 /*
 @markup
 <a class="button button--primary">Text</a>
@@ -5,35 +7,35 @@
 
 .button,
 button {
-  @include make-button;
+  @include button.make-button;
 
   // @options
 
   &.button--primary {
-    @include make-button--primary;
+    @include button.make-button--primary;
   }
   &.button--secondary {
-    @include make-button--secondary;
+    @include button.make-button--secondary;
   }
   &.button--dark {
-    @include make-button--dark;
+    @include button.make-button--dark;
   }
   &.button--white {
-    @include make-button--white;
+    @include button.make-button--white;
   }
   &.button--lg {
-    @include make-button--lg;
+    @include button.make-button--lg;
   }
   &.button--md {
-    @include make-button--md;
+    @include button.make-button--md;
   }
   &.button--sm {
-    @include make-button--sm;
+    @include button.make-button--sm;
   }
   &.button--block {
-    @include make-button--block;
+    @include button.make-button--block;
   }
   &.button--disabled {
-    @include make-button--disabled;
+    @include button.make-button--disabled;
   }
 }

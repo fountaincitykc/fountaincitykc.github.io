@@ -1,5 +1,7 @@
+@use "../mixins/stack";
+
 .tags {
   > * {
-    @include make-stack(8);
+    @include stack.make-stack(8);
   }
 }

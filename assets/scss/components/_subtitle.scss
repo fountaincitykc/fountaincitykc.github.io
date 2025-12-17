@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <h2>Headline</h2>
@@ -6,12 +8,12 @@
 */
 
 .subtitle {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  font-family: lib.$font-family-base;
+  font-size: lib.$font-size-base;
+  font-weight: lib.$font-weight-bold;
+  line-height: lib.$line-height-tight;
 
   & ~ .subtitle {
-    margin-top: -(size(2));
+    margin-top: -(lib.size(2));
   }
 }

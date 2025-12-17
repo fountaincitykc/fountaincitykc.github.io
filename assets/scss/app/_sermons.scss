@@ -1,5 +1,7 @@
+@use "../mixins/stack";
+
 .sermons {
   > * {
-    @include make-stack(8);
+    @include stack.make-stack(8);
   }
 }

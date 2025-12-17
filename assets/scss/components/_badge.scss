@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <span class="badge">Text</span>
@@ -5,12 +7,12 @@
 
 .badge {
   display: inline-block;
-  padding: size(1) size(3);
-  background-color: $gray-100;
+  padding: lib.size(1) lib.size(3);
+  background-color: lib.$gray-100;
   border-radius: 999px;
-  font-size: $font-size-sm;
+  font-size: lib.$font-size-sm;
 
   &.badge--condensed {
-    padding: size(0.5) size(2);
+    padding: lib.size(0.5) lib.size(2);
   }
 }

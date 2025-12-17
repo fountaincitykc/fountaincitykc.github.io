@@ -1,3 +1,5 @@
+@use "../lib";
+
 /*
 @markup
 <div class="pill-header">
@@ -8,14 +10,14 @@
 .pill-header {
   display: inline-block;
   margin-bottom: 0;
-  padding: size(1) size(3);
-  background-color: $blue-900;
+  padding: lib.size(1) lib.size(3);
+  background-color: lib.$blue-900;
   border-radius: 999px;
-  color: $white;
-  font-family: $font-family-base;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-heavy;
-  line-height: $line-height-tight;
+  color: lib.$white;
+  font-family: lib.$font-family-base;
+  font-size: lib.$font-size-lg;
+  font-weight: lib.$font-weight-heavy;
+  line-height: lib.$line-height-tight;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

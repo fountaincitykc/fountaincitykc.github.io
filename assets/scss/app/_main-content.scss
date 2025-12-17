@@ -1,3 +1,5 @@
+@use "../lib";
+
 .main-content {
-  padding: size(10) 0;
+  padding: lib.size(10) 0;
 }

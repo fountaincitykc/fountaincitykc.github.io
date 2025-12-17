@@ -1,18 +1,20 @@
+@use "../lib";
+
 @mixin make-base-font {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  font-family: lib.$font-family-base;
+  font-size: lib.$font-size-base;
+  font-weight: lib.$font-weight-normal;
+  line-height: lib.$line-height-base;
 }
 @mixin make-header-font {
-  font-family: $font-family-display;
-  font-weight: $font-weight-heavy;
-  line-height: $line-height-tight;
+  font-family: lib.$font-family-display;
+  font-weight: lib.$font-weight-heavy;
+  line-height: lib.$line-height-tight;
   font-feature-settings: "ss04"; // Use alternate "g" (https://gitlab.com/bonjour-monde/fonderie/syne-typeface/-/issues/4)
 }
 @mixin make-white-link {
-  color: $white;
+  color: lib.$white;
   text-decoration: underline;
-  text-decoration-color: rgba($white, 0.4);
+  text-decoration-color: rgba(lib.$white, 0.4);
   text-decoration-thickness: 2px;
 }

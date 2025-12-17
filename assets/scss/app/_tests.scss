@@ -1,13 +1,17 @@
+@use "../lib";
+@use "../mixins/card";
+@use "../mixins/stack";
+
 .tests {
   .container {
-    @include make-stack(3);
-    padding-top: size(8);
-    padding-bottom: size(8);
+    @include stack.make-stack(3);
+    padding-top: lib.size(8);
+    padding-bottom: lib.size(8);
   }
-  @media (min-width: breakpoint-min-width("md")) {
+  @media (min-width: lib.breakpoint-min-width("md")) {
     .test-card {
-      @include make-card--horz;
-      @include make-card--reverse;
+      @include card.make-card--horz;
+      @include card.make-card--reverse;
     }
   }
 }

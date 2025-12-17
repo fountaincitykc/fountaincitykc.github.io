@@ -1,64 +1,51 @@
-// Utility functions
-@import "functions";
-
-// Values for colors, fonts, spacing, etc
-@import "variables";
-
 // Font file imports
-@import "fonts";
-
-// Mix-ins
-@import "mixins/button";
-@import "mixins/card";
-@import "mixins/content-section";
-@import "mixins/stack";
-@import "mixins/utils";
+@use "fonts";
 
 // Global styling of html elements
-@import "base";
+@use "base";
 
 // Components
-@import "components/accordion";
-@import "components/animate";
-@import "components/badge";
-@import "components/banner";
-@import "components/button";
-@import "components/callout";
-@import "components/card";
-@import "components/container";
-@import "components/content-section";
-@import "components/has-icon";
-@import "components/icon";
-@import "components/img";
-@import "components/loader";
-@import "components/pager";
-@import "components/paginator";
-@import "components/pill-header";
-@import "components/search-input";
-@import "components/stack";
-@import "components/subtitle";
-@import "components/youtube-embed";
-@import "components/youtube-image";
+@use "components/accordion";
+@use "components/animate";
+@use "components/badge";
+@use "components/banner";
+@use "components/button";
+@use "components/callout";
+@use "components/card";
+@use "components/container";
+@use "components/content-section";
+@use "components/has-icon";
+@use "components/icon";
+@use "components/img";
+@use "components/loader";
+@use "components/pager";
+@use "components/paginator";
+@use "components/pill-header";
+@use "components/search-input";
+@use "components/stack";
+@use "components/subtitle";
+@use "components/youtube-embed";
+@use "components/youtube-image";
 
 // Application
 
-@import "app/main-content";
-@import "app/main-footer";
-@import "app/main-header";
-@import "app/main-nav";
-@import "app/page-header";
-@import "app/basic-page";
+@use "app/main-content";
+@use "app/main-footer";
+@use "app/main-header";
+@use "app/main-nav";
+@use "app/page-header";
+@use "app/basic-page";
 
-@import "app/child-discipleship";
-@import "app/connect";
-@import "app/events";
-@import "app/home";
-@import "app/search";
-@import "app/series";
-@import "app/sermons";
-@import "app/staff";
-@import "app/sunday-morning";
-@import "app/tags";
-@import "app/404";
+@use "app/child-discipleship";
+@use "app/connect";
+@use "app/events";
+@use "app/home";
+@use "app/search";
+@use "app/series";
+@use "app/sermons";
+@use "app/staff";
+@use "app/sunday-morning";
+@use "app/tags";
+@use "app/four0four";
 
-@import "app/tests";
+@use "app/tests";

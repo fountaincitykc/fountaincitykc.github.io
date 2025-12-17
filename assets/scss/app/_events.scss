@@ -1,6 +1,9 @@
+@use "../lib";
+@use "../mixins/stack";
+
 .events {
   > * {
-    @include make-stack(8);
+    @include stack.make-stack(8);
   }
 }
 
@@ -10,10 +13,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: size(2);
-  margin-top: -(size(8));
-  padding-bottom: size(2);
-  border-bottom: 3px solid $border-color;
+  gap: lib.size(2);
+  margin-top: -(lib.size(8));
+  padding-bottom: lib.size(2);
+  border-bottom: 3px solid lib.$border-color;
 
   ul, li {
     margin: 0;
@@ -23,11 +26,11 @@
   ul, li {
     display: flex;
     flex-direction: row;
-    gap: size(2);
+    gap: lib.size(2);
   }
   li {
-    padding-left: size(2);
-    border-left: solid 2px $border-color;
+    padding-left: lib.size(2);
+    border-left: solid 2px lib.$border-color;
   }
   & > ul > li:first-of-type {
     padding-left: 0;
@@ -40,7 +43,7 @@
       // Shorten month names on smaller breakpoints
       display: none;
 
-      @media (min-width: breakpoint-min-width("md")) {
+      @media (min-width: lib.breakpoint-min-width("md")) {
         display: inline;
       }
     }
@@ -50,8 +53,8 @@
 // Header
 
 .events-header {
-  padding-top: size(8);
-  border-top: 3px solid $border-color;
+  padding-top: lib.size(8);
+  border-top: 3px solid lib.$border-color;
 
   &:first-of-type {
     padding-top: 0;
@@ -64,7 +67,7 @@
 .event {
   display: flex;
   flex-direction: column;
-  gap: size(3);
+  gap: lib.size(3);
 
   .event__month,
   .event__day,
@@ -74,30 +77,30 @@
   }
   .event__month,
   .event__tbd {
-    padding: size(1) 0 size(0.5) 0;
-    background-color: $blue-300;
-    border-top-left-radius: size(1);
-    border-top-right-radius: size(1);
-    color: $white;
+    padding: lib.size(1) 0 lib.size(0.5) 0;
+    background-color: lib.$blue-300;
+    border-top-left-radius: lib.size(1);
+    border-top-right-radius: lib.size(1);
+    color: lib.$white;
     font-size: var(--font-size-h4);
-    font-weight: $font-weight-bold;
+    font-weight: lib.$font-weight-bold;
   }
   .event__day {
     padding: 0;
-    border: 6px solid $blue-300;
-    border-bottom-left-radius: size(1);
-    border-bottom-right-radius: size(1);
-    font-family: $font-family-base;
+    border: 6px solid lib.$blue-300;
+    border-bottom-left-radius: lib.size(1);
+    border-bottom-right-radius: lib.size(1);
+    font-family: lib.$font-family-base;
     font-size: var(--font-size-h2);
-    font-weight: $font-weight-heavy;
+    font-weight: lib.$font-weight-heavy;
   }
   .event__tbd {
-    padding: size(3) 0;
+    padding: lib.size(3) 0;
   }
   .event__body {
     display: flex;
     flex-direction: column;
-    gap: size(3);
+    gap: lib.size(3);
   }
   .event__header,
   .event__content,
@@ -109,11 +112,11 @@
   .event__footer {
     display: flex;
     flex-direction: row;
-    gap: size(2);
+    gap: lib.size(2);
   }
-  @media (min-width: breakpoint-min-width("lg")) {
+  @media (min-width: lib.breakpoint-min-width("lg")) {
     flex-direction: row;
-    gap: size(10);
+    gap: lib.size(10);
     
     .event__month,
     .event__day,
@@ -126,7 +129,7 @@
 // No Events
 
 .no-events {
-  padding: size(8) 0;
+  padding: lib.size(8) 0;
   text-align: center;
-  font-size: $font-size-lg;
+  font-size: lib.$font-size-lg;
 }
