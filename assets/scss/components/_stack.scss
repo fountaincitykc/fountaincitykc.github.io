@@ -1,10 +1,10 @@
-@use "../mixins/stack";
+@use "../abstracts";
 
 .stack {
-  @include stack.make-stack(0);
+  @include abstracts.make-stack(0);
 }
 @for $i from 1 through 16 {
   .stack-#{$i} {
-    @include stack.make-stack($i);
+    @include abstracts.make-stack($i);
   }
 }

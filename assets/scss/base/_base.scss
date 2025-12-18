@@ -1,8 +1,7 @@
-@use "lib";
-@use "mixins/utils";
+@use "../abstracts";
 
 :root {
-  font-size: lib.$font-size-base;
+  font-size: abstracts.$font-size-base;
   
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
@@ -16,8 +15,8 @@
 }
 
 ::selection {
-  color: lib.$white;
-  background-color: lib.tint-color(lib.$blue-500, 20%);
+  color: abstracts.$white;
+  background-color: abstracts.shade-color(abstracts.$blue-500, 20%);
 }
 
 html {
@@ -28,17 +27,17 @@ html {
 
 body {
   margin: 0;
-  background-color: lib.$background-color;
-  color: lib.$foreground-color;
-  @include utils.make-base-font;
+  background-color: abstracts.$background-color;
+  color: abstracts.$foreground-color;
+  @include abstracts.make-base-font;
 }
 
 // Block elements
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  margin-bottom: lib.size(3);
-  @include utils.make-header-font;
+  margin-bottom: abstracts.size(3);
+  @include abstracts.make-header-font;
 }
 
 h1 {
@@ -67,12 +66,12 @@ h6 {
 
 p, ul, ol, figure, address {
   margin: 0;
-  margin-bottom: lib.size(3);
-  @include utils.make-base-font;
+  margin-bottom: abstracts.size(3);
+  @include abstracts.make-base-font;
 }
 
 ul, ol {
-  padding-left: lib.size(3);
+  padding-left: abstracts.size(3);
 }
 
 ul ul,
@@ -80,11 +79,11 @@ ol ol,
 ol ul,
 ul ol {
   margin-bottom: 0;
-  padding-top: lib.size(1);
+  padding-top: abstracts.size(1);
 }
 
 li {
-  margin-bottom: lib.size(1);
+  margin-bottom: abstracts.size(1);
 
   &:last-child {
     margin-bottom: 0;
@@ -103,9 +102,9 @@ address {
 
 blockquote {
   margin: 0;
-  margin-bottom: lib.size(3);
-  padding: lib.size(3);
-  border-left: solid 3px lib.$border-color;
+  margin-bottom: abstracts.size(3);
+  padding: abstracts.size(3);
+  border-left: solid 3px abstracts.$border-color;
 
   & > :last-child {
     margin-bottom: 0;
@@ -116,10 +115,10 @@ hr {
   overflow: visible;
   height: 0;
   margin: 0;
-  margin-bottom: lib.size(3);
+  margin-bottom: abstracts.size(3);
   box-sizing: content-box;
   border: none;
-  border-top: solid 3px lib.$border-color;
+  border-top: solid 3px abstracts.$border-color;
 }
 
 // Inline elements
@@ -129,28 +128,28 @@ img {
 }
 
 a {
-  color: lib.$link-color;
+  color: abstracts.$link-color;
   text-decoration: underline;
-  text-decoration-color: rgba(lib.$link-color, 0.15);
+  text-decoration-color: rgba(abstracts.$link-color, 0.15);
   text-decoration-thickness: 2px;
   transition: color .2s ease, text-decoration-color .2s ease;
   
   &:hover,
   &:active {
-    color: lib.$link-color-hover;
-    text-decoration-color: rgba(lib.$link-color, 0.3);
+    color: abstracts.$link-color-hover;
+    text-decoration-color: rgba(abstracts.$link-color, 0.3);
   }
 }
 
 strong,
 b {
-  font-weight: lib.$font-weight-heavy;
+  font-weight: abstracts.$font-weight-heavy;
 }
 
 figcaption {
-  padding-top: lib.size(1);
-  color: lib.$gray-500;
-  font-size: lib.$font-size-sm;
+  padding-top: abstracts.size(1);
+  color: abstracts.$gray-500;
+  font-size: abstracts.$font-size-sm;
   text-align: center;
 }
 
@@ -160,26 +159,26 @@ select,
 input,
 textarea,
 button {
-  font-family: lib.$font-family-base;
-  font-size: lib.$font-size-base;
-  font-weight: lib.$font-weight-normal;
-  line-height: lib.$line-height-base;
+  font-family: abstracts.$font-family-base;
+  font-size: abstracts.$font-size-base;
+  font-weight: abstracts.$font-weight-normal;
+  line-height: abstracts.$line-height-base;
 }
 
 input[type=text],
 textarea {
-  padding: lib.size(1) lib.size(2);
+  padding: abstracts.size(1) abstracts.size(2);
   width: 100%;
-  border: solid 1px lib.$border-color;
-  border-radius: lib.size(0.5);
-  background-color: lib.$background-color;
-  color: lib.$foreground-color;
+  border: solid 1px abstracts.$border-color;
+  border-radius: abstracts.size(0.5);
+  background-color: abstracts.$background-color;
+  color: abstracts.$foreground-color;
 
   &:focus {
-    outline: lib.$blue-500;
+    outline: abstracts.$blue-500;
   }
   &::placeholder {
-    color: lib.$gray-500;
+    color: abstracts.$gray-500;
   }
 }
 
@@ -190,7 +189,7 @@ input[type=text] {
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    -webkit-text-fill-color: lib.$foreground-color;
+    -webkit-text-fill-color: abstracts.$foreground-color;
     transition: background-color 5000s ease-in-out 0s;
   }
 }

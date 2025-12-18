@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -18,17 +18,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: lib.size(3);
-  padding: lib.size(3);
-  background-color: lib.$blue-100;
-  border-radius: lib.size(1);
+  gap: abstracts.size(3);
+  padding: abstracts.size(3);
+  background-color: abstracts.$blue-100;
+  border-radius: abstracts.size(1);
 
   .banner__content {
     & > :last-child {
       margin-bottom: 0;
     }
   }
-  @media (min-width: lib.breakpoint-min-width("md")) {
+  @media (min-width: abstracts.breakpoint-min-width("md")) {
     flex-direction: row;
   }
 }

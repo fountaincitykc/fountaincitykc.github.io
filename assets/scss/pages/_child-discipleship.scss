@@ -1,0 +1,7 @@
+@use "../abstracts";
+
+.child-discipleship {
+  > * {
+    @include abstracts.make-stack(8);
+  }
+}

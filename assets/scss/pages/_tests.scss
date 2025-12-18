@@ -1,0 +1,15 @@
+@use "../abstracts";
+
+.tests {
+  .container {
+    @include abstracts.make-stack(3);
+    padding-top: abstracts.size(8);
+    padding-bottom: abstracts.size(8);
+  }
+  @media (min-width: abstracts.breakpoint-min-width("md")) {
+    .test-card {
+      @include abstracts.make-card--horz;
+      @include abstracts.make-card--reverse;
+    }
+  }
+}

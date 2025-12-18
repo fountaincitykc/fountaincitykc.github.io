@@ -1,7 +1,0 @@
-@use "../mixins/stack";
-
-.connect {
-  > * {
-    @include stack.make-stack(8);
-  }
-}

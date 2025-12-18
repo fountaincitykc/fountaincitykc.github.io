@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 .container,
 .container-sm,
@@ -8,28 +8,28 @@
 .container-xxl {
   width: 100%;
   margin: 0 auto;
-  padding: 0 lib.size(3);
+  padding: 0 abstracts.size(3);
 
-  @media (min-width: lib.breakpoint-min-width("lg")) {
-    padding: 0 lib.size(6);
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
+    padding: 0 abstracts.size(6);
   }
-  @media (min-width: lib.breakpoint-min-width("xxl")) {
-    padding: 0 lib.size(3);
+  @media (min-width: abstracts.breakpoint-min-width("xxl")) {
+    padding: 0 abstracts.size(3);
   }
 }
 .container,
 .container-xxl {
-  max-width: lib.container-max-width("xxl");
+  max-width: abstracts.container-max-width("xxl");
 }
 .container-sm {
-  max-width: lib.container-max-width("sm");
+  max-width: abstracts.container-max-width("sm");
 }
 .container-md {
-  max-width: lib.container-max-width("md");
+  max-width: abstracts.container-max-width("md");
 }
 .container-lg {
-  max-width: lib.container-max-width("lg");
+  max-width: abstracts.container-max-width("lg");
 }
 .container-xl {
-  max-width: lib.container-max-width("xl");
+  max-width: abstracts.container-max-width("xl");
 }

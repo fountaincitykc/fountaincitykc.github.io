@@ -1,6 +1,6 @@
-@use "../lib";
+@use "../abstracts";
 
-@media (max-width: lib.breakpoint-max-width("md")) {
+@media (max-width: abstracts.breakpoint-max-width("md")) {
   // Hide body scrollbar when mobile nav is open
   body {
     &:has(.main-header__toggle-checkbox:checked) {
@@ -20,8 +20,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: lib.size(3);
-    padding: lib.size(3);
+    gap: abstracts.size(3);
+    padding: abstracts.size(3);
   }
   .main-header__logo {
     width: 240px;
@@ -54,7 +54,7 @@
   // Mobile nav only
   // ===============
 
-  @media (max-width: lib.breakpoint-max-width("md")) {
+  @media (max-width: abstracts.breakpoint-max-width("md")) {
     .main-header__container {
       position: relative;
     }
@@ -78,8 +78,8 @@
       left: 0;
       overflow: auto;
       z-index: 998;
-      padding-top: lib.size(8);// Push down nav
-      background-color: lib.$blue-700;
+      padding-top: abstracts.size(8);// Push down nav
+      background-color: abstracts.$blue-700;
     }
   }
 
@@ -87,9 +87,9 @@
   // Desktop nav only
   // ================
 
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     .main-header__container {
-      padding: lib.size(3) lib.size(6);
+      padding: abstracts.size(3) abstracts.size(6);
     }
     .main-header__toggle {
       display: none;

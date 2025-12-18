@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 .main-nav {
 
@@ -19,7 +19,7 @@
     margin-bottom: 0;
   }
   a {
-    font-weight: lib.$font-weight-bold;
+    font-weight: abstracts.$font-weight-bold;
     text-decoration: none;
   }
 
@@ -27,33 +27,33 @@
   // Mobile nav only
   // ===============
 
-  @media (max-width: lib.breakpoint-max-width("md")) {
+  @media (max-width: abstracts.breakpoint-max-width("md")) {
     ul {
       flex-direction: column;
     }
     a {
       display: block;
-      padding: lib.size(1.5) lib.size(6);
-      color: lib.$white;
-      font-size: lib.$font-size-lg;
+      padding: abstracts.size(1.5) abstracts.size(6);
+      color: abstracts.$white;
+      font-size: abstracts.$font-size-lg;
     }
     li.main-nav--selected > a {
-      background-color: rgba(lib.$white, 0.1);
+      background-color: rgba(abstracts.$white, 0.1);
     }
     .icon {
       path {
-        fill: lib.$white;
+        fill: abstracts.$white;
       }
     }
 
     // Mobile submenu
 
     li li {
-      padding-left: lib.size(6);
+      padding-left: abstracts.size(6);
 
       a {
-        padding-left: lib.size(4);
-        border-left: solid 3px lib.$border-color;
+        padding-left: abstracts.size(4);
+        border-left: solid 3px abstracts.$border-color;
       }
     }
   }
@@ -62,22 +62,22 @@
   // Desktop nav only
   // ================
 
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     & > ul {
       position: relative; // Needed for desktop submenu
       flex-direction: row;
       justify-content: right;
       align-items: center;
-      gap: lib.size(6);
+      gap: abstracts.size(6);
     }
     a {
       display: inline-block;
-      padding: lib.size(1) 0;
+      padding: abstracts.size(1) 0;
     }
     li.main-nav--selected > a {
-      color: lib.$foreground-color;
+      color: abstracts.$foreground-color;
       text-decoration: underline;
-      text-decoration-color: rgba(lib.$blue-300, 0.4);
+      text-decoration-color: rgba(abstracts.$blue-300, 0.4);
       text-decoration-thickness: 3px;
     }
 
@@ -86,22 +86,22 @@
     li:hover ul {
       display: flex;
       flex-direction: column;
-      gap: lib.size(0.5);
+      gap: abstracts.size(0.5);
     }
     ul ul {
       display: none;
       position: absolute;
       min-width: 160px;
-      padding: lib.size(2) lib.size(3);
-      background-color: lib.$white;
-      box-shadow: 0px lib.size(1) lib.size(2) 0px rgba(lib.$blue-900, 0.2);
-      border-radius: lib.size(1);
+      padding: abstracts.size(2) abstracts.size(3);
+      background-color: abstracts.$white;
+      box-shadow: 0px abstracts.size(1) abstracts.size(2) 0px rgba(abstracts.$blue-900, 0.2);
+      border-radius: abstracts.size(1);
       z-index: 999;
     }
   }
-  @media (min-width: lib.breakpoint-min-width("xl")) {
+  @media (min-width: abstracts.breakpoint-min-width("xl")) {
     & > ul  {
-      gap: lib.size(8);
+      gap: abstracts.size(8);
     }
   }
 }

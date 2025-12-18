@@ -1,9 +1,9 @@
-@use "../lib";
+@use "../abstracts";
 
 @mixin make-content-section {
   display: flex;
   flex-direction: column;
-  gap: lib.size(6);
+  gap: abstracts.size(6);
 
   .content-section__media {
     figure {
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: lib.size(3);
+    gap: abstracts.size(3);
   }
   .content-section__header,
   .content-section__content,
@@ -26,9 +26,9 @@
   .content-section__footer  {
     display: flex;
     flex-direction: row;
-    gap: lib.size(3);
+    gap: abstracts.size(3);
   }
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     flex-direction: row;
     
     .content-section__media {

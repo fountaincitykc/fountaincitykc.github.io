@@ -1,10 +1,10 @@
-@use "../lib";
+@use "../abstracts";
 
 @mixin make-stack($spacer) {
   & > * {
     margin-bottom: 0;
   }
   & > * + * {
-    margin-top: lib.size($spacer);
+    margin-top: abstracts.size($spacer);
   }
 }

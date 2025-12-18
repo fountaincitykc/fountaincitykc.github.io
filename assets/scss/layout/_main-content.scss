@@ -1,0 +1,5 @@
+@use "../abstracts";
+
+.main-content {
+  padding: abstracts.size(10) 0;
+}

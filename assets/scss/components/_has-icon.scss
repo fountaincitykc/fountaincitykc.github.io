@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: lib.size(1);
+  gap: abstracts.size(1);
 
   svg {
     flex-shrink: 0;

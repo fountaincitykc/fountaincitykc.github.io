@@ -1,9 +1,8 @@
-@use "../lib";
-@use "../mixins/stack";
+@use "../abstracts";
 
 .events {
   > * {
-    @include stack.make-stack(8);
+    @include abstracts.make-stack(8);
   }
 }
 
@@ -13,10 +12,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: lib.size(2);
-  margin-top: -(lib.size(8));
-  padding-bottom: lib.size(2);
-  border-bottom: 3px solid lib.$border-color;
+  gap: abstracts.size(2);
+  margin-top: -(abstracts.size(8));
+  padding-bottom: abstracts.size(2);
+  border-bottom: 3px solid abstracts.$border-color;
 
   ul, li {
     margin: 0;
@@ -26,11 +25,11 @@
   ul, li {
     display: flex;
     flex-direction: row;
-    gap: lib.size(2);
+    gap: abstracts.size(2);
   }
   li {
-    padding-left: lib.size(2);
-    border-left: solid 2px lib.$border-color;
+    padding-left: abstracts.size(2);
+    border-left: solid 2px abstracts.$border-color;
   }
   & > ul > li:first-of-type {
     padding-left: 0;
@@ -43,7 +42,7 @@
       // Shorten month names on smaller breakpoints
       display: none;
 
-      @media (min-width: lib.breakpoint-min-width("md")) {
+      @media (min-width: abstracts.breakpoint-min-width("md")) {
         display: inline;
       }
     }
@@ -53,8 +52,8 @@
 // Header
 
 .events-header {
-  padding-top: lib.size(8);
-  border-top: 3px solid lib.$border-color;
+  padding-top: abstracts.size(8);
+  border-top: 3px solid abstracts.$border-color;
 
   &:first-of-type {
     padding-top: 0;
@@ -67,7 +66,7 @@
 .event {
   display: flex;
   flex-direction: column;
-  gap: lib.size(3);
+  gap: abstracts.size(3);
 
   .event__month,
   .event__day,
@@ -77,30 +76,30 @@
   }
   .event__month,
   .event__tbd {
-    padding: lib.size(1) 0 lib.size(0.5) 0;
-    background-color: lib.$blue-300;
-    border-top-left-radius: lib.size(1);
-    border-top-right-radius: lib.size(1);
-    color: lib.$white;
+    padding: abstracts.size(1) 0 abstracts.size(0.5) 0;
+    background-color: abstracts.$blue-300;
+    border-top-left-radius: abstracts.size(1);
+    border-top-right-radius: abstracts.size(1);
+    color: abstracts.$white;
     font-size: var(--font-size-h4);
-    font-weight: lib.$font-weight-bold;
+    font-weight: abstracts.$font-weight-bold;
   }
   .event__day {
     padding: 0;
-    border: 6px solid lib.$blue-300;
-    border-bottom-left-radius: lib.size(1);
-    border-bottom-right-radius: lib.size(1);
-    font-family: lib.$font-family-base;
+    border: 6px solid abstracts.$blue-300;
+    border-bottom-left-radius: abstracts.size(1);
+    border-bottom-right-radius: abstracts.size(1);
+    font-family: abstracts.$font-family-base;
     font-size: var(--font-size-h2);
-    font-weight: lib.$font-weight-heavy;
+    font-weight: abstracts.$font-weight-heavy;
   }
   .event__tbd {
-    padding: lib.size(3) 0;
+    padding: abstracts.size(3) 0;
   }
   .event__body {
     display: flex;
     flex-direction: column;
-    gap: lib.size(3);
+    gap: abstracts.size(3);
   }
   .event__header,
   .event__content,
@@ -112,11 +111,11 @@
   .event__footer {
     display: flex;
     flex-direction: row;
-    gap: lib.size(2);
+    gap: abstracts.size(2);
   }
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     flex-direction: row;
-    gap: lib.size(10);
+    gap: abstracts.size(10);
     
     .event__month,
     .event__day,
@@ -129,7 +128,7 @@
 // No Events
 
 .no-events {
-  padding: lib.size(8) 0;
+  padding: abstracts.size(8) 0;
   text-align: center;
-  font-size: lib.$font-size-lg;
+  font-size: abstracts.$font-size-lg;
 }

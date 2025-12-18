@@ -1,0 +1,7 @@
+@use "../abstracts";
+
+.connect {
+  > * {
+    @include abstracts.make-stack(8);
+  }
+}

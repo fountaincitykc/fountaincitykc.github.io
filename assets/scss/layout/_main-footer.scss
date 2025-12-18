@@ -1,47 +1,46 @@
-@use "../lib";
-@use "../mixins/utils";
+@use "../abstracts";
 
 .main-footer {
 
-  background-color: lib.$blue-900;
-  color: lib.$white;
+  background-color: abstracts.$blue-900;
+  color: abstracts.$white;
   
   a:not(.button) {
-    @include utils.make-white-link;
+    @include abstracts.make-white-link;
   }
 
   // Container
 
   .main-footer__top-container,
   .main-footer__bottom-container {
-    padding: 0 lib.size(3);
+    padding: 0 abstracts.size(3);
 
-    @media (min-width: lib.breakpoint-min-width("lg")) {
-      padding: 0 lib.size(6);
+    @media (min-width: abstracts.breakpoint-min-width("lg")) {
+      padding: 0 abstracts.size(6);
     }
   }
   
   // Top
 
   .main-footer__top {
-    margin-bottom: lib.size(10);
-    padding-top: lib.size(10);
+    margin-bottom: abstracts.size(10);
+    padding-top: abstracts.size(10);
   }
   .main-footer__top-container {
     display: flex;
     flex-direction: column;
-    gap: lib.size(8);
+    gap: abstracts.size(8);
   }
   .main-footer__contact,
   .main-footer__apps {
-    padding-bottom: lib.size(8);
-    border-bottom: solid 3px lib.$gray-900;
+    padding-bottom: abstracts.size(8);
+    border-bottom: solid 3px abstracts.$gray-900;
   }
   .main-footer__app-buttons {
     display: flex;
-    gap: lib.size(2);
+    gap: abstracts.size(2);
   }
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     .main-footer__top-container {
       flex-direction: row;
     }
@@ -62,8 +61,8 @@
   // Bottom
 
   .main-footer__bottom {
-    padding-top: lib.size(3);
-    border-top: solid 3px lib.$gray-900;
+    padding-top: abstracts.size(3);
+    border-top: solid 3px abstracts.$gray-900;
   }
   .main-footer__bottom-container {
     display: flex;
@@ -73,7 +72,7 @@
     ul {
       display: flex;
       padding-left: 0;
-      gap: lib.size(3);
+      gap: abstracts.size(3);
       list-style-type: none;
     }
     li {
@@ -83,7 +82,7 @@
       display: block;
     }
   }
-  @media (min-width: lib.breakpoint-min-width("lg")) {
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
     .main-footer__bottom-container {
       flex-direction: row;
       justify-content: space-between;

@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -14,19 +14,19 @@
   display: flex;
   align-items: center;
   min-width: 200px;
-  padding-left: lib.size(2);
-  border: solid 1px lib.$border-color;
+  padding-left: abstracts.size(2);
+  border: solid 1px abstracts.$border-color;
   border-radius: 999px;
-  background-color: lib.$white;
+  background-color: abstracts.$white;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   
   svg {
     flex-shrink: 0;
-    width: lib.size(3);
-    height: lib.size(3);
+    width: abstracts.size(3);
+    height: abstracts.size(3);
     
     path {
-      color: lib.$gray-500;
+      color: abstracts.$gray-500;
     }
   }
   input[type=text],
@@ -36,8 +36,8 @@
     outline: none;
   }
   input[type=reset] {
-    padding-right: lib.size(3);
-    color: lib.$link-color;
+    padding-right: abstracts.size(3);
+    color: abstracts.$link-color;
     cursor: pointer;
   }
   // Hide reset button if search input is empty
@@ -50,22 +50,22 @@
 
   &.search-input--sm {
     svg {
-      width: lib.size(2.5);
-      height: lib.size(2.5);
+      width: abstracts.size(2.5);
+      height: abstracts.size(2.5);
     }
     input[type=text],
     input[type=reset] {
-      font-size: lib.$font-size-sm;
+      font-size: abstracts.$font-size-sm;
     }
   }
   &.search-input--lg {
     svg {
-      width: lib.size(4);
-      height: lib.size(4);
+      width: abstracts.size(4);
+      height: abstracts.size(4);
     }
     input[type=text],
     input[type=reset] {
-      font-size: lib.$font-size-lg;
+      font-size: abstracts.$font-size-lg;
     }
   }
 }

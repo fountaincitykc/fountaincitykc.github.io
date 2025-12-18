@@ -1,5 +1,4 @@
-@use "../lib";
-@use "../mixins/utils";
+@use "../abstracts";
 
 /*
 @markup
@@ -9,39 +8,39 @@
 */
 
 .callout {
-  padding: lib.size(3);
-  border-radius: lib.size(2);
-  background-color: lib.$blue-500;
-  color: lib.$white;
+  padding: abstracts.size(3);
+  border-radius: abstracts.size(2);
+  background-color: abstracts.$blue-500;
+  color: abstracts.$white;
 
   a:not(.button) {
-    @include utils.make-white-link;
-    font-weight: lib.$font-weight-bold;
+    @include abstracts.make-white-link;
+    font-weight: abstracts.$font-weight-bold;
   }
   & > :last-child {
     margin-bottom: 0;
   }
-  @media (min-width: lib.breakpoint-min-width("lg")) {
-    padding: lib.size(10);
-    border-radius: lib.size(6);
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
+    padding: abstracts.size(10);
+    border-radius: abstracts.size(6);
 
     p {
-      font-size: lib.$font-size-lg;
+      font-size: abstracts.$font-size-lg;
     }
   }
 
   // @options
 
   &.callout--dark {
-    background-color: lib.$blue-900;
+    background-color: abstracts.$blue-900;
   }
   &.callout--center {
     text-align: center;
   }
   &.callout--condensed {
-    @media (min-width: lib.breakpoint-min-width("lg")) {
-      padding: lib.size(6);
-      border-radius: lib.size(4);
+    @media (min-width: abstracts.breakpoint-min-width("lg")) {
+      padding: abstracts.size(6);
+      border-radius: abstracts.size(4);
     }
   }
 }

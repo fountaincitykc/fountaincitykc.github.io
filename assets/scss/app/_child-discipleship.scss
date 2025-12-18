@@ -1,7 +1,0 @@
-@use "../mixins/stack";
-
-.child-discipleship {
-  > * {
-    @include stack.make-stack(8);
-  }
-}

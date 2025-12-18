@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -10,14 +10,14 @@
 .pill-header {
   display: inline-block;
   margin-bottom: 0;
-  padding: lib.size(1) lib.size(3);
-  background-color: lib.$blue-900;
+  padding: abstracts.size(1) abstracts.size(3);
+  background-color: abstracts.$blue-900;
   border-radius: 999px;
-  color: lib.$white;
-  font-family: lib.$font-family-base;
-  font-size: lib.$font-size-lg;
-  font-weight: lib.$font-weight-heavy;
-  line-height: lib.$line-height-tight;
+  color: abstracts.$white;
+  font-family: abstracts.$font-family-base;
+  font-size: abstracts.$font-size-lg;
+  font-weight: abstracts.$font-weight-heavy;
+  line-height: abstracts.$line-height-tight;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -18,7 +18,7 @@
     border-radius: 999px;
   }
   &.img--rounded {
-    border-radius: lib.size(2);
+    border-radius: abstracts.size(2);
   }
   &.img--center {
     margin-right: auto;

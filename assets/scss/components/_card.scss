@@ -1,4 +1,4 @@
-@use "../mixins/card";
+@use "../abstracts";
 
 /*
 @markup
@@ -21,43 +21,43 @@
 */
 
 .card {
-  @include card.make-card;
+  @include abstracts.make-card;
 
   // @options
 
   // When card in horizontal, set ratio of media to body
   &.card--horz {
     &.card--1x1 {
-      @include card.make-card--1x1;
+      @include abstracts.make-card--1x1;
     }
     &.card--2x3 {
-      @include card.make-card--2x3;
+      @include abstracts.make-card--2x3;
     }
     &.card--1x2 {
-      @include card.make-card--1x2;
+      @include abstracts.make-card--1x2;
     }
     &.card--1x3 {
-      @include card.make-card--1x3;
+      @include abstracts.make-card--1x3;
     }
   }
 
   // Add padding around media to align with content
   &.card--inset-media {
-    @include card.make-card--inset-media;
+    @include abstracts.make-card--inset-media;
   }
 
   // Move media horizontal to content
   &.card--horz {
-    @include card.make-card--horz;
+    @include abstracts.make-card--horz;
   }
 
   // Move media after content
   &.card--reverse {
-    @include card.make-card--reverse;
+    @include abstracts.make-card--reverse;
   }
 
   // Center body
   &.card--center {
-    @include card.make-card--center;
+    @include abstracts.make-card--center;
   }
 }

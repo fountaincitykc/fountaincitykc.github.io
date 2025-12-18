@@ -1,19 +1,19 @@
-@use "../lib";
+@use "../abstracts";
 
 @mixin make-card {
   display: flex;
   flex-direction: column;
-  background-color: lib.$background-color;
-  border: solid 3px lib.$border-color;
-  border-radius: lib.size(2);
+  background-color: abstracts.$background-color;
+  border: solid 3px abstracts.$border-color;
+  border-radius: abstracts.size(2);
   overflow: hidden;
 
   .card__body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: lib.size(3);
-    padding: lib.size(3);
+    gap: abstracts.size(3);
+    padding: abstracts.size(3);
   }
   .card__header,
   .card__content,
@@ -28,7 +28,7 @@
   .card__footer {
     display: flex;
     flex-direction: row;
-    gap: lib.size(2);
+    gap: abstracts.size(2);
   }
 }
 @mixin make-card--1x1 {
@@ -64,8 +64,8 @@
   }
 }
 @mixin make-card--inset-media {
-  gap: lib.size(3);
-  padding: lib.size(3);
+  gap: abstracts.size(3);
+  padding: abstracts.size(3);
 
   .card__body {
     padding: 0;

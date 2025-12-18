@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -8,12 +8,12 @@
 */
 
 .subtitle {
-  font-family: lib.$font-family-base;
-  font-size: lib.$font-size-base;
-  font-weight: lib.$font-weight-bold;
-  line-height: lib.$line-height-tight;
+  font-family: abstracts.$font-family-base;
+  font-size: abstracts.$font-size-base;
+  font-weight: abstracts.$font-weight-bold;
+  line-height: abstracts.$line-height-tight;
 
   & ~ .subtitle {
-    margin-top: -(lib.size(2));
+    margin-top: -(abstracts.size(2));
   }
 }

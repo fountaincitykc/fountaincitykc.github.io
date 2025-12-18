@@ -1,8 +1,8 @@
-@use "../lib";
+@use "../abstracts";
 
 .basic-page {
   hr {
-    width: lib.size(4);
+    width: abstracts.size(4);
     margin-left: auto;
     margin-right: auto;
   }

@@ -1,0 +1,7 @@
+@use "../abstracts";
+
+.sermons {
+  > * {
+    @include abstracts.make-stack(8);
+  }
+}

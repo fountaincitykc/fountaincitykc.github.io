@@ -1,7 +1,0 @@
-@use "../mixins/stack";
-
-.staff {
-  > * {
-    @include stack.make-stack(8);
-  }
-}

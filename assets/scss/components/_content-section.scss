@@ -1,4 +1,4 @@
-@use "../mixins/content-section";
+@use "../abstracts";
 
 /*
 @markup
@@ -21,14 +21,14 @@
 */
 
 .content-section {
-  @include content-section.make-content-section;
+  @include abstracts.make-content-section;
 
   // @options
 
   &.content-section--stack {
-    @include content-section.make-content-section--stack;
+    @include abstracts.make-content-section--stack;
   }
   &.content-section--center {
-    @include content-section.make-content-section--center;
+    @include abstracts.make-content-section--center;
   }
 }

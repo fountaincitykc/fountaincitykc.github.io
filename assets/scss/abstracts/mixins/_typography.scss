@@ -1,0 +1,20 @@
+@use "../abstracts";
+
+@mixin make-base-font {
+  font-family: abstracts.$font-family-base;
+  font-size: abstracts.$font-size-base;
+  font-weight: abstracts.$font-weight-normal;
+  line-height: abstracts.$line-height-base;
+}
+@mixin make-header-font {
+  font-family: abstracts.$font-family-display;
+  font-weight: abstracts.$font-weight-heavy;
+  line-height: abstracts.$line-height-tight;
+  font-feature-settings: "ss04"; // Use alternate "g" (https://gitlab.com/bonjour-monde/fonderie/syne-typeface/-/issues/4)
+}
+@mixin make-white-link {
+  color: abstracts.$white;
+  text-decoration: underline;
+  text-decoration-color: rgba(abstracts.$white, 0.4);
+  text-decoration-thickness: 2px;
+}

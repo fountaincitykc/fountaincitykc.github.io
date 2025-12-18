@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: lib.size(2);
+  gap: abstracts.size(2);
   padding-left: 0;
   list-style-type: none;
 
@@ -30,12 +30,12 @@
     margin-bottom: 0;
 
     &:nth-child(2) {
-      padding-left: lib.size(2);
-      border-left: 3px solid lib.$border-color;
+      padding-left: abstracts.size(2);
+      border-left: 3px solid abstracts.$border-color;
     }
   }
 
-  @media (max-width: lib.breakpoint-max-width("sm")) {
+  @media (max-width: abstracts.breakpoint-max-width("sm")) {
     span {
       display: none; // Hide page title
     }

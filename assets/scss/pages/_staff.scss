@@ -1,0 +1,7 @@
+@use "../abstracts";
+
+.staff {
+  > * {
+    @include abstracts.make-stack(8);
+  }
+}

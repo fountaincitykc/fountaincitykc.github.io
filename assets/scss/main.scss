@@ -1,10 +1,10 @@
-// Font file imports
-@use "fonts";
+// Base
 
-// Global styling of html elements
-@use "base";
+@use "base/fonts";
+@use "base/base";
 
 // Components
+
 @use "components/accordion";
 @use "components/animate";
 @use "components/badge";
@@ -27,25 +27,26 @@
 @use "components/youtube-embed";
 @use "components/youtube-image";
 
-// Application
+// Layout
 
-@use "app/main-content";
-@use "app/main-footer";
-@use "app/main-header";
-@use "app/main-nav";
-@use "app/page-header";
-@use "app/basic-page";
+@use "layout/main-content";
+@use "layout/main-footer";
+@use "layout/main-header";
+@use "layout/main-nav";
+@use "layout/page-header";
+@use "layout/basic-page";
 
-@use "app/child-discipleship";
-@use "app/connect";
-@use "app/events";
-@use "app/home";
-@use "app/search";
-@use "app/series";
-@use "app/sermons";
-@use "app/staff";
-@use "app/sunday-morning";
-@use "app/tags";
-@use "app/four0four";
+// Pages
 
-@use "app/tests";
+@use "pages/child-discipleship";
+@use "pages/connect";
+@use "pages/events";
+@use "pages/home";
+@use "pages/search";
+@use "pages/series";
+@use "pages/sermons";
+@use "pages/staff";
+@use "pages/sunday-morning";
+@use "pages/tags";
+@use "pages/four0four";
+@use "pages/tests";

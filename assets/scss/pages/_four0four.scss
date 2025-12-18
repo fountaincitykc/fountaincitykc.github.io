@@ -1,0 +1,8 @@
+@use "../abstracts";
+
+.four0four {
+  p {
+    font-size: abstracts.$font-size-lg;
+    text-align: center;
+  }
+}

@@ -1,33 +1,33 @@
-@use "../lib";
+@use "../abstracts";
 
 .accordion {
   
   details {
-    padding: lib.size(3);
-    background-color: lib.$blue-50;
-    border-bottom: solid 1px lib.$white;
+    padding: abstracts.size(3);
+    background-color: abstracts.$blue-50;
+    border-bottom: solid 1px abstracts.$white;
     transition: background-color .2s ease;
 
     summary {
-      padding-right: lib.size(4);
+      padding-right: abstracts.size(4);
       list-style-type: none;
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="%233874AA" /></svg>');
       background-repeat: no-repeat;
       background-position: right center;
-      background-size: lib.size(3) lib.size(3);
-      font-size: lib.$font-size-lg;
+      background-size: abstracts.size(3) abstracts.size(3);
+      font-size: abstracts.$font-size-lg;
       cursor: pointer;
       transition: color .2s ease;
 
       &:hover {
-        color: lib.$link-color;
+        color: abstracts.$link-color;
       }
     }
     &[open] {
-      background-color: lib.$gray-50;
+      background-color: abstracts.$gray-50;
 
       summary {
-        margin-bottom: lib.size(3);
+        margin-bottom: abstracts.size(3);
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" fill="%233874AA" /></svg>');  
       }
     }

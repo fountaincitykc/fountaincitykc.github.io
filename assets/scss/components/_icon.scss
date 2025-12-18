@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -10,8 +10,8 @@
 .icon {
   display: inline-block;
   vertical-align: middle;
-  width: lib.size(3);
-  height: lib.size(3);
+  width: abstracts.size(3);
+  height: abstracts.size(3);
   
   path {
     fill: currentColor;
@@ -21,22 +21,22 @@
 
   &.icon--primary {
     path {
-      fill: lib.$blue-500;
+      fill: abstracts.$blue-500;
     }
   }
   &.icon--secondary {
     path {
-      fill: lib.$gray-500;
+      fill: abstracts.$gray-500;
     }
   }
   &.icon--dark {
     path {
-      fill: lib.$foreground-color;
+      fill: abstracts.$foreground-color;
     }
   }
   &.icon--white {
     path {
-      fill: lib.$white;
+      fill: abstracts.$white;
     }
   }
   &.icon--current {
@@ -45,23 +45,23 @@
     }
   }
   &.icon--xs {
-    width: lib.size(2.25);
-    height: lib.size(2.25);
+    width: abstracts.size(2.25);
+    height: abstracts.size(2.25);
   }
   &.icon--sm {
-    width: lib.size(2.5);
-    height: lib.size(2.5);
+    width: abstracts.size(2.5);
+    height: abstracts.size(2.5);
   }
   &.icon--md {
-    width: lib.size(3);
-    height: lib.size(3);
+    width: abstracts.size(3);
+    height: abstracts.size(3);
   }
   &.icon--lg {
-    width: lib.size(4);
-    height: lib.size(4);
+    width: abstracts.size(4);
+    height: abstracts.size(4);
   }
   &.icon--xl {
-    width: lib.size(6);
-    height: lib.size(6);
+    width: abstracts.size(6);
+    height: abstracts.size(6);
   }
 }

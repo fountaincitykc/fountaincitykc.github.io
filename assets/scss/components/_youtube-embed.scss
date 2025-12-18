@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 
@@ -16,7 +16,7 @@ TODO: This class should be updated to use the `aspect-ratio: 16 / 9` css propert
   max-width: 100%;
   height: 0;
   overflow: hidden;
-  border-radius: lib.size(2);
+  border-radius: abstracts.size(2);
 
   iframe {
     position: absolute;

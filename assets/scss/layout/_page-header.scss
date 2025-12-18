@@ -1,4 +1,4 @@
-@use "../lib";
+@use "../abstracts";
 
 /*
 @markup
@@ -10,19 +10,19 @@
 */
 
 .page-header {
-  padding: lib.size(6) lib.size(3);
-  background-color: lib.$blue-700;
+  padding: abstracts.size(6) abstracts.size(3);
+  background-color: abstracts.$blue-700;
   background-image: url("/images/page-header-bkgd.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   text-align: center;
 
-  @media (min-width: lib.breakpoint-min-width("lg")) {
-    padding: lib.size(8) lib.size(3);
+  @media (min-width: abstracts.breakpoint-min-width("lg")) {
+    padding: abstracts.size(8) abstracts.size(3);
   }
 
   &.page-header__fcc-kids-and-families {
-    padding: lib.size(3);
+    padding: abstracts.size(3);
 
     img {
       display: block;
@@ -31,7 +31,7 @@
       height: auto;
       margin: 0 auto;
     }
-    @media (max-width: lib.breakpoint-max-width("md")) {
+    @media (max-width: abstracts.breakpoint-max-width("md")) {
       background-image: none;
     }
   }
