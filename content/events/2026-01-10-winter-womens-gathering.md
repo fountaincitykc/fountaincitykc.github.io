@@ -5,7 +5,7 @@ params:
   time: 7-8:30PM
   location: "The Johnson Home "
   featured: false
-  image: /media/events/img3-blue.svg
+  image: /media/events/img3-green.svg
   button:
     text: RSVP
     href: https://fountaincitykc.churchcenter.com/registrations/events/3344757
