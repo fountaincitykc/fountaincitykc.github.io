@@ -1,9 +1,9 @@
 ---
-title: "Winter Women's Gathering "
+title: Winter Women's Gathering
 date: 2026-01-10
 params:
-  time: 7-8:30PM
-  location: "The Johnson Home "
+  time: 7-8:30pm
+  location: The Johnson Home
   featured: false
   image: /media/events/img3-green.svg
   button:
