@@ -16,7 +16,7 @@
 
 ::selection {
   color: abstracts.$white;
-  background-color: abstracts.shade-color(abstracts.$blue-500, 20%);
+  background-color: abstracts.tint-color(abstracts.$blue-500, 20%);
 }
 
 html {

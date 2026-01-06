@@ -53,12 +53,12 @@
 }
 @mixin make-button--dark {
   color: abstracts.$white;
-  background-color: abstracts.shade-color(abstracts.$foreground-color, 10%);
+  background-color: abstracts.tint-color(abstracts.$foreground-color, 10%);
 
   &:hover,
   &:active {
     color: abstracts.$white;
-    background-color: abstracts.shade-color(abstracts.$foreground-color, 15%);
+    background-color: abstracts.tint-color(abstracts.$foreground-color, 15%);
   }
 }
 @mixin make-button--white {
@@ -68,7 +68,7 @@
   &:hover,
   &:active {
     color: abstracts.shade-color(abstracts.$blue-500, 20%);
-    background-color: abstracts.shade-color(abstracts.$blue-500, 90%);
+    background-color: abstracts.tint-color(abstracts.$blue-500, 90%);
   }
 }
 @mixin make-button--lg {
