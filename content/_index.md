@@ -59,7 +59,7 @@ params:
       href: https://www.youtube.com/@fountaincitychurchkc9519/videos
     listen:
       text: Listen
-      href: https://fcckc.podbean.com/
+      href: https://podcasts.apple.com/us/podcast/fountain-city-kc/id1528910234
   events:
     headline:
       singleFeatured: Join us
