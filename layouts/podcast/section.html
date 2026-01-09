@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <main class="main-content | podcast">
+    <div class="container">
+      <div class="content-section content-section--media-right | animate">
+        {{ with partial "utils/process-image.html" (dict
+          "res" (resources.Get .Params.image)
+          "width" 800
+          "height" 533
+          "process" "fit jpg q80 lanczos"
+        )}}
+          <div class="content-section__media">
+            <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}" class="img img--fill img--rounded">
+          </div>
+        {{ end }}
+        <div class="content-section__body">
+          <div class="content-section__header">
+            <h3>
+              {{ .Params.headline }}
+            </h3>
+          </div>
+          <div class="content-section__content">
+            {{ with .Params.distribution }}
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+              <p class="button-group">
+                {{ range .providers }}
+                  {{ partial "components/button" (dict "href" .url "text" .name "variant" "secondary") }}
+                {{ end }}
+              </p>
+            {{ end }}
+            {{ with .Params.feed }}
+              {{ .content | $.Page.RenderString (dict "display" "block") }}
+              <div class="banner banner--condensed banner--neutral">
+                <div class="banner__content">
+                  {{ .url }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}

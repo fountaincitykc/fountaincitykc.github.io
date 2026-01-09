@@ -79,7 +79,7 @@
             <div class="content-section__footer">
               {{ with site.Params.directions }}
                 {{ if and .href .text }}
-                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary" )}}
+                  {{ partial "components/button" (dict "href" .href "text" .text "variant" "primary") }}
                 {{ end }}
               {{ end }}
             </div>

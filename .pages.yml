@@ -463,6 +463,64 @@ content:
                     label: Button Text
                     type: string
                     required: true
+  # Podcast
+  - name: podcast
+    label: Podcast
+    type: file
+    format: yaml-frontmatter
+    path: content/podcast/_index.md
+    fields:
+      - name: title
+        component: title
+      - name: description
+        component: description
+      - name: params
+        label: Params
+        type: object
+        fields:
+          - name: image
+            label: Image
+            type: image
+            options:
+              multiple: false
+              path: assets/media/podcast
+          - name: headline
+            label: Headline
+            type: string
+            required: true
+          - name: distribution
+            label: Distribution
+            type: object
+            fields:
+              - name: content
+                label: Content
+                type: rich-text
+                required: true
+              - name: providers
+                label: Providers
+                type: object
+                list: true
+                fields:
+                  - name: name
+                    label: Name
+                    type: string
+                    required: true
+                  - name: url
+                    label: URL
+                    type: string
+                    required: true
+          - name: feed
+            label: Feed
+            type: object
+            fields:
+              - name: content
+                label: Content
+                type: rich-text
+                required: true
+              - name: url
+                label: URL
+                type: string
+                required: true
   # Events
   - name: events
     label: Events
