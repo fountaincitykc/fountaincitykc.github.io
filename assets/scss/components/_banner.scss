@@ -31,4 +31,14 @@
   @media (min-width: abstracts.breakpoint-min-width("md")) {
     flex-direction: row;
   }
+
+  // @options
+
+  &.banner--condensed {
+    padding: abstracts.size(1) abstracts.size(2);
+    border-radius: abstracts.size(0.5);
+  }
+  &.banner--neutral {
+    background-color: abstracts.$gray-100;
+  }
 }

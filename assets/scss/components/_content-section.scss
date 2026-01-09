@@ -31,4 +31,7 @@
   &.content-section--center {
     @include abstracts.make-content-section--center;
   }
+  &.content-section--media-right {
+    @include abstracts.make-content-section--media-right;
+  }
 }
