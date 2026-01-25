@@ -4,8 +4,8 @@ description: |-
   Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.
 params:
   banner:
-    enabled: false
-    content:
+    enabled: true
+    content: Due to weather, Fountain City will not meet in person this morning (Jan 25)
     button:
       text:
       href:
