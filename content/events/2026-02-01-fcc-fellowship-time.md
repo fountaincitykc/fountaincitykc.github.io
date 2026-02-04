@@ -1,5 +1,5 @@
 ---
-title: "FCC Fellowship Time "
+title: FCC Fellowship Time
 date: 2026-02-01
 params:
   featured: false
