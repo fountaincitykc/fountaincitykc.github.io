@@ -46,9 +46,9 @@ main:
     params:
       enabled: true
     type: internal
-  - name: Child Discipleship
+  - name: Child and Student Discipleship
     parent: Visit
-    pageRef: /child-discipleship/
+    pageRef: /child-and-student-discipleship/
     weight: 8
     params:
       enabled: true

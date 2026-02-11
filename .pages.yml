@@ -344,12 +344,12 @@ content:
                 label: Headline
                 type: string
                 required: true
-  # Child Discipleship
-  - name: child-discipleship
-    label: Child Discipleship
+  # Child and Student Discipleship
+  - name: child-and-student-discipleship
+    label: Child and Student Discipleship
     type: file
     format: yaml-frontmatter
-    path: content/child-discipleship/_index.md
+    path: content/child-and-student-discipleship/_index.md
     fields:
       - name: title
         component: title
@@ -372,13 +372,13 @@ content:
                 label: Content
                 type: rich-text
                 required: true
-              - name: image
-                label: Image
-                type: image
-                options:
-                  multiple: false
-                  path: assets/media/child-discipleship
-                required: true
+              #- name: image
+              #  label: Image
+              #  type: image
+              #  options:
+              #    multiple: false
+              #    path: assets/media/child-and-student-discipleship
+              #  required: true
               - name: button
                 component: buttonVariant
           - name: faqs
