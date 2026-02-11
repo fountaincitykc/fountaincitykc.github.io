@@ -15,15 +15,17 @@ params:
     button:
       text: Watch sermons
       href: https://www.youtube.com/@fountaincitychurchkc9519/videos
-  - headline: Child Discipleship
+  - headline: Child and Student Discipleship
     content: |-
-      Fountain City is filled with young families. As we seek to help each child grow in his or her knowledge and love of God, families are invited to worship together for portions of the service. Nursery is available for children eight weeks to three years old, and a worship class for kids four years old through the first grade during the sermon. Kids in second grade and up join their parents and receive age-appropriate materials to engage them during the sermon. Our Children's and Family Ministry assists parents in training up children as faithful followers of Jesus.
+      At Fountain City Church, we believe children are an important part of the church!
 
-      Is it your first time visiting Fountain City Church? Save some time on Sunday by [pre-registering your kids](https://fountaincitykc.churchcenter.com/people/forms/1065096) for our kids' classes.
-    image: /media/sunday-morning/kids.jpg
+      FCC Kids is available for children eight weeks old through the 5th grade during worship. The nursery and toddler class is held during the entire service, and classes for kids four years old through 5th grade are held during the sermon portion of worship.
+
+      Save some time on Sunday by pre-registering your kids here:
+    image: /media/sunday-morning/fcc-kids-and-families.svg
     button:
-      text: Learn more
-      href: /child-discipleship/
+      text: Register your kids
+      href: https://fountaincitykc.churchcenter.com/people/forms/1065096
   location:
     image: /media/sunday-morning/heritage.jpg
     headline: Where We Meet
