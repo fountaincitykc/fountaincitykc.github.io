@@ -1,6 +1,6 @@
 {{ define "main" }}
   <main class="main-content | child-and-student-discipleship">
-    <div class="container-lg">
+    <div class="container">
       {{ range .Params.sections }}
         <div class="content-section | animate" id="{{ .headline | urlize }}">
           {{ with partial "utils/process-image.html" (dict

@@ -13,25 +13,25 @@ params:
   - headline: Nursery and Toddler Class
     content: |-
       Our nursery and toddler class (8 weeks-3 years old) is a nurturing environment for very young children to learn that God is real, good, and trustworthy. Toddlers learn the attributes of God through singing, short Bible stories, and activities designed just for them. This class is held during the entire worship service.
-    #image: /media/child-and-student-discipleship/nursery.jpg
+    image: /media/child-and-student-discipleship/nursery.jpg
   - headline: 4-1st Grade Class
     content: |-
       Our 4-1st grade class engages young kids with an overview of God’s big story to cultivate young hearts with a sense of wonder and awe in the God who made them, loves them, and sent His Son Jesus for them. This class is held during the sermon portion of the worship service.
-    #image: /media/child-and-student-discipleship/kids.jpg
+    image: /media/child-and-student-discipleship/kids.jpg
   - headline: 2nd-5th Grade Class
     content: |-
       Our 2nd-5th grade class is a place for elementary kids to dig deeper into God’s big story and explore God’s plan for redemption through His Son, Jesus. This class uses The _Biggest Story_ curriculum by Kevin DeYoung and is held during the sermon portion of the worship service.
-    #image: /media/child-and-student-discipleship/kids.jpg
+    image: /media/child-and-student-discipleship/thebiggeststory.jpg
   - headline: Students
     content: |-
       Students in the 6th-12 grades meet once a month on Sundays at 9:00 am before worship for donuts and connection and once a month on Sunday afternoons for in-depth Bible study, food, and games. For more information, contact Risha Flannagan at risha@fountaincitykc.org.
-    #image: /media/child-and-student-discipleship/kids.jpg
+    image: /media/child-and-student-discipleship/knowingjesus.jpg
   - headline: Family Welcome Center
     content: |-
       We would love to meet your family! Stop by the Family Welcome Center before worship so we can answer any questions you may have and help your family get checked in and comfortable.
 
       Is it your first time visiting Fountain City Church? Save some time on Sunday by pre-registering your kids here:
-    #image: /media/child-and-student-discipleship/welcome.jpg
+    image: /media/child-and-student-discipleship/welcome.jpg
     button:
       text: Register your kids
       href: https://fountaincitykc.churchcenter.com/people/forms/1065096

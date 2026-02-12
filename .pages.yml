@@ -372,13 +372,13 @@ content:
                 label: Content
                 type: rich-text
                 required: true
-              #- name: image
-              #  label: Image
-              #  type: image
-              #  options:
-              #    multiple: false
-              #    path: assets/media/child-and-student-discipleship
-              #  required: true
+              - name: image
+                label: Image
+                type: image
+                options:
+                  multiple: false
+                  path: assets/media/child-and-student-discipleship
+                required: true
               - name: button
                 component: buttonVariant
           - name: faqs
