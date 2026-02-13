@@ -317,6 +317,27 @@ content:
                 required: true
               - name: button
                 component: buttonVariant
+          - name: highlight
+            label: Highlight
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: content
+                label: Content
+                type: rich-text
+                required: true
+              - name: image
+                label: Image
+                type: image
+                options:
+                  multiple: false
+                  path: assets/media/sunday-morning
+                required: true
+              - name: button
+                component: optionalButton
           - name: location
             label: Location
             type: object

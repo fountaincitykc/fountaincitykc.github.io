@@ -15,7 +15,8 @@ params:
     button:
       text: Watch sermons
       href: https://www.youtube.com/@fountaincitychurchkc9519/videos
-  - headline: Child and Student Discipleship
+  highlight:
+    headline: Child and Student Discipleship
     content: |-
       At Fountain City Church, we believe children are an important part of the church!
 

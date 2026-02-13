@@ -33,6 +33,41 @@
         </div>
       {{ end }}
     </div>
+    {{ with .Params.highlight }}
+      <div class="sunday-morning__highlight | animate">
+        <div class="container">
+          <div class="content-section content-section--media-center" id="{{ .headline | urlize }}">
+            {{ with partial "utils/process-image.html" (dict
+              "res" (resources.Get .image)
+              "width" 800
+              "height" 533
+              "process" "fit jpg q80 lanczos"
+            )}}
+              <div class="content-section__media">
+                <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}" class="img img--fill img--rounded">
+              </div>
+            {{ end }}
+            <div class="content-section__body">
+              <div class="content-section__header">
+                <h2>
+                  {{ .headline }}
+                </h2>
+              </div>
+              <div class="content-section__content">
+                {{ .content | $.Page.RenderString (dict "display" "block") }}
+              </div>
+              {{ with .button }}
+                {{ if and .href .text }}
+                  <div class="content-section__footer">
+                    {{ partial "components/button" (dict "href" .href "text" .text "variant" "white" )}}
+                  </div>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{ end }}
     {{ with .Params.location }}
       {{ with partial "utils/process-image.html" (dict
         "res" (resources.Get .image)

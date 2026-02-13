@@ -28,10 +28,13 @@
   &.content-section--stack {
     @include abstracts.make-content-section--stack;
   }
-  &.content-section--center {
-    @include abstracts.make-content-section--center;
+  &.content-section--media-center {
+    @include abstracts.make-content-section--media-center;
   }
   &.content-section--media-right {
     @include abstracts.make-content-section--media-right;
+  }
+  &.content-section--body-center {
+    @include abstracts.make-content-section--body-center;
   }
 }

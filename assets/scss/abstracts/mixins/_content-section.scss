@@ -47,14 +47,17 @@
     width: auto;
   }
 }
-@mixin make-content-section--center {
-  .content-section__body {
-    align-items: center;
-    text-align: center;
-  }
+@mixin make-content-section--media-center {
+  align-items: center;
 }
 @mixin make-content-section--media-right {
   .content-section__media {
     order: 2;
+  }
+}
+@mixin make-content-section--body-center {
+  .content-section__body {
+    align-items: center;
+    text-align: center;
   }
 }

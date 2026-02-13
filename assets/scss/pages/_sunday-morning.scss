@@ -6,7 +6,23 @@
   > * {
     @include abstracts.make-stack(8);
   }
+  .sunday-morning__highlight {
+    padding-top: abstracts.size(8);
+    padding-bottom: abstracts.size(8);
+    background-color: abstracts.$blue-500;
+
+    .content-section__body,
+    .content-section__content {
+      color: abstracts.$white;
+
+      a:not(.button) {
+        @include abstracts.make-white-link;
+      }
+    }
+  }
   .sunday-morning__image {
+    margin-top: 0;// Override stack
+
     img {
       display: block;
       object-fit: cover;
@@ -25,7 +41,7 @@
   @media (min-width: abstracts.breakpoint-min-width("lg")) {
     .sunday-morning__location,
     .sunday-morning__directions {
-      @include abstracts.make-content-section--center;
+      @include abstracts.make-content-section--body-center;
     }
   }
 }
