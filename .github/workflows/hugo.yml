@@ -3,8 +3,8 @@ name: Deploy Hugo site to Pages
 
 on:
   # Run every day at 3 AM CST (Standard Time) (UTC−6):
-  schedule:
-    - cron: '0 9 * * *'
+  #schedule:
+  #  - cron: '0 9 * * *'
 
   # Runs on pushes targeting the default branch
   push:
