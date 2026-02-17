@@ -29,25 +29,24 @@ params:
       role: Children's and Family Ministry Director
       email: risha@fountaincitykc.org
       content: >-
-        Risha is passionate about teaching the Bible in a way that connects
-        Jesus Christ with young minds and hearts and invites children and
-        students into God's grand redemptive narrative. Risha also enjoys
-        encouraging and empowering parents to be spiritual leaders in their
-        homes.
+        Risha loves engaging the next generation with the gospel and inviting
+        children, students, and their families to know and love God above all
+        else and to trust him in all things through faith in Jesus Christ.
 
 
-        Risha's love for family ministry grew in her home as she witnessed the
-        love and grace of God work powerfully in her family. Risha was raised in
-        Texas and studied Journalism at Texas A&M University before moving to
-        Kansas City, where she met her husband, Mark, in their adjoining
-        backyards. After marriage, they became a blended family with four
-        children under three years old. Now that her children are nearly grown,
-        Risha feels she can relate to the struggles many parents experience and
-        she looks forward to sharing the hope of Christ with families.
+        Risha grew up in Texas and studied Journalism at Texas A&M University
+        before moving to Kansas City, where she met her husband, Mark, and they
+        became a blended family with four young children. After experiencing
+        God’s grace through the joys and struggles of family life and serving in
+        several ministry contexts, Risha felt called to family ministry and
+        earned a Master of Divinity (M. Div) from Gordon Conwell Theological
+        Seminary. With seminary complete, Risha is looking forward to creating a
+        discipleship pathway for children and students and finding new ways to
+        support parents and strengthen families at Fountain City Church.
 
 
-        Risha is pursuing a Master of Divinity (M. Div) through Gordon Conwell
-        Theological Seminary.
+        In her free time, Risha enjoys spending time with friends and family,
+        reading, and exploring new parts of God’s creation.
       image: /media/staff/risha.jpg
     - name: Lindsay Cottier
       role: Hospitality and Connections Coordinator
