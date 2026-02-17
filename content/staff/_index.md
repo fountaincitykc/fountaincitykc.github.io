@@ -40,9 +40,9 @@ params:
         God’s grace through the joys and struggles of family life and serving in
         several ministry contexts, Risha felt called to family ministry and
         earned a Master of Divinity (M. Div) from Gordon Conwell Theological
-        Seminary. With seminary complete, Risha is looking forward to creating
-        discipleship opportunities for children and students and finding new
-        ways to support parents and strengthen families at Fountain City Church.
+        Seminary. With seminary complete, Risha is excited to create
+        discipleship opportunities for children and students and find new ways
+        to support parents and strengthen families at Fountain City Church.
 
 
         In her free time, Risha enjoys spending time with friends and family,
