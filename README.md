@@ -21,7 +21,7 @@ Hugo:
 brew install hugo
 ```
 
-The minimum Hugo version required is `0.147.0`.
+The minimum Hugo version required is `0.156.0`.
 
 ### Run Hugo
 
