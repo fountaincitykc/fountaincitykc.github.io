@@ -31,7 +31,7 @@ params:
         DeYoung and is held during the sermon portion of the worship service.
       image: /media/child-and-student-discipleship/thebiggeststory.jpg
     - headline: Students
-      content: Students in the 6th-12 grades meet once a month on Sundays at 9:00 am
+      content: Students in the 6th-12th grades meet once a month on Sundays at 9:00 am
         before worship for donuts and connection and once a month on Sunday
         afternoons for in-depth Bible study, food, and games. Our students are
         currently working through _Knowing Jesus_ by Rooted Ministry. For more
