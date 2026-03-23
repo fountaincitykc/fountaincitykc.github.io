@@ -2,7 +2,6 @@
 title: "Easter Sunday "
 date: 2026-04-05
 params:
-  endDate: 2026-03-23
   featured: false
   image: /media/events/Celebrate With Us (1).jpg
 ---
