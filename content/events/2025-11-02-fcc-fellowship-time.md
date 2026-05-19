@@ -1,6 +1,7 @@
 ---
 title: FCC Fellowship Time
 date: 2025-11-02
+expiryDate: 2025-11-03
 params:
   time: Right after service
   featured: false

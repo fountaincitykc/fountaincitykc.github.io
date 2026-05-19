@@ -1,6 +1,7 @@
 ---
 title: Christmas Gathering
 date: 2024-12-22
+expiryDate: 2024-12-23
 params:
   time: After service
   featured: false

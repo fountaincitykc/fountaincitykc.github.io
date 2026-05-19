@@ -1,6 +1,7 @@
 ---
 title: "Women's Bible Study"
 date: 2024-06-07
+expiryDate: 2024-06-08
 params:
   time: 7–8:30am
   location: Roe Park

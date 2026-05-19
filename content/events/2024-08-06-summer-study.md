@@ -1,6 +1,7 @@
 ---
 title: 10:25 Nights
 date: 2024-08-06
+expiryDate: 2024-08-07
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse

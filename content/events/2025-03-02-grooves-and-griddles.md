@@ -1,6 +1,7 @@
 ---
 title: Grooves and Griddles
 date: 2025-03-02
+expiryDate: 2025-03-03
 params:
   time: 10am-1:30pm
   location: JOCO Arts and Heritage Center

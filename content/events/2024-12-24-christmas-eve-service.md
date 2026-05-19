@@ -1,6 +1,7 @@
 ---
 title: Christmas Eve Service
 date: 2024-12-24
+expiryDate: 2024-12-25
 params:
   time: 3:30pm
   location: "[Overland Park Church of the Nazarene](https://maps.app.goo.gl/8JSpnLGREJ7VyhJG6)"

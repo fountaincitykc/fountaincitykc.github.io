@@ -1,6 +1,7 @@
 ---
 title: Good Friday Service
 date: 2026-04-03
+expiryDate: 2026-04-04
 params:
   time: 7:00pm
   featured: false

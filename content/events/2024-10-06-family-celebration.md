@@ -1,6 +1,7 @@
 ---
 title: 5 Year Family Celebration
 date: 2024-10-06
+expiryDate: 2024-10-07
 params:
   time: After service
   location: Grand Pavilion at Meadowbrook Park

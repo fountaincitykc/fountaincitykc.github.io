@@ -1,6 +1,7 @@
 ---
 title: Easter Sunday
 date: 2025-04-20
+expiryDate: 2025-04-21
 params:
   featured: false
 ---

@@ -1,6 +1,7 @@
 ---
 title: FCC Prayer Night
 date: 2023-10-04
+expiryDate: 2023-10-05
 params:
   time: 6–8pm
   featured: false

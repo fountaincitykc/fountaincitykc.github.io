@@ -1,6 +1,7 @@
 ---
 title: New Members Class — Autumn
 date: 2023-10-22
+expiryDate: 2023-10-23
 params:
   featured: false
 ---

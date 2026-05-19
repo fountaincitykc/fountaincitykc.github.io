@@ -1,6 +1,7 @@
 ---
 title: Congregational Meeting
 date: 2024-01-21
+expiryDate: 2024-01-22
 params:
   time: 11:45am–12:30pm
   featured: false

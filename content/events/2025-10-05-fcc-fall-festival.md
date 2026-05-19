@@ -1,6 +1,7 @@
 ---
 title: FCC Fall Festival
 date: 2025-10-05
+expiryDate: 2025-10-06
 params:
   time: Right after service
   button:

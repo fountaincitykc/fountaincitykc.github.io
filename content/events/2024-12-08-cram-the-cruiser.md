@@ -1,6 +1,7 @@
 ---
 title: Cram the Cruiser Toy Drive
 date: 2024-12-08
+expiryDate: 2024-12-09
 params:
   featured: false
 ---

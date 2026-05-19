@@ -1,6 +1,7 @@
 ---
 title: Step Up Sunday
 date: 2024-08-18
+expiryDate: 2024-08-19
 params:
   featured: false
 ---

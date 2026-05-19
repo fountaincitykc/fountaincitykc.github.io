@@ -1,6 +1,7 @@
 ---
 title: Home Group Nights
 date: 2025-01-22
+expiryDate: 2025-01-23
 params:
   time: 6-8pm
   location: JOCO Arts and Heritage Center

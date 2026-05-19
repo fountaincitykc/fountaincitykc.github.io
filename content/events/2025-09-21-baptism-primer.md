@@ -1,6 +1,7 @@
 ---
 title: Baptism Primer
 date: 2025-09-21
+expiryDate: 2025-09-22
 params:
   time: 11:30am-Noon (Directly after service)
   featured: false

@@ -1,6 +1,7 @@
 ---
 title: Prayer Gathering
 date: 2025-03-05
+expiryDate: 2025-03-06
 params:
   time: 7-8pm
   location: JOCO Arts and Heritage Center

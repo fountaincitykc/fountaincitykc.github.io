@@ -1,6 +1,7 @@
 ---
 title: Women's Night
 date: 2024-03-07
+expiryDate: 2024-03-08
 params:
   time: 6:30–8:30pm
   location: Meadowbrook Clubhouse

@@ -1,6 +1,7 @@
 ---
 title: Good Friday Service
 date: 2024-03-29
+expiryDate: 2024-03-30
 params:
   time: 7pm
   featured: false

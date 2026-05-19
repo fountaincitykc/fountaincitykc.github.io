@@ -1,6 +1,7 @@
 ---
 title: FCC Prayer Night
 date: 2024-04-24
+expiryDate: 2024-04-25
 params:
   time: 6–8pm
   button:

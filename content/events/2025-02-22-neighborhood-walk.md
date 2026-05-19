@@ -1,6 +1,7 @@
 ---
 title: Neighborhood Walk
 date: 2025-02-22
+expiryDate: 2025-02-23
 params:
   time: 10am
   location: JOCO Arts and Heritage Center

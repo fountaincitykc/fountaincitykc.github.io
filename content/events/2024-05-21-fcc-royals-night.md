@@ -1,6 +1,7 @@
 ---
 title: FCC Royals Night
 date: 2024-05-21
+expiryDate: 2024-05-22
 params:
   time: 6–9:30pm
   button:

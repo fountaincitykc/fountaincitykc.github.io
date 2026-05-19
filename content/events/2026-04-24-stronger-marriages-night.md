@@ -1,6 +1,7 @@
 ---
 title: "Stronger Marriages Night: because your marriage matters"
 date: 2026-04-24
+expiryDate: 2026-04-25
 params:
   time: 7-9:30pm
   location: Meadowbrook Park Clubhouse (9101 Nall Ave, Prairie Village, KS 66207)

@@ -1,6 +1,7 @@
 ---
 title: Sunday Worship
 date: 2025-05-04
+expiryDate: 2025-05-05
 params:
   time: 10am
   location: "[Meadowbrook Clubhouse](https://maps.app.goo.gl/BxP4goaf3nadTLY9A)"

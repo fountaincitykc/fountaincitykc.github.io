@@ -1,6 +1,7 @@
 ---
 title: Baptism Class
 date: 2024-04-07
+expiryDate: 2024-04-08
 params:
   time: 11:30am
   featured: false

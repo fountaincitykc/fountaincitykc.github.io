@@ -1,6 +1,7 @@
 ---
 title: Prayer Night
 date: 2024-09-04
+expiryDate: 2024-09-05
 params:
   time: 7-8pm
   location: Meadowbrook Clubhouse

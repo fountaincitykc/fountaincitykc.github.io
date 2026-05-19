@@ -1,6 +1,7 @@
 ---
 title: "Women's Gathering : Book Exchange and Dessert"
 date: 2025-09-27
+expiryDate: 2025-09-28
 params:
   time: 7–9pm
   button:

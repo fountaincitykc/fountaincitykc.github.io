@@ -1,6 +1,7 @@
 ---
 title: Winter Women's Gathering
 date: 2026-01-10
+expiryDate: 2026-01-11
 params:
   time: 7-8:30pm
   location: The Johnson Home

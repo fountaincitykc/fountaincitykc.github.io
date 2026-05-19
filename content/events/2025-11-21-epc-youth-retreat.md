@@ -1,6 +1,7 @@
 ---
 title: EPC Youth Retreat
 date: 2025-11-21
+expiryDate: 2025-11-24
 params:
   endDate: 2025-11-23
   featured: false

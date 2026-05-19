@@ -1,6 +1,7 @@
 ---
 title: Sips and Sweets
 date: 2024-12-01
+expiryDate: 2024-12-02
 params:
   time: 9:15am
   location: Meadowbrook Clubhouse - Rosewood B

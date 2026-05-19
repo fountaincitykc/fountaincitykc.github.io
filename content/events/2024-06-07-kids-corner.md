@@ -1,6 +1,7 @@
 ---
 title: Meadowbrook Festival Kids Corner
 date: 2024-06-07
+expiryDate: 2024-06-08
 params:
   button:
     text: Sign Up

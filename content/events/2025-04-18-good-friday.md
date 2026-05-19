@@ -1,6 +1,7 @@
 ---
 title: Good Friday
 date: 2025-04-18
+expiryDate: 2025-04-19
 params:
   time: 7-8pm
   location: JOCO Arts and Heritage Center

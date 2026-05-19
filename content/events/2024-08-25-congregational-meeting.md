@@ -1,6 +1,7 @@
 ---
 title: Congregational Meeting
 date: 2024-08-25
+expiryDate: 2024-08-26
 params:
   featured: false
 ---

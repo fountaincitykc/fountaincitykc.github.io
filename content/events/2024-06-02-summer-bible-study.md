@@ -1,6 +1,7 @@
 ---
 title: Summer Kids' and Family Bible Study
 date: 2024-06-02
+expiryDate: 2024-06-03
 params:
   dateText: Begins June 2, 2024
   button:

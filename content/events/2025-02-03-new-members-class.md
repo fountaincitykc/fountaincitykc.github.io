@@ -1,6 +1,7 @@
 ---
 title: New Members Class
 date: 2025-02-03
+expiryDate: 2025-02-04
 params:
   time: 6-8pm
   location: Matt Ross Community Center

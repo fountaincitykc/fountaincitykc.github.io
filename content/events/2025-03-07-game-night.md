@@ -1,6 +1,7 @@
 ---
 title: Zoom Game Night
 date: 2025-03-07
+expiryDate: 2025-03-08
 params:
   time: 8:30-10pm
   button:

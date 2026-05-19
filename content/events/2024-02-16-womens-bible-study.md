@@ -1,6 +1,7 @@
 ---
 title: Women's Bible Study
 date: 2024-02-16
+expiryDate: 2024-02-20
 params:
   endDate: 2024-04-19
   time: 8–9:30am

@@ -1,6 +1,7 @@
 ---
 title: Home Group Nights
 date: 2025-04-16
+expiryDate: 2025-04-17
 tags:
   - home-groups
 params:

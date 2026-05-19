@@ -1,6 +1,7 @@
 ---
 title: Home Group Nights
 date: 2024-11-20
+expiryDate: 2024-11-21
 params:
   time: 6-8pm
   location: "[Johnson County Arts & Heritage Center](https://maps.app.goo.gl/yRLoeGU1QisTNYLP9)"

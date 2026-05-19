@@ -1,6 +1,7 @@
 ---
 title: All Church Potluck
 date: 2025-05-14
+expiryDate: 2025-05-15
 params:
   time: 6-8pm
   location: Meadowbrook Park - Shelter 1

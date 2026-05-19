@@ -1,6 +1,7 @@
 ---
 title: Screen Sanity Night
 date: 2024-10-30
+expiryDate: 2024-10-31
 params:
   time: 7-8:30pm
   location: Meadowbrook Clubhouse

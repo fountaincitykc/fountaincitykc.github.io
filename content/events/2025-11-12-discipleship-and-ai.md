@@ -1,6 +1,7 @@
 ---
 title: Discipleship in the Age of AI
 date: 2025-11-12
+expiryDate: 2025-11-13
 summary: |-
   With the rise of Artificial Intelligence in the last three years, AI has gone from the fringes of society to the center of our shared life together. Join us as we have an in-depth discussion about what it means to follow Jesus in the age of AI.
 params:

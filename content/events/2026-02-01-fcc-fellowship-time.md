@@ -1,6 +1,7 @@
 ---
 title: FCC Fellowship Time
 date: 2026-02-01
+expiryDate: 2026-02-02
 params:
   featured: false
 ---

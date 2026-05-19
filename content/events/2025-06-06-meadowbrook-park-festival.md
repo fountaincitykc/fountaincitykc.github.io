@@ -1,6 +1,7 @@
 ---
 title: Meadowbrook Park Festival
 date: 2025-06-06
+expiryDate: 2025-06-07
 params:
   time: 4-9pm
   featured: false

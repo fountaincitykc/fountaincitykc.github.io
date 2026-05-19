@@ -1,6 +1,7 @@
 ---
 title: Newcomer's Lunch
 date: 2024-06-23
+expiryDate: 2024-06-24
 params:
   time: After service
   location: Meadowbrook Clubhouse - Rosewood B

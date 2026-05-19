@@ -1,6 +1,7 @@
 ---
 title: Park Play Date
 date: 2025-07-28
+expiryDate: 2025-07-29
 tags:
   - park-play-dates
 params:

@@ -1,6 +1,7 @@
 ---
 title: Sips and Sweets
 date: 2024-02-04
+expiryDate: 2024-02-05
 params:
   time: 9:30am
   featured: false

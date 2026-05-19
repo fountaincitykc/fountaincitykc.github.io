@@ -1,6 +1,7 @@
 ---
 title: Home Group Nights
 date: 2024-11-06
+expiryDate: 2024-11-07
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse

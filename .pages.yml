@@ -6,7 +6,7 @@ media:
   input: assets/media
   output: /media
 content:
-# Home Page
+  # Home Page
   - name: home
     label: Home
     type: file
@@ -547,7 +547,7 @@ content:
     label: Events
     type: collection
     path: content/events
-    exclude: 
+    exclude:
       - _index.md
     filename: '{fields.date}-{primary}.md'
     view:
@@ -566,6 +566,11 @@ content:
         options:
           format: yyyy-MM-dd
         required: true
+      - name: expiryDate
+        label: Expiration Date
+        type: date
+        options:
+          format: yyyy-MM-dd
       - name: tags
         label: Tags
         type: select
@@ -624,7 +629,7 @@ content:
   #  label: Sermons
   #  type: collection
   #  path: content/sermons
-  #  exclude: 
+  #  exclude:
   #    - _index.md
   #  filename: '{fields.date}.md'
   #  view:
@@ -672,7 +677,7 @@ content:
   #  label: Sermon Series
   #  type: collection
   #  path: content/series
-  #  exclude: 
+  #  exclude:
   #    - _index.html # Note that .html is excluded, not .md
   #  filename: '{fields.params.term}/_index.md'
   #  view:

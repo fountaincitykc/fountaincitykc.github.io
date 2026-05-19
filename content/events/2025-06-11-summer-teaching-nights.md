@@ -3,6 +3,7 @@ title: Summer Teaching Night
 tags:
   - summer-teaching-nights
 date: 2025-06-11
+expiryDate: 2025-06-12
 params:
   time: 6-8pm
   location: Meadowbrook Clubhouse

@@ -1,6 +1,7 @@
 ---
 title: Park Play Date
 date: 2024-08-08
+expiryDate: 2024-08-09
 tags:
   - park-play-dates
 params:

@@ -1,6 +1,7 @@
 ---
 title: Easter Sunday
 date: 2026-04-05
+expiryDate: 2026-04-06
 params:
   time: 10:00am
   featured: false

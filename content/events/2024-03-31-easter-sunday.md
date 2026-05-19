@@ -1,6 +1,7 @@
 ---
 title: Easter Sunday
 date: 2024-03-31
+expiryDate: 2024-04-01
 params:
   featured: false
 ---

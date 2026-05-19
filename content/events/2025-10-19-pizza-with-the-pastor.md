@@ -1,6 +1,7 @@
 ---
 title: Pizza with the Pastor
 date: 2025-10-19
+expiryDate: 2025-10-20
 params:
   featured: false
 ---

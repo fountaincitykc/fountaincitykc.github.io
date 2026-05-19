@@ -1,6 +1,7 @@
 ---
 title: Women's Lent Bible Study
 date: 2025-03-03
+expiryDate: 2025-04-22
 params:
   dateText: Every Friday from March 3 – April 21
   endDate: 2025-04-21

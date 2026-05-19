@@ -1,6 +1,7 @@
 ---
 title: 5 Year Anniversary Dinner
 date: 2024-10-04
+expiryDate: 2024-10-05
 params:
   time: 6:30–8:30pm
   location: Meadowbrook Clubhouse

@@ -1,6 +1,7 @@
 ---
 title: Christmas Eve Service
 date: 2025-12-24
+expiryDate: 2025-12-25
 params:
   time: 3:30-4:30pm
   location: Johnson County Arts & Heritage Center

@@ -1,6 +1,7 @@
 ---
 title: New Members Class — Winter
 date: 2024-03-04
+expiryDate: 2024-03-05
 params:
   time: 7–8:30pm
   location: "[Matt Ross Community Center — Conference Room](https://maps.app.goo.gl/dcMQEWTgLi7N2AN5A)"

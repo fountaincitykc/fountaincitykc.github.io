@@ -1,6 +1,7 @@
 ---
 title: Christmas Eve
 date: 2023-12-24
+expiryDate: 2023-12-25
 params:
   featured: false
 ---

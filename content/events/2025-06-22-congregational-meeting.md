@@ -1,6 +1,7 @@
 ---
 title: Congregational Meeting
 date: 2025-06-22
+expiryDate: 2025-06-23
 params:
   time: Right after service
   featured: false
