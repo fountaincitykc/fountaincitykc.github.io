@@ -5,8 +5,8 @@ description: Experience real community and meaningful relationships at Fountain
   glorify God and serve their community.
 params:
   banner:
-    enabled: false
-    content: Due to weather, Fountain City will not meet in person this morning (Jan 25)
+    enabled: true
+    content: Sunday service will be held at Meadowbrook Park Clubhouse July 19 — August 2
   hero:
     video: /media/home/loop.mp4
     poster: /media/home/loop.jpg
