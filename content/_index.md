@@ -5,7 +5,7 @@ description: Experience real community and meaningful relationships at Fountain
   glorify God and serve their community.
 params:
   banner:
-    enabled: true
+    enabled: false
     content: Sunday service will be held at Meadowbrook Park Clubhouse July 19 — August 2
   hero:
     video: /media/home/loop.mp4
