@@ -86,7 +86,10 @@ content:
           - name: cards
             label: Cards
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{headline}"
             fields:
               - name: headline
                 label: Headline
@@ -227,7 +230,10 @@ content:
           - name: sections
             label: Staff Members
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
             fields:
               - name: name
                 label: Name
@@ -298,7 +304,10 @@ content:
           - name: sections
             label: Sections
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{headline}"
             fields:
               - name: headline
                 label: Headline
@@ -383,7 +392,10 @@ content:
           - name: sections
             label: Sections
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{headline}"
             fields:
               - name: headline
                 label: Headline
@@ -413,7 +425,10 @@ content:
               - name: questions
                 label: Questions
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
                 fields:
                   - name: question
                     label: Question
@@ -443,7 +458,10 @@ content:
           - name: sections
             label: Sections
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{headline}"
             fields:
               - name: headline
                 label: Headline
@@ -520,7 +538,10 @@ content:
               - name: providers
                 label: Providers
                 type: object
-                list: true
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
                 fields:
                   - name: name
                     label: Name
