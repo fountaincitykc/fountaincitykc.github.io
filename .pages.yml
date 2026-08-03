@@ -710,7 +710,10 @@ content:
       - name: main
         label: Main Menu
         type: block
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
         blockKey: type
         blocks:
           - name: internal
