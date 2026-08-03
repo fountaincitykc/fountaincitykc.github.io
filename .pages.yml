@@ -885,7 +885,10 @@ content:
           - name: buttons
             label: App Buttons
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{text}"
             fields:
               - name: text
                 label: Button Text
@@ -905,7 +908,10 @@ content:
       - name: social
         label: Social Links
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{text}"
         fields:
           - name: text
             label: Social Platform
