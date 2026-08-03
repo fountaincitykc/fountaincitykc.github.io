@@ -29,7 +29,7 @@
             {{ .Key }}
           </h2>
           {{ range .Pages }}
-            {{ .Render "event" }}
+            {{ .Render "_views/event" }}
           {{ end }}
         {{ end }}
       {{ else }}

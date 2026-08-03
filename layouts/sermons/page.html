@@ -15,12 +15,12 @@
               </h4>
             </div>
             <div class="content-section__content">
-              {{ .Render "sermon-content" }}
-              {{ .Render "series-badge" }}
+              {{ .Render "_views/sermon-content" }}
+              {{ .Render "_views/series-badge" }}
             </div>
           </div>
         </div>
         {{ partial "components/pager" . }}
-    </div>  
+    </div>
   </main>
 {{ end }}

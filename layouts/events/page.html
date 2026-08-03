@@ -1,8 +1,8 @@
 {{ define "main" }}
   <main class="main-content | events">
     <div class="container-lg">
-      {{ .Render "event" }}
+      {{ .Render "_views/event" }}
       {{ partial "components/pager" . }}
-    </div>  
+    </div>
   </main>
 {{ end }}
