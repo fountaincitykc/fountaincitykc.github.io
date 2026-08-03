@@ -1,6 +1,7 @@
 /*
 @description
 Fade in an element when it's visible in the viewport
+See: assets/js/animate.js
 
 @markup
 <div class="animate">
@@ -8,15 +9,10 @@ Fade in an element when it's visible in the viewport
 </div>
 */
 
-.animate {
+.animate--start {
   opacity: 0;
 }
-
-// This class is added by JavaScript (see assets/js/animate.js)
-.js-start-animation {
+.animate--end {
   opacity: 1;
-
-  @media (prefers-reduced-motion: no-preference) {
-    transition: opacity 1s ease;
-  }
+  transition: opacity 1s ease;
 }

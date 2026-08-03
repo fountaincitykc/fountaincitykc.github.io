@@ -111,15 +111,15 @@
 
   // Animation
 
-  h1, img, h4 {
-    transform: translate(0, 40px);
+  &.animate--start {
+    h1, img, h4 {
+      transform: translate(0, 40px);
+    }
   }
-  &.js-start-animation {
+  &.animate--end {
     h1, img, h4 {
       transform: translate(0, 0);
     }
-  }
-  @media (prefers-reduced-motion: no-preference) {
     h1 {
       transition: transform 1s abstracts.$easeOutQuad;
     }
