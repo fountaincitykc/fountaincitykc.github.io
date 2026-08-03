@@ -428,7 +428,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{name}"
+                    summary: "{question}"
                 fields:
                   - name: question
                     label: Question
