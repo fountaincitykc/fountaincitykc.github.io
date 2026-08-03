@@ -33,9 +33,12 @@
           {{ end }}
         {{ end }}
       {{ else }}
-        <p class="no-events | animate">
-          There are no scheduled events at this time.
-        </p>
+        <div class="no-events | animate">
+          {{ partial "components/icon" (dict "name" "date" "size" "xl") }}
+          <p>
+            There are no scheduled events at this time.
+          </p>
+        </div>
       {{ end }}
     </div>
   </main>
