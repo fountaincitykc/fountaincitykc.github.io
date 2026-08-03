@@ -81,6 +81,7 @@ jobs:
           hugo \
             --gc \
             --cleanDestinationDir \
+            --buildFuture \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact

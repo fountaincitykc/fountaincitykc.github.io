@@ -6,17 +6,13 @@ This site is built with [Hugo](https://gohugo.io/).
 
 ### Local installation
 
-To develop locally, install Dart Sass Embedded first:
+To develop locally, install Dart Sass Embedded first.
 
 ```bash
 npm install -g sass-embedded
 ```
 
-Then install Hugo:
-
-```bash
-brew install hugo
-```
+Then download and install Hugo from the GitHub [releases page](https://github.com/gohugoio/hugo/releases/).
 
 The minimum Hugo version required is `0.164.0`.
 
@@ -28,7 +24,7 @@ From the root directory, build the site and run Hugo in development mode by runn
 hugo server --cleanDestinationDir --buildFuture
 ```
 
-You should see the site on localhost:1313.
+You should see the site at http://localhost:1313/.
 
 ## Hosting
 
@@ -50,6 +46,9 @@ hugo new content events/2025-01-01-event-title.md
 
 ### Create a new sermon
 
+> [!WARNING]
+> Sermons have been disabled.
+
 ```bash
 hugo new content sermons/2025-01-01.md
 ```
@@ -67,6 +66,9 @@ params:
 ```
 
 ### Create a sermon series
+
+> [!WARNING]
+> Sermon series have been disabled.
 
 To create a new sermon series, add a new term page to the `/content/series/` taxonomy.
 
