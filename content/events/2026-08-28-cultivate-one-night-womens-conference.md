@@ -15,6 +15,6 @@ params:
     text: "Register Here "
     href: https://colonialkc.ccbchurch.com/goto/forms/3243/responses/new
   image: /media/events/park-play-date.svg
-  dateText: "Friday, August 28 "
+  dateText: Friday, August 28 6-9PM
 ---
 Join other women from across Kansas City for a special women's event at Colonial Presbyterian church.  This will be a night of fellowship with appetizers, desserts, boba tea and some craft activities.  There will be a time of worship and listening to messages from three different women on this year's theme, Cultivate Connection! We will be encouraged in our connection with God, connection within the Church, and connection with the World.
