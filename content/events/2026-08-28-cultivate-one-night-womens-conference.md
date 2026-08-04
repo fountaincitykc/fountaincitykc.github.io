@@ -1,7 +1,6 @@
 ---
 title: "Cultivate: One Night Women's Conference"
 date: 2026-08-28
-expiryDate: 2026-08-29
 summary: High School girls are also invited to the event. Colonial Presbyterian
   church is offerning this event to FCC ladies for half off their usual price so
   it will be $10 for Fountain City Church women. Feel free to grab a neighbor or
