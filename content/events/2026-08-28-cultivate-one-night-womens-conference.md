@@ -8,7 +8,7 @@ summary: High School girls are also invited to the event. Colonial Presbyterian
   friend, your high school daughter and join us at the end of August. You must
   register for the event.
 params:
-  endDate: 2026-08-04
+  endDate: 2026-08-28
   time: 6-9PM
   location: "Colonial Presbyterian Church, 9500 Wornall Road "
   featured: true
