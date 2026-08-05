@@ -5,6 +5,8 @@ description: |-
 
 # THIS SECTION HAS BEEN DISABLED, ADD REDIRECT FOR EXISTING PAGES
 cascade:
+  sitemap:
+    disable: true
   layout: redirect
   params:
     redirect: /

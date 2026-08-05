@@ -587,11 +587,6 @@ content:
         options:
           format: yyyy-MM-dd
         required: true
-      - name: expiryDate
-        label: Expiration Date
-        type: date
-        options:
-          format: yyyy-MM-dd
       - name: tags
         label: Tags
         type: select
@@ -612,7 +607,7 @@ content:
         type: rich-text
         options:
           rows: 3
-        description: This text is only used when an event is featured on the home page. If this text is empty, then the Content field will be used.
+        description: This text is only used when an event is shown on the home page. If this text is empty, then the Content field will be used.
       - name: params
         label: Params
         type: object
