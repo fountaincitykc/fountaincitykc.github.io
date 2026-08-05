@@ -632,6 +632,7 @@ content:
             label: Feature on Home Page
             type: boolean
             default: false
+            description: By default the 3 most recent events are shown on the home page. However, if you would like to shown certain events regardless of their dates, just turn on this Featured switch.
           - name: image
             label: Feature Image
             type: image
