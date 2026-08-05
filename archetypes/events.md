@@ -15,5 +15,3 @@ params:
     text: String
     href: URL
 ---
-
-<!--more-->
