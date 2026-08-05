@@ -603,11 +603,11 @@ content:
         type: rich-text
         required: true
       - name: summary
-        label: Summary (optional)
+        label: Featured content (optional)
         type: rich-text
         options:
           rows: 3
-        description: This text is only used when an event is shown on the home page. If this text is empty, then the Content field will be used.
+        description: When an event is shown on the home page, the Content field is used by default. However, if you would like to use different text, you can add it in this field.
       - name: params
         label: Params
         type: object
