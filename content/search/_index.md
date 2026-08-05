@@ -1,4 +1,7 @@
 ---
+# THIS PAGE HAS BEEN DISABLED
+draft: true
+
 title: Search
 params:
   noIndex: true

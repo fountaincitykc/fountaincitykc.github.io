@@ -72,10 +72,10 @@ main:
     params:
       rel: external
       enabled: true
-  - type: internal
-    name: Search
-    pageRef: /search/
-    weight: 12
-    params:
-      icon: search
-      enabled: false
+  #- type: internal
+  #  name: Search
+  #  pageRef: /search/
+  #  weight: 12
+  #  params:
+  #    icon: search
+  #    enabled: false

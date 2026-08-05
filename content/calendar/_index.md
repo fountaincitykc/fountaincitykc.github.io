@@ -1,5 +1,7 @@
 ---
+# THIS PAGE HAS BEEN DISABLED
 draft: true
+
 title: Calendar
 description: |-
   Upcoming events for Fountain City Church.
