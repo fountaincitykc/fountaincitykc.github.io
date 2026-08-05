@@ -2,6 +2,8 @@
 title: 5 Year Anniversary Dinner
 date: 2024-10-04
 expiryDate: 2024-10-05
+summary: |-
+  This October marks the 5th year anniversary since we launched. The night will include dinner, a night of remembering and praise.
 params:
   time: 6:30–8:30pm
   location: Meadowbrook Clubhouse
@@ -10,9 +12,7 @@ params:
     href: https://fountaincitykc.churchcenter.com/registrations/events/2502536
   featured: false
 ---
-This October marks the 5th year anniversary since we launched. The night will include dinner, a night of remembering and praise. 
-
-<!--more-->
+This October marks the 5th year anniversary since we launched. The night will include dinner, a night of remembering and praise.
 
 Please note that this is an adults-only event. We kindly ask that all attendees dress in business casual attire to match the occasion.
 
