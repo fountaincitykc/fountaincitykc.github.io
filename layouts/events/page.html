@@ -2,7 +2,7 @@
   <main class="main-content | events">
     <div class="container-lg">
       {{ .Render "_views/event" }}
-      {{ partial "components/pager" . }}
+      {{ .Render "_views/event-pager" }}
     </div>
   </main>
 {{ end }}

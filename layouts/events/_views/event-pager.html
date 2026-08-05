@@ -1,0 +1,17 @@
+{{ $events := partialCached "utils/upcoming-events" . }}
+{{ if gt (len $events) 1 }}
+  <ul class="pager">
+    {{ with $events.Prev . }}
+      <li class="pager__prev">
+        {{- $text := printf "← <span>%s &mdash; %s</span>" (dateFormat "Jan 2" .Date) .Title }}
+        {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
+      </li>
+    {{ end }}
+    {{ with $events.Next . }}
+      <li class="pager__next">
+        {{- $text := printf "<span>%s &mdash; %s</span> →" (dateFormat "Jan 2" .Date) .Title }}
+        {{ partial "components/button" (dict "href" .RelPermalink "text" $text )}}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

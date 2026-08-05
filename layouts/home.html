@@ -218,16 +218,12 @@
 
     {{/* Events */}}
     {{ $events := slice }}
+    {{ $upcomingEvents := partialCached "utils/upcoming-events" . }}
     {{ $hasFeaturedEvents := false }}
-    {{ $buildTime := time.AsTime (now.Format "2006-01-02") }}
-    {{/* Get all events */}}
-    {{ $allEvents := where site.RegularPages "Section" "events" }}
-    {{/* Filter down to upcoming events */}}
-    {{ $upcomingEvents := where $allEvents "Date" "ge" $buildTime }}
     {{/* Filter down to featured events */}}
     {{ $featuredEvents := where $upcomingEvents "Params.featured" true }}
     {{/* If there are one or more featured events... */}}
-    {{ if gt ($featuredEvents | len) 0 }}
+    {{ if gt (len $featuredEvents) 0 }}
       {{/* Filter down to the next 3 featured events */}}
       {{ $events = sort $featuredEvents "Date" "asc" | first 3 }}
       {{ $hasFeaturedEvents = true }}
@@ -236,7 +232,7 @@
       {{ $events = sort $upcomingEvents "Date" "asc" | first 3 }}
     {{ end }}
     {{/* Get count of events */}}
-    {{ $eventLen := $events | len }}
+    {{ $eventLen := len $events }}
     {{/* Render events */}}
     {{ if gt $eventLen 0 }}
       <div class="container">
