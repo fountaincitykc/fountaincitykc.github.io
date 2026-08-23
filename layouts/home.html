@@ -2,7 +2,7 @@
   <main class="main-content | home">
 
     {{/* Directions */}}
-    <div class="home-directions | animate">
+    <div class="home-directions | reveal">
       {{ with site.Params.serviceAddress }}
         <address>
           <strong>{{ .text }}</strong><br>
@@ -18,7 +18,7 @@
 
     {{/* Hero */}}
     {{ with .Params.hero }}
-      <div class="home-hero | animate">
+      <div class="home-hero | reveal">
         <div class="home-hero__background">
           {{ $poster := resources.Get .poster }}
           {{ with resources.Get .video }}
@@ -51,7 +51,7 @@
     {{ if .Params.banner.enabled }}
       {{ with .Params.banner }}
         <div class="container">
-          <div class="home-banner | animate">
+          <div class="home-banner | reveal">
             <div class="home-banner__content">
               {{ .content | $.Page.RenderString (dict "display" "block") }}
             </div>
@@ -70,7 +70,7 @@
     {{/* Callout */}}
     {{ with .Params.callout }}
       <div class="container">
-        <div class="home-callout | callout callout--dark | animate">
+        <div class="home-callout | callout callout--dark | reveal">
           {{ .content | $.Page.RenderString (dict "display" "block") }}
           {{ with .button }}
             <p class="home-callout__link">
@@ -86,7 +86,7 @@
       <div class="container">
         <div class="home-cards">
           {{ range . }}
-            <div class="card | animate">
+            <div class="card | reveal">
               <div class="card__media">
                 {{ with partial "utils/process-image.html" (dict
                   "res" (resources.Get .image)
@@ -123,7 +123,7 @@
     {{/* Welcome */}}
     {{ with .Params.welcome }}
       <div class="container-lg">
-        <div class="home-welcome | animate">
+        <div class="home-welcome | reveal">
           <h2 class="home-welcome__headline">
             {{ .headline }}
           </h2>
@@ -135,7 +135,7 @@
     {{/* Sermons */}}
     {{ with .Params.sermons }}
       <div class="container-lg">
-        <div class="home-sermons | callout callout--condensed callout--center | animate">
+        <div class="home-sermons | callout callout--condensed callout--center | reveal">
             <h3>
               {{ .headline }}
             </h3>
@@ -173,7 +173,7 @@
         ```
       */}}
       <div class="container">
-        <div class="home-sermon | content-section | animate">
+        <div class="home-sermon | content-section | reveal">
           <div class="content-section__media">
             <a href="{{ .RelPermalink }}">
               {{ with partial "utils/process-image.html" (dict
@@ -240,7 +240,7 @@
           {{/* Layout for 1 event */}}
           {{ if eq $eventLen 1 }}
             {{ with index $events 0 }}
-              <div class="content-section | animate">
+              <div class="content-section | reveal">
                 <div class="content-section__media">
                   {{ $src := default (index $.Page.Params.events.defaultImages 0) .Params.image }}
                   {{ with partial "utils/process-image.html" (dict
@@ -278,7 +278,7 @@
             {{ end }}
           {{/* Layout for multiple events */}}
           {{ else }}
-            <h2 class="home-events__headline | animate">
+            <h2 class="home-events__headline | reveal">
               {{ with $.Page.Params.events.headline }}
                 {{ cond $hasFeaturedEvents .multipleFeatured .multipleUpcoming }}
               {{ end }}
@@ -286,7 +286,7 @@
             <div class="home-events__cards">
               {{ $index := 0 }}
               {{ range $events }}
-                <div class="card | animate">
+                <div class="card | reveal">
                   <div class="card__media">
                     {{ $src := default (index $.Page.Params.events.defaultImages $index) .Params.image }}
                     {{ with partial "utils/process-image.html" (dict
@@ -320,7 +320,7 @@
               {{ end }}
             </div>
             {{ with .Params.events.button }}
-              <p class="home-events__footer | animate">
+              <p class="home-events__footer | reveal">
                 <a href="{{ .href }}">{{ .text }}</a>
               </p>
             {{ end }}

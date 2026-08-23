@@ -5,7 +5,7 @@
       {{ $events := where .RegularPages "Date" "ge" $today }}
       {{ $year := "" }}
       {{ if gt ($events | len) 0 }}
-        <nav class="events-nav | animate">
+        <nav class="events-nav | reveal">
           <ul>
             {{ range $events.GroupByDate "2006" "asc" }}
               {{ $year := .Key }}
@@ -25,7 +25,7 @@
           </ul>
         </nav>
         {{ range $events.GroupByDate "January 2006" "asc" }}
-          <h2 class="events-header | animate" id="{{ .Key | anchorize }}">
+          <h2 class="events-header | reveal" id="{{ .Key | anchorize }}">
             {{ .Key }}
           </h2>
           {{ range .Pages }}
@@ -33,7 +33,7 @@
           {{ end }}
         {{ end }}
       {{ else }}
-        <div class="no-events | animate">
+        <div class="no-events | reveal">
           {{ partial "components/icon" (dict "name" "date" "size" "xl") }}
           <p>
             There are no scheduled events at this time.

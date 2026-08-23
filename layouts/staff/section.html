@@ -2,7 +2,7 @@
   <main class="main-content | staff">
     <div class="container">
       {{ range .Params.sections }}
-        <div class="content-section | animate" id="{{ .name | urlize }}">
+        <div class="content-section | reveal" id="{{ .name | urlize }}">
           {{ with partial "utils/process-image.html" (dict
             "res" (resources.Get .image)
             "width" 800

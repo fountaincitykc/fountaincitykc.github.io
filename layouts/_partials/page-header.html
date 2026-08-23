@@ -1,5 +1,5 @@
 {{ if not .IsHome }}
-  <div class="page-header animate">
+  <div class="page-header reveal">
     <h1 class="pill-header">
       {{/* If this is a single page or a term page, show the title of the top section, otherwise show the page title */}}
       {{ cond (or .IsPage (eq .Kind "term")) .FirstSection.Title .Title }}

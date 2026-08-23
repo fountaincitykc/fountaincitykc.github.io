@@ -2,7 +2,7 @@
   <main class="main-content | connect">
     <div class="container">
       {{ range .Params.sections }}
-        <div class="content-section | animate" id="{{ .headline | urlize }}">
+        <div class="content-section | reveal" id="{{ .headline | urlize }}">
           {{ with partial "utils/process-image.html" (dict
             "res" (resources.Get .image)
             "width" 800
@@ -36,7 +36,7 @@
         </div>
       {{ end }}
       {{ with .Params.callout }}
-        <div class="callout | animate">
+        <div class="callout | reveal">
           <h2>
             {{ .headline }}
           </h2>

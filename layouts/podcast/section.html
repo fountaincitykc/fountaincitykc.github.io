@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="main-content | podcast">
     <div class="container">
-      <div class="content-section content-section--media-right | animate">
+      <div class="content-section content-section--media-right | reveal">
         {{ with partial "utils/process-image.html" (dict
           "res" (resources.Get .Params.image)
           "width" 800

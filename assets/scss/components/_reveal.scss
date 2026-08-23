@@ -1,18 +1,18 @@
 /*
 @description
 Fade in an element when it's visible in the viewport
-See: assets/js/animate.js
+See: assets/js/reveal.js
 
 @markup
-<div class="animate">
+<div class="reveal">
   ...
 </div>
 */
 
-.animate--start {
+.reveal--start {
   opacity: 0;
 }
-.animate--end {
+.reveal--end {
   opacity: 1;
   transition: opacity 1s ease;
 }

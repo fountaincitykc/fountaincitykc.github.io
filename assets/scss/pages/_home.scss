@@ -111,23 +111,27 @@
 
   // Animation
 
-  &.animate--start {
+  &.reveal--start {
     h1, img, h4 {
+      opacity: 0;
       transform: translate(0, 40px);
     }
   }
-  &.animate--end {
+  &.reveal--end {
     h1, img, h4 {
+      opacity: 1;
       transform: translate(0, 0);
     }
     h1 {
-      transition: transform 1s abstracts.$easeOutQuad;
+      transition: opacity 1s ease, transform 1s abstracts.$easeOutQuad;
     }
     img {
-      transition: transform 1.5s abstracts.$easeOutQuad;
+      transition: opacity 1s ease, transform 1.5s abstracts.$easeOutQuad;
+      transition-delay: 0.25s;
     }
     h4 {
-      transition: transform 2s abstracts.$easeOutQuad;
+      transition: opacity 1s ease, transform 2s abstracts.$easeOutQuad;
+      transition-delay: 0.5s;
     }
   }
 }
