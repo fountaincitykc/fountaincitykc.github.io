@@ -6,11 +6,7 @@ This site is built with [Hugo](https://gohugo.io/).
 
 ### Local installation
 
-To develop locally, install Dart Sass Embedded first.
-
-```bash
-npm install -g sass-embedded
-```
+To develop locally, first download and install Dart Sass from the GitHub [releases page](https://github.com/sass/dart-sass/releases/).
 
 Then download and install Hugo from the GitHub [releases page](https://github.com/gohugoio/hugo/releases/).
 
