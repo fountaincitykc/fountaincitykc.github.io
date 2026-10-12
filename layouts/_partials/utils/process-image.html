@@ -1,38 +1,43 @@
 {{/*
 Image processing for a page resource or global resource
 
-@param {res} [resource]
-@param {int} [width]
-@param {int} [height]
-@param {string} [process] Process specification **without** `dimensions`
-@param {bool} [upscale] Defaults to false
+@param {Resource} [res]
+@param {Int} [width]
+@param {Int} [height]
+@param {String} [process] Process specification **without** `dimensions`
+@param {Boolean} [upscale] Defaults to false
 
 The `upscale` param only has an effect for `fill` and `resize` processes. `fit`
 only downscales, and `crop` does not resize, so `upscale` will
 not have any effect for these two processes.
 
-@returns {resource}
+@returns {Resource}
 
 @example
-{{ with partial "process-image.html" (dict
-  "res" $res
-  "width" 1600
-  "height" 1600
-  "process" "fit jpg q80 lanczos"
-)}}
-  <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+{{ with .Resources.Get "image.jpg" }}
+  {{ with partial "utils/process-image" (dict
+    "res" .
+    "width" 1600
+    "height" 1600
+    "process" "fit jpg q80 lanczos"
+  )}}
+    <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}">
+  {{ end }}
 {{ end }}
 
 @example
-{{ with partial "process-image.html" (dict
-  "res" $res
-  "width" 128
-  "height" 128
-  "process" "fill"
-  "upscale" true
-)}}
-  <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+{{ with .Resources.Get "image.jpg" }}
+  {{ with partial "process-image.html" (dict
+    "res" .
+    "width" 128
+    "height" 128
+    "process" "fill"
+    "upscale" true
+  )}}
+    <img src="{{ .RelPermalink }}" alt="{{ path.BaseName .Name | humanize }}">
+  {{ end }}
 {{ end }}
+
 */}}
 
 {{ $res := .res }}
@@ -44,26 +49,24 @@ not have any effect for these two processes.
 {{ $p := "" }}
 
 {{ with $res }}
-  {{ if eq .ResourceType "image" }}
-    {{ if not (eq .MediaType.SubType "svg") }}
-      {{ if and $width $height }}
-        {{ if or (eq $upscale true) (gt .Width $width) (gt .Height $height) }}
-          {{ $p = printf "%s %dx%d" $process $width $height }}
-        {{ end }}
-      {{ else if $width }}
-        {{ if or (eq $upscale true) (gt .Width $width) }}
-          {{ $p = printf "%s %dx" $process $width }}
-        {{ end }}
-      {{ else if $height }}
-        {{ if or (eq $upscale true) (gt .Height $height) }}
-          {{ $p = printf "%s x%d" $process $height }}
-        {{ end }}
-      {{ else }}
-        {{ $p := $process }}
+  {{ if reflect.IsImageResourceProcessable $res }}
+    {{ if and $width $height }}
+      {{ if or (eq $upscale true) (gt .Width $width) (gt .Height $height) }}
+        {{ $p = printf "%s %dx%d" $process $width $height }}
       {{ end }}
-      {{ if $p }}
-        {{ $res = .Process $p }}
+    {{ else if $width }}
+      {{ if or (eq $upscale true) (gt .Width $width) }}
+        {{ $p = printf "%s %dx" $process $width }}
       {{ end }}
+    {{ else if $height }}
+      {{ if or (eq $upscale true) (gt .Height $height) }}
+        {{ $p = printf "%s x%d" $process $height }}
+      {{ end }}
+    {{ else }}
+      {{ $p := $process }}
+    {{ end }}
+    {{ if $p }}
+      {{ $res = .Process $p }}
     {{ end }}
   {{ end }}
 {{ end }}
