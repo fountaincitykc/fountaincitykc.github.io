@@ -5,8 +5,9 @@ description: Experience real community and meaningful relationships at Fountain
   glorify God and serve their community.
 params:
   banner:
-    enabled: false
-    content: Sunday service will be held at Meadowbrook Park Clubhouse July 19 — August 2
+    enabled: true
+    content: |-
+      **NOTE:** We are temporarily gathering for worship at Meadowbrook Park Clubhouse on October 18 & 25, and November 1. (9101 Nall Ave, Prairie Village, KS 66207)
   hero:
     video: /media/home/loop.mp4
     poster: /media/home/loop.jpg
@@ -18,7 +19,8 @@ params:
       text: Watch live
       href: https://www.youtube.com/@fountaincitychurchkc9519/
   callout:
-    content: We believe God is working in our world to bring healing and new life to
+    content:
+      We believe God is working in our world to bring healing and new life to
       all people and places through Jesus Christ. God wants people to know him,
       find their true selves in him, flourish in all of life with him.
     button:
@@ -34,7 +36,8 @@ params:
         text: Learn more
         href: /sunday-morning/
     - headline: Kids and Families
-      content: Families are a significant part of our community. We aim to help kids
+      content:
+        Families are a significant part of our community. We aim to help kids
         of all ages grow as faithful followers of Jesus as we assist parents to
         raise them in the ways of God.
       image: /media/home/families.jpg
