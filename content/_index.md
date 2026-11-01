@@ -5,9 +5,8 @@ description: Experience real community and meaningful relationships at Fountain
   glorify God and serve their community.
 params:
   banner:
-    enabled: true
-    content: |-
-      **NOTE:** We are temporarily gathering for worship at Meadowbrook Park Clubhouse on October 18 & 25, and November 1. (9101 Nall Ave, Prairie Village, KS 66207)
+    enabled: false
+    content:
   hero:
     video: /media/home/loop.mp4
     poster: /media/home/loop.jpg
