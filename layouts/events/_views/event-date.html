@@ -10,8 +10,13 @@
       {{ with .Date }}
         {{ time.Format ":date_full" . }}
       {{ end }}
+      {{/* Only show event end date if it's different than the date */}}
+      {{ $dateLong := time.Format ":date_long" .Date }}
       {{ with .Params.endDate }}
-        &ndash; {{ time.Format ":date_long" . }}
+        {{ $endDateLong := time.Format ":date_long" . }}
+        {{ if ne $dateLong $endDateLong }}
+          &ndash; {{ $endDateLong }}
+        {{ end }}
       {{ end }}
     </h4>
   {{ end }}
